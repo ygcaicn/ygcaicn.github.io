@@ -21,7 +21,7 @@
 <meta property="og:description" content="关于win10调包grub引导的过程2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。
 往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。
 好在我还有移动硬盘的linux，当然你用live盘也是可以的。进去移动硬盘linux后按照上篇文章讲的方法">
-<meta property="og:updated_time" content="2017-06-01T01:38:18.496Z">
+<meta property="og:updated_time" content="2017-06-01T01:46:51.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于win10version1703 多引导（grub引导）的问题">
 <meta name="twitter:description" content="关于win10调包grub引导的过程2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。
@@ -169,13 +169,13 @@
 <p>先将esp分区中的win引导程序备份出来（不过后来证明我用cp备份的引导并不能正常进入win）<br>拆分分区主要就是用了gdisk工具，格式化为vfat 使用了mkfs.vfat程序，选择一个esp作为linux的引导分区，然后安装grub，还要注意修改内置硬盘系统的/etc/fstab文件中的esp分区挂载的uuid，这个尤其重要，不修改的话也是无法正常进入系统的。ps.这些操作都是在移动硬盘的linux系统中进行的。</p>
 <p>这时候重启进入bios中发现自动识别出了sda2也就是我的第二快efi分区中的grub引导，第一块的win引导没有识别。我就手动添加了一下发现启动出了问题，不能正常进入win。没办法逢山开路进winPE，bcdboot修复win引导。这时候需要注意的是你要指定win引导安装在哪个esp分区。到此的话已经win和linux都可以启动了，并且grub引导不会被win调包。</p>
 <p>这种解决方法相对完美，但是没有解决win将自身调整为boot1的问题。</p>
-<p>需要注意的问题：</p>
-<ol>
+<h2 id="需要注意的问题："><a href="#需要注意的问题：" class="headerlink" title="需要注意的问题："></a>需要注意的问题：</h2><ol>
 <li>拆分分区时第二个esp分区的分区号可能会排到最后，也就是数值最大。这个你可以手动调整分区号，不过开机进入内置硬盘的win后分区号按照扇区的顺序自动调整。</li>
 <li>备份win的引导我是没成功，如果又winPE的话可以不备份直接删除格式化，badboot重建win引导。</li>
 <li>不要考虑在win下无损调整vfat文件系统的分区。</li>
 <li>fstab文件一定要修改的，要不然进不去系统。</li>
 </ol>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://blog.cumtpn.com/Linux/Esp-grub-uefi-windows.html" target="_blank" rel="external">ESP分区格式化，修复Windows&amp;Linux引导</a></p>
 
       
     </div>
@@ -241,7 +241,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于win10调包grub引导的过程"><span class="nav-number">1.</span> <span class="nav-text">关于win10调包grub引导的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装修复grub"><span class="nav-number">1.1.</span> <span class="nav-text">安装修复grub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grubx64-efi文件"><span class="nav-number">1.2.</span> <span class="nav-text">grubx64.efi文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启win后grubx64-efi文件"><span class="nav-number">1.3.</span> <span class="nav-text">重启win后grubx64.efi文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试的一些方法"><span class="nav-number">2.</span> <span class="nav-text">尝试的一些方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改grubx64-efi的文件名（失败）"><span class="nav-number">2.1.</span> <span class="nav-text">修改grubx64.efi的文件名（失败）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改grubx64-efi所在的文件夹"><span class="nav-number">2.2.</span> <span class="nav-text">修改grubx64.efi所在的文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双Esp分区"><span class="nav-number">2.3.</span> <span class="nav-text">双Esp分区</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于win10调包grub引导的过程"><span class="nav-number">1.</span> <span class="nav-text">关于win10调包grub引导的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装修复grub"><span class="nav-number">1.1.</span> <span class="nav-text">安装修复grub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grubx64-efi文件"><span class="nav-number">1.2.</span> <span class="nav-text">grubx64.efi文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启win后grubx64-efi文件"><span class="nav-number">1.3.</span> <span class="nav-text">重启win后grubx64.efi文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试的一些方法"><span class="nav-number">2.</span> <span class="nav-text">尝试的一些方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改grubx64-efi的文件名（失败）"><span class="nav-number">2.1.</span> <span class="nav-text">修改grubx64.efi的文件名（失败）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改grubx64-efi所在的文件夹"><span class="nav-number">2.2.</span> <span class="nav-text">修改grubx64.efi所在的文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双Esp分区"><span class="nav-number">2.3.</span> <span class="nav-text">双Esp分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需要注意的问题："><span class="nav-number">2.4.</span> <span class="nav-text">需要注意的问题：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol>
     
     </div>
   </aside>
