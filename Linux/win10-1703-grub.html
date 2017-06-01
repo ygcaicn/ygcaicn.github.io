@@ -22,7 +22,7 @@
 往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。
 好在我还有移动硬盘的linux，当然你用live盘也是可以的。进去移动硬盘linux后按照上篇文章讲的方法">
 <meta property="og:image" content="http://imgur.com/6pbOMcK.png">
-<meta property="og:updated_time" content="2017-06-01T02:09:47.855Z">
+<meta property="og:updated_time" content="2017-06-01T02:10:13.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于win10version1703 多引导（grub引导）的问题">
 <meta name="twitter:description" content="关于win10调包grub引导的过程2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。
@@ -179,7 +179,7 @@
 <h2 id="修改grubx64-efi所在的文件夹"><a href="#修改grubx64-efi所在的文件夹" class="headerlink" title="修改grubx64.efi所在的文件夹"></a>修改grubx64.efi所在的文件夹</h2><p>这样可以正常进入grub，但是bios中的启动项要手动添加。并且启动win后添加的启动项被删除了，文件倒是没有被修改，可以通过再次添加进入grub程序。</p>
 <h2 id="双Esp分区"><a href="#双Esp分区" class="headerlink" title="双Esp分区"></a>双Esp分区</h2><p>将以前的esp分区划分成两个esp分区，一个专门用来存放windows的efi程序，另一个专门存放grub的efi程序（grubx64.efi）</p>
 <p>先将esp分区中的win引导程序备份出来（不过后来证明我用cp备份的引导并不能正常进入win）<br>拆分分区主要就是用了gdisk工具，格式化为vfat 使用了mkfs.vfat程序，选择一个esp作为linux的引导分区，然后安装grub，还要注意修改内置硬盘系统的/etc/fstab文件中的esp分区挂载的uuid，这个尤其重要，不修改的话也是无法正常进入系统的。ps.这些操作都是在移动硬盘的linux系统中进行的。</p>
-<p>这时候重启进入bios中发现自动识别出了sda2也就是我的第二快efi分区中的grub引导，第一块的win引导没有识别。我就手动添加了一下发现启动出了问题，不能正常进入win。没办法逢山开路进winPE，bcdboot修复win引导。这时候需要注意的是你要指定win引导安装在哪个esp分区。到此的话已经win和linux都可以启动了，并且grub引导不会被win调包。</p>
+<p>这时候重启进入bios中发现自动识别出了sda2也就是我的第二块efi分区中的grub引导，第一块的win引导没有识别。我就手动添加了一下发现启动出了问题，不能正常进入win。没办法逢山开路进winPE，bcdboot修复win引导。这时候需要注意的是你要指定win引导安装在哪个esp分区。到此的话已经win和linux都可以启动了，并且grub引导不会被win调包。</p>
 <p>这种解决方法相对完美，但是没有解决win将自身调整为boot1的问题。</p>
 <h2 id="需要注意的问题："><a href="#需要注意的问题：" class="headerlink" title="需要注意的问题："></a>需要注意的问题：</h2><ol>
 <li>拆分分区时第二个esp分区的分区号可能会排到最后，也就是数值最大。这个你可以手动调整分区号，不过开机进入内置硬盘的win后分区号按照扇区的顺序自动调整。</li>
