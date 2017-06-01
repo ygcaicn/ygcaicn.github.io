@@ -19,7 +19,7 @@ ESP分区被格式化意味着无法进入系统">
 <meta property="og:site_name" content="Jachin">
 <meta property="og:description" content="ESP分区存放的UEFI引导程序
 ESP分区被格式化意味着无法进入系统">
-<meta property="og:updated_time" content="2017-05-15T04:03:59.070Z">
+<meta property="og:updated_time" content="2017-06-01T01:43:29.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ESP分区格式化，修复Windows&Linux引导">
 <meta name="twitter:description" content="ESP分区存放的UEFI引导程序
@@ -129,7 +129,7 @@ ESP分区被格式化意味着无法进入系统">
     <div class="article-meta">
       
 	<a href="/Linux/Esp-grub-uefi-windows.html" class="article-date">
-	  <time datetime="2017-05-14T09:32:55.000Z" itemprop="datePublished">May 14, 2017</time>
+	  <time datetime="2017-05-14T21:32:55.000Z" itemprop="datePublished">May 14, 2017</time>
 	</a>
 
       
@@ -163,7 +163,9 @@ ESP分区被格式化意味着无法进入系统">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo grub-install --target x86_64-efi --efi-directory /mnt/esp --boot-directory=/mnt/boot</div></pre></td></tr></table></figure>
 <p>成功执行结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Installing for x86_64-efi platform.</div><div class="line">Installation finished. No error reported.</div></pre></td></tr></table></figure>
-<p><strong>note:</strong></p>
+<p>错误信息类似于grub-install: error: /usr/lib/grub/x86_64-efi/modinfo.sh doesn’t exist. Please specify –target or –directory. 这样的话，就需要安装grub-pc或grub-efi之后再试。</p>
+<pre><code>sudo apt-get install grub-pc -y
+</code></pre><p><strong>note:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--efi-directory=DIR    use DIR as the EFI System Partition root</div></pre></td></tr></table></figure>
 <p>生成grub.cfg</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo grub-mkconfig -o /mnt/boot/grub/grub.cfg</div></pre></td></tr></table></figure>
@@ -241,6 +243,15 @@ ESP分区被格式化意味着无法进入系统">
   
     
 <nav id="article-nav">
+  
+    <a href="/Linux/win10-1703-grub.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          关于win10version1703 多引导（grub引导）的问题
+        
+      </div>
+    </a>
   
   
     <a href="/嵌入式/stm32f1xx-h.html" id="article-nav-older" class="article-nav-link-wrap">

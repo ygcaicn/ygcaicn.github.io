@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2017-05-15T04:03:59.070Z</updated>
+  <updated>2017-06-01T01:38:18.496Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -16,11 +16,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于win10version1703 多引导（grub引导）的问题</title>
+    <link href="https://ygcaicn.github.io/Linux/win10-1703-grub.html"/>
+    <id>https://ygcaicn.github.io/Linux/win10-1703-grub.html</id>
+    <published>2017-06-01T12:32:55.000Z</published>
+    <updated>2017-06-01T01:38:18.496Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
+<p>往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。</p>
+<p>好在我还有移动硬盘的linux，当然你用live盘也是可以的。进去移动硬盘linux后按照上篇文章讲的方法修复了grub。再次进入bios选择ubuntu启动，没什么问题一下就进入了grub熟悉的界面。成功进入了内置硬盘的linuxmint。<br><a id="more"></a></p>
+<p>本来以为故事到此就结束了呢，骂也骂过了，问题也修复了，万万万万没有想到的是我从win关机之后首先发现了第一个小问题：bios的启动项顺序发生了变化，以往我都是将grub放到第一启动项的，现在变成win是第一项。<br>然后接着来了一个大问题：第二项的ubuntu选项（也就是grub引导程序grubx64.efi）选择从该项启动以后又直接进入了win。到这时候我就已经有了不好的预感。同样从硬盘进入linux看看什么情况，先修复了grub</p>
+<p>via.一下操作均在live linux下操作</p>
+<h2 id="安装修复grub"><a href="#安装修复grub" class="headerlink" title="安装修复grub"></a>安装修复grub</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jachin-Inspiron-5548 ubuntu # sudo grub-install --target x86_64-efi --efi-directory /mnt/esp --boot-directory=/mnt/boot</div><div class="line">Installing for x86_64-efi platform.</div><div class="line">Installation finished. No error reported.</div></pre></td></tr></table></figure>
+<h2 id="grubx64-efi文件"><a href="#grubx64-efi文件" class="headerlink" title="grubx64.efi文件"></a>grubx64.efi文件</h2><pre><code>jachin-Inspiron-5548 ubuntu # ll -h grubx64.efi
+-rwx------ 1 root root 118K May 31 09:45 grubx64.efi*
+</code></pre><p>同样修复万以后grub一切正常，重复上次的操作，进入win，关机win，选择grub启动项。和上次结果一样又进了win。。再进入移动硬盘的linux</p>
+<h2 id="重启win后grubx64-efi文件"><a href="#重启win后grubx64-efi文件" class="headerlink" title="重启win后grubx64.efi文件"></a>重启win后grubx64.efi文件</h2><pre><code>jachin-Inspiron-5548 ubuntu # ll -h grubx64.efi
+-rwx------ 1 root root  74K May 31 09:45 grubx64.efi*
+</code></pre><p>发现了猫腻，万恶的Mxx公司竟然修改了grubx64.efi文件。。。</p>
+<p>总结一下就是：</p>
+<ol>
+<li>win会调包（sda1@efi）/EFI/ubuntu/grubx64.efi文件</li>
+<li>win会自动调整启动项的顺序，把自己条boot1</li>
+<li>linux下win的分区不能挂载，之前是开着快速启动也可以挂载的，现在不行了。这个关掉快速启动可以解决，没办法果断关掉。</li>
+</ol>
+<h1 id="尝试的一些方法"><a href="#尝试的一些方法" class="headerlink" title="尝试的一些方法"></a>尝试的一些方法</h1><h2 id="修改grubx64-efi的文件名（失败）"><a href="#修改grubx64-efi的文件名（失败）" class="headerlink" title="修改grubx64.efi的文件名（失败）"></a>修改grubx64.efi的文件名（失败）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">cp grubx64.efi mgrubx64.efi </div><div class="line"></div><div class="line">jachin-Inspiron-5548 ubuntu # ll -h</div><div class="line">total 240K</div><div class="line">drwxr-xr-x 2 root root 2.0K May 31 10:18 ./</div><div class="line">drwxr-xr-x 5 root root 2.0K May 28 00:45 ../</div><div class="line">-rwxr-xr-x 1 root root 118K May 31 10:09 grubx64.efi*</div><div class="line">-rwxr-xr-x 1 root root 118K May 31 10:18 mgrubx64.efi*</div></pre></td></tr></table></figure>
+<p>启动过win之后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">jachin-Inspiron-5548 ubuntu # ll -h</div><div class="line">total 78K</div><div class="line">drwxr-xr-x 2 root root 2.0K May 31 10:18 ./</div><div class="line">drwxr-xr-x 5 root root 2.0K May 28 00:45 ../</div><div class="line">-rwxr-xr-x 1 root root 74K May 31 10:09 grubx64.efi*</div><div class="line">-rwxr-xr-x 1 root root 0K May 31 10:18 mgrubx64.efi*</div></pre></td></tr></table></figure>
+<p>可以看到（sda1@efi）/EFI/ubuntu/grubx64.efi文件被调包，（sda1@efi）/EFI/ubuntu/mgrubx64.efi这个更是直接被清空。</p>
+<h2 id="修改grubx64-efi所在的文件夹"><a href="#修改grubx64-efi所在的文件夹" class="headerlink" title="修改grubx64.efi所在的文件夹"></a>修改grubx64.efi所在的文件夹</h2><p>这样可以正常进入grub，但是bios中的启动项要手动添加。并且启动win后添加的启动项被删除了，文件倒是没有被修改，可以通过再次添加进入grub程序。</p>
+<h2 id="双Esp分区"><a href="#双Esp分区" class="headerlink" title="双Esp分区"></a>双Esp分区</h2><p>将以前的esp分区划分成两个esp分区，一个专门用来存放windows的efi程序，另一个专门存放grub的efi程序（grubx64.efi）</p>
+<p>先将esp分区中的win引导程序备份出来（不过后来证明我用cp备份的引导并不能正常进入win）<br>拆分分区主要就是用了gdisk工具，格式化为vfat 使用了mkfs.vfat程序，选择一个esp作为linux的引导分区，然后安装grub，还要注意修改内置硬盘系统的/etc/fstab文件中的esp分区挂载的uuid，这个尤其重要，不修改的话也是无法正常进入系统的。ps.这些操作都是在移动硬盘的linux系统中进行的。</p>
+<p>这时候重启进入bios中发现自动识别出了sda2也就是我的第二快efi分区中的grub引导，第一块的win引导没有识别。我就手动添加了一下发现启动出了问题，不能正常进入win。没办法逢山开路进winPE，bcdboot修复win引导。这时候需要注意的是你要指定win引导安装在哪个esp分区。到此的话已经win和linux都可以启动了，并且grub引导不会被win调包。</p>
+<p>这种解决方法相对完美，但是没有解决win将自身调整为boot1的问题。</p>
+<p>需要注意的问题：</p>
+<ol>
+<li>拆分分区时第二个esp分区的分区号可能会排到最后，也就是数值最大。这个你可以手动调整分区号，不过开机进入内置硬盘的win后分区号按照扇区的顺序自动调整。</li>
+<li>备份win的引导我是没成功，如果又winPE的话可以不备份直接删除格式化，badboot重建win引导。</li>
+<li>不要考虑在win下无损调整vfat文件系统的分区。</li>
+<li>fstab文件一定要修改的，要不然进不去系统。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;关于win10调包grub引导的过程&quot;&gt;&lt;a href=&quot;#关于win10调包grub引导的过程&quot; class=&quot;headerlink&quot; title=&quot;关于win10调包grub引导的过程&quot;&gt;&lt;/a&gt;关于win10调包grub引导的过程&lt;/h1&gt;&lt;p&gt;2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。&lt;/p&gt;
+&lt;p&gt;往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。&lt;/p&gt;
+&lt;p&gt;好在我还有移动硬盘的linux，当然你用live盘也是可以的。进去移动硬盘linux后按照上篇文章讲的方法修复了grub。再次进入bios选择ubuntu启动，没什么问题一下就进入了grub熟悉的界面。成功进入了内置硬盘的linuxmint。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
+    
+    
+      <category term="Grub2 Linux Windows" scheme="https://ygcaicn.github.io/tags/Grub2-Linux-Windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ESP分区格式化，修复Windows&amp;Linux引导</title>
     <link href="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html"/>
     <id>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</id>
-    <published>2017-05-14T09:32:55.000Z</published>
-    <updated>2017-05-15T04:03:59.070Z</updated>
+    <published>2017-05-14T21:32:55.000Z</published>
+    <updated>2017-06-01T01:43:29.725Z</updated>
     
     <content type="html"><![CDATA[<p>ESP分区存放的UEFI引导程序</p>
 <p>ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
@@ -46,7 +104,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo grub-install --target x86_64-efi --efi-directory /mnt/esp --boot-directory=/mnt/boot</div></pre></td></tr></table></figure>
 <p>成功执行结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Installing for x86_64-efi platform.</div><div class="line">Installation finished. No error reported.</div></pre></td></tr></table></figure>
-<p><strong>note:</strong></p>
+<p>错误信息类似于grub-install: error: /usr/lib/grub/x86_64-efi/modinfo.sh doesn’t exist. Please specify –target or –directory. 这样的话，就需要安装grub-pc或grub-efi之后再试。</p>
+<pre><code>sudo apt-get install grub-pc -y
+</code></pre><p><strong>note:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--efi-directory=DIR    use DIR as the EFI System Partition root</div></pre></td></tr></table></figure>
 <p>生成grub.cfg</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo grub-mkconfig -o /mnt/boot/grub/grub.cfg</div></pre></td></tr></table></figure>
@@ -1477,151 +1537,6 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
       <category term="免费" scheme="https://ygcaicn.github.io/tags/%E5%85%8D%E8%B4%B9/"/>
     
       <category term="QQ空间" scheme="https://ygcaicn.github.io/tags/QQ%E7%A9%BA%E9%97%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown Syntax Tutorial</title>
-    <link href="https://ygcaicn.github.io/%E8%AF%AD%E8%A8%80/Syntax.html"/>
-    <id>https://ygcaicn.github.io/语言/Syntax.html</id>
-    <published>2016-10-15T14:22:01.000Z</published>
-    <updated>2017-05-04T03:19:28.975Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="MarkDown语法简明"><a href="#MarkDown语法简明" class="headerlink" title="MarkDown语法简明"></a>MarkDown语法简明</h2><h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1><p>This is first paragraph!</p>
-<p>This is second paragraph!</p>
-<p>1.段落的前后必须有一个空行，否则换行符会被替换为空格<br>2.行内要换行的话，必须在上一行的最后空上至少两个空格<br>或者加入<code>&lt;br/&gt;</code><br>实现换行.</p>
-<p>3. Markdown 中的多数区块都需要在两个空行之间。</p>
-<a id="more"></a>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="我在左侧加了空格"><a href="#我在左侧加了空格" class="headerlink" title="我在左侧加了空格"></a>我在左侧加了空格</h2><h1 id="一级标题的另一种写法H1"><a href="#一级标题的另一种写法H1" class="headerlink" title="一级标题的另一种写法H1"></a>一级标题的另一种写法H1</h1><h2 id="二级标题H2"><a href="#二级标题H2" class="headerlink" title="二级标题H2"></a>二级标题H2</h2><blockquote>
-<p>引用的内容（blockquote）<br>引用内容<br>引用的嵌套</p>
-<blockquote>
-<p>内部的quote<br>内部的引用</p>
-</blockquote>
-</blockquote>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>1.第一条<br>2.第二条<br>4.第三条  </p>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
-<li>第一条  </li>
-</ul>
-<ul>
-<li>第二条  </li>
-</ul>
-<ul>
-<li>第三条</li>
-</ul>
-<h2 id="嵌套的列表"><a href="#嵌套的列表" class="headerlink" title="嵌套的列表"></a>嵌套的列表</h2><ol>
-<li>第一条  <ul>
-<li>第一例  </li>
-<li>第二例</li>
-</ul>
-</li>
-<li>第二条  <ol>
-<li>第二例</li>
-<li>第二例</li>
-<li>第三例</li>
-</ol>
-</li>
-<li>第三条  </li>
-</ol>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>#include&lt;iostream&gt;
-#using namespce std;
-int main()
-{
-    cout&lt;&lt;&quot;Hello world&quot;&lt;&lt;end;
-    return 0;
-}
-</code></pre><p>通过前面的Table来写代码块</p>
-<p><code>#include&lt;iostream&gt;</code><br><code>#using namespce std;</code><br><code>int main()</code><br><code>{</code><br><code>cout&lt;&lt;&quot;Hello world&quot;&lt;&lt;end;</code><br><code>return 0;</code><br><code>}</code>  </p>
-<p>另一种形式</p>
-<p>##分割线</p>
-<p>两种形式</p>
-<hr>
-<hr>
-<p>都必须单独占一个段落，每个分割符为一个区块，前后必须空行，中间无所谓</p>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="url">text</a></p>
-<ul>
-<li>行内式</li>
-</ul>
-<p>网页链接：</p>
-<p>I like <a href="www.google.com">Google</a></p>
-<p>This is my <a href="www.cumtpn.com">homepage</a></p>
-<p>文件连接：</p>
-<p><a href="./calcu.png">icon</a></p>
-<p>包含Title的连接</p>
-<p><a href="www.google.com" title="Google">google</a></p>
-<ul>
-<li>参考式</li>
-</ul>
-<p><a href="www.google.com" title="Google">Google</a></p>
-<p><a href="www.baidu.com" title="baidu">Baidu</a></p>
-<p><a href="www.github.com" title="GitHub">GitHub</a></p>
-<ul>
-<li>自动链接</li>
-</ul>
-<p>www.google.com</p>
-<www.google.com>
-
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
-<p>name@gmail.com</p>
-<p><a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x6e;&#x61;&#x6d;&#x65;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x6e;&#x61;&#x6d;&#x65;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="./calcu.png" alt="icon"></p>
-<p>嵌入Html</p>
-<p><img src="/img/calcu.png" alt="This is a calcular" title="calcular" width="100" length="100"></p>
-<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p><em>斜体强调</em></p>
-<p><strong>粗体强调</strong></p>
-<p>*<em>粗体强调*</em></p>
-<h2 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h2><p>例如  </p>
-<p>#标题</p>
-<p>*<em>粗体强调*</em></p>
-<p>##删除线</p>
-<p>~删除线删除这些文字~</p>
-<p>##多行代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span></div><div class="line">&#123;     </div><div class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world!"</span>&lt;&lt;<span class="built_in">endl</span>;  </div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="TaskList"><a href="#TaskList" class="headerlink" title="TaskList"></a>TaskList</h2><ul>
-<li>[ ] Eat</li>
-<li>[x] Code<ul>
-<li>[x] HTML</li>
-<li>[x] CSS</li>
-<li>[x] JavaScript</li>
-</ul>
-</li>
-<li>[ ] Sleep</li>
-</ul>
-<h2 id="Graphy"><a href="#Graphy" class="headerlink" title="Graphy"></a>Graphy</h2><table>
-<thead>
-<tr>
-<th>name</th>
-<th>age</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LearnShare</td>
-<td>12</td>
-</tr>
-<tr>
-<td>Mike</td>
-<td>32</td>
-</tr>
-</tbody>
-</table>
-</www.google.com>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;MarkDown语法简明&quot;&gt;&lt;a href=&quot;#MarkDown语法简明&quot; class=&quot;headerlink&quot; title=&quot;MarkDown语法简明&quot;&gt;&lt;/a&gt;MarkDown语法简明&lt;/h2&gt;&lt;h1 id=&quot;Title&quot;&gt;&lt;a href=&quot;#Title&quot; class=&quot;headerlink&quot; title=&quot;Title&quot;&gt;&lt;/a&gt;Title&lt;/h1&gt;&lt;p&gt;This is first paragraph!&lt;/p&gt;
-&lt;p&gt;This is second paragraph!&lt;/p&gt;
-&lt;p&gt;1.段落的前后必须有一个空行，否则换行符会被替换为空格&lt;br&gt;2.行内要换行的话，必须在上一行的最后空上至少两个空格&lt;br&gt;或者加入&lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;&lt;br/&gt;实现换行.&lt;/p&gt;
-&lt;p&gt;3. Markdown 中的多数区块都需要在两个空行之间。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="语言" scheme="https://ygcaicn.github.io/categories/%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="MarkDown" scheme="https://ygcaicn.github.io/tags/MarkDown/"/>
-    
-      <category term="github" scheme="https://ygcaicn.github.io/tags/github/"/>
     
   </entry>
   
