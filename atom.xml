@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2017-06-01T01:46:51.351Z</updated>
+  <updated>2017-06-01T01:51:07.418Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="https://ygcaicn.github.io/Linux/win10-1703-grub.html"/>
     <id>https://ygcaicn.github.io/Linux/win10-1703-grub.html</id>
     <published>2017-06-01T12:32:55.000Z</published>
-    <updated>2017-06-01T01:46:51.351Z</updated>
+    <updated>2017-06-01T01:51:07.418Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
+    <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p><img src="http://i.imgur.com/x5fAy7r.png" alt="Imgur"></p>
+<p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
 <p>往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。</p>
 <p>好在我还有移动硬盘的linux，当然你用live盘也是可以的。进去移动硬盘linux后按照上篇文章讲的方法修复了grub。再次进入bios选择ubuntu启动，没什么问题一下就进入了grub熟悉的界面。成功进入了内置硬盘的linuxmint。<br><a id="more"></a></p>
 <p>本来以为故事到此就结束了呢，骂也骂过了，问题也修复了，万万万万没有想到的是我从win关机之后首先发现了第一个小问题：bios的启动项顺序发生了变化，以往我都是将grub放到第一启动项的，现在变成win是第一项。<br>然后接着来了一个大问题：第二项的ubuntu选项（也就是grub引导程序grubx64.efi）选择从该项启动以后又直接进入了win。到这时候我就已经有了不好的预感。同样从硬盘进入linux看看什么情况，先修复了grub</p>
@@ -60,7 +61,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;关于win10调包grub引导的过程&quot;&gt;&lt;a href=&quot;#关于win10调包grub引导的过程&quot; class=&quot;headerlink&quot; title=&quot;关于win10调包grub引导的过程&quot;&gt;&lt;/a&gt;关于win10调包grub引导的过程&lt;/h1&gt;&lt;p&gt;2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。&lt;/p&gt;
+      &lt;h1 id=&quot;关于win10调包grub引导的过程&quot;&gt;&lt;a href=&quot;#关于win10调包grub引导的过程&quot; class=&quot;headerlink&quot; title=&quot;关于win10调包grub引导的过程&quot;&gt;&lt;/a&gt;关于win10调包grub引导的过程&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/x5fAy7r.png&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。&lt;/p&gt;
 &lt;p&gt;往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。&lt;/p&gt;
 &lt;p&gt;好在我还有移动硬盘的linux，当然你用live盘也是可以的。进去移动硬盘linux后按照上篇文章讲的方法修复了grub。再次进入bios选择ubuntu启动，没什么问题一下就进入了grub熟悉的界面。成功进入了内置硬盘的linuxmint。&lt;br&gt;
     
