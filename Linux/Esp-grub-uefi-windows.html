@@ -19,7 +19,7 @@ ESP分区被格式化意味着无法进入系统">
 <meta property="og:site_name" content="Jachin">
 <meta property="og:description" content="ESP分区存放的UEFI引导程序
 ESP分区被格式化意味着无法进入系统">
-<meta property="og:updated_time" content="2017-06-01T01:43:29.725Z">
+<meta property="og:updated_time" content="2017-06-01T02:05:20.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ESP分区格式化，修复Windows&Linux引导">
 <meta name="twitter:description" content="ESP分区存放的UEFI引导程序
@@ -164,7 +164,7 @@ ESP分区被格式化意味着无法进入系统">
 <p>成功执行结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Installing for x86_64-efi platform.</div><div class="line">Installation finished. No error reported.</div></pre></td></tr></table></figure>
 <p>错误信息类似于grub-install: error: /usr/lib/grub/x86_64-efi/modinfo.sh doesn’t exist. Please specify –target or –directory. 这样的话，就需要安装grub-pc或grub-efi之后再试。</p>
-<pre><code>sudo apt-get install grub-pc -y
+<pre><code>sudo apt-get install grub-efi -y
 </code></pre><p><strong>note:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--efi-directory=DIR    use DIR as the EFI System Partition root</div></pre></td></tr></table></figure>
 <p>生成grub.cfg</p>
