@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2017-06-01T02:15:09.338Z</updated>
+  <updated>2017-07-22T12:22:53.184Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IP视频解析+去广告教程</title>
+    <link href="https://ygcaicn.github.io/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html"/>
+    <id>https://ygcaicn.github.io/网络/VIP视频解析-去广告.html</id>
+    <published>2017-07-22T12:32:55.000Z</published>
+    <updated>2017-07-22T12:22:53.184Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="IP视频解析-去广告教程"><a href="#IP视频解析-去广告教程" class="headerlink" title="IP视频解析+去广告教程"></a>IP视频解析+去广告教程</h1><h2 id="Step1-打开视频网站"><a href="#Step1-打开视频网站" class="headerlink" title="Step1.打开视频网站"></a>Step1.打开视频网站</h2><p>这里以爱奇艺为例 <a href="http://www.iqiyi.com" target="_blank" rel="external">http://www.iqiyi.com</a> 打开首页看到类似下面的界面：</p>
+<p><img src="http://i.imgur.com/ZQhMuKf.png" alt="Imgur"></p>
+<h2 id="Step2-找到你要看的视频"><a href="#Step2-找到你要看的视频" class="headerlink" title="Step2.找到你要看的视频"></a>Step2.找到你要看的视频</h2><p>在视频网站中找到你想要看的视频，看到类似下面的界面：</p>
+<p><img src="http://i.imgur.com/tmSUnQl.png" alt="Imgur"></p>
+<ul>
+<li><code>点击1</code> 指的地方，这里可以看到选择是一个需要VIP才能观看的《河神EP04》，这里无意冒犯出版商版权，多有得罪，提倡大家购买正版观看！</li>
+<li><code>复制2</code> 指的链接</li>
+</ul>
+<h2 id="Step3-打开VIP视频解析-去广告"><a href="#Step3-打开VIP视频解析-去广告" class="headerlink" title="Step3.打开VIP视频解析+去广告"></a>Step3.打开<a href="http://blog.cumtpn.com/vipvideo" target="_blank" rel="external">VIP视频解析+去广告</a></h2><p>将刚才复制的链接粘贴到输入框中，入下图所示：</p>
+<p><img src="http://i.imgur.com/y3Vo4ll.png" alt="Imgur"></p>
+<ul>
+<li><code>1→</code>为输入框，输入在视频网站找到的视频链接</li>
+<li><code>2→</code>为解析接口选择，在无法解析的情况下可以在这里换解析接口，另外支持自定义解析接口。</li>
+<li><code>3→</code>为理解播放按钮，点击即可观看，并且没有广告哟！</li>
+</ul>
+<p><img src="http://i.imgur.com/vsrxmVT.png" alt="Imgur"><br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;IP视频解析-去广告教程&quot;&gt;&lt;a href=&quot;#IP视频解析-去广告教程&quot; class=&quot;headerlink&quot; title=&quot;IP视频解析+去广告教程&quot;&gt;&lt;/a&gt;IP视频解析+去广告教程&lt;/h1&gt;&lt;h2 id=&quot;Step1-打开视频网站&quot;&gt;&lt;a href=&quot;#Step1-打开视频网站&quot; class=&quot;headerlink&quot; title=&quot;Step1.打开视频网站&quot;&gt;&lt;/a&gt;Step1.打开视频网站&lt;/h2&gt;&lt;p&gt;这里以爱奇艺为例 &lt;a href=&quot;http://www.iqiyi.com&quot;&gt;http://www.iqiyi.com&lt;/a&gt; 打开首页看到类似下面的界面：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ZQhMuKf.png&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Step2-找到你要看的视频&quot;&gt;&lt;a href=&quot;#Step2-找到你要看的视频&quot; class=&quot;headerlink&quot; title=&quot;Step2.找到你要看的视频&quot;&gt;&lt;/a&gt;Step2.找到你要看的视频&lt;/h2&gt;&lt;p&gt;在视频网站中找到你想要看的视频，看到类似下面的界面：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/tmSUnQl.png&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;点击1&lt;/code&gt; 指的地方，这里可以看到选择是一个需要VIP才能观看的《河神EP04》，这里无意冒犯出版商版权，多有得罪，提倡大家购买正版观看！&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;复制2&lt;/code&gt; 指的链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Step3-打开VIP视频解析-去广告&quot;&gt;&lt;a href=&quot;#Step3-打开VIP视频解析-去广告&quot; class=&quot;headerlink&quot; title=&quot;Step3.打开VIP视频解析+去广告&quot;&gt;&lt;/a&gt;Step3.打开&lt;a href=&quot;http://blog.cumtpn.com/vipvideo&quot;&gt;VIP视频解析+去广告&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;将刚才复制的链接粘贴到输入框中，入下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/y3Vo4ll.png&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1→&lt;/code&gt;为输入框，输入在视频网站找到的视频链接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2→&lt;/code&gt;为解析接口选择，在无法解析的情况下可以在这里换解析接口，另外支持自定义解析接口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3→&lt;/code&gt;为理解播放按钮，点击即可观看，并且没有广告哟！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/vsrxmVT.png&quot; alt=&quot;Imgur&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网络" scheme="https://ygcaicn.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="VIP视频" scheme="https://ygcaicn.github.io/tags/VIP%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
   
   <entry>
     <title>关于win10version1703 多引导（grub引导）的问题</title>
@@ -1488,59 +1541,6 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
       <category term="shadowsocks" scheme="https://ygcaicn.github.io/tags/shadowsocks/"/>
     
       <category term="资源下载" scheme="https://ygcaicn.github.io/tags/%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>免费设置QQ空间音乐记 qzone music</title>
-    <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/qzonemusic.html"/>
-    <id>https://ygcaicn.github.io/杂项/qzonemusic.html</id>
-    <published>2016-10-16T23:32:07.000Z</published>
-    <updated>2016-10-16T14:03:20.729Z</updated>
-    
-    <content type="html"><![CDATA[<p>如今有了智能终端，Web QQ空间好像越来越冷落。可是QQ空间的背景音乐仍然是要收费的，奈我何，发现了腾讯还是给屌丝们留了一条活路！！！</p>
-<p>按照以下步骤免费获得QQ空间背景音乐。</p>
-<h2 id="a-进入QQ空间"><a href="#a-进入QQ空间" class="headerlink" title="a.进入QQ空间"></a>a.进入QQ空间</h2><p><img src="http://pubcdn.cumtpn.com/SDfXASCFDXASCRXF2.png-blog" alt=""></p>
-<a id="more"></a>
-<h2 id="b-点击背景音乐，进入背景音乐设置的页面"><a href="#b-点击背景音乐，进入背景音乐设置的页面" class="headerlink" title="b.点击背景音乐，进入背景音乐设置的页面"></a>b.点击背景音乐，进入背景音乐设置的页面</h2><p><img src="http://pubcdn.cumtpn.com/DSACSXdSFDGCSDFDASDXSD.png-blog" alt=""></p>
-<h2 id="c-然后点击-添加网络音乐"><a href="#c-然后点击-添加网络音乐" class="headerlink" title="c.然后点击-添加网络音乐"></a>c.然后点击-添加网络音乐</h2><p><img src="http://pubcdn.cumtpn.com/afsdxfadx4.png-blog" alt=""></p>
-<p>有三个选项要填：</p>
-<ul>
-<li><p>歌曲链接 最重要的就是这个，这里需要一个MP3外链</p>
-<pre><code>http://pubcdn.cumtpn.com/G.E.M.%20%E9%82%93%E7%B4%AB%E6%A3%8B%20-%20%E7%94%BB%20%28Live%20Piano%20Session%20II%29.mp3
-</code></pre><p>这是邓紫棋-画的外链</p>
-</li>
-<li><p>歌曲名  随便填就是啦</p>
-</li>
-<li>歌手名 随便填就是啦</li>
-</ul>
-<p>填完点击添加就是了。就是这么简单你会发现你已经添加上啦！</p>
-<h2 id="添加成功"><a href="#添加成功" class="headerlink" title="添加成功"></a>添加成功</h2><p>添加成功刷新QQ空间就能直接播放额。这是添加成功的图：</p>
-<p><img src="http://pubcdn.cumtpn.com/XFFAXSS3.png-blog" alt=""></p>
-<p>不过不幸的是网络上的mp3外链不好找，像什么 <code>百度音乐</code>、<code>QQ音乐</code>、<code>天天动听</code>之类的是不会轻易放出外链的。</p>
-<h2 id="下面是我在我的七牛CDN公开的外链："><a href="#下面是我在我的七牛CDN公开的外链：" class="headerlink" title="下面是我在我的七牛CDN公开的外链："></a>下面是我在我的七牛CDN公开的外链：</h2><p>  孙露-怎样遇见你：</p>
-<pre><code>http://pubcdn.cumtpn.com/%E5%AD%99%E9%9C%B2%20-%20%E6%80%8E%E6%A0%B7%E9%81%87%E8%A7%81%E4%BD%A0.mp3
-</code></pre><p>  邓紫棋-画：</p>
-<pre><code>http://pubcdn.cumtpn.com/G.E.M.%20%E9%82%93%E7%B4%AB%E6%A3%8B%20-%20%E7%94%BB%20%28Live%20Piano%20Session%20II%29.mp3
-</code></pre><p>有需要的欢迎留言歌曲名+歌手，我免费为大家添加外链！！！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如今有了智能终端，Web QQ空间好像越来越冷落。可是QQ空间的背景音乐仍然是要收费的，奈我何，发现了腾讯还是给屌丝们留了一条活路！！！&lt;/p&gt;
-&lt;p&gt;按照以下步骤免费获得QQ空间背景音乐。&lt;/p&gt;
-&lt;h2 id=&quot;a-进入QQ空间&quot;&gt;&lt;a href=&quot;#a-进入QQ空间&quot; class=&quot;headerlink&quot; title=&quot;a.进入QQ空间&quot;&gt;&lt;/a&gt;a.进入QQ空间&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://pubcdn.cumtpn.com/SDfXASCFDXASCRXF2.png-blog&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂项" scheme="https://ygcaicn.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
-    
-    
-      <category term="skill" scheme="https://ygcaicn.github.io/tags/skill/"/>
-    
-      <category term="免费" scheme="https://ygcaicn.github.io/tags/%E5%85%8D%E8%B4%B9/"/>
-    
-      <category term="QQ空间" scheme="https://ygcaicn.github.io/tags/QQ%E7%A9%BA%E9%97%B4/"/>
     
   </entry>
   
