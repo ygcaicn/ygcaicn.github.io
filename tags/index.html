@@ -55,10 +55,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "http://imgur.com/NTZyO4L.jpg,http://imgur.com/MitleI9.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -122,19 +144,15 @@
         <!-- 
         <div id='tag_cloud' class="tags">
             
-                <a href="#Linux版本" title="Linux版本" rel="1">Linux版本</a>
-            
-                <a href="#Linux下载" title="Linux下载" rel="1">Linux下载</a>
-            
                 <a href="#Grub2 Linux Windows" title="Grub2 Linux Windows" rel="1">Grub2 Linux Windows</a>
             
-                <a href="#MarkDown" title="MarkDown" rel="1">MarkDown</a>
-            
-                <a href="#github" title="github" rel="3">github</a>
-            
-                <a href="#Machine Learning" title="Machine Learning" rel="1">Machine Learning</a>
+                <a href="#磁盘" title="磁盘" rel="1">磁盘</a>
             
                 <a href="#Linux" title="Linux" rel="3">Linux</a>
+            
+                <a href="#分区" title="分区" rel="1">分区</a>
+            
+                <a href="#VIP视频" title="VIP视频" rel="1">VIP视频</a>
             
                 <a href="#openwrt" title="openwrt" rel="1">openwrt</a>
             
@@ -144,25 +162,31 @@
             
                 <a href="#LEDE" title="LEDE" rel="1">LEDE</a>
             
-                <a href="#Acm" title="Acm" rel="1">Acm</a>
+                <a href="#Machine Learning" title="Machine Learning" rel="1">Machine Learning</a>
             
-                <a href="#编程" title="编程" rel="1">编程</a>
+                <a href="#MarkDown" title="MarkDown" rel="1">MarkDown</a>
             
-                <a href="#磁盘" title="磁盘" rel="1">磁盘</a>
-            
-                <a href="#分区" title="分区" rel="1">分区</a>
+                <a href="#github" title="github" rel="3">github</a>
             
                 <a href="#C++" title="C++" rel="1">C++</a>
             
                 <a href="#练习" title="练习" rel="1">练习</a>
             
-                <a href="#github入门" title="github入门" rel="1">github入门</a>
+                <a href="#CentOS7" title="CentOS7" rel="1">CentOS7</a>
             
-                <a href="#置顶文章" title="置顶文章" rel="1">置顶文章</a>
+                <a href="#防火墙" title="防火墙" rel="1">防火墙</a>
+            
+                <a href="#firewall" title="firewall" rel="1">firewall</a>
+            
+                <a href="#Acm" title="Acm" rel="1">Acm</a>
+            
+                <a href="#编程" title="编程" rel="1">编程</a>
             
                 <a href="#Markdown" title="Markdown" rel="1">Markdown</a>
             
-                <a href="#hexo" title="hexo" rel="2">hexo</a>
+                <a href="#github入门" title="github入门" rel="1">github入门</a>
+            
+                <a href="#置顶文章" title="置顶文章" rel="1">置顶文章</a>
             
                 <a href="#linux" title="linux" rel="1">linux</a>
             
@@ -172,6 +196,8 @@
             
                 <a href="#raspberry" title="raspberry" rel="1">raspberry</a>
             
+                <a href="#hexo" title="hexo" rel="2">hexo</a>
+            
                 <a href="#博客" title="博客" rel="1">博客</a>
             
                 <a href="#服务器" title="服务器" rel="1">服务器</a>
@@ -180,19 +206,17 @@
             
                 <a href="#LAMP" title="LAMP" rel="1">LAMP</a>
             
+                <a href="#markdown" title="markdown" rel="1">markdown</a>
+            
+                <a href="#代理" title="代理" rel="2">代理</a>
+            
+                <a href="#python" title="python" rel="1">python</a>
+            
                 <a href="#skill" title="skill" rel="1">skill</a>
             
                 <a href="#免费" title="免费" rel="1">免费</a>
             
                 <a href="#QQ空间" title="QQ空间" rel="1">QQ空间</a>
-            
-                <a href="#Python3" title="Python3" rel="1">Python3</a>
-            
-                <a href="#正则表达式" title="正则表达式" rel="1">正则表达式</a>
-            
-                <a href="#IP伪装" title="IP伪装" rel="1">IP伪装</a>
-            
-                <a href="#代理" title="代理" rel="2">代理</a>
             
                 <a href="#科学上网" title="科学上网" rel="1">科学上网</a>
             
@@ -200,23 +224,21 @@
             
                 <a href="#资源下载" title="资源下载" rel="1">资源下载</a>
             
-                <a href="#python" title="python" rel="1">python</a>
+                <a href="#Python3" title="Python3" rel="1">Python3</a>
             
-                <a href="#CentOS7" title="CentOS7" rel="1">CentOS7</a>
+                <a href="#正则表达式" title="正则表达式" rel="1">正则表达式</a>
             
-                <a href="#防火墙" title="防火墙" rel="1">防火墙</a>
-            
-                <a href="#firewall" title="firewall" rel="1">firewall</a>
-            
-                <a href="#markdown" title="markdown" rel="1">markdown</a>
-            
-                <a href="#stm32" title="stm32" rel="1">stm32</a>
+                <a href="#IP伪装" title="IP伪装" rel="1">IP伪装</a>
             
                 <a href="#Grub2" title="Grub2" rel="1">Grub2</a>
             
                 <a href="#Windows" title="Windows" rel="1">Windows</a>
             
-                <a href="#VIP视频" title="VIP视频" rel="1">VIP视频</a>
+                <a href="#Linux版本" title="Linux版本" rel="1">Linux版本</a>
+            
+                <a href="#Linux下载" title="Linux下载" rel="1">Linux下载</a>
+            
+                <a href="#stm32" title="stm32" rel="1">stm32</a>
             
         </div> 
         -->
@@ -1942,6 +1964,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

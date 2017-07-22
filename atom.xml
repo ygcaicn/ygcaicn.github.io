@@ -73,7 +73,7 @@
     <link href="https://ygcaicn.github.io/Linux/win10-1703-grub.html"/>
     <id>https://ygcaicn.github.io/Linux/win10-1703-grub.html</id>
     <published>2017-06-01T12:32:55.000Z</published>
-    <updated>2017-06-01T02:15:09.338Z</updated>
+    <updated>2017-06-01T02:15:58.515Z</updated>
     
     <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
 <p>往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。</p>
@@ -467,9 +467,9 @@
       <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
-    
       <category term="磁盘" scheme="https://ygcaicn.github.io/tags/%E7%A3%81%E7%9B%98/"/>
+    
+      <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
     
       <category term="分区" scheme="https://ygcaicn.github.io/tags/%E5%88%86%E5%8C%BA/"/>
     
@@ -506,13 +506,13 @@
       <category term="Python3" scheme="https://ygcaicn.github.io/categories/Python3/"/>
     
     
+      <category term="代理" scheme="https://ygcaicn.github.io/tags/%E4%BB%A3%E7%90%86/"/>
+    
       <category term="Python3" scheme="https://ygcaicn.github.io/tags/Python3/"/>
     
       <category term="正则表达式" scheme="https://ygcaicn.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
       <category term="IP伪装" scheme="https://ygcaicn.github.io/tags/IP%E4%BC%AA%E8%A3%85/"/>
-    
-      <category term="代理" scheme="https://ygcaicn.github.io/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
@@ -839,7 +839,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#49;&#50;&#x33;&#64;&#101;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#49;&#50;&#x33;&#64;&#101;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#49;&#x32;&#51;&#x40;&#x65;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#49;&#x32;&#51;&#x40;&#x65;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>

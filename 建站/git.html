@@ -74,10 +74,32 @@ Windows：下载
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "http://imgur.com/NTZyO4L.jpg,http://imgur.com/MitleI9.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -132,7 +154,7 @@ Windows：下载
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://i.imgur.com/tudQUov.jpg" rel="gallery_cj3drg0g2000nmcevgep6l32p">
+      <a class="article-gallery-img fancybox" href="http://i.imgur.com/tudQUov.jpg" rel="gallery_cj5f9t33u000vgrevz0qudibk">
         <img src="http://i.imgur.com/tudQUov.jpg" itemprop="image">
       </a>
     
@@ -182,7 +204,7 @@ Windows：下载
 <p><img src="/img/markdown-img-paste-20161016161851265.png" alt=""><br><img src="/img/markdown-img-paste-20161016162035764.png" alt=""></p>
 <p>完成以后你的远程仓库也就建好了。不过你还需要将刚才建立的本地仓库与远程的仓库建立连接。那么你就需要你的远程仓库地址</p>
 <p><img src="/img/markdown-img-paste-20161016162352701.png" alt=""><br>连接支持HTTPs和SSH两种协议，推荐使用ＳＳＨ连接。</p>
-<p>我的连接是<a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#103;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;&#58;&#x79;&#x67;&#x63;&#97;&#105;&#99;&#x6e;&#x2f;&#109;&#121;&#x67;&#105;&#116;&#x2e;&#103;&#105;&#x74;">&#103;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;&#58;&#x79;&#x67;&#x63;&#97;&#105;&#99;&#x6e;&#x2f;&#109;&#121;&#x67;&#105;&#116;&#x2e;&#103;&#105;&#x74;</a>, （这用的是SSH连接地址）</p>
+<p>我的连接是<a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x67;&#x69;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;&#58;&#121;&#x67;&#99;&#97;&#105;&#x63;&#x6e;&#47;&#109;&#x79;&#x67;&#x69;&#x74;&#46;&#x67;&#105;&#116;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;&#58;&#121;&#x67;&#99;&#97;&#105;&#x63;&#x6e;&#47;&#109;&#x79;&#x67;&#x69;&#x74;&#46;&#x67;&#105;&#116;</a>, （这用的是SSH连接地址）</p>
 <h1 id="本地仓库与远程仓库连接-connect-a-remote-repository"><a href="#本地仓库与远程仓库连接-connect-a-remote-repository" class="headerlink" title="本地仓库与远程仓库连接( connect a remote repository )"></a>本地仓库与远程仓库连接( connect a remote repository )</h1><pre><code>#打开git shell
 cd D:/github/mygit
 git remote add origin git@github.com:ygcaicn/mygit.git
@@ -439,6 +461,9 @@ git push origin master //  同步到远程库
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

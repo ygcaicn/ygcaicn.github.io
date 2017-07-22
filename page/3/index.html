@@ -54,10 +54,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "http://imgur.com/NTZyO4L.jpg,http://imgur.com/MitleI9.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -139,7 +161,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/杂项/qzonemusic.html"><img src="http://lorempixel.com/750/450/city/10" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/杂项/qzonemusic.html"><img src="http://lorempixel.com/750/450/city/1" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -204,7 +226,7 @@ a.进入QQ空间
 
           
             <div class="entry-thumbnail">
-              <a href="/语言/Syntax.html"><img src="http://lorempixel.com/750/450/city/3" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/语言/Syntax.html"><img src="http://lorempixel.com/750/450/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -270,7 +292,7 @@ This is second paragraph!
 
           
             <div class="entry-thumbnail">
-              <a href="/网络/proxy.html"><img src="http://lorempixel.com/750/450/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/网络/proxy.html"><img src="http://lorempixel.com/750/450/city/9" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -330,7 +352,7 @@ This is second paragraph!
 
           
             <div class="entry-thumbnail">
-              <a href="/uncategorized/about.html"><img src="http://lorempixel.com/750/450/city/9" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/uncategorized/about.html"><img src="http://lorempixel.com/750/450/city/2" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -539,7 +561,7 @@ Mac：terminal : brew install git
 
           
             <div class="entry-thumbnail">
-              <a href="/uncategorized/hello-world.html"><img src="http://lorempixel.com/750/450/city/6" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/uncategorized/hello-world.html"><img src="http://lorempixel.com/750/450/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -832,6 +854,9 @@ Mac：terminal : brew install git
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
