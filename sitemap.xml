@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ygcaicn.github.io/about/index.html</loc>
+    
+    <lastmod>2017-10-24T04:35:37.306Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ygcaicn.github.io/uncategorized/about.html</loc>
     
-    <lastmod>2017-10-24T04:27:55.637Z</lastmod>
+    <lastmod>2017-10-24T04:30:41.780Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</loc>
     
     <lastmod>2017-06-01T02:05:20.599Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/about/index.html</loc>
-    
-    <lastmod>2017-05-15T04:33:12.532Z</lastmod>
     
   </url>
   

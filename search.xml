@@ -1686,10 +1686,12 @@ int main()
       <url>https://ygcaicn.github.io/uncategorized/about.html</url>
       <content type="html"><![CDATA[<ul>
 <li><h1 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h1><ul>
-<li>山东大学 控制科学与工程研究生</li>
+<li>山东大学 控制科学与工程研究生<ul>
 <li>中国矿业大学（物理系应用物理学）本科四年级在读生</li>
 <li>基于WIFI的室内定位技术</li>
 <li>恋爱ing<a id="more"></a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -1719,9 +1721,9 @@ int main()
 </ul>
 <pre><code>- ## 工具类
 
-    - git 
+    - git
     - MATLAB
-    - EDA类 
+    - EDA类
     - Linux
     - ~~各类科学上网工具~~
 </code></pre><ul>
