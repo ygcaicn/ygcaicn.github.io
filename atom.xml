@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2017-10-24T07:21:53.266Z</updated>
+  <updated>2017-10-24T07:29:56.134Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="https://ygcaicn.github.io/Linux/TCP-IP.html"/>
     <id>https://ygcaicn.github.io/Linux/TCP-IP.html</id>
     <published>2017-10-24T12:32:55.000Z</published>
-    <updated>2017-10-24T07:21:53.266Z</updated>
+    <updated>2017-10-24T07:29:56.134Z</updated>
     
     <content type="html"><![CDATA[<h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><p>维基百科：<a href="https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F" target="_blank" rel="external">https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F</a></p>
 <p>互联网协议族（英语：Internet Protocol Suite，缩写IPS）是一个网络通信模型，以及一整个网络传输协议家族，为互联网的基础通信架构。它常被通称为TCP/IP协议族（英语：TCP/IP Protocol Suite，或TCP/IP Protocols），简称TCP/IP[2]。因为该协议家族的两个核心协议：TCP（传输控制协议）和IP（网际协议），为该家族中最早通过的标准[3]。由于在网络通讯协议普遍采用分层的结构，当多个层次的协议共同工作时，类似计算机科学中的堆栈，因此又被称为TCP/IP协议栈（英语：TCP/IP Protocol Stack）</p>
 <p>整个通信网络的任务，可以划分成不同的功能区块，即所谓的层级（layer）。用于互联网的协议可以比照TCP/IP参考模型进行分类。TCP/IP协议栈起始于第三层协议IP（网际协议）。</p>
 <a id="more"></a>
 <p>TCP/IP参考模型是一个抽象的分层模型，这个模型中，所有的TCP/IP系列网络协议都被归类到4个抽象的”层”中。每一抽象层创建在低一层提供的服务上，并且为高一层提供服务。 完成一些特定的任务需要众多的协议协同工作，这些协议分布在参考模型的不同层中的，因此有时称它们为一个协议栈。 TCP/IP参考模型为TCP/IP协议栈订身制作。其中IP协议只关心如何使得数据能够跨越本地网络边界的问题，而不关心如何利用传输媒体，数据如何传输。整个TCP/IP协议栈则负责解决数据如何通过许许多多个点对点通路（一个点对点通路，也称为一”跳”, 1 hop）顺利传输，由此不同的网络成员能够在许多”跳”的基础上创建相互的数据通路。</p>
-<h2 id="因特网协议栈中的层"><a href="#因特网协议栈中的层" class="headerlink" title="因特网协议栈中的层"></a>因特网协议栈中的层</h2><p><img src="img/fsdafsdfw.png" alt="fsdafsdfw"></p>
+<h2 id="因特网协议栈中的层"><a href="#因特网协议栈中的层" class="headerlink" title="因特网协议栈中的层"></a>因特网协议栈中的层</h2><p><img src="../img/fsdafsdfw.png" alt="fsdafsdfw"></p>
 <hr>
 <p>4 .  应用层application layer 例如HTTP、FTP、DNS（如BGP和RIP这样的路由协议，尽管由于各种各样的原因它们分别运行在TCP和UDP上，仍然可以将它们看作网络层的一部分）</p>
 <p>3 . 传输层transport layer 例如TCP、UDP、RTP、SCTP（如OSPF这样的路由协议，尽管运行在IP上也可以看作是网络层的一部分）</p>
