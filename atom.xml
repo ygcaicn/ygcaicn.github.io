@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2017-08-26T20:00:36.934Z</updated>
+  <updated>2017-10-24T04:36:02.707Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -16,11 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://ygcaicn.github.io/uncategorized/about.html"/>
+    <id>https://ygcaicn.github.io/uncategorized/about.html</id>
+    <published>2017-10-24T04:36:02.707Z</published>
+    <updated>2017-10-24T04:36:02.707Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>VIP视频解析+去广告教程</title>
     <link href="https://ygcaicn.github.io/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html"/>
     <id>https://ygcaicn.github.io/网络/VIP视频解析-去广告.html</id>
     <published>2017-07-22T12:32:55.000Z</published>
-    <updated>2017-08-26T20:00:36.934Z</updated>
+    <updated>2017-08-31T15:45:07.390Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VIP视频解析-去广告教程"><a href="#VIP视频解析-去广告教程" class="headerlink" title="VIP视频解析+去广告教程"></a>VIP视频解析+去广告教程</h1><h2 id="Step1-打开视频网站"><a href="#Step1-打开视频网站" class="headerlink" title="Step1.打开视频网站"></a>Step1.打开视频网站</h2><p>这里以爱奇艺为例 <a href="http://www.iqiyi.com" target="_blank" rel="external">http://www.iqiyi.com</a> 打开首页看到类似下面的界面：</p>
 <p><img src="http://i.imgur.com/ZQhMuKf.png" alt="Imgur"></p>
@@ -467,9 +481,9 @@
       <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
     
     
-      <category term="磁盘" scheme="https://ygcaicn.github.io/tags/%E7%A3%81%E7%9B%98/"/>
-    
       <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
+    
+      <category term="磁盘" scheme="https://ygcaicn.github.io/tags/%E7%A3%81%E7%9B%98/"/>
     
       <category term="分区" scheme="https://ygcaicn.github.io/tags/%E5%88%86%E5%8C%BA/"/>
     
@@ -506,13 +520,13 @@
       <category term="Python3" scheme="https://ygcaicn.github.io/categories/Python3/"/>
     
     
-      <category term="代理" scheme="https://ygcaicn.github.io/tags/%E4%BB%A3%E7%90%86/"/>
-    
       <category term="Python3" scheme="https://ygcaicn.github.io/tags/Python3/"/>
     
       <category term="正则表达式" scheme="https://ygcaicn.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
       <category term="IP伪装" scheme="https://ygcaicn.github.io/tags/IP%E4%BC%AA%E8%A3%85/"/>
+    
+      <category term="代理" scheme="https://ygcaicn.github.io/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
@@ -839,7 +853,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#49;&#50;&#51;&#64;&#101;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#49;&#50;&#51;&#64;&#101;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x31;&#x32;&#x33;&#64;&#x65;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#x32;&#x33;&#64;&#x65;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
@@ -1504,43 +1518,6 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
       <category term="防火墙" scheme="https://ygcaicn.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
     
       <category term="firewall" scheme="https://ygcaicn.github.io/tags/firewall/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>科学上网</title>
-    <link href="https://ygcaicn.github.io/shadowsocks/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html"/>
-    <id>https://ygcaicn.github.io/shadowsocks/科学上网.html</id>
-    <published>2016-10-17T01:03:10.000Z</published>
-    <updated>2017-05-03T19:07:23.029Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="持续更新，Shadowsocks下载-2016最新版（影梭，小飞机客户端）"><a href="#持续更新，Shadowsocks下载-2016最新版（影梭，小飞机客户端）" class="headerlink" title="持续更新，Shadowsocks下载 2016最新版（影梭，小飞机客户端）"></a>持续更新，Shadowsocks下载 2016最新版（影梭，小飞机客户端）</h2><p><img src="http://pubcdn.cumtpn.com/Shadowsocks.jpg-blog" alt=""><br>Shadowsocks（中文名称：影梭）是一个安全的socks5代理，用于保护网络流量，是一个开源项目。</p>
-<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>快速（异步I/O和事件驱动程序）<br>安全（所有的流量都经过加密算法加密，支持自定义算法）<br>支持移动客户端（专为移动设备和无线网络优化）<br>跨平台（可运行于包括PC，Mac，手机（Android和iOS）和路由器（OpenWrt）在内的多种平台上）</p>
-<h3 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h3><h3 id="易于维护"><a href="#易于维护" class="headerlink" title="易于维护"></a>易于维护</h3><h2 id="按下Ctrl点击-gt-github地址"><a href="#按下Ctrl点击-gt-github地址" class="headerlink" title="按下Ctrl点击-&gt;github地址"></a><a href="https://github.com/shadowsocks" target="_blank" rel="external"><code>按下Ctrl点击-&gt;</code>github地址</a></h2><a id="more"></a>
-<h2 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h2><h3 id="按下Ctrl点击-gt-shadowsocks官网"><a href="#按下Ctrl点击-gt-shadowsocks官网" class="headerlink" title="按下Ctrl点击-&gt;shadowsocks官网"></a><a href="https://shadowsocks.org/" target="_blank" rel="external"><code>按下Ctrl点击-&gt;</code>shadowsocks官网</a></h3><h3 id="本站下载："><a href="#本站下载：" class="headerlink" title="本站下载："></a>本站下载：</h3><p><a href="https://shadowsocks.org/en/download/clients.html" target="_blank" rel="external"><code>按下Ctrl点击-&gt;</code>官方下载地址</a></p>
-<p><a href="http://pan.baidu.com/s/1eQhLCTO" target="_blank" rel="external"><code>按下Ctrl点击-&gt;</code>windows百度网盘下载</a> 密码: 7w8y<br>|<a href="http://pubcdn.cumtpn.com/Shadowsocks-3.3.3.zip" target="_blank" rel="external"><code>本地下载</code></a></p>
-<p><code>按下Ctrl点击-&gt;</code>Android客户端：<a href=""><code>Google Play</code></a> |<br><a href=""><code>百度网盘</code></a> 密码: | <a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v3.2.6/shadowsocks-nightly-3.2.6.apk" target="_blank" rel="external"><code>Ggithub</code></a></p>
-<p><a href=""><code>按下Ctrl点击-&gt;</code> <code>Linux 客户端:shadowsocks-gui</code></a></p>
-<p>[<code>按下Ctrl点击-&gt;</code>] iOS 客户端:shadowsocks-iOS | MobileShadowSocks</p>
-<p><strong>本页持续更</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;持续更新，Shadowsocks下载-2016最新版（影梭，小飞机客户端）&quot;&gt;&lt;a href=&quot;#持续更新，Shadowsocks下载-2016最新版（影梭，小飞机客户端）&quot; class=&quot;headerlink&quot; title=&quot;持续更新，Shadowsocks下载 2016最新版（影梭，小飞机客户端）&quot;&gt;&lt;/a&gt;持续更新，Shadowsocks下载 2016最新版（影梭，小飞机客户端）&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://pubcdn.cumtpn.com/Shadowsocks.jpg-blog&quot; alt=&quot;&quot;&gt;&lt;br&gt;Shadowsocks（中文名称：影梭）是一个安全的socks5代理，用于保护网络流量，是一个开源项目。&lt;/p&gt;
-&lt;h3 id=&quot;特性&quot;&gt;&lt;a href=&quot;#特性&quot; class=&quot;headerlink&quot; title=&quot;特性&quot;&gt;&lt;/a&gt;特性&lt;/h3&gt;&lt;p&gt;快速（异步I/O和事件驱动程序）&lt;br&gt;安全（所有的流量都经过加密算法加密，支持自定义算法）&lt;br&gt;支持移动客户端（专为移动设备和无线网络优化）&lt;br&gt;跨平台（可运行于包括PC，Mac，手机（Android和iOS）和路由器（OpenWrt）在内的多种平台上）&lt;/p&gt;
-&lt;h3 id=&quot;开源&quot;&gt;&lt;a href=&quot;#开源&quot; class=&quot;headerlink&quot; title=&quot;开源&quot;&gt;&lt;/a&gt;开源&lt;/h3&gt;&lt;h3 id=&quot;易于维护&quot;&gt;&lt;a href=&quot;#易于维护&quot; class=&quot;headerlink&quot; title=&quot;易于维护&quot;&gt;&lt;/a&gt;易于维护&lt;/h3&gt;&lt;h2 id=&quot;按下Ctrl点击-gt-github地址&quot;&gt;&lt;a href=&quot;#按下Ctrl点击-gt-github地址&quot; class=&quot;headerlink&quot; title=&quot;按下Ctrl点击-&amp;gt;github地址&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/shadowsocks&quot;&gt;&lt;code&gt;按下Ctrl点击-&amp;gt;&lt;/code&gt;github地址&lt;/a&gt;&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="shadowsocks" scheme="https://ygcaicn.github.io/categories/shadowsocks/"/>
-    
-    
-      <category term="科学上网" scheme="https://ygcaicn.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-      <category term="shadowsocks" scheme="https://ygcaicn.github.io/tags/shadowsocks/"/>
-    
-      <category term="资源下载" scheme="https://ygcaicn.github.io/tags/%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/"/>
     
   </entry>
   

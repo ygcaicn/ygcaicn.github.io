@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title></title>
+      <url>https://ygcaicn.github.io/uncategorized/about.html</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[VIP视频解析+去广告教程]]></title>
       <url>https://ygcaicn.github.io/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html</url>
       <content type="html"><![CDATA[<h1 id="VIP视频解析-去广告教程"><a href="#VIP视频解析-去广告教程" class="headerlink" title="VIP视频解析+去广告教程"></a>VIP视频解析+去广告教程</h1><h2 id="Step1-打开视频网站"><a href="#Step1-打开视频网站" class="headerlink" title="Step1.打开视频网站"></a>Step1.打开视频网站</h2><p>这里以爱奇艺为例 <a href="http://www.iqiyi.com" target="_blank" rel="external">http://www.iqiyi.com</a> 打开首页看到类似下面的界面：</p>
@@ -404,9 +412,9 @@
         
         <tags>
             
-            <tag> 磁盘 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 磁盘 </tag>
             
             <tag> 分区 </tag>
             
@@ -441,13 +449,13 @@
         
         <tags>
             
-            <tag> 代理 </tag>
-            
             <tag> Python3 </tag>
             
             <tag> 正则表达式 </tag>
             
             <tag> IP伪装 </tag>
+            
+            <tag> 代理 </tag>
             
         </tags>
         
@@ -757,7 +765,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#49;&#50;&#51;&#64;&#101;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#49;&#50;&#51;&#64;&#101;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x31;&#x32;&#x33;&#64;&#x65;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#x32;&#x33;&#64;&#x65;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
@@ -1558,7 +1566,7 @@ int main()
 <p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
 <p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
 <p>name@gmail.com</p>
-<p><a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#110;&#97;&#x6d;&#101;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#110;&#97;&#x6d;&#101;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x6e;&#x61;&#109;&#101;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#x6e;&#x61;&#109;&#101;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a></p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="./calcu.png" alt="icon"></p>
 <p>嵌入Html</p>
 <p><img src="/img/calcu.png" alt="This is a calcular" title="calcular" width="100" length="100"></p>
@@ -1682,96 +1690,6 @@ int main()
     </entry>
     
     <entry>
-      <title><![CDATA[关于我以及本博客]]></title>
-      <url>https://ygcaicn.github.io/uncategorized/about.html</url>
-      <content type="html"><![CDATA[<ul>
-<li><h1 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h1><ul>
-<li>山东大学 控制科学与工程研究生<ul>
-<li>中国矿业大学（物理系应用物理学）本科四年级在读生</li>
-<li>基于WIFI的室内定位技术</li>
-<li>恋爱ing<a id="more"></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h1 id="奖项"><a href="#奖项" class="headerlink" title="奖项"></a>奖项</h1><ul>
-<li>幼儿园时多次获得小红花</li>
-</ul>
-</li>
-<li><h1 id="兴趣"><a href="#兴趣" class="headerlink" title="兴趣"></a>兴趣</h1><ul>
-<li>跑步（长跑，马拉松）</li>
-<li>收藏癖（各种收藏，金石玉玩，代码软件无所不收）</li>
-<li>偶尔会无聊（感觉太没意思，不如研究研究代码）</li>
-<li>代码（沉浸在代码中会有安静的感觉）</li>
-<li>软件（喜欢尝鲜，欢迎推荐）</li>
-<li>嵌入式设备（比如STM32、路由器等）</li>
-</ul>
-</li>
-<li><h1 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h1><ul>
-<li><h2 id="语言类"><a href="#语言类" class="headerlink" title="语言类"></a>语言类</h2><ul>
-<li>C/C++，QT 熟练</li>
-<li>python</li>
-<li>PHP 了解</li>
-<li>html，css，js 了解</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>- ## 工具类
-
-    - git
-    - MATLAB
-    - EDA类
-    - Linux
-    - ~~各类科学上网工具~~
-</code></pre><ul>
-<li><h1 id="正在捣鼓"><a href="#正在捣鼓" class="headerlink" title="正在捣鼓"></a>正在捣鼓</h1><ul>
-<li>[智能餐柜项目]</li>
-<li><a href="">硬改路由 <em>科学上网最佳方案</em></a></li>
-<li><a href="http://www.lewei50.com/u/g/20969" target="_blank" rel="external">基于STM32+ESP8266的远程温度监控系统 <em>其实现在我是用51让它跑起来了，stm太浪费</em></a></li>
-<li>ThinkPHP <em>上面温度监控系统服务器为第三方平台心中不爽，so……</em></li>
-</ul>
-</li>
-<li><h1 id="博客更新日志-2017-10-24-00-26-00"><a href="#博客更新日志-2017-10-24-00-26-00" class="headerlink" title="博客更新日志 2017/10/24 00:26:00"></a>博客更新日志 2017/10/24 00:26:00</h1><ul>
-<li>2017年10月24日: <strong>好好珍惜身边的人，因为你不知道意外和明天哪一个会先到来。——【南茜的早晨】</strong></li>
-</ul>
-<ul>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-</ul>
-<ul>
-<li>2017年10月24日：TCP/IP 详解卷I</li>
-<li><p>2016年10月24日：C++复习，记录 <a href="http://blog.cumtpn.com/2016/10/24/cpplianxi/" target="_blank" rel="external"><em>学习笔记</em></a>，估计要持续更新一段时间了。</p>
-</li>
-<li><p>2016年10月22日：搭建了manyuser的SS和SS panel，记录了<a href="http://blog.cumtpn.com/2016/10/22/lamp-centos7/" target="_blank" rel="external"><em>Centos7.2的lamp服务器环境搭建</em></a> ，<a href="http://blog.cumtpn.com/2016/10/22/firewalld-centos7/" target="_blank" rel="external"><em>防火墙端口管理</em></a></p>
-</li>
-<li><p>2016年10月15日: 配置Next主题，完善主页，About</p>
-</li>
-<li><p>2016年10月14日: 闲来无事，偶遇hexo，便擦出了火花，此博客诞生了！</p>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<blockquote>
-<ul>
-<li>Emial:ygcaicn@gmail.com</li>
-<li><p>Facebook: <a href="https://www.facebook.com/ygcaicn" target="_blank" rel="external">Follow me</a></p>
-</li>
-<li><p>微信扫一扫找到我：</p>
-</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id=""><a href="#" class="headerlink" title=" "></a> <img src="/img/wechatadd.jpg" alt="wechat"></h2>]]></content>
-      
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Hexo搭建个人博客及NexT主题配置与优化]]></title>
       <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/hexo-blog.html</url>
       <content type="html"><![CDATA[<a id="more"></a>
@@ -1847,7 +1765,7 @@ hexo d == hexo deploy
 <p><img src="/img/markdown-img-paste-20161016161851265.png" alt=""><br><img src="/img/markdown-img-paste-20161016162035764.png" alt=""></p>
 <p>完成以后你的远程仓库也就建好了。不过你还需要将刚才建立的本地仓库与远程的仓库建立连接。那么你就需要你的远程仓库地址</p>
 <p><img src="/img/markdown-img-paste-20161016162352701.png" alt=""><br>连接支持HTTPs和SSH两种协议，推荐使用ＳＳＨ连接。</p>
-<p>我的连接是<a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;&#58;&#121;&#x67;&#99;&#97;&#105;&#99;&#x6e;&#x2f;&#109;&#x79;&#x67;&#x69;&#x74;&#46;&#103;&#105;&#116;">&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;&#58;&#121;&#x67;&#99;&#97;&#105;&#99;&#x6e;&#x2f;&#109;&#x79;&#x67;&#x69;&#x74;&#46;&#103;&#105;&#116;</a>, （这用的是SSH连接地址）</p>
+<p>我的连接是<a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;&#58;&#121;&#103;&#99;&#97;&#105;&#x63;&#x6e;&#x2f;&#x6d;&#x79;&#x67;&#105;&#x74;&#46;&#x67;&#105;&#x74;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;&#58;&#121;&#103;&#99;&#97;&#105;&#x63;&#x6e;&#x2f;&#x6d;&#x79;&#x67;&#105;&#x74;&#46;&#x67;&#105;&#x74;</a>, （这用的是SSH连接地址）</p>
 <h1 id="本地仓库与远程仓库连接-connect-a-remote-repository"><a href="#本地仓库与远程仓库连接-connect-a-remote-repository" class="headerlink" title="本地仓库与远程仓库连接( connect a remote repository )"></a>本地仓库与远程仓库连接( connect a remote repository )</h1><pre><code>#打开git shell
 cd D:/github/mygit
 git remote add origin git@github.com:ygcaicn/mygit.git
