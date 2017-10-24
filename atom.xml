@@ -60,6 +60,66 @@
   </entry>
   
   <entry>
+    <title>Adblock的一些软件</title>
+    <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/adb.html"/>
+    <id>https://ygcaicn.github.io/杂项/adb.html</id>
+    <published>2017-10-16T03:02:06.000Z</published>
+    <updated>2017-10-24T07:53:59.438Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><p>1.Adblock Plus （推荐）</p>
+<p><a href="https://adblockplus.org/zh_CN/" target="_blank" rel="external">https://adblockplus.org/zh_CN/</a></p>
+<p>2.AdBlock</p>
+<p><a href="https://www.getadblock.com/" target="_blank" rel="external">https://www.getadblock.com/</a></p>
+<p>3.adbyby（国产，支持去各大视频站 <code>包括https</code> 的广告，支持openwrt端）</p>
+<p><a href="https://www.adbyby.com/" target="_blank" rel="external">https://www.adbyby.com/</a></p>
+<p>4.adsafe (唯一比较靠谱的国产）</p>
+<p><a href="http://ad-safe.com/" target="_blank" rel="external">http://ad-safe.com/</a></p>
+<p>5.µBlock</p>
+<p><a href="https://github.com/gorhill/uBlock" target="_blank" rel="external">https://github.com/gorhill/uBlock</a></p>
+<p>6.Adblock Edge</p>
+<p><a href="https://addons.mozilla.org/firefox/addon/adblock-edge/" target="_blank" rel="external">https://addons.mozilla.org/firefox/addon/adblock-edge/</a></p>
+<p>7.AdGuard</p>
+<p><a href="http://adguard.com/en/welcome.html" target="_blank" rel="external">http://adguard.com/en/welcome.html</a></p>
+<p>8.AdFender</p>
+<p><a href="http://www.adfender.com/" target="_blank" rel="external">http://www.adfender.com/</a></p>
+<p>9.Bluhell Firewall</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/bluhell-firewall" target="_blank" rel="external">https://addons.mozilla.org/en-US/firefox/addon/bluhell-firewall</a></p>
+<p>10.Proxomitron （卡饭有介绍)</p>
+<p><a href="http://proximodo.sourceforge.net/" target="_blank" rel="external">http://proximodo.sourceforge.net/</a></p>
+<p>11.poper-blocker</p>
+<p><a href="http://wzmn.net/poper-blocker" target="_blank" rel="external">http://wzmn.net/poper-blocker</a></p>
+<p>12.Updated Ad Blocker for Firefox</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/updated-ad-blocker-for-fire/" target="_blank" rel="external">https://addons.mozilla.org/en-US/firefox/addon/updated-ad-blocker-for-fire/</a></p>
+<p>13.javascript-blocker</p>
+<p><a href="http://javascript-blocker.toggleable.com/" target="_blank" rel="external">http://javascript-blocker.toggleable.com/</a></p>
+<p>14.uMatrix</p>
+<p><a href="https://github.com/gorhill/uMatrix" target="_blank" rel="external">https://github.com/gorhill/uMatrix</a></p>
+<p>15.webmailAdBlocker （邮箱广告）</p>
+<p><a href="http://jasonsavard.com/webmailAdBlocker" target="_blank" rel="external">http://jasonsavard.com/webmailAdBlocker</a></p>
+<p>16.adblockvideo</p>
+<p><a href="http://adblockvideo.com/" target="_blank" rel="external">http://adblockvideo.com/</a></p>
+<p>17.karma-blocker</p>
+<p><a href="https://github.com/arantius/karma-blocker" target="_blank" rel="external">https://github.com/arantius/karma-blocker</a></p>
+<p>18.奶牛</p>
+<p><a href="https://www.admuncher.com/" target="_blank" rel="external">https://www.admuncher.com/</a></p>
+<h2 id="附加adb常用屏蔽（update-2017-10-24）"><a href="#附加adb常用屏蔽（update-2017-10-24）" class="headerlink" title="附加adb常用屏蔽（update 2017.10.24）"></a>附加adb常用屏蔽（update 2017.10.24）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">baidu.com###content_right</div><div class="line">baidu.com##.cr-offset</div><div class="line">baidu.com##.leftBlock</div><div class="line">mail.163.com###\31 508028782489_dvmailrecomPanelCont</div><div class="line">mail.163.com##.gWel-tabs-panel-cont</div><div class="line">mail.163.com##.gWel-tabs-list</div><div class="line">baidu.com###s_mancard_main</div><div class="line">baidu.com##.s-top-nav</div><div class="line">dazi.kukuw.com##.gg_close</div><div class="line">163.com##.col_r</div><div class="line">tech.163.com###js-ep3rdRank</div><div class="line">163.com##.gallery-tie-right</div><div class="line">163.com##.post_content_side</div><div class="line">163.com##.mt35 mod_bobo</div><div class="line">news.163.com##.clearfix.bobolist</div><div class="line">news.163.com##.mt35.mod_bobo</div><div class="line">||img1.cache.netease.com/f2e/www/index2014/images/sprite_dw2.png</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;推荐列表&quot;&gt;&lt;a href=&quot;#推荐列表&quot; class=&quot;headerlink&quot; title=&quot;推荐列表&quot;&gt;&lt;/a&gt;推荐列表&lt;/h2&gt;&lt;p&gt;1.Adblock Plus （推荐）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://adblockplus.org/zh
+    
+    </summary>
+    
+      <category term="杂项" scheme="https://ygcaicn.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="去广告" scheme="https://ygcaicn.github.io/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VIP视频解析+去广告教程</title>
     <link href="https://ygcaicn.github.io/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html"/>
     <id>https://ygcaicn.github.io/网络/VIP视频解析-去广告.html</id>
@@ -1515,39 +1575,6 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
       <category term="数据库" scheme="https://ygcaicn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
       <category term="LAMP" scheme="https://ygcaicn.github.io/tags/LAMP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7使用firewalld管理防火墙与端口</title>
-    <link href="https://ygcaicn.github.io/Linux/firewalld-centos7.html"/>
-    <id>https://ygcaicn.github.io/Linux/firewalld-centos7.html</id>
-    <published>2016-10-23T01:24:46.000Z</published>
-    <updated>2016-10-22T15:40:56.883Z</updated>
-    
-    <content type="html"><![CDATA[<p>CentOS7使用firewalld打开关闭防火墙与端口</p>
-<h2 id="1、firewalld的基本使用"><a href="#1、firewalld的基本使用" class="headerlink" title="1、firewalld的基本使用"></a>1、firewalld的基本使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">启动： systemctl start firewalld</div><div class="line">查看状态： systemctl status firewalld</div><div class="line">停止： systemctl disable firewalld</div><div class="line">禁用： systemctl stop firewalld</div><div class="line">systemctl list-unit-files | grep firewalld #查看是否加入开机启</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2-systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。"><a href="#2-systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。" class="headerlink" title="2.systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。"></a>2.systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">启动一个服务：systemctl start firewalld.service</div><div class="line">关闭一个服务：systemctl stop firewalld.service</div><div class="line">重启一个服务：systemctl restart firewalld.service</div><div class="line">显示一个服务的状态：systemctl status firewalld.service</div><div class="line">在开机时启用一个服务：systemctl enable firewalld.service</div><div class="line">在开机时禁用一个服务：systemctl disable firewalld.service</div><div class="line">查看服务是否开机启动：systemctl is-enabled firewalld.service</div><div class="line">查看已启动的服务列表：systemctl list-unit-files|grep enabled</div><div class="line">查看启动失败的服务列表：systemctl --failed</div></pre></td></tr></table></figure>
-<h2 id="3-配置firewalld-cmd"><a href="#3-配置firewalld-cmd" class="headerlink" title="3.配置firewalld-cmd"></a>3.配置firewalld-cmd</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">查看版本： firewall-cmd --version</div><div class="line">查看帮助： firewall-cmd --help</div><div class="line">显示状态： firewall-cmd --state</div><div class="line">查看所有打开的端口： firewall-cmd --zone=public --list-ports</div><div class="line">更新防火墙规则： firewall-cmd --reload</div><div class="line">查看区域信息:  firewall-cmd --get-active-zones</div><div class="line">查看指定接口所属区域： firewall-cmd --get-zone-of-interface=eth0</div><div class="line">拒绝所有包：firewall-cmd --panic-on</div><div class="line">取消拒绝状态： firewall-cmd --panic-off</div><div class="line">查看是否拒绝： firewall-cmd --query-panic</div></pre></td></tr></table></figure>
-<h2 id="开启一个端口"><a href="#开启一个端口" class="headerlink" title="开启一个端口"></a>开启一个端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">在vim /etc/firewalld/zones/public.xml 加入端口或者服务</div><div class="line">    &lt;service name=&quot;http&quot;/&gt;</div><div class="line">    &lt;service name=&quot;https&quot;/&gt;</div><div class="line">    &lt;port protocol=&quot;tcp&quot; port=&quot;8080&quot;/&gt;</div><div class="line"></div><div class="line">    或者</div><div class="line">    firewall-cmd --zone=public --add-port=8080/tcp --permanent</div><div class="line">    firewall-cmd --zone=public --add-service=http  --permanent</div><div class="line">    firewall-cmd --zone=public --add-service=https --permanent</div><div class="line">    命令含义：</div><div class="line">    --zone #作用域</div><div class="line">    --add-port=80/tcp #添加端口，格式为：端口/通讯协议</div><div class="line">    firewall-cmd --zone=public --add-port=8001/tcp</div><div class="line">    --permanent #永久生效，没有此参数重启后失效</div><div class="line"></div><div class="line">    查看是否启用：</div><div class="line">    firewall-cmd --permanent --zone=public --query-port=8080/tcp</div><div class="line">    firewall-cmd --permanent --zone=public --query-service=http</div><div class="line"></div><div class="line">    删除端口或者服务：</div><div class="line">    firewall-cmd --zone=public --remove-service=http  --permanent</div><div class="line">    firewall-cmd --zone=public --remove-port=8080/tcp  --permanent</div><div class="line"></div><div class="line">开启连续多个端口：</div><div class="line">firewall-cmd --zone=public --add-port=1000-1500/tcp --permanent</div></pre></td></tr></table></figure>
-<h2 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!"></a>每天进步一点点!!!</h2><h3 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CentOS7使用firewalld打开关闭防火墙与端口&lt;/p&gt;
-&lt;h2 id=&quot;1、firewalld的基本使用&quot;&gt;&lt;a href=&quot;#1、firewalld的基本使用&quot; class=&quot;headerlink&quot; title=&quot;1、firewalld的基本使用&quot;&gt;&lt;/a&gt;1、firewalld的基本使用&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;启动： systemctl start firewalld&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;查看状态： systemctl status firewalld&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;停止： systemctl disable firewalld&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;禁用： systemctl stop firewalld&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl list-unit-files | grep firewalld #查看是否加入开机启&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
-    
-    
-      <category term="CentOS7" scheme="https://ygcaicn.github.io/tags/CentOS7/"/>
-    
-      <category term="防火墙" scheme="https://ygcaicn.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    
-      <category term="firewall" scheme="https://ygcaicn.github.io/tags/firewall/"/>
     
   </entry>
   
