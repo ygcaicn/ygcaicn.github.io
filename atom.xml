@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2017-10-24T07:37:47.173Z</updated>
+  <updated>2017-11-09T16:51:30.140Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -14,6 +14,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Qt-doc-struct</title>
+    <link href="https://ygcaicn.github.io/Qt/qt-doc-struct.html"/>
+    <id>https://ygcaicn.github.io/Qt/qt-doc-struct.html</id>
+    <published>2017-11-09T16:09:40.000Z</published>
+    <updated>2017-11-09T16:51:30.140Z</updated>
+    
+    <content type="html"><![CDATA[<p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="external">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
+<p>进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists</p>
+<p><img src="../img/49e21d26-e157-40b5-acb1-3e492b9cf2d8.png" alt="49e21d26-e157-40b5-acb1-3e492b9cf2d8"></p>
+<p>Class Lists中又有不同的索引方式，方便不同情景下查询：<br><img src="../img/c42b0ad4-92e7-4dcf-b09f-14bce8261eea.png" alt="c42b0ad4-92e7-4dcf-b09f-14bce8261eea"> </p>
+<p>Qt的class文档大致分为3个部分，Type（数据类型），Functions（成员函数），Macros（宏）。每个部分又分为两块，前一块是一个list，简单的列举，后一块为detail，详细信息。每个类的文档都是在同一个html页面上，采用锚点相互跳转，这也是非常棒的一点！</p>
+<a id="more"></a>
+<h2 id="QDir-Class-类名"><a href="#QDir-Class-类名" class="headerlink" title="QDir Class 类名"></a>QDir Class <em>类名</em></h2><p><img src="../img/qdirdfadfclass.png" alt="qdirdfadfclass"></p>
+<p>The QDir class provides access to directory structures and their contents. More… <em>简单介绍功能，可点击查看详细</em></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header:</td>
+<td>#include <qdir></qdir></td>
+</tr>
+<tr>
+<td>qmake:</td>
+<td>QT += core</td>
+</tr>
+</tbody>
+</table>
+<p><em>说明header和qmake的包含操作</em></p>
+<hr>
+<h2 id="Public-Types-公有的数据类型"><a href="#Public-Types-公有的数据类型" class="headerlink" title="Public Types 公有的数据类型"></a>Public Types <em>公有的数据类型</em></h2><p><img src="../img/ae7e90b2-2b94-45af-819e-cb99c0f686e3.png" alt="ae7e90b2-2b94-45af-819e-cb99c0f686e3"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">enum	Filter &#123; Dirs, AllDirs, Files, Drives, ..., CaseSensitive &#125;</div><div class="line">flags	Filters</div></pre></td></tr></table></figure>
+<blockquote>
+<p>The Filters type is a typedef for QFlags<filter>. It stores an OR combination of Filter values.</filter></p>
+</blockquote>
+<h2 id="Public-Functions-公有成员函数"><a href="#Public-Functions-公有成员函数" class="headerlink" title="Public Functions 公有成员函数"></a>Public Functions <em>公有成员函数</em></h2><p><img src="../img/baac4270-afb5-41f3-ac10-4c8d217d2e56.png" alt="baac4270-afb5-41f3-ac10-4c8d217d2e56"><br>对象可以访问的函数,编程过程中主要查阅的就是这部分。</p>
+<h2 id="Static-Public-Members-静态成员函数"><a href="#Static-Public-Members-静态成员函数" class="headerlink" title="Static Public Members  静态成员函数"></a>Static Public Members  <em>静态成员函数</em></h2><p><img src="../img/74c56c41-e57f-49e2-bb0b-2863471984f8.png" alt="74c56c41-e57f-49e2-bb0b-2863471984f8"></p>
+<p>解决同一个类不同对象之间的数据共享问题。主要作用是用来访问同一个类中的静态数据成员，维护对象之间的数据共享。</p>
+<p>访问不依赖于对象。</p>
+<p>可以通过对象与类名进行调用，一般习惯与用类名进行访问。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">static QDir	current()</div><div class="line"></div><div class="line">//example：</div><div class="line"></div><div class="line">QDir::current()</div><div class="line"></div><div class="line">//return a QDir Object of current directory.</div></pre></td></tr></table></figure>
+<h2 id="Macros-宏"><a href="#Macros-宏" class="headerlink" title="Macros 宏"></a>Macros 宏</h2><p><img src="../img/747b2a9a-3760-4319-8dda-06b283649d8e.png" alt="747b2a9a-3760-4319-8dda-06b283649d8e"></p>
+<hr>
+<h2 id="Detailed-Description"><a href="#Detailed-Description" class="headerlink" title="Detailed Description"></a>Detailed Description</h2><p>该部分介绍QDir的整体概览。又分为小的章节进行介绍</p>
+<h3 id="Navigation-and-Directory-Operations"><a href="#Navigation-and-Directory-Operations" class="headerlink" title="Navigation and Directory Operations"></a>Navigation and Directory Operations</h3><h3 id="Files-and-Directory-Contents"><a href="#Files-and-Directory-Contents" class="headerlink" title="Files and Directory Contents"></a>Files and Directory Contents</h3><h3 id="The-Current-Directory-and-Other-Special-Paths"><a href="#The-Current-Directory-and-Other-Special-Paths" class="headerlink" title="The Current Directory and Other Special Paths"></a>The Current Directory and Other Special Paths</h3><p><img src="../img/93ced37a-d761-4d88-a0d4-033002f35a25.png" alt="93ced37a-d761-4d88-a0d4-033002f35a25"></p>
+<h3 id="Path-Manipulation-and-Strings"><a href="#Path-Manipulation-and-Strings" class="headerlink" title="Path Manipulation and Strings"></a>Path Manipulation and Strings</h3><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><hr>
+<h2 id="Member-Type-Documentation"><a href="#Member-Type-Documentation" class="headerlink" title="Member Type Documentation"></a>Member Type Documentation</h2><p><img src="../img/559c5e7d-9573-4d55-b9b0-e4b45f100494.png" alt="559c5e7d-9573-4d55-b9b0-e4b45f100494"></p>
+<p>具体的介绍数据类型</p>
+<h2 id="Member-Function-Documentation"><a href="#Member-Function-Documentation" class="headerlink" title="Member Function Documentation"></a>Member Function Documentation</h2><p><img src="../img/g3364be29-656a-4a1f-8b6e-2f96a635e4d3.png" alt="g3364be29-656a-4a1f-8b6e-2f96a635e4d3"></p>
+<p><img src="../img/ee471f05-3f7e-4537-baa3-537f69c3c64f.png" alt="ee471f05-3f7e-4537-baa3-537f69c3c64f"><br>具体的介绍Function，包括static function。每个函数后有<code>See also xxx()</code>非常的方便。</p>
+<h2 id="Macro-Documentation"><a href="#Macro-Documentation" class="headerlink" title="Macro Documentation"></a>Macro Documentation</h2><p><img src="../img/c70d4c00-6840-4eb5-be99-4c18cdf4fe01.png" alt="c70d4c00-6840-4eb5-be99-4c18cdf4fe01"><br>具体的介绍宏</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="QDir"><a href="#QDir" class="headerlink" title="QDir"></a><a href="http://doc.qt.io/qt-5/qdir.html#QDir" target="_blank" rel="external">QDir</a></h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为&lt;a href=&quot;http://doc.qt.io&quot;&gt;http://doc.qt.io&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png&quot; alt=&quot;4bbdac2a-5470-4829-8a47-5cfed7253eba&quot;&gt;&lt;/p&gt;
+&lt;p&gt;进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../img/49e21d26-e157-40b5-acb1-3e492b9cf2d8.png&quot; alt=&quot;49e21d26-e157-40b5-acb1-3e492b9cf2d8&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Class Lists中又有不同的索引方式，方便不同情景下查询：&lt;br&gt;&lt;img src=&quot;../img/c42b0ad4-92e7-4dcf-b09f-14bce8261eea.png&quot; alt=&quot;c42b0ad4-92e7-4dcf-b09f-14bce8261eea&quot;&gt; &lt;/p&gt;
+&lt;p&gt;Qt的class文档大致分为3个部分，Type（数据类型），Functions（成员函数），Macros（宏）。每个部分又分为两块，前一块是一个list，简单的列举，后一块为detail，详细信息。每个类的文档都是在同一个html页面上，采用锚点相互跳转，这也是非常棒的一点！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Qt" scheme="https://ygcaicn.github.io/categories/Qt/"/>
+    
+    
+      <category term="Qt" scheme="https://ygcaicn.github.io/tags/Qt/"/>
+    
+      <category term="cpp" scheme="https://ygcaicn.github.io/tags/cpp/"/>
+    
+  </entry>
   
   <entry>
     <title>TCP/IP</title>
@@ -943,7 +1021,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x31;&#50;&#x33;&#x40;&#x65;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#x40;&#x65;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x31;&#50;&#x33;&#64;&#x65;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#64;&#x65;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
@@ -1527,54 +1605,6 @@ Sample Output
       <category term="C++" scheme="https://ygcaicn.github.io/tags/C/"/>
     
       <category term="练习" scheme="https://ygcaicn.github.io/tags/%E7%BB%83%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>lamp服务器搭建-centos7+Apache2.4+MariaDB+php5.6+phpmyadmin</title>
-    <link href="https://ygcaicn.github.io/Linux/lamp-centos7.html"/>
-    <id>https://ygcaicn.github.io/Linux/lamp-centos7.html</id>
-    <published>2016-10-23T03:43:54.000Z</published>
-    <updated>2017-05-04T05:05:50.056Z</updated>
-    
-    <content type="html"><![CDATA[<p>centos7 下yum搭建服务器以及数据库的流程。</p>
-<a id="more"></a>
-<h1 id="安装httpd"><a href="#安装httpd" class="headerlink" title="安装httpd"></a>安装httpd</h1><p>直接yum源安装就可以，centos7的yum源是Apache2.4</p>
-<p>  <code>yum install httpd</code></p>
-<h2 id="apache常用指令"><a href="#apache常用指令" class="headerlink" title="apache常用指令"></a>apache常用指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">systemctl start httpd      #启动apache</div><div class="line">systemctl stop httpd       #停止apache</div><div class="line">systemctl restart httpd    #重启apache</div><div class="line">systemctl enable httpd     #设置apache开机启动</div></pre></td></tr></table></figure>
-<h1 id="配置两个扩展yum源"><a href="#配置两个扩展yum源" class="headerlink" title="配置两个扩展yum源"></a>配置两个扩展yum源</h1><pre><code>yum install epel-release
-rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-</code></pre><p>因为centos7默认的yum源php是5.4的，有点跟不上时代的脚步啊。。。所以使用扩展yum源进行安装。</p>
-<!--more-->
-<h1 id="php相关模块"><a href="#php相关模块" class="headerlink" title="php相关模块"></a>php相关模块</h1><pre><code>yum --enablerepo=remi-php56 install php php-cli php-pear php-pdo php-mysqlnd php-gd php-mbstring php-mcrypt php-xml
-</code></pre><h1 id="phpmyadmin"><a href="#phpmyadmin" class="headerlink" title="phpmyadmin"></a>phpmyadmin</h1><pre><code>yum --enablerepo=remi-php56 install phpmyadmin
-</code></pre><p>这里指定php的版本是必须的，有很多教程就是这里出了问题。。。</p>
-<h2 id="phpmyadmin配置："><a href="#phpmyadmin配置：" class="headerlink" title="phpmyadmin配置："></a>phpmyadmin配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#打开phpmyadmin的配置文件</div><div class="line">vim /etc/httpd/conf.d/phpMyAdmin.conf</div><div class="line"></div><div class="line">将Allow from 127.0.0.1</div><div class="line">Allow from ::1</div><div class="line">改为： Require all granted</div><div class="line">systemctl restart httpd  #重启apache</div></pre></td></tr></table></figure>
-<h1 id="安装MariaDB"><a href="#安装MariaDB" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h1><p>CentOS 7.0中，已经使用MariaDB替代了MySQL数据库</p>
-<h2 id="安装MariaDB-1"><a href="#安装MariaDB-1" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h2><pre><code>yum install mariadb mariadb-server #询问是否要安装，输入Y即可自动安装,直到安装完成
-</code></pre><h2 id="常用MariaDB指令"><a href="#常用MariaDB指令" class="headerlink" title="常用MariaDB指令"></a>常用MariaDB指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">systemctl start mariadb.service #启动MariaDB</div><div class="line">systemctl stop mariadb.service #停止MariaDB</div><div class="line">systemctl restart mariadb.service #重启MariaDB</div><div class="line">systemctl enable mariadb.service #设置开机启动</div><div class="line">cp /usr/share/mysql/my-huge.cnf /etc/my.cnf #拷贝配置文件（注意：如果/etc目录下面默认有一个my.cnf，直接覆盖即可）</div></pre></td></tr></table></figure>
-<h2 id="为root账户设置密码"><a href="#为root账户设置密码" class="headerlink" title="为root账户设置密码"></a>为root账户设置密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql_secure_installation</div><div class="line">#回车，根据提示输入Y</div><div class="line">#输入2次密码，回车</div><div class="line">#根据提示一路输入Y</div><div class="line">#最后出现：Thanks for using MySQL!</div><div class="line">#MySql密码设置完成，重新启动 MySQL：</div><div class="line">systemctl restart mariadb.service #重启MariaDB</div></pre></td></tr></table></figure>
-<h2 id="新建数据库账户"><a href="#新建数据库账户" class="headerlink" title="新建数据库账户"></a>新建数据库账户</h2><h2 id="进入数据库"><a href="#进入数据库" class="headerlink" title="进入数据库"></a>进入数据库</h2><p>mysql -u root -p</p>
-<blockquote>
-<p>show databases</p>
-</blockquote>
-<p>最后开启相应的端口就可以外网访问了，关于firewalld的相关操作请参考<a href="http://blog.cumtpn.com/2016/10/22/firewalld-centos7/" target="_blank" rel="external"><em>CentOS7使用firewalld管理防火墙与端口</em></a></p>
-<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!"></a>每天进步一点点!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;centos7 下yum搭建服务器以及数据库的流程。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
-    
-    
-      <category term="服务器" scheme="https://ygcaicn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="数据库" scheme="https://ygcaicn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-      <category term="LAMP" scheme="https://ygcaicn.github.io/tags/LAMP/"/>
     
   </entry>
   
