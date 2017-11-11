@@ -55,32 +55,10 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081,http://imgur.com/NTZyO4L.jpg,http://imgur.com/MitleI9.jpg".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
 
 
 <header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+   >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -156,6 +134,8 @@
             
                 <a href="#分区" title="分区" rel="1">分区</a>
             
+                <a href="#Machine Learning" title="Machine Learning" rel="1">Machine Learning</a>
+            
                 <a href="#openwrt" title="openwrt" rel="1">openwrt</a>
             
                 <a href="#路由器" title="路由器" rel="1">路由器</a>
@@ -164,13 +144,11 @@
             
                 <a href="#LEDE" title="LEDE" rel="1">LEDE</a>
             
-                <a href="#Machine Learning" title="Machine Learning" rel="1">Machine Learning</a>
+                <a href="#TCP/IP" title="TCP/IP" rel="1">TCP/IP</a>
             
                 <a href="#MarkDown" title="MarkDown" rel="1">MarkDown</a>
             
                 <a href="#github" title="github" rel="3">github</a>
-            
-                <a href="#TCP/IP" title="TCP/IP" rel="1">TCP/IP</a>
             
                 <a href="#Qt" title="Qt" rel="2">Qt</a>
             
@@ -222,13 +200,13 @@
             
                 <a href="#markdown" title="markdown" rel="1">markdown</a>
             
-                <a href="#代理" title="代理" rel="2">代理</a>
-            
                 <a href="#Python3" title="Python3" rel="1">Python3</a>
             
                 <a href="#正则表达式" title="正则表达式" rel="1">正则表达式</a>
             
                 <a href="#IP伪装" title="IP伪装" rel="1">IP伪装</a>
+            
+                <a href="#代理" title="代理" rel="2">代理</a>
             
                 <a href="#python" title="python" rel="1">python</a>
             
@@ -2239,9 +2217,6 @@
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
