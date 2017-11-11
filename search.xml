@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title><![CDATA[build-live-ubuntu打造日常使用Ubuntu]]></title>
+      <url>https://ygcaicn.github.io/Linux/build-live-ubuntu.html</url>
+      <content type="html"><![CDATA[<p>转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。<br>Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大<br>的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。<br>本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10</p>
+<a id="more"></a>
+<h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p>几张系统美图：<br><img src="../img/b207a505-34c5-4236-898d-21de1c7dd91e.png" alt="b207a505-34c5-4236-898d-21de1c7dd91e"><br><img src="../img/e0a9cda0-3cac-4dd4-88cb-2e201d649880.png" alt="e0a9cda0-3cac-4dd4-88cb-2e201d649880"><br><img src="../img/a3f9ed8c-efba-423d-a62d-420514282260.png" alt="a3f9ed8c-efba-423d-a62d-420514282260"><br><img src="../img/731747dc-79eb-42c0-bf02-bb98602a463a.png" alt="731747dc-79eb-42c0-bf02-bb98602a463a"><br><img src="../img/98343370-eb6a-4b11-9fe2-e0c558bf1e0d.png" alt="98343370-eb6a-4b11-9fe2-e0c558bf1e0d"></p>
+<h2 id="Step1-浏览器Chrome-amp-FireFox"><a href="#Step1-浏览器Chrome-amp-FireFox" class="headerlink" title="Step1.浏览器Chrome&amp;FireFox"></a>Step1.浏览器Chrome&amp;FireFox</h2><p>浏览器是日常使用的top1。在Ubuntu下也有很多浏览器可以选择，当然我的搭配为Chrome为主，FireFox为辅。选择Chrome后可以在Chrome的基础上安装很多的Chrome App。</p>
+<h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p>Chrome主页：<a href="https://www.google.com/chrome/browser/desktop/index.html#" target="_blank" rel="external">https://www.google.com/chrome/browser/desktop/index.html#</a></p>
+<p>（当然需要梯子）</p>
+<p>Chrome安装很简单在上面的链接中下着二进制包安装即可！</p>
+<p><img src="../img/62c4e42a-5a98-4f11-921b-1954821b3451.png" alt="62c4e42a-5a98-4f11-921b-1954821b3451"></p>
+<h3 id="FireFox"><a href="#FireFox" class="headerlink" title="FireFox"></a>FireFox</h3><p>Firefox主页：<a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="external">https://www.mozilla.org/en-US/firefox/new/</a><br><img src="../img/d4329e63-1f7f-4863-8733-8309e37a8eb1.png" alt="d4329e63-1f7f-4863-8733-8309e37a8eb1"></p>
+<h2 id="Step2-编辑器Atom"><a href="#Step2-编辑器Atom" class="headerlink" title="Step2. 编辑器Atom"></a>Step2. 编辑器Atom</h2><p>程序员最不可缺少的就是一个好的编辑器。Atom是万能的，开源，有很多的扩展包可以使用。</p>
+<p><img src="../img/96878ad6-346d-43a3-a1b7-7851683c8219.png" alt="96878ad6-346d-43a3-a1b7-7851683c8219"></p>
+<p>必须扩展包：</p>
+<h3 id="Sublime-Style-Column-Celection"><a href="#Sublime-Style-Column-Celection" class="headerlink" title="Sublime-Style-Column-Celection"></a>Sublime-Style-Column-Celection</h3><p>区块编辑支持<br><img src="../img/d24863a2-5697-411f-b9ad-35c032a2467a.png" alt="d24863a2-5697-411f-b9ad-35c032a2467a"><br><img src="../img/e319e32b-da3b-4814-b514-68f79f829e35.png" alt="e319e32b-da3b-4814-b514-68f79f829e35"></p>
+<h3 id="gcc-make-run"><a href="#gcc-make-run" class="headerlink" title="gcc-make-run"></a>gcc-make-run</h3><p>c文件快速编译运行<br><img src="../img/93120020-fa27-445e-a77e-de0d38df843a.png" alt="93120020-fa27-445e-a77e-de0d38df843a"></p>
+<h3 id="markdown-image-paste"><a href="#markdown-image-paste" class="headerlink" title="markdown-image-paste"></a>markdown-image-paste</h3><p>最棒的插件之一！！！在md文件编辑中，截图以后直接打出文件名然后Ctrl+V将图片存到配置好的目录中，并生成Markdow 图片链接。<br><img src="../img/719a6b00-d384-4b08-8656-85c24e4b3444.png" alt="719a6b00-d384-4b08-8656-85c24e4b3444"></p>
+<h3 id="uuidgen"><a href="#uuidgen" class="headerlink" title="uuidgen"></a>uuidgen</h3><p>在粘贴md的图片时总是要起文件名也是一件麻烦的事，还要保证不重复。uuidgen完美解决这个问题！只要快捷键Alt+Commend+G即生成一个uuid。保证不会重复！</p>
+<p><img src="../img/3cd28274-9a9c-4f1b-8fee-0594c307f9c1.png" alt="3cd28274-9a9c-4f1b-8fee-0594c307f9c1"></p>
+<h3 id="atom-python-run"><a href="#atom-python-run" class="headerlink" title="atom-python-run"></a>atom-python-run</h3><p>快速python运行！<br><img src="../img/315006bb-9155-4c78-a262-7fbd3e319992.png" alt="315006bb-9155-4c78-a262-7fbd3e319992"></p>
+<h3 id="markdown-preview-plus"><a href="#markdown-preview-plus" class="headerlink" title="markdown-preview-plus"></a>markdown-preview-plus</h3><p> markdown预览，支持latex公式嵌入。<br><img src="../img/f291e0ac-04ec-433b-a753-8bb83c3bd226.png" alt="f291e0ac-04ec-433b-a753-8bb83c3bd226"></p>
+<h3 id="markdown-scroll-sync"><a href="#markdown-scroll-sync" class="headerlink" title="markdown-scroll-sync"></a>markdown-scroll-sync</h3><p> markdown预览时同步滚动。<br><img src="../img/6cee2b03-1e20-498c-82a1-9f34a5a55cd0.png" alt="6cee2b03-1e20-498c-82a1-9f34a5a55cd0"></p>
+<h2 id="Step3-音乐"><a href="#Step3-音乐" class="headerlink" title="Step3.音乐"></a>Step3.音乐</h2><p>听歌当然你可以选择网页：</p>
+<p><a href="http://music.163.com" target="_blank" rel="external">http://music.163.com</a></p>
+<p><a href="https://youtube.com" target="_blank" rel="external">https://youtube.com</a></p>
+<p>当然你有更好的选择，就是Chrome app, Netease Music!</p>
+<p><img src="../img/c454aefc-269a-4501-8c0f-1c06021023c5.png" alt="c454aefc-269a-4501-8c0f-1c06021023c5"></p>
+<p><img src="../img/d56fbec3-d2b5-4262-afbe-41e847a70b36.png" alt="d56fbec3-d2b5-4262-afbe-41e847a70b36"></p>
+<p>chrome app的启动是不依赖与chrome的界面的，因此你完全可以在不启动chrome的情况下直接启动music！</p>
+<h2 id="Step4-微信（可作为QQ的替代品）"><a href="#Step4-微信（可作为QQ的替代品）" class="headerlink" title="Step4.微信（可作为QQ的替代品）"></a>Step4.微信（可作为QQ的替代品）</h2><p>同样chrome app中安装Wechat，其实就是网页版的wechat封装成单独的app可以独立启动！这大概是我对微信刮目相看的唯一理由了。。QQ也是有chrome app的，但是选择wechat而不选择QQ是因为wechat的功能要强大的多！比如支持与好友或者手机互传文件！！！！对的你没看错是文件！！当然照片也是可以的！并且照片是支持截图后Ctrl+v直接粘贴发送的，是不是很方便。然而QQ只能发个表情包里面的表情。。</p>
+<p><img src="../img/53a62b2f-2c64-4531-b933-e66cab438c64.jpg" alt="53a62b2f-2c64-4531-b933-e66cab438c64"></p>
+<h2 id="Step5-office系列"><a href="#Step5-office系列" class="headerlink" title="Step5.office系列"></a>Step5.office系列</h2><p>office系列的软件有自带的liberate office，当然那简直就是一坨X.果断卸载…支持国产我们选择wps，完美兼容Mxx公司的几大坨的文件。</p>
+<p>wps 主页：<a href="http://wps-community.org/download.html" target="_blank" rel="external">http://wps-community.org/download.html</a></p>
+<p><img src="../img/0dab9e22-085d-4162-83f7-20a417430d75.png" alt="0dab9e22-085d-4162-83f7-20a417430d75"><br><img src="../img/4152da53-40f7-4430-ad4b-2533323b3012.png" alt="4152da53-40f7-4430-ad4b-2533323b3012"><br><img src="../img/d3216ba8-b725-457e-9da3-dbd507444c6f.png" alt="d3216ba8-b725-457e-9da3-dbd507444c6f"></p>
+<h2 id="Step6-Foxit-Reader"><a href="#Step6-Foxit-Reader" class="headerlink" title="Step6.Foxit Reader"></a>Step6.Foxit Reader</h2><p>Foxit Reader完美支持Linux：</p>
+<p>Foxit 主页：<a href="https://www.foxitsoftware.com/pdf-reader/" target="_blank" rel="external">https://www.foxitsoftware.com/pdf-reader/</a></p>
+<p><img src="../img/387400dc-1467-4222-b56b-74e966d15e48.png" alt="387400dc-1467-4222-b56b-74e966d15e48"></p>
+<h2 id="Step7-视频播放器"><a href="#Step7-视频播放器" class="headerlink" title="Step7.视频播放器"></a>Step7.视频播放器</h2><p>SMplayer</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Ubuntu17.10-ChineseInputContexts]]></title>
       <url>https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html</url>
       <content type="html"><![CDATA[<p>unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！<br>环境为Ubuntu17.10 （17.04同样适用）。<br>常用软件包括：</p>
@@ -995,7 +1053,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#49;&#50;&#x33;&#64;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#49;&#50;&#x33;&#64;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x31;&#x32;&#x33;&#x40;&#101;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x31;&#x32;&#x33;&#x40;&#101;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
@@ -1796,7 +1854,7 @@ int main()
 <p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
 <p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
 <p>name@gmail.com</p>
-<p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#x6d;&#101;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#110;&#97;&#x6d;&#101;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x6e;&#x61;&#109;&#x65;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#x6e;&#x61;&#109;&#x65;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="./calcu.png" alt="icon"></p>
 <p>嵌入Html</p>
 <p><img src="/img/calcu.png" alt="This is a calcular" title="calcular" width="100" length="100"></p>
@@ -1995,7 +2053,7 @@ hexo d == hexo deploy
 <p><img src="/img/markdown-img-paste-20161016161851265.png" alt=""><br><img src="/img/markdown-img-paste-20161016162035764.png" alt=""></p>
 <p>完成以后你的远程仓库也就建好了。不过你还需要将刚才建立的本地仓库与远程的仓库建立连接。那么你就需要你的远程仓库地址</p>
 <p><img src="/img/markdown-img-paste-20161016162352701.png" alt=""><br>连接支持HTTPs和SSH两种协议，推荐使用ＳＳＨ连接。</p>
-<p>我的连接是<a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x67;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;&#58;&#121;&#x67;&#99;&#97;&#105;&#99;&#110;&#x2f;&#109;&#121;&#103;&#x69;&#x74;&#x2e;&#103;&#105;&#116;">&#x67;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;&#58;&#121;&#x67;&#99;&#97;&#105;&#99;&#110;&#x2f;&#109;&#121;&#103;&#x69;&#x74;&#x2e;&#103;&#105;&#116;</a>, （这用的是SSH连接地址）</p>
+<p>我的连接是<a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;&#x3a;&#x79;&#x67;&#x63;&#97;&#105;&#x63;&#110;&#47;&#109;&#x79;&#x67;&#x69;&#x74;&#x2e;&#x67;&#105;&#116;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;&#x3a;&#x79;&#x67;&#x63;&#97;&#105;&#x63;&#110;&#47;&#109;&#x79;&#x67;&#x69;&#x74;&#x2e;&#x67;&#105;&#116;</a>, （这用的是SSH连接地址）</p>
 <h1 id="本地仓库与远程仓库连接-connect-a-remote-repository"><a href="#本地仓库与远程仓库连接-connect-a-remote-repository" class="headerlink" title="本地仓库与远程仓库连接( connect a remote repository )"></a>本地仓库与远程仓库连接( connect a remote repository )</h1><pre><code>#打开git shell
 cd D:/github/mygit
 git remote add origin git@github.com:ygcaicn/mygit.git
