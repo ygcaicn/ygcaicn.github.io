@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ygcaicn.github.io/about/index.html</loc>
+    
+    <lastmod>2017-11-11T18:41:41.766Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ygcaicn.github.io/Linux/build-live-ubuntu.html</loc>
     
     <lastmod>2017-11-11T18:31:04.089Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/adb.html</loc>
     
     <lastmod>2017-10-24T08:17:24.259Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/about/index.html</loc>
-    
-    <lastmod>2017-10-24T08:11:11.200Z</lastmod>
     
   </url>
   
