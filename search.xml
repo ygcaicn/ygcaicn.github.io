@@ -4,6 +4,72 @@
   
     
     <entry>
+      <title><![CDATA[Ubuntu17.10-ChineseInputContexts]]></title>
+      <url>https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html</url>
+      <content type="html"><![CDATA[<p>unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！<br>环境为Ubuntu17.10 （17.04同样适用）。<br>常用软件包括：</p>
+<ul>
+<li>Atom</li>
+<li>Wps</li>
+<li>QtCreator</li>
+</ul>
+<a id="more"></a>
+<h2 id="系统中文输入"><a href="#系统中文输入" class="headerlink" title="系统中文输入"></a>系统中文输入</h2><p>看图，不多说：</p>
+<p><img src="../img/7c1e95b2-17a3-4322-ab84-8c09619e237e.png" alt="7c1e95b2-17a3-4322-ab84-8c09619e237e"></p>
+<p><img src="../img/8f506da4-b2d3-4a23-84e3-53472b5f0320.png" alt="8f506da4-b2d3-4a23-84e3-53472b5f0320"></p>
+<p><img src="../img/8a39b319-f52c-4f2d-a61a-de2f62dead49.png" alt="8a39b319-f52c-4f2d-a61a-de2f62dead49"></p>
+<p><img src="../img/ddb58d66-7572-4a6f-8d9f-0d20b28ccdf8.png" alt="ddb58d66-7572-4a6f-8d9f-0d20b28ccdf8"></p>
+<p>效果图：<br><img src="../img/4d3ae893-f910-4c23-8749-ef7bf963ef56.png" alt="4d3ae893-f910-4c23-8749-ef7bf963ef56"></p>
+<h2 id="Qt-QtCreator"><a href="#Qt-QtCreator" class="headerlink" title="Qt QtCreator"></a>Qt QtCreator</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install fcitx-libs-qt fcitx-libs-qt5</div><div class="line"></div><div class="line">cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so  ~/qtcreator-4.4.0/lib/Qt/plugins/platforminputcontexts/</div></pre></td></tr></table></figure>
+<p>以上操作其实就是安装fcitx-libs-qt和fcitx-libs-qt5的库，然后将动态链接拷贝到qtcreator的插件目录中，至于为什么是这个目录需要你自己去发现，不过我们可以看到在该目录中已经存在ibux的动态链接库，我们只是把fcitx的加进去而已。</p>
+<p><img src="../img/b7a25a45-c60d-44ba-bcaa-2ead2ca1bd4e.png" alt="b7a25a45-c60d-44ba-bcaa-2ead2ca1bd4e"></p>
+<p>当然你也可以不拷贝直接将libfcitxplatforminputcontextplugin.so所在的目录加入到环境变量中应该也是可以的（我没有测试）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etx/bash.bashrc</div></pre></td></tr></table></figure>
+<p>在文件最后添加一行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export $PATH = $PATH:/usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/</div></pre></td></tr></table></figure></p>
+<p>到此重启qtcreator已经可以输入中文了。就是这么简单！<br>效果图：<br><img src="../img/fa8ee2df-6668-469f-b965-55174c5275e3.png" alt="370933ff-bb56-47de-8c4c-aca83576cf79"></p>
+<h2 id="Wps"><a href="#Wps" class="headerlink" title="Wps"></a>Wps</h2><p>google搜到的解决办法,(亲测在Ubuntu17.04&amp;17.10中无效)</p>
+<blockquote>
+<p>wps文字不能输入中文解决  </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim /usr/bin/wps</div></pre></td></tr></table></figure>
+<p>修改wps启动文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">export XMODIFIERS=&quot;@im=fcitx&quot;</div><div class="line">export QT_IM_MODULE=&quot;fcitx&quot;</div><div class="line">gOpt=</div><div class="line">#gOptExt=-multiply</div><div class="line">gTemplateExt=(&quot;wpt&quot; &quot;dot&quot; &quot;dotx&quot;)</div></pre></td></tr></table></figure>
+<p>wps writer,表格，ppt对应的启动文件分别为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/usr/bin/wps</div><div class="line">/usr/bin/et</div><div class="line">/usr/bin/wpp</div></pre></td></tr></table></figure>
+<p><img src="../img/a419806f-81a9-4ace-8249-874e1a004b45.png" alt="a419806f-81a9-4ace-8249-874e1a004b45"></p>
+<p>以上方式在17.04和17.10中亲测无效！！！</p>
+<p>受到qtcreator的启示，同样将libfcitxplatforminputcontextplugin.so动态链接库拷贝到wps的目录中，wps的目录位于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/opt/kingsoft/wps-office/office6</div></pre></td></tr></table></figure>
+<p>可以看到在office6目录下有一个这样的路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/opt/kingsoft/wps-office/office6/qt/plugins/</div></pre></td></tr></table></figure>
+<p>和qtcreator的很相似，只是没有platforminputcontexts这个下一级目录，由于强迫症就建立一个这个目录（其实不建也是可以的）把libfcitxplatforminputcontextplugin.so拷贝进来，然后启动wps发现完美解决。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /opt/kingsoft/wps-office/office6/qt/plugins/platforminputcontexts</div><div class="line"></div><div class="line">sudo cp  /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so  /opt/kingsoft/wps-office/office6/qt/plugins/platforminputcontexts/</div><div class="line"></div><div class="line">fcitx-autostart</div><div class="line"></div><div class="line">wps</div></pre></td></tr></table></figure>
+<p>效果图：<br><img src="../img/5e598032-adc5-48ad-a1a3-8a2cd012861a.png" alt="5e598032-adc5-48ad-a1a3-8a2cd012861a"></p>
+<h2 id="Atom"><a href="#Atom" class="headerlink" title="Atom"></a>Atom</h2><p>Atom 我没有测试上面的方法，应该也是可以的。我的解决办法是编译安装。</p>
+<p>Atom的官方网址：<a href="https://atom.io/" target="_blank" rel="external">https://atom.io/</a></p>
+<p>binary包安装以后无法输入中文，后来采用编译安装问题的到解决。</p>
+<p>编译安装参考：<a href="http://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-linux" target="_blank" rel="external">http://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-linux</a></p>
+<p>效果图：<br><img src="../img/01cf646b-b789-4b42-9278-adcdec0ffed6.png" alt="01cf646b-b789-4b42-9278-adcdec0ffed6"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上通过安装 fcitx-libs-qt fcitx-libs-qt5，然后将动态链接库拷贝到软件的启动目录（或者特定的库目录中）完美解决了Qtcreator，wps，Atom在Ubuntu中的中文输入问题！！Enjoy your Ubuntu!<br>&lt;</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Qt </tag>
+            
+            <tag> wps </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Qt-doc-struct]]></title>
       <url>https://ygcaicn.github.io/Qt/qt-doc-struct.html</url>
       <content type="html"><![CDATA[<p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="external">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
@@ -927,7 +993,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x31;&#50;&#x33;&#64;&#x65;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#64;&#x65;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#49;&#x32;&#x33;&#64;&#101;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#49;&#x32;&#x33;&#64;&#101;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
@@ -1728,7 +1794,7 @@ int main()
 <p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
 <p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a></p>
 <p>name@gmail.com</p>
-<p><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#110;&#97;&#x6d;&#x65;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#110;&#97;&#x6d;&#x65;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p><a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6e;&#x61;&#x6d;&#101;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#x6e;&#x61;&#x6d;&#101;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a></p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="./calcu.png" alt="icon"></p>
 <p>嵌入Html</p>
 <p><img src="/img/calcu.png" alt="This is a calcular" title="calcular" width="100" length="100"></p>
@@ -1927,7 +1993,7 @@ hexo d == hexo deploy
 <p><img src="/img/markdown-img-paste-20161016161851265.png" alt=""><br><img src="/img/markdown-img-paste-20161016162035764.png" alt=""></p>
 <p>完成以后你的远程仓库也就建好了。不过你还需要将刚才建立的本地仓库与远程的仓库建立连接。那么你就需要你的远程仓库地址</p>
 <p><img src="/img/markdown-img-paste-20161016162352701.png" alt=""><br>连接支持HTTPs和SSH两种协议，推荐使用ＳＳＨ连接。</p>
-<p>我的连接是<a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;&#58;&#121;&#103;&#x63;&#97;&#105;&#x63;&#110;&#x2f;&#109;&#121;&#103;&#105;&#x74;&#46;&#x67;&#105;&#x74;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;&#58;&#121;&#103;&#x63;&#97;&#105;&#x63;&#110;&#x2f;&#109;&#121;&#103;&#105;&#x74;&#46;&#x67;&#105;&#x74;</a>, （这用的是SSH连接地址）</p>
+<p>我的连接是<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;&#x3a;&#121;&#103;&#x63;&#97;&#105;&#x63;&#x6e;&#x2f;&#109;&#x79;&#x67;&#x69;&#x74;&#x2e;&#x67;&#105;&#x74;">&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;&#x3a;&#121;&#103;&#x63;&#97;&#105;&#x63;&#x6e;&#x2f;&#109;&#x79;&#x67;&#x69;&#x74;&#x2e;&#x67;&#105;&#x74;</a>, （这用的是SSH连接地址）</p>
 <h1 id="本地仓库与远程仓库连接-connect-a-remote-repository"><a href="#本地仓库与远程仓库连接-connect-a-remote-repository" class="headerlink" title="本地仓库与远程仓库连接( connect a remote repository )"></a>本地仓库与远程仓库连接( connect a remote repository )</h1><pre><code>#打开git shell
 cd D:/github/mygit
 git remote add origin git@github.com:ygcaicn/mygit.git
