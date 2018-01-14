@@ -155,7 +155,7 @@
     <link href="https://ygcaicn.github.io/Qt/qt-doc-struct.html"/>
     <id>https://ygcaicn.github.io/Qt/qt-doc-struct.html</id>
     <published>2017-11-09T16:09:40.000Z</published>
-    <updated>2017-11-09T16:51:30.140Z</updated>
+    <updated>2017-11-09T16:51:30.139Z</updated>
     
     <content type="html"><![CDATA[<p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="external">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
 <p>进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists</p>
@@ -337,7 +337,7 @@
     <link href="https://ygcaicn.github.io/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html"/>
     <id>https://ygcaicn.github.io/网络/VIP视频解析-去广告.html</id>
     <published>2017-07-22T12:32:55.000Z</published>
-    <updated>2017-08-31T15:45:07.390Z</updated>
+    <updated>2017-08-31T15:45:07.389Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VIP视频解析-去广告教程"><a href="#VIP视频解析-去广告教程" class="headerlink" title="VIP视频解析+去广告教程"></a>VIP视频解析+去广告教程</h1><h2 id="Step1-打开视频网站"><a href="#Step1-打开视频网站" class="headerlink" title="Step1.打开视频网站"></a>Step1.打开视频网站</h2><p>这里以爱奇艺为例 <a href="http://www.iqiyi.com" target="_blank" rel="external">http://www.iqiyi.com</a> 打开首页看到类似下面的界面：</p>
 <p><img src="http://i.imgur.com/ZQhMuKf.png" alt="Imgur"></p>
@@ -390,7 +390,7 @@
     <link href="https://ygcaicn.github.io/Linux/win10-1703-grub.html"/>
     <id>https://ygcaicn.github.io/Linux/win10-1703-grub.html</id>
     <published>2017-06-01T12:32:55.000Z</published>
-    <updated>2017-06-01T02:15:58.516Z</updated>
+    <updated>2017-06-01T02:15:58.515Z</updated>
     
     <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
 <p>往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。</p>
@@ -452,7 +452,7 @@
     <link href="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html"/>
     <id>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</id>
     <published>2017-05-14T21:32:55.000Z</published>
-    <updated>2017-06-01T02:05:20.599Z</updated>
+    <updated>2017-06-01T02:05:20.598Z</updated>
     
     <content type="html"><![CDATA[<p>ESP分区存放的UEFI引导程序</p>
 <p>ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
@@ -555,7 +555,7 @@
     <link href="https://ygcaicn.github.io/Linux/mathjax.html"/>
     <id>https://ygcaicn.github.io/Linux/mathjax.html</id>
     <published>2017-05-05T01:57:40.000Z</published>
-    <updated>2017-05-05T01:58:45.656Z</updated>
+    <updated>2017-05-05T01:58:45.655Z</updated>
     
     <content type="html"><![CDATA[<p>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
 <a id="more"></a>
@@ -577,7 +577,7 @@
     <link href="https://ygcaicn.github.io/Machine-Learning/Mechine-Learning.html"/>
     <id>https://ygcaicn.github.io/Machine-Learning/Mechine-Learning.html</id>
     <published>2017-05-04T21:32:55.000Z</published>
-    <updated>2017-05-04T05:52:22.505Z</updated>
+    <updated>2017-05-04T05:52:22.504Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文是一篇转载自<a href="http://blog.jobbole.com/67616/" target="_blank" rel="external"><strong>伯乐在线的译文</strong></a>，英文原文是这里：<a href="https://medium.com/code-poet/80ea3ec3c471" target="_blank" rel="external"><strong>Machine Learning is Fun!</strong> — by Adam Geitgey</a></p>
@@ -691,7 +691,7 @@
     <link href="https://ygcaicn.github.io/Python/python%E5%9F%BA%E7%A1%80.html"/>
     <id>https://ygcaicn.github.io/Python/python基础.html</id>
     <published>2017-05-04T19:25:36.000Z</published>
-    <updated>2017-05-04T07:48:54.287Z</updated>
+    <updated>2017-05-04T07:48:54.286Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h1><blockquote>
 <p>A string is a sequence of values that represent Unicode code points. All the code points in the range U+0000 - U+10FFFF can be represented in a string. Python doesn’t have a char type; instead, every code point in the string is represented as a string object with length 1. The built-in function ord() converts a code point from its string form to an integer in the range 0 - 10FFFF; chr() converts an integer in the range 0 - 10FFFF to the corresponding length 1 string object. <code>str.encode()</code> can be used to convert a str to bytes using the given text encoding, and <code>bytes.decode()</code> can be used to achieve the opposite.</p>
@@ -893,7 +893,7 @@
     <link href="https://ygcaicn.github.io/Linux/help-linux.html"/>
     <id>https://ygcaicn.github.io/Linux/help-linux.html</id>
     <published>2017-03-16T02:01:55.000Z</published>
-    <updated>2017-03-16T15:54:42.006Z</updated>
+    <updated>2017-03-16T15:54:42.005Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Help-Linux"><a href="#Help-Linux" class="headerlink" title="Help Linux"></a>Help Linux</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a><em>Ubuntu</em></h2><h3 id="发行版列表WIKI"><a href="#发行版列表WIKI" class="headerlink" title="发行版列表WIKI"></a><a href="https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8" target="_blank" rel="external">发行版列表WIKI</a></h3><p>Ubuntu版本的命名规则是根据正式版发行的年月命名，Ubuntu 8.10也就意味着2008年10月发行的Ubuntu，研发人员与使用者可从版本号码就知道正式发布的时间。Ubuntu是基于Debian开发的Linux发行版，Debian的开发代号来自于电影玩具总动员，不过，Ubuntu各版本的代号却固定是形容词加上动物名称，而且这2个词的英文首字母一定是相同的。从Ubuntu 6.06开始，两个词的首字母按照英文字母表的排列顺序取用</p>
 <p><img src="http://i.imgur.com/ApYN4RB.png" alt="Imgur"></p>
@@ -1156,7 +1156,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x31;&#50;&#51;&#64;&#101;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#x31;&#50;&#51;&#64;&#101;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#49;&#50;&#51;&#x40;&#101;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#49;&#50;&#51;&#x40;&#101;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
@@ -1288,7 +1288,7 @@
     <link href="https://ygcaicn.github.io/Linux/CentOS%E4%B8%8B%E8%BD%BD%E5%8F%8A%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9-Linux%E7%89%88%E6%9C%AC%EF%BC%8C%E4%B8%8B%E8%BD%BD.html"/>
     <id>https://ygcaicn.github.io/Linux/CentOS下载及版本选择-Linux版本，下载.html</id>
     <published>2017-01-16T04:02:06.000Z</published>
-    <updated>2017-01-15T15:12:48.103Z</updated>
+    <updated>2017-01-15T15:12:48.102Z</updated>
     
     <content type="html"><![CDATA[<p>CentOS 是一个企业级的 Linux 发行版本，它源于 Red Hat 1 免费公开的源代码。<br>CentOS 完全遵守 Red Hat 的再发行政策，并且以功能上的兼容性为目标。CentOS 对组件的修改主要是去除上游供应商的商标及美工。</p>
 <a id="more"></a>
@@ -1355,7 +1355,7 @@
     <link href="https://ygcaicn.github.io/uncategorized/grub2-1.html"/>
     <id>https://ygcaicn.github.io/uncategorized/grub2-1.html</id>
     <published>2016-11-06T17:07:01.000Z</published>
-    <updated>2016-11-06T04:19:49.517Z</updated>
+    <updated>2016-11-06T04:19:49.516Z</updated>
     
     <content type="html"><![CDATA[<p>（译）<a href="http://blog.woodelf.org/2014/05/28/uefi-boot-how-it-works.html" target="_blank" rel="external">转</a> UEFI 启动：实际工作原理 2014.05.28</p>
 <p>本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。</p>
