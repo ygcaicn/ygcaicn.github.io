@@ -4,6 +4,36 @@
   
     
     <entry>
+      <title><![CDATA[build-live-ubuntu --2]]></title>
+      <url>https://ygcaicn.github.io/Linux/build-live-ubuntu2.html</url>
+      <content type="html"><![CDATA[<p>在上次介绍了一些基础的常用软件之后决定进一步探索！在知乎找到了一篇很棒的讨论，链接如下：<br><a href="https://www.zhihu.com/question/19811112" target="_blank" rel="external">https://www.zhihu.com/question/19811112</a>通过实践找出了我比较满意的软件。<br>由于本人电脑只有240G的固盘，电脑性能一般，因此对与内存和硬盘都是相当的奢侈，能原配的就不去搞些华丽胡哨的<br>东西，本着能简单绝不复杂，能默认绝不修改的原则去测试一些软件，以及一些脚本，特此记录以备后查！</p>
+<a id="more"></a>
+<h1 id="No-1-Guake-Terminal"><a href="#No-1-Guake-Terminal" class="headerlink" title="No.1 Guake Terminal"></a>No.1 Guake Terminal</h1><p>这个名字有点意思，‘挂科’Terminal。。。功能很简单快速打开Terminal，或许你认为Ctrl+Alt+T（或者自己设置一个快捷键）去开Terminal也是一件很简单的事。没错我以前也是这么认为的，但是遇到了Guake后我改变了看法，特别是需要开多个Terminal的时候（高手都不需要开多个，一个都能全搞定！）系统的Terminal显的不方便，还有就是临时开一个<br>Terminal的时候很可能用完就不去关然后在那积攒了很多。Guake Terminal就是来解决这些问题的！一键弹出（默认F12），失去焦点自动关闭，可以开启多个Tab，可以自定义Appearance。<br><img src="../img/82bdf788-4c0c-4238-a94c-bf6e7e2e2106.png" alt="82bdf788-4c0c-4238-a94c-bf6e7e2e2106"></p>
+<h1 id="No-2-bash-aliases"><a href="#No-2-bash-aliases" class="headerlink" title="No.2 ~/.bash_aliases"></a>No.2 ~/.bash_aliases</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">m_basedir=&apos;/media/jachin/Software&apos;</div><div class="line">#cd</div><div class="line">alias pydir=&apos;cd $&#123;m_basedir&#125;/python&apos;</div><div class="line">alias soft=&apos;cd $&#123;m_basedir&#125;&apos;</div><div class="line">alias gitdir=&apos;cd $&#123;m_basedir&#125;/Github&apos;</div><div class="line"></div><div class="line"></div><div class="line">#python3 -m venv</div><div class="line">alias pyvenv=&apos;python3 -m venv&apos;</div><div class="line">alias pyenv=&apos;pydir &amp;&amp; source ./ENV/bin/activate&apos;</div><div class="line"></div><div class="line">#atom</div><div class="line">alias atoma=&apos;atom -a&apos;</div><div class="line"></div><div class="line">#blog</div><div class="line">alias blogdir=&apos;cd $&#123;m_basedir&#125;/Github/blog-hexo&apos;</div><div class="line">alias blog=&apos;pushd $&#123;m_basedir&#125;/Github/blog-hexo &amp;&amp; atom -a ./  &amp;&amp; popd&apos;</div><div class="line">alias blogd=&apos;pushd $&#123;m_basedir&#125;/Github/blog-hexo &amp;&amp; hexo d -g  &amp;&amp; popd&apos;</div><div class="line">alias blogs=&apos;pushd $&#123;m_basedir&#125;/Github/blog-hexo &amp;&amp; hexo s -g  &amp;&amp; popd&apos;</div></pre></td></tr></table></figure>
+<p>配置后我只要F12 blog便用atom打开了我的blog目录，写完之后只要blogd就会执行上传！真的很方便！还可以写很多的快捷命令，搭配GuakeTerminal简直完美！有点像win下Listary。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">pydir #进入python的目录</div><div class="line">pyenv #进入python的目录并进入venv</div><div class="line">atoma #以append的方式将目录添加到atom中</div><div class="line"></div><div class="line">blogdir #进入到blog的目录</div><div class="line">blog    #用atom打开blog目录</div><div class="line">blogd   #上传</div><div class="line">blogs   #本地测试</div></pre></td></tr></table></figure>
+<h1 id="No-3-Draw-io"><a href="#No-3-Draw-io" class="headerlink" title="No.3 Draw.io"></a>No.3 <a href="https://www.draw.io/" target="_blank" rel="external">Draw.io</a></h1><p>有很多的模板可以使用，支持存储在本地，Github，google drive等，在线版的viso！</p>
+<p><img src="../img/6fd4b766-2a6b-42a9-b27e-1536f8d993c6.png" alt="6fd4b766-2a6b-42a9-b27e-1536f8d993c6"></p>
+<h1 id="No-4"><a href="#No-4" class="headerlink" title="No.4"></a>No.4</h1>]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[build-live-ubuntu打造日常使用Ubuntu]]></title>
       <url>https://ygcaicn.github.io/Linux/build-live-ubuntu.html</url>
       <content type="html"><![CDATA[<p>转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。<br>Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大<br>的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。<br>本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10</p>
