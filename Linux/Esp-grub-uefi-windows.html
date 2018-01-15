@@ -11,19 +11,16 @@
   
   
   
-  <meta name="description" content="ESP分区存放的UEFI引导程序
-ESP分区被格式化意味着无法进入系统">
+  <meta name="description" content="ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ESP分区格式化，修复Windows&Linux引导">
 <meta property="og:url" content="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html">
 <meta property="og:site_name" content="Jachin">
-<meta property="og:description" content="ESP分区存放的UEFI引导程序
-ESP分区被格式化意味着无法进入系统">
-<meta property="og:updated_time" content="2017-06-01T02:05:20.598Z">
+<meta property="og:description" content="ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统">
+<meta property="og:updated_time" content="2018-01-15T10:13:42.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ESP分区格式化，修复Windows&Linux引导">
-<meta name="twitter:description" content="ESP分区存放的UEFI引导程序
-ESP分区被格式化意味着无法进入系统">
+<meta name="twitter:description" content="ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统">
   
     <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
   
@@ -140,18 +137,17 @@ ESP分区被格式化意味着无法进入系统">
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ESP分区存放的UEFI引导程序</p>
-<p>ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
+        <p>ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
 <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>Windows10 64<br>Linuxmint 64</p>
 <p>双系统</p>
 <p>Windows UEFI引导<br>Linux Grub2引导</p>
 <p>sda1是我的Esp分区。被我格式化过</p>
 <pre><code>sudo mkfs.vfat /dev/sda1
-</code></pre><p>Linux的boot我是单独分区的，设备符为：/dev/sda5</p>
+</code></pre><p>Linux的boot是单独分区的，设备符为：/dev/sda5</p>
 <h1 id="修复Linux-Grub2"><a href="#修复Linux-Grub2" class="headerlink" title="修复Linux Grub2"></a>修复Linux Grub2</h1><p>进入U盘进入live Linux</p>
 <h2 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h2><p>从新安装grub2,</p>
 <p>挂载esp分区：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /mnt/esp </div><div class="line">sudo mount /dev/sda1 /mnt/esp</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /mnt/esp</div><div class="line">sudo mount /dev/sda1 /mnt/esp</div></pre></td></tr></table></figure>
 <p>挂载boot分区：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /mnt/boot</div><div class="line">sudo mount /dev/sda5 /mnt/boot</div></pre></td></tr></table></figure>
 <p><strong>Note:</strong> 这里为什么要挂载boot分区？</p>
@@ -191,7 +187,7 @@ ESP分区被格式化意味着无法进入系统">
 <p><code>/f UEFI</code>选项尽量加上吧，我的不加没有成功哦。</p>
 <p>到此位置你的Windows已经可以启动了。</p>
 <p>查看一下上面的命令都干了什么事,可以看到esp分区中只有一个目录：EFI</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">EFI</div><div class="line">├── Boot</div><div class="line">│   └── bootx64.efi</div><div class="line">├── Microsoft</div><div class="line">│   ├── Boot</div><div class="line">│   │   ├── BCD</div><div class="line">│   │   ├── BCD.LOG</div><div class="line">│   │   ├── BCD.LOG1</div><div class="line">│   │   ├── BCD.LOG2</div><div class="line">│   │   ├── bg-BG</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   └── bootmgr.efi.mui</div><div class="line">│   │   ├── bootmgfw.efi</div><div class="line">│   │   ├── bootmgr.efi</div><div class="line">│   │   ├── BOOTSTAT.DAT</div><div class="line">│   │   ├── boot.stl</div><div class="line">│   │   ├── cs-CZ  语言文件</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   ├── bootmgr.efi.mui</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">│   │   ├── en-GB</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   └── bootmgr.efi.mui</div><div class="line">│   │   ├── en-US</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   ├── bootmgr.efi.mui</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">|   |   : </div><div class="line">|   |   : </div><div class="line">│   │   ├── zh-CN</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   ├── bootmgr.efi.mui</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">│   │   ├── Fonts  字体文件</div><div class="line">│   │   │   ├── chs_boot.ttf</div><div class="line">│   │   │   :</div><div class="line">│   │   │   :</div><div class="line">│   │   │   └── wgl4_boot.ttf</div><div class="line">│   │   ├── kd_02_10df.dll</div><div class="line">│   │   :</div><div class="line">│   │   :</div><div class="line">│   │   ├── kdstub.dll</div><div class="line">│   │   ├── memtest.efi</div><div class="line">│   │   ├── qps-ploc</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">│   │   └── Resources</div><div class="line">│   │       ├── bootres.dll</div><div class="line">│   │       ├── en-US</div><div class="line">│   │       │   └── bootres.dll.mui</div><div class="line">│   │       └── zh-CN</div><div class="line">│   │           └── bootres.dll.mui</div><div class="line">│   └── Recovery</div><div class="line">│       ├── BCD</div><div class="line">│       ├── BCD.LOG</div><div class="line">│       ├── BCD.LOG1</div><div class="line">│       └── BCD.LOG2</div><div class="line">└── ubuntu</div><div class="line">    └── grubx64.efi</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">EFI</div><div class="line">├── Boot</div><div class="line">│   └── bootx64.efi</div><div class="line">├── Microsoft</div><div class="line">│   ├── Boot</div><div class="line">│   │   ├── BCD</div><div class="line">│   │   ├── BCD.LOG</div><div class="line">│   │   ├── BCD.LOG1</div><div class="line">│   │   ├── BCD.LOG2</div><div class="line">│   │   ├── bg-BG</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   └── bootmgr.efi.mui</div><div class="line">│   │   ├── bootmgfw.efi</div><div class="line">│   │   ├── bootmgr.efi</div><div class="line">│   │   ├── BOOTSTAT.DAT</div><div class="line">│   │   ├── boot.stl</div><div class="line">│   │   ├── cs-CZ  语言文件</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   ├── bootmgr.efi.mui</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">│   │   ├── en-GB</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   └── bootmgr.efi.mui</div><div class="line">│   │   ├── en-US</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   ├── bootmgr.efi.mui</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">|   |   :</div><div class="line">|   |   :</div><div class="line">│   │   ├── zh-CN</div><div class="line">│   │   │   ├── bootmgfw.efi.mui</div><div class="line">│   │   │   ├── bootmgr.efi.mui</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">│   │   ├── Fonts  字体文件</div><div class="line">│   │   │   ├── chs_boot.ttf</div><div class="line">│   │   │   :</div><div class="line">│   │   │   :</div><div class="line">│   │   │   └── wgl4_boot.ttf</div><div class="line">│   │   ├── kd_02_10df.dll</div><div class="line">│   │   :</div><div class="line">│   │   :</div><div class="line">│   │   ├── kdstub.dll</div><div class="line">│   │   ├── memtest.efi</div><div class="line">│   │   ├── qps-ploc</div><div class="line">│   │   │   └── memtest.efi.mui</div><div class="line">│   │   └── Resources</div><div class="line">│   │       ├── bootres.dll</div><div class="line">│   │       ├── en-US</div><div class="line">│   │       │   └── bootres.dll.mui</div><div class="line">│   │       └── zh-CN</div><div class="line">│   │           └── bootres.dll.mui</div><div class="line">│   └── Recovery</div><div class="line">│       ├── BCD</div><div class="line">│       ├── BCD.LOG</div><div class="line">│       ├── BCD.LOG1</div><div class="line">│       └── BCD.LOG2</div><div class="line">└── ubuntu</div><div class="line">    └── grubx64.efi</div></pre></td></tr></table></figure>
 <p>windows引导有几类文件：<br>efi文件memtest.efi bootmgr.efi bootmgfw.efi /Boot/bootmgfw.efi<br>字体文件 *.ttf<br>语言文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">zh-CN</div><div class="line">├── bootmgfw.efi.mui</div><div class="line">├── bootmgr.efi.mui</div><div class="line">└── memtest.efi.mui</div></pre></td></tr></table></figure></p>
 <p>BCD文件 BCD引导修复这个是最重要的其他的那些文件都可以拷贝，这个不可以。所以前面的命令bcdboot主要任务就是修复这个BCD文件。当然还有其他的修复方式。</p>
 <h1 id="Other-things"><a href="#Other-things" class="headerlink" title="Other things"></a>Other things</h1><p>现在系统都可以完美启动了，但是还有些不完没就是Grub的引导中没有Windows item。<br>进入Lilnux<br>执行   <code>update-grub2</code></p>
@@ -207,7 +203,7 @@ ESP分区被格式化意味着无法进入系统">
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grub2-Linux-Windows/">Grub2 Linux Windows</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grub-Linux-Windows/">Grub Linux Windows</a></li></ul>
 
       
         
@@ -255,9 +251,9 @@ ESP分区被格式化意味着无法进入系统">
     </a>
   
   
-    <a href="/嵌入式/stm32f1xx-h.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Linux/mathjax.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">stm32f1xx.h</div>
+      <div class="article-nav-title">mathjax 测试</div>
     </a>
   
 </nav>

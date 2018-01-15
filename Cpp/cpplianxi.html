@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C++练习笔记（持续更新） | Jachin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Cpp程序练习" />
+  
+  
+  
+  
+  <meta name="description" content="前言由于近一年来学习嵌入式大多接触的都是纯C语言，直到看到学校搞了一个程序设计大赛，才发现自己的C++的基础遗忘了好多。不过这也是正常的，毕竟三天不练手生，学习其他知识的同时不要忘记基础！！将练习记录写在博客中一来方便以后查阅，而来和大家一起学习！
+查了查以前囤下的C++API手册发现是C++98的，这有点让我不开心了，于是上网搜寻了一番，发现没有找到好的本地手册，oschina的手册做的不能再垃">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++练习笔记（持续更新）">
+<meta property="og:url" content="https://ygcaicn.github.io/Cpp/cpplianxi.html">
+<meta property="og:site_name" content="Jachin">
+<meta property="og:description" content="前言由于近一年来学习嵌入式大多接触的都是纯C语言，直到看到学校搞了一个程序设计大赛，才发现自己的C++的基础遗忘了好多。不过这也是正常的，毕竟三天不练手生，学习其他知识的同时不要忘记基础！！将练习记录写在博客中一来方便以后查阅，而来和大家一起学习！
+查了查以前囤下的C++API手册发现是C++98的，这有点让我不开心了，于是上网搜寻了一番，发现没有找到好的本地手册，oschina的手册做的不能再垃">
+<meta property="og:updated_time" content="2018-01-15T10:02:21.759Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++练习笔记（持续更新）">
+<meta name="twitter:description" content="前言由于近一年来学习嵌入式大多接触的都是纯C语言，直到看到学校搞了一个程序设计大赛，才发现自己的C++的基础遗忘了好多。不过这也是正常的，毕竟三天不练手生，学习其他知识的同时不要忘记基础！！将练习记录写在博客中一来方便以后查阅，而来和大家一起学习！
+查了查以前囤下的C++API手册发现是C++98的，这有点让我不开心了，于是上网搜寻了一番，发现没有找到好的本地手册，oschina的手册做的不能再垃">
+  
+    <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
+  
+  <link rel="icon" href="/img/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Jachin" rel="home"> Jachin </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">openwrt  嵌入式  学习总结  思考感悟  知识管理</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/gallery">gallery</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/link">link</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-cpplianxi" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      C++练习笔记（持续更新）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/Cpp/cpplianxi.html" class="article-date">
+	  <time datetime="2016-10-24T23:28:32.000Z" itemprop="datePublished">October 24, 2016</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Cpp/">Cpp</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于近一年来学习嵌入式大多接触的都是纯C语言，直到看到学校搞了一个程序设计大赛，才发现自己的C++的基础遗忘了好多。<br>不过这也是正常的，毕竟三天不练手生，学习其他知识的同时不要忘记基础！！将练习记录写在博客中一来方便以后查阅，而来和大家一起学习！</p>
+<p>查了查以前囤下的C++API手册发现是C++98的，这有点让我不开心了，于是上网搜寻了一番，发现没有找到好的本地手册，oschina的手册做的不能再垃圾，连个search都没有。去一些<a href="http://www.cplusplus.com/" target="_blank" rel="external">cpp的权威网站</a>当然是英文的，但是发现不怎么活跃。这怎么能满足我这种完美主义的程序爱好者呢。。。最后搜寻了一番终于找到了满意的手册，不过美中不足的是不能本地化。不过这也没什么这说明网站更新活跃嘛！下面附上链接，欢迎各位<code>Ctrl+D</code>:</p>
+<p><a href="http://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5" target="_blank" rel="external">Cpp编程手册</a></p>
+<p><a href="http://www.cplusplus.com/reference/" target="_blank" rel="external">cplusplus reference</a></p>
+<a id="more"></a>
+<p><em>本文程序大多基于C++11特性，除非特别声明！！</em></p>
+<h1 id="输入不定量数据，求和"><a href="#输入不定量数据，求和" class="headerlink" title="输入不定量数据，求和"></a>输入不定量数据，求和</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"><span class="keyword">int</span> sum = <span class="number">0</span>, val = <span class="number">0</span>;</div><div class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"输入一组数据，以Ctrl+Z结束,Enter 计算"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; val)</div><div class="line">sum += val;</div><div class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"sum="</span> &lt;&lt;sum&lt;&lt; <span class="built_in">endl</span>;</div><div class="line">system(<span class="string">"pause"</span>);</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="将字符串的小写转换为大写，统计字符串等"><a href="#将字符串的小写转换为大写，统计字符串等" class="headerlink" title="将字符串的小写转换为大写，统计字符串等"></a>将字符串的小写转换为大写，统计字符串等</h1><p>string 引用</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cctype"</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"><span class="built_in">string</span> str;</div><div class="line">getline(<span class="built_in">cin</span>, str);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : str)</div><div class="line">&#123;</div><div class="line"><span class="comment">//if(c&gt;='a'&amp;&amp;c&lt;='z')</span></div><div class="line"><span class="keyword">if</span>(<span class="built_in">islower</span>(c))</div><div class="line">&#123;</div><div class="line">c = c - <span class="string">'a'</span> + <span class="string">'A'</span>;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">cout</span> &lt;&lt; str&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">system(<span class="string">"pause"</span>);</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="A-B-probles的一道Acm题"><a href="#A-B-probles的一道Acm题" class="headerlink" title="A+B probles的一道Acm题"></a>A+B probles的一道Acm题</h1><pre><code>Description
+Calculate a + b
+Input
+The input will consist of a series of pairs of integers a and b,separated by a space, one pair of integers per line.
+Output
+For each pair of input integers a and b you should output the sum of a and b in one line,and with one line of output for each line in input.
+Sample Input
+1 2
+3 4
+
+Sample Output
+3
+7
+</code></pre><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"><span class="keyword">int</span> a, b;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; slove;</div><div class="line"><span class="keyword">int</span> tmp;</div><div class="line"></div><div class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; a&amp;&amp;<span class="built_in">cin</span> &gt;&gt; b)</div><div class="line">&#123;</div><div class="line">tmp= (a + b);</div><div class="line">slove.push_back(tmp);</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> i:slove)</div><div class="line"><span class="built_in">cout</span> &lt;&lt; (<span class="keyword">int</span>)i &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">system(<span class="string">"pause"</span>);</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><del>无奈这么写上传之后直接编译不通过。。。看来acm的系统是不支持C++11特性的。。</del>明天再写C++98的吧。。</p>
+<p>看来是我太不了解OJ了，回头好好学习一下OJ的基本输入和输出。下面附上正确的程序：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a, b;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">cout</span> &lt;&lt; a + b &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="char-数组的遍历操作"><a href="#char-数组的遍历操作" class="headerlink" title="char * 数组的遍历操作"></a>char * 数组的遍历操作</h1><blockquote>
+<p>输入字符串若满足：首字母大写，后面全为小写返回1，否则返回0。如Hello满足条件</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun</span><span class="params">(<span class="keyword">char</span> *str)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> ((*str)&gt;<span class="string">'A'</span> &amp;&amp; (*str)&lt;<span class="string">'Z'</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">while</span> (*(++str))</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> ((*str)&lt;<span class="string">'a'</span> || (*str)&gt;<span class="string">'z'</span>)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>将输入的字符串中的字符全部变为ASCII码表中的下一个字符.</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">char</span> *str)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span> (*(str+i))</div><div class="line">		&#123;</div><div class="line">			(*(str + i))++;</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>寻找两个字符串第一个不同的位置,下标从0开始，如果全部相同返回-1</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun</span><span class="params">(<span class="keyword">char</span> *str1, <span class="keyword">char</span> *str2)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">size_t</span> length = <span class="built_in">strlen</span>(str1);</div><div class="line">	<span class="keyword">size_t</span> length2 = <span class="built_in">strlen</span>(str2);</div><div class="line">	length = length &lt; length2 ? length:length2;</div><div class="line">	<span class="keyword">int</span> i;</div><div class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">char</span> c1 = str1[i], c2 = str2[i];</div><div class="line"></div><div class="line">		<span class="keyword">if</span> (c1 &gt; <span class="string">'a'</span>&amp;&amp;c1 &lt; <span class="string">'z'</span>)</div><div class="line">			c1 = c1 - (<span class="string">'a'</span> - <span class="string">'A'</span>);</div><div class="line">		<span class="keyword">if</span> (c2 &gt;= <span class="string">'a'</span>&amp;&amp;c2 &lt;= <span class="string">'z'</span>)</div><div class="line">			c2 = c2 - (<span class="string">'a'</span> - <span class="string">'A'</span>);</div><div class="line">		<span class="keyword">if</span> (c1!=c2)</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">	&#125;</div><div class="line">  <span class="keyword">if</span> (i == length)</div><div class="line">      <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	<span class="keyword">return</span> i;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="检索出字符串中出现最多的字符，并返回该字符"><a href="#检索出字符串中出现最多的字符，并返回该字符" class="headerlink" title="检索出字符串中出现最多的字符，并返回该字符"></a>检索出字符串中出现最多的字符，并返回该字符</h1><blockquote>
+<p>ASCII共定义了256个代码(从0-255)，从0-32位为控制字符(33个)(ASCII control characters)，从33-127位为可打印字符(95个)(ASCII printable characters)。从0-127是标准的ASCII编码，从128-255是扩展的ASCII编码。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="comment">//检索出字符串中出现最多的字符，并返回该字符</span></div><div class="line"><span class="function"><span class="keyword">char</span> <span class="title">fun</span><span class="params">(<span class="keyword">char</span> *str)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">char</span> *tstr = str;</div><div class="line">	<span class="keyword">int</span> tmp[<span class="number">100</span>] = &#123;<span class="number">0</span>&#125;;</div><div class="line">	<span class="keyword">while</span> (*tstr)</div><div class="line">	&#123;</div><div class="line">		<span class="comment">//相对首个可打印字符位置</span></div><div class="line">		tmp[<span class="keyword">int</span>(*tstr)<span class="number">-32</span>]++;</div><div class="line">		tstr++;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//去除大小写差异</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="string">'A'</span><span class="number">-32</span>;i&lt;=<span class="string">'Z'</span><span class="number">-32</span>; i++)</div><div class="line">	&#123;</div><div class="line">		tmp[i] += tmp[i + <span class="string">'a'</span> - <span class="string">'A'</span>];</div><div class="line">	<span class="comment">//	tmp[i + 'a' - 'A']=tmp[i];</span></div><div class="line">	&#125;</div><div class="line">	<span class="comment">//找到最大的</span></div><div class="line">	<span class="keyword">char</span> maxstr = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> maxnum = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (tmp[i] &gt; maxnum)</div><div class="line">		&#123;</div><div class="line">			maxnum = tmp[i];</div><div class="line">			maxstr = i;</div><div class="line">		&#125;		</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//判断是否只出现大写或只出现小写</span></div><div class="line">	<span class="comment">//大小写同时出现返回大写</span></div><div class="line">	<span class="keyword">if</span> (tmp[maxstr] &gt; tmp[maxstr + <span class="string">'a'</span> - <span class="string">'A'</span>])</div><div class="line">		maxstr += <span class="number">32</span>;</div><div class="line">	<span class="keyword">else</span></div><div class="line">	maxstr += <span class="number">32</span>+<span class="string">'a'</span> - <span class="string">'A'</span>;</div><div class="line">	<span class="keyword">return</span> maxstr;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">char</span> str[<span class="number">100</span>];</div><div class="line">	<span class="built_in">cin</span> &gt;&gt; str;</div><div class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"次数最多的是："</span> &lt;&lt; fun(str) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">	system(<span class="string">"pause"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>同样的要求，一位大神给出的程序，让我看到了差距：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span> <span class="title">fun</span><span class="params">(<span class="keyword">char</span> *str)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">char</span> o = <span class="string">'a'</span> - <span class="string">'A'</span>;</div><div class="line">	<span class="keyword">char</span> c = <span class="string">'\0'</span>;</div><div class="line">	<span class="comment">//存储ASCII256个字符的的出现次数</span></div><div class="line">	<span class="keyword">int</span> data[<span class="number">256</span>];</div><div class="line">	<span class="built_in">memset</span>(data, <span class="number">0</span>, <span class="number">256</span> * <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</div><div class="line">	<span class="keyword">size_t</span> length = <span class="built_in">strlen</span>(str);</div><div class="line">	<span class="comment">//遍历字符串</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;length; i++)</div><div class="line">	&#123;</div><div class="line">		c = str[i];</div><div class="line">		data[c]++;</div><div class="line">		<span class="keyword">if</span> (c &gt;= <span class="string">'A'</span> &amp;&amp; c &lt;= <span class="string">'Z'</span> &amp;&amp; data[c + o] &gt; <span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			data[c + o]++;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (c &gt;= <span class="string">'a'</span> &amp;&amp; c &lt;= <span class="string">'z'</span> &amp;&amp; data[c - o] &gt; <span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			data[c - o]++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//找出最大的</span></div><div class="line">	<span class="keyword">char</span> result = <span class="string">'\0'</span>;</div><div class="line">	<span class="keyword">int</span> maxNumber = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;<span class="number">256</span>; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> number = data[i];</div><div class="line">		<span class="keyword">if</span> (number &gt; maxNumber)</div><div class="line">		&#123;</div><div class="line">			result = i;</div><div class="line">			maxNumber = number;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="getline获取一行输入，以回车符触发getline结束，且不保存最后的回车符"><a href="#getline获取一行输入，以回车符触发getline结束，且不保存最后的回车符" class="headerlink" title="getline获取一行输入，以回车符触发getline结束，且不保存最后的回车符"></a>getline获取一行输入，以回车符触发getline结束，且不保存最后的回车符</h1><p>空行结束输入，（注意与文件尾EOF结束的区别）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">     <span class="built_in">string</span> str;</div><div class="line">     <span class="built_in">vector</span> &lt;<span class="built_in">string</span>&gt; vec;</div><div class="line"><span class="keyword">while</span> (getline(<span class="built_in">cin</span>,str)&amp;&amp;!str.empty())</div><div class="line">&#123;</div><div class="line">     vec.push_back(str);</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : vec)</div><div class="line">&#123;</div><div class="line">     <span class="built_in">cout</span> &lt;&lt; i&lt;&lt; <span class="built_in">endl</span>;</div><div class="line">&#125;</div><div class="line">system(<span class="string">"pause"</span>);</div><div class="line"><span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="vector列表初始化，元素引用"><a href="#vector列表初始化，元素引用" class="headerlink" title="vector列表初始化，元素引用"></a>vector列表初始化，元素引用</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">//构造函数初始化</span></div><div class="line">	<span class="comment">//vector &lt;int&gt; vec(10,1);</span></div><div class="line">	<span class="comment">//列表初始化</span></div><div class="line">	<span class="built_in">vector</span> &lt;<span class="keyword">int</span>&gt; vec = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : vec)</div><div class="line">	&#123;</div><div class="line">		i = i*i;</div><div class="line">		<span class="built_in">cout</span> &lt;&lt; i&lt;&lt; <span class="string">'\t'</span>;</div><div class="line">	&#125;</div><div class="line">	system(<span class="string">"pause"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="vector常用操作"><a href="#vector常用操作" class="headerlink" title="vector常用操作"></a><a href="http://zh.cppreference.com/w/cpp/container/vector" target="_blank" rel="external">vector常用操作</a></h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vec.empty()  <span class="comment">//如果vec不含有任何元素返回真，否则返回假</span></div><div class="line">vec.size()  <span class="comment">//返回元素的个数</span></div><div class="line">vec.push_back()  <span class="comment">//添加元素</span></div><div class="line">vex.pop_back()   <span class="comment">//删除元素</span></div><div class="line"><span class="comment">//……更多参见[cppreference](http://zh.cppreference.com/w/cpp/container/vector)</span></div></pre></td></tr></table></figure>
+<h1 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h1><p>迭代器类似于指针类型，提供了我们间接访问对象的方法。我们利用指针可以访问各种数据类型的内容，采用的是 * 符进行</p>
+<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!"></a>每天进步一点点!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Cpp/">Cpp</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cpp/">Cpp</a></li></ul>
+
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'jachin';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/杂项/acmurl.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          收集整理各高校ACM OJ网站，欢迎补充修正
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Linux/lamp-centos7.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">lamp服务器搭建-centos7+Apache2.4+MariaDB+php5.6+phpmyadmin</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入不定量数据，求和"><span class="nav-number">2.</span> <span class="nav-text">输入不定量数据，求和</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将字符串的小写转换为大写，统计字符串等"><span class="nav-number">3.</span> <span class="nav-text">将字符串的小写转换为大写，统计字符串等</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#A-B-probles的一道Acm题"><span class="nav-number">4.</span> <span class="nav-text">A+B probles的一道Acm题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#char-数组的遍历操作"><span class="nav-number">5.</span> <span class="nav-text">char * 数组的遍历操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检索出字符串中出现最多的字符，并返回该字符"><span class="nav-number">6.</span> <span class="nav-text">检索出字符串中出现最多的字符，并返回该字符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#getline获取一行输入，以回车符触发getline结束，且不保存最后的回车符"><span class="nav-number">7.</span> <span class="nav-text">getline获取一行输入，以回车符触发getline结束，且不保存最后的回车符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vector列表初始化，元素引用"><span class="nav-number">8.</span> <span class="nav-text">vector列表初始化，元素引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vector常用操作"><span class="nav-number">9.</span> <span class="nav-text">vector常用操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#迭代器"><span class="nav-number">10.</span> <span class="nav-text">迭代器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#每天进步一点点"><span class="nav-number">11.</span> <span class="nav-text">每天进步一点点!!!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#impossible-is-I’m-possible"><span class="nav-number">11.1.</span> <span class="nav-text">impossible is I’m possible!!!</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/gallery" class="mobile-nav-link">Gallery</a>
+  
+    <a href="/link" class="mobile-nav-link">Link</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Jachin All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+<!--        
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+-->      
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-103029370-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263042211&web_id=1263042211" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
