@@ -919,6 +919,56 @@
   </entry>
   
   <entry>
+    <title>hello md</title>
+    <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/hello-md.html"/>
+    <id>https://ygcaicn.github.io/杂项/hello-md.html</id>
+    <published>2017-03-05T23:08:28.000Z</published>
+    <updated>2018-01-15T11:02:24.880Z</updated>
+    
+    <content type="html"><![CDATA[<p>MarkDown 文本编辑器：  </p>
+<ul>
+<li>MarkdownPad（我使用的是Markdownpad2）</li>
+<li>Sublime</li>
+<li>Atom</li>
+<li>有道云笔记（直接存入云笔记很方便）</li>
+<li>任何有文本编辑功能的软件都可以书写markdown</li>
+</ul>
+<a id="more"></a>
+<h2 id="Hello-word！"><a href="#Hello-word！" class="headerlink" title="Hello word！"></a>Hello word！</h2><p>打开Markdown编辑器，新建Hello.md文件，写入下面的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Hello world!</div><div class="line">===</div><div class="line"></div><div class="line">I love [Google](http://www.google.com)!</div></pre></td></tr></table></figure>
+<p>可视化以后的效果：</p>
+<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world!"></a>Hello world!</h1><p>I love <a href="http://www.google.com" target="_blank" rel="external">Google</a>!</p>
+<hr>
+<h1 id="关于MarkdownPad2"><a href="#关于MarkdownPad2" class="headerlink" title="关于MarkdownPad2"></a>关于MarkdownPad2</h1><ul>
+<li>官方<a href="https://markdownpad.com/" target="_blank" rel="external">MarkdownPad2</a>,可以下载Pro版本。</li>
+<li>破解<a href="http://www.jianshu.com/p/fa7c4387dc62" target="_blank" rel="external">注册码</a><blockquote>
+<p>邮箱：<br>Soar360@live.com<br>授权秘钥：<br>GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MarkDown 文本编辑器：  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MarkdownPad（我使用的是Markdownpad2）&lt;/li&gt;
+&lt;li&gt;Sublime&lt;/li&gt;
+&lt;li&gt;Atom&lt;/li&gt;
+&lt;li&gt;有道云笔记（直接存入云笔记很方便）&lt;/li&gt;
+&lt;li&gt;任何有文本编辑功能的软件都可以书写markdown&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="杂项" scheme="https://ygcaicn.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Markdown" scheme="https://ygcaicn.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown 基础语法</title>
     <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/markdown.html"/>
     <id>https://ygcaicn.github.io/杂项/markdown.html</id>
@@ -1097,7 +1147,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#49;&#x32;&#51;&#64;&#101;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">&#49;&#x32;&#51;&#64;&#101;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#49;&#x32;&#x33;&#64;&#101;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#49;&#x32;&#x33;&#64;&#101;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
@@ -1531,82 +1581,6 @@
       <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
     
       <category term="grub" scheme="https://ygcaicn.github.io/tags/grub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>收集整理各高校ACM OJ网站，欢迎补充修正</title>
-    <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/acmurl.html"/>
-    <id>https://ygcaicn.github.io/杂项/acmurl.html</id>
-    <published>2016-10-25T00:28:32.000Z</published>
-    <updated>2018-01-15T09:54:09.639Z</updated>
-    
-    <content type="html"><![CDATA[<p>搜集的各大高校的ACM网站…</p>
-<a id="more"></a>
-<h1 id="中国：-China"><a href="#中国：-China" class="headerlink" title="中国：(China)"></a>中国：(China)</h1><h1 id="华东地区："><a href="#华东地区：" class="headerlink" title="华东地区："></a>华东地区：</h1><h2 id="浙江："><a href="#浙江：" class="headerlink" title="浙江："></a>浙江：</h2><p>杭州电子科技大学(HDU)：<a href="http://acm.hdu.edu.cn/" target="_blank" rel="external">http://acm.hdu.edu.cn/</a></p>
-<p>浙江大学（ZJU）：<a href="http://acm.zju.edu.cn/" target="_blank" rel="external">http://acm.zju.edu.cn/</a></p>
-<p>浙江工业大学（ZJUT）：<a href="http://acm.zjut.edu.cn/" target="_blank" rel="external">http://acm.zjut.edu.cn/</a></p>
-<p>浙江师范大学（ZJNU）：<a href="http://acm.zjnu.cn/" target="_blank" rel="external">http://acm.zjnu.cn/</a></p>
-<p>浙江工商（ZJGSU）：<a href="http://acm.zjgsu.edu.cn/" target="_blank" rel="external">http://acm.zjgsu.edu.cn/</a></p>
-<p>宁波理工（NIT）：<a href="http://acm.nit.net.cn/" target="_blank" rel="external">http://acm.nit.net.cn/</a></p>
-<h2 id="上海："><a href="#上海：" class="headerlink" title="上海："></a>上海：</h2><p>华东师范大学（ECNU）：<a href="http://acm.cs.ecnu.edu.cn/" target="_blank" rel="external">http://acm.cs.ecnu.edu.cn/</a></p>
-<p>华东理工大学（ECUST）：<a href="http://acm.ecust.edu.cn/" target="_blank" rel="external">http://acm.ecust.edu.cn/</a></p>
-<p>同济大学（TJU）：<a href="http://acm.tongji.edu.cn/" target="_blank" rel="external">http://acm.tongji.edu.cn/</a></p>
-<h2 id="江苏："><a href="#江苏：" class="headerlink" title="江苏："></a>江苏：</h2><p>中国矿业大学（CUMT）： <a href="http://219.219.62.238" target="_blank" rel="external">http://219.219.62.238</a> (我也不懂为啥连个域名都没有)<br>南京航空航天大学： <a href="http://acm.nuaa.edu.cn/" target="_blank" rel="external">http://acm.nuaa.edu.cn/</a></p>
-<h2 id="福建："><a href="#福建：" class="headerlink" title="福建："></a>福建：</h2><p>福州大学（FZU）：<a href="http://acm.fzu.edu.cn/" target="_blank" rel="external">http://acm.fzu.edu.cn/</a></p>
-<p>厦门大学（XMU）：<a href="http://acm.xmu.edu.cn/" target="_blank" rel="external">http://acm.xmu.edu.cn/</a></p>
-<p>福建师范大学（FJNU）：<a href="http://acm.fjnu.edu.cn/" target="_blank" rel="external">http://acm.fjnu.edu.cn/</a></p>
-<h2 id="安徽："><a href="#安徽：" class="headerlink" title="安徽："></a>安徽：</h2><p>中国科技大学（USTC）：<a href="http://acm.ustc.edu.cn/" target="_blank" rel="external">http://acm.ustc.edu.cn/</a></p>
-<p>华北地区：</p>
-<h2 id="北京："><a href="#北京：" class="headerlink" title="北京："></a>北京：</h2><p>北京交大（BJTU）：<a href="http://acm.bjtu.edu.cn/" target="_blank" rel="external">http://acm.bjtu.edu.cn/</a></p>
-<p>北京大学（PKU）：<a href="http://acm.pku.edu.cn/" target="_blank" rel="external">http://acm.pku.edu.cn/</a></p>
-<h2 id="天津："><a href="#天津：" class="headerlink" title="天津："></a>天津：</h2><p>南开大学（NAIKAI）：<a href="http://acm.nankai.edu.cn/" target="_blank" rel="external">http://acm.nankai.edu.cn/</a></p>
-<p>天津大学（TJU）：<a href="http://acm.tju.edu.cn/toj/" target="_blank" rel="external">http://acm.tju.edu.cn/toj/</a></p>
-<h1 id="东北地区："><a href="#东北地区：" class="headerlink" title="东北地区："></a>东北地区：</h1><h2 id="黑龙江："><a href="#黑龙江：" class="headerlink" title="黑龙江："></a>黑龙江：</h2><p>哈尔滨工程大学（HRBEU）：<a href="http://acm.hrbeu.edu.cn/" target="_blank" rel="external">http://acm.hrbeu.edu.cn/</a></p>
-<h1 id="华南地区："><a href="#华南地区：" class="headerlink" title="华南地区："></a>华南地区：</h1><h2 id="广东："><a href="#广东：" class="headerlink" title="广东："></a>广东：</h2><h2 id="中山大学（ZSU）：http-acm-zsu-edu-cn"><a href="#中山大学（ZSU）：http-acm-zsu-edu-cn" class="headerlink" title="中山大学（ZSU）：http://acm.zsu.edu.cn/"></a>中山大学（ZSU）：<a href="http://acm.zsu.edu.cn/" target="_blank" rel="external">http://acm.zsu.edu.cn/</a></h2><h1 id="西南地区："><a href="#西南地区：" class="headerlink" title="西南地区："></a>西南地区：</h1><h2 id="四川："><a href="#四川：" class="headerlink" title="四川："></a>四川：</h2><p>西南民大（SWUN）：<a href="http://acm.swun.edu.cn/" target="_blank" rel="external">http://acm.swun.edu.cn/</a></p>
-<h1 id="华中地区："><a href="#华中地区：" class="headerlink" title="华中地区："></a>华中地区：</h1><h2 id="湖北："><a href="#湖北：" class="headerlink" title="湖北："></a>湖北：</h2><p>华中科技大学（HUST）：<a href="http://acm.hust.edu.cn/JudgeOnline/" target="_blank" rel="external">http://acm.hust.edu.cn/JudgeOnline/</a></p>
-<p>武汉大学（WHU）：<a href="http://acm.whu.edu.cn/" target="_blank" rel="external">http://acm.whu.edu.cn/</a></p>
-<h1 id="港澳台地区："><a href="#港澳台地区：" class="headerlink" title="港澳台地区："></a>港澳台地区：</h1><h2 id="香港："><a href="#香港：" class="headerlink" title="香港："></a>香港：</h2><p>香港大学(HKOI)：<a href="http://judge.hkoi.org/" target="_blank" rel="external">http://judge.hkoi.org/</a></p>
-<p>俄罗斯：(Russia)</p>
-<p>乌拉尔大学（URAL）：<a href="http://acm.timus.ru/" target="_blank" rel="external">http://acm.timus.ru/</a></p>
-<p>萨拉托夫大学（SGU）：<a href="http://acm.sgu.ru/" target="_blank" rel="external">http://acm.sgu.ru/</a></p>
-<p>(vallod) ：<a href="http://acm.uva.es/" target="_blank" rel="external">http://acm.uva.es/</a></p>
-<p>EL Judge(MIPT):：<a href="http://acm.mipt.ru/judge/problems.pl" target="_blank" rel="external">http://acm.mipt.ru/judge/problems.pl</a></p>
-<p>西班牙：(Spanish)</p>
-<p>瓦拉杜利德大学（UVA）：<a href="http://acm.uva.es/" target="_blank" rel="external">http://acm.uva.es/</a></p>
-<h1 id="美国：-America"><a href="#美国：-America" class="headerlink" title="美国：(America)"></a>美国：(America)</h1><p>USACO: <a href="http://train.usaco.org/usacogate" target="_blank" rel="external">http://train.usaco.org/usacogate</a></p>
-<p>波兰：(Poland)</p>
-<p>SPOJ：<a href="http://www.spoj.pl/" target="_blank" rel="external">http://www.spoj.pl/</a></p>
-<p>吉尔吉斯斯坦:：(Kirgizstan)</p>
-<p>KRSU: <a href="http://www.olymp.krsu.edu.kg/GeneralProblemset.aspx" target="_blank" rel="external">http://www.olymp.krsu.edu.kg/GeneralProblemset.aspx</a></p>
-<h1 id="中国各大高校BBS"><a href="#中国各大高校BBS" class="headerlink" title="中国各大高校BBS:"></a>中国各大高校BBS:</h1><p><a href="http://acm.hdu.edu.cn/forum/（杭电）" target="_blank" rel="external">http://acm.hdu.edu.cn/forum/（杭电）</a></p>
-<p><a href="http://www.hdubbs.com/（杭电）" target="_blank" rel="external">http://www.hdubbs.com/（杭电）</a></p>
-<p><a href="http://www.freecity.cn/（浙大）" target="_blank" rel="external">http://www.freecity.cn/（浙大）</a></p>
-<p><a href="http://bbs.freecity.cn/(浙大" target="_blank" rel="external">http://bbs.freecity.cn/(浙大</a>)</p>
-<p>Others：</p>
-<p>Topcoder：<a href="http://www.topcoder.com/tc" target="_blank" rel="external">http://www.topcoder.com/tc</a></p>
-<p>ACM-ICPC：<a href="http://icpc.baylor.edu/icpc/" target="_blank" rel="external">http://icpc.baylor.edu/icpc/</a></p>
-<p>美国信息学奥林匹克竞赛官方网站：<a href="http://www.usaco.org/" target="_blank" rel="external">http://www.usaco.org/</a></p>
-<p>全美计算机奥林匹克竞赛：<a href="http://ace.delos.com/usacogate" target="_blank" rel="external">http://ace.delos.com/usacogate</a></p>
-<p>信息学初学者之家：<a href="http://oibh.ioiforum.org/" target="_blank" rel="external">http://oibh.ioiforum.org/</a></p>
-<p>中国教育曙光网：<a href="http://www.chinaschool.org/aosai/" target="_blank" rel="external">http://www.chinaschool.org/aosai/</a></p>
-<p>福建信息学奥林匹克：<a href="http://www.cfcs.com.cn/fjas/index.htm" target="_blank" rel="external">http://www.cfcs.com.cn/fjas/index.htm</a></p>
-<p>IOI：<a href="http://olympiads.win.tue.nl/ioi/" target="_blank" rel="external">http://olympiads.win.tue.nl/ioi/</a></p>
-<p>高效信息学在线判题系统（VIJOS）：<a href="http://www.vijos.cn/" target="_blank" rel="external">http://www.vijos.cn/</a></p>
-<p>ACM的例程和测试数据：<a href="http://www.karrels.org/Ed/ACM/" target="_blank" rel="external">http://www.karrels.org/Ed/ACM/</a></p>
-<p>ACM社区：<a href="http://www.608088.com/" target="_blank" rel="external">http://www.608088.com/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;搜集的各大高校的ACM网站…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂项" scheme="https://ygcaicn.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
-    
-    
-      <category term="编程" scheme="https://ygcaicn.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

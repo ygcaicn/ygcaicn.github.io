@@ -3,24 +3,44 @@
 <head>
   <meta charset="utf-8">
   
-  <title>lamp服务器搭建-centos7+Apache2.4+MariaDB+php5.6+phpmyadmin | Jachin</title>
+  <title>hello md | Jachin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    <meta name="keywords" content="jachin" />
+    <meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu" />
   
   
   
   
-  <meta name="description" content="centos7 下yum搭建服务器以及数据库的流程。">
+  <meta name="description" content="MarkDown 文本编辑器：  
+
+MarkdownPad（我使用的是Markdownpad2）
+Sublime
+Atom
+有道云笔记（直接存入云笔记很方便）
+任何有文本编辑功能的软件都可以书写markdown">
 <meta property="og:type" content="article">
-<meta property="og:title" content="lamp服务器搭建-centos7+Apache2.4+MariaDB+php5.6+phpmyadmin">
-<meta property="og:url" content="https://ygcaicn.github.io/Linux/lamp-centos7.html">
+<meta property="og:title" content="hello md">
+<meta property="og:url" content="https://ygcaicn.github.io/杂项/hello-md.html">
 <meta property="og:site_name" content="Jachin">
-<meta property="og:description" content="centos7 下yum搭建服务器以及数据库的流程。">
-<meta property="og:updated_time" content="2018-01-15T10:21:55.789Z">
+<meta property="og:description" content="MarkDown 文本编辑器：  
+
+MarkdownPad（我使用的是Markdownpad2）
+Sublime
+Atom
+有道云笔记（直接存入云笔记很方便）
+任何有文本编辑功能的软件都可以书写markdown">
+<meta property="og:image" content="https://ygcaicn.github.io/../img/c08538ff-6f21-4d1c-bf1b-0662ae6d681b.png">
+<meta property="og:updated_time" content="2018-01-15T11:02:24.880Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lamp服务器搭建-centos7+Apache2.4+MariaDB+php5.6+phpmyadmin">
-<meta name="twitter:description" content="centos7 下yum搭建服务器以及数据库的流程。">
+<meta name="twitter:title" content="hello md">
+<meta name="twitter:description" content="MarkDown 文本编辑器：  
+
+MarkdownPad（我使用的是Markdownpad2）
+Sublime
+Atom
+有道云笔记（直接存入云笔记很方便）
+任何有文本编辑功能的软件都可以书写markdown">
+<meta name="twitter:image" content="https://ygcaicn.github.io/../img/c08538ff-6f21-4d1c-bf1b-0662ae6d681b.png">
   
     <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
   
@@ -109,15 +129,25 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-lamp-centos7" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-hello-md" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/../img/c08538ff-6f21-4d1c-bf1b-0662ae6d681b.png" rel="gallery_cjcg3w1nr001cfoevrk4lujf6">
+        <img src="/../img/c08538ff-6f21-4d1c-bf1b-0662ae6d681b.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
     
       <header class="article-header">
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      lamp服务器搭建-centos7+Apache2.4+MariaDB+php5.6+phpmyadmin
+      hello md
     </h1>
   
 
@@ -125,51 +155,50 @@
     
     <div class="article-meta">
       
-	<a href="/Linux/lamp-centos7.html" class="article-date">
-	  <time datetime="2016-10-23T03:43:54.000Z" itemprop="datePublished">October 22, 2016</time>
+	<a href="/杂项/hello-md.html" class="article-date">
+	  <time datetime="2017-03-05T23:08:28.000Z" itemprop="datePublished">March 5, 2017</time>
 	</a>
 
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/杂项/">杂项</a>
  
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>centos7 下yum搭建服务器以及数据库的流程。</p>
+        <p>MarkDown 文本编辑器：  </p>
+<ul>
+<li>MarkdownPad（我使用的是Markdownpad2）</li>
+<li>Sublime</li>
+<li>Atom</li>
+<li>有道云笔记（直接存入云笔记很方便）</li>
+<li>任何有文本编辑功能的软件都可以书写markdown</li>
+</ul>
 <a id="more"></a>
-<h1 id="安装httpd"><a href="#安装httpd" class="headerlink" title="安装httpd"></a>安装httpd</h1><p>直接yum源安装就可以，centos7的yum源是Apache2.4</p>
-<p>  <code>yum install httpd</code></p>
-<h2 id="apache常用指令"><a href="#apache常用指令" class="headerlink" title="apache常用指令"></a>apache常用指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">systemctl start httpd      #启动apache</div><div class="line">systemctl stop httpd       #停止apache</div><div class="line">systemctl restart httpd    #重启apache</div><div class="line">systemctl enable httpd     #设置apache开机启动</div></pre></td></tr></table></figure>
-<h1 id="配置两个扩展yum源"><a href="#配置两个扩展yum源" class="headerlink" title="配置两个扩展yum源"></a>配置两个扩展yum源</h1><pre><code>yum install epel-release
-rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-</code></pre><p>因为centos7默认的yum源php是5.4的，有点跟不上时代的脚步啊。。。所以使用扩展yum源进行安装。</p>
-<!--more-->
-<h1 id="php相关模块"><a href="#php相关模块" class="headerlink" title="php相关模块"></a>php相关模块</h1><pre><code>yum --enablerepo=remi-php56 install php php-cli php-pear php-pdo php-mysqlnd php-gd php-mbstring php-mcrypt php-xml
-</code></pre><h1 id="phpmyadmin"><a href="#phpmyadmin" class="headerlink" title="phpmyadmin"></a>phpmyadmin</h1><pre><code>yum --enablerepo=remi-php56 install phpmyadmin
-</code></pre><p>这里指定php的版本是必须的，有很多教程就是这里出了问题。。。</p>
-<h2 id="phpmyadmin配置："><a href="#phpmyadmin配置：" class="headerlink" title="phpmyadmin配置："></a>phpmyadmin配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#打开phpmyadmin的配置文件</div><div class="line">vim /etc/httpd/conf.d/phpMyAdmin.conf</div><div class="line"></div><div class="line">将Allow from 127.0.0.1</div><div class="line">Allow from ::1</div><div class="line">改为： Require all granted</div><div class="line">systemctl restart httpd  #重启apache</div></pre></td></tr></table></figure>
-<h1 id="安装MariaDB"><a href="#安装MariaDB" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h1><p>CentOS 7.0中，已经使用MariaDB替代了MySQL数据库</p>
-<h2 id="安装MariaDB-1"><a href="#安装MariaDB-1" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h2><pre><code>yum install mariadb mariadb-server #询问是否要安装，输入Y即可自动安装,直到安装完成
-</code></pre><h2 id="常用MariaDB指令"><a href="#常用MariaDB指令" class="headerlink" title="常用MariaDB指令"></a>常用MariaDB指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">systemctl start mariadb.service #启动MariaDB</div><div class="line">systemctl stop mariadb.service #停止MariaDB</div><div class="line">systemctl restart mariadb.service #重启MariaDB</div><div class="line">systemctl enable mariadb.service #设置开机启动</div><div class="line">cp /usr/share/mysql/my-huge.cnf /etc/my.cnf #拷贝配置文件（注意：如果/etc目录下面默认有一个my.cnf，直接覆盖即可）</div></pre></td></tr></table></figure>
-<h2 id="为root账户设置密码"><a href="#为root账户设置密码" class="headerlink" title="为root账户设置密码"></a>为root账户设置密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql_secure_installation</div><div class="line">#回车，根据提示输入Y</div><div class="line">#输入2次密码，回车</div><div class="line">#根据提示一路输入Y</div><div class="line">#最后出现：Thanks for using MySQL!</div><div class="line">#MySql密码设置完成，重新启动 MySQL：</div><div class="line">systemctl restart mariadb.service #重启MariaDB</div></pre></td></tr></table></figure>
-<h2 id="新建数据库账户"><a href="#新建数据库账户" class="headerlink" title="新建数据库账户"></a>新建数据库账户</h2><h2 id="进入数据库"><a href="#进入数据库" class="headerlink" title="进入数据库"></a>进入数据库</h2><p>mysql -u root -p</p>
-<blockquote>
-<p>show databases</p>
+<h2 id="Hello-word！"><a href="#Hello-word！" class="headerlink" title="Hello word！"></a>Hello word！</h2><p>打开Markdown编辑器，新建Hello.md文件，写入下面的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Hello world!</div><div class="line">===</div><div class="line"></div><div class="line">I love [Google](http://www.google.com)!</div></pre></td></tr></table></figure>
+<p>可视化以后的效果：</p>
+<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world!"></a>Hello world!</h1><p>I love <a href="http://www.google.com" target="_blank" rel="external">Google</a>!</p>
+<hr>
+<h1 id="关于MarkdownPad2"><a href="#关于MarkdownPad2" class="headerlink" title="关于MarkdownPad2"></a>关于MarkdownPad2</h1><ul>
+<li>官方<a href="https://markdownpad.com/" target="_blank" rel="external">MarkdownPad2</a>,可以下载Pro版本。</li>
+<li>破解<a href="http://www.jianshu.com/p/fa7c4387dc62" target="_blank" rel="external">注册码</a><blockquote>
+<p>邮箱：<br>Soar360@live.com<br>授权秘钥：<br>GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==</p>
 </blockquote>
-<p>最后开启相应的端口就可以外网访问了，关于firewalld的相关操作请参考<a href="http://blog.cumtpn.com/2016/10/22/firewalld-centos7/" target="_blank" rel="external"><em>CentOS7使用firewalld管理防火墙与端口</em></a></p>
-<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!"></a>每天进步一点点!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>
+</li>
+</ul>
+
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/杂项/">杂项</a>
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LAMP/">LAMP</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
 
       
         
@@ -207,19 +236,19 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
     
 <nav id="article-nav">
   
-    <a href="/Cpp/cpplianxi.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Linux/help-linux.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          C++练习笔记（持续更新）
+          help-linux
         
       </div>
     </a>
   
   
-    <a href="/Linux/firewalld-centos7.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/杂项/markdown.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">CentOS7使用firewalld管理防火墙与端口</div>
+      <div class="article-nav-title">Markdown 基础语法</div>
     </a>
   
 </nav>
@@ -233,7 +262,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装httpd"><span class="nav-number">1.</span> <span class="nav-text">安装httpd</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#apache常用指令"><span class="nav-number">1.1.</span> <span class="nav-text">apache常用指令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置两个扩展yum源"><span class="nav-number">2.</span> <span class="nav-text">配置两个扩展yum源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#php相关模块"><span class="nav-number">3.</span> <span class="nav-text">php相关模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phpmyadmin"><span class="nav-number">4.</span> <span class="nav-text">phpmyadmin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#phpmyadmin配置："><span class="nav-number">4.1.</span> <span class="nav-text">phpmyadmin配置：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装MariaDB"><span class="nav-number">5.</span> <span class="nav-text">安装MariaDB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MariaDB-1"><span class="nav-number">5.1.</span> <span class="nav-text">安装MariaDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用MariaDB指令"><span class="nav-number">5.2.</span> <span class="nav-text">常用MariaDB指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为root账户设置密码"><span class="nav-number">5.3.</span> <span class="nav-text">为root账户设置密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建数据库账户"><span class="nav-number">5.4.</span> <span class="nav-text">新建数据库账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入数据库"><span class="nav-number">5.5.</span> <span class="nav-text">进入数据库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#每天进步一点点"><span class="nav-number">6.</span> <span class="nav-text">每天进步一点点!!!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#impossible-is-I’m-possible"><span class="nav-number">6.1.</span> <span class="nav-text">impossible is I’m possible!!!</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-word！"><span class="nav-number">1.</span> <span class="nav-text">Hello word！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hello-world"><span class="nav-number"></span> <span class="nav-text">Hello world!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于MarkdownPad2"><span class="nav-number"></span> <span class="nav-text">关于MarkdownPad2</span></a>
     
     </div>
   </aside>
