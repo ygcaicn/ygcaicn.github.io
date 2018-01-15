@@ -11,29 +11,19 @@
   
   
   
-  <meta name="description" content="（译）转 UEFI 启动：实际工作原理 2014.05.28
-本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。
-本文的原始链接位于：，https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/
-本人的翻译水平有限，难免多有疏漏。废话不多说，请看正文：
-又到">
+  <meta name="description" content="（译）转 UEFI 启动：实际工作原理 2014.05.28 本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。 本文的原始链接位于：，https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/ 本人的翻译水平有限，难免多有疏漏。废话不多说，请看正文： 又到">
+<meta name="keywords" content="UEFI 启动：实际工作原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UEFI 启动：实际工作原理">
 <meta property="og:url" content="https://ygcaicn.github.io/Linux/grub2-1.html">
 <meta property="og:site_name" content="Jachin">
-<meta property="og:description" content="（译）转 UEFI 启动：实际工作原理 2014.05.28
-本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。
-本文的原始链接位于：，https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/
-本人的翻译水平有限，难免多有疏漏。废话不多说，请看正文：
-又到">
+<meta property="og:description" content="（译）转 UEFI 启动：实际工作原理 2014.05.28 本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。 本文的原始链接位于：，https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/ 本人的翻译水平有限，难免多有疏漏。废话不多说，请看正文： 又到">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://i.imgur.com/Q9g4RCE.png">
 <meta property="og:updated_time" content="2018-01-15T10:19:14.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UEFI 启动：实际工作原理">
-<meta name="twitter:description" content="（译）转 UEFI 启动：实际工作原理 2014.05.28
-本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。
-本文的原始链接位于：，https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/
-本人的翻译水平有限，难免多有疏漏。废话不多说，请看正文：
-又到">
+<meta name="twitter:description" content="（译）转 UEFI 启动：实际工作原理 2014.05.28 本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。 本文的原始链接位于：，https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/ 本人的翻译水平有限，难免多有疏漏。废话不多说，请看正文： 又到">
 <meta name="twitter:image" content="http://i.imgur.com/Q9g4RCE.png">
   
     <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
