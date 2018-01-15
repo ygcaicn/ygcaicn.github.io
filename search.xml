@@ -35,27 +35,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[第二层]]></title>
-      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/test-2.html</url>
-      <content type="html"><![CDATA[<p><img src="../img/82bdf788-4c0c-4238-a94c-bf6e7e2e2106.png" alt="82bdf788-4c0c-4238-a94c-bf6e7e2e2106"></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 杂项 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 编程 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[build-live-ubuntu打造日常使用Ubuntu]]></title>
       <url>https://ygcaicn.github.io/Linux/build-live-ubuntu.html</url>
       <content type="html"><![CDATA[<p>转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。<br>Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大<br>的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。<br>本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10</p>
