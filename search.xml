@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Linux下python3测试网速]]></title>
-      <url>https://ygcaicn.github.io/python3/python3-networkrate.html</url>
+      <url>https://ygcaicn.github.io/python3/py3-networkrate.html</url>
       <content type="html"><![CDATA[<h1 id="python3实现"><a href="#python3实现" class="headerlink" title="python3实现"></a>python3实现</h1><p>python3学习中写的一个小程序，有时候还挺有用，贴出来做记录！</p>
 <a id="more"></a>
 <p>依赖系统的net-tools工具，也就是ifconfig命令。<br>实现原理利用ifconfig查看网卡发送和接受的数据多少，利用re匹配出需要的数据，利用time模块计时算出<br>1s内发送或者接收数据的多少！</p>
