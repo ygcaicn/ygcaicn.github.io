@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title><![CDATA[Ubuntu17 aria2c安装使用手记]]></title>
+      <url>https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>aria2 is a utility for downloading files. The supported protocols are HTTP(S), FTP, SFTP, BitTorrent, and Metalink. aria2 can download a file from multiple sources/protocols and tries to utilize your maximum download bandwidth. It supports downloading a file from HTTP(S)/FTP /SFTP and BitTorrent at the same time, while the data downloaded from HTTP(S)/FTP/SFTP is uploaded to the BitTorrent swarm. Using Metalink chunk checksums, aria2 automatically validates chunks of data while downloading a file.</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="0x01-安装环境："><a href="#0x01-安装环境：" class="headerlink" title="0x01.安装环境："></a>0x01.安装环境：</h1><ul>
+<li><p>Ubuntu17.10</p>
+</li>
+<li><p>参考：<a href="http://aria2c.com/usage.html" target="_blank" rel="noopener">http://aria2c.com/usage.html</a></p>
+</li>
+</ul>
+<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02."></a>0x02.</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install aria2</span><br><span class="line">sudo mkdir /etc/aria2c</span><br><span class="line">sudo touch /etc/aria2c/aria2.conf</span><br><span class="line">sudo touch /etc/aria2c/aria2.session</span><br><span class="line">chowm -R [your_name] /etc/aria2c</span><br></pre></td></tr></table></figure>
+<h2 id="bash-aliases"><a href="#bash-aliases" class="headerlink" title="~/.bash_aliases"></a>~/.bash_aliases</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#aria</span><br><span class="line">alias aria2=&apos;aria2c --conf-path=/etc/aria2c/aria2.conf&apos;</span><br></pre></td></tr></table></figure>
+<p>修改完成后 <code>source ~/.bash_aliases</code></p>
+<h2 id="Downloads"><a href="#Downloads" class="headerlink" title="Downloads"></a>Downloads</h2><p>打开命令行输入啊aria2,然后用浏览器打开<a href="http://aria2c.com/便可以添加任务！" target="_blank" rel="noopener">http://aria2c.com/便可以添加任务！</a></p>
+<h1 id="0x03-百度网盘插件"><a href="#0x03-百度网盘插件" class="headerlink" title="0x03. 百度网盘插件"></a>0x03. 百度网盘插件</h1><p><a href="https://blog.icehoney.me/posts/2015-01-31-Aria2-download" target="_blank" rel="noopener">https://blog.icehoney.me/posts/2015-01-31-Aria2-download</a></p>
+<h1 id="0x03-每天进步一点点"><a href="#0x03-每天进步一点点" class="headerlink" title="0x03.每天进步一点点!!!"></a>0x03.每天进步一点点!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Linux下python3测试网速]]></title>
       <url>https://ygcaicn.github.io/python3/py3-networkrate.html</url>
       <content type="html"><![CDATA[<h1 id="python3实现"><a href="#python3实现" class="headerlink" title="python3实现"></a>python3实现</h1><p>python3学习中写的一个小程序，有时候还挺有用，贴出来做记录！</p>

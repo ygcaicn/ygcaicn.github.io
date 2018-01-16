@@ -111,6 +111,86 @@
         
           <section id="main">
   
+    <article id="post-hexo-blog"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/杂项/hexo-blog.html">Hexo搭建个人博客及NexT主题配置与优化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/杂项/hexo-blog.html" class="article-date">
+	  <time datetime="2016-10-15T03:04:19.000Z" itemprop="datePublished">October 14, 2016</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/杂项/">杂项</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h1 id="命令行帮助"><a href="#命令行帮助" class="headerlink" title="命令行帮助"></a>命令行帮助</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">D:\Github\blog-hexo&gt;hexo -help</div><div class="line">Usage: hexo &lt;command&gt;</div><div class="line"></div><div class="line">Commands:</div><div class="line">  clean     Removed generated files and cache.</div><div class="line">  config    Get or set configurations.</div><div class="line">  deploy    Deploy your website.</div><div class="line">  generate  Generate static files.</div><div class="line">  help      Get help on a command.</div><div class="line">  init      Create a new Hexo folder.</div><div class="line">  list      List the information of the site</div><div class="line">  migrate   Migrate your site from other system to Hexo.</div><div class="line">  new       Create a new post.</div><div class="line">  publish   Moves a draft post from _drafts to _posts folder.</div><div class="line">  render    Render files with renderer plugins.</div><div class="line">  server    Start the server.</div><div class="line">  version   Display version information.</div><div class="line"></div><div class="line">Global Options:</div><div class="line">  --config  Specify config file instead of using _config.yml</div><div class="line">  --cwd     Specify the CWD</div><div class="line">  --debug   Display all verbose messages in the terminal</div><div class="line">  --draft   Display draft posts</div><div class="line">  --safe    Disable all plugins and scripts</div><div class="line">  --silent  Hide output on console</div><div class="line"></div><div class="line">For more help, you can use &apos;hexo help [command]&apos; for the detailed information</div><div class="line">or you can check the docs: http://hexo.io/docs/</div></pre></td></tr></table></figure>
+<ul>
+<li><h2 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h2><pre><code>hexo help #查看帮助
+hexo init #初始化一个目录
+hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成网页，可以在 public 目录查看整个网站的文件
+hexo server #本地预览，&apos;Ctrl+C&apos;关闭
+hexo deploy #部署.deploy目录
+hexo clean #清除缓存，强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹
+
+简写：
+hexo n == hexo new
+hexo g == hexo generate
+hexo s == hexo server
+hexo d == hexo deploy
+</code></pre></li>
+</ul>
+<p>直接在命令行中操作出现一下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">D:\Github\blog-hexo&gt;hexo d</div><div class="line">INFO  Deploying: git</div><div class="line">INFO  Clearing .deploy_git folder...</div><div class="line">INFO  Copying files from public folder...</div><div class="line">&apos;git&apos; �����ڲ����ⲿ���Ҳ���ǿ����еĳ���</div><div class="line">�������ļ�</div><div class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</div><div class="line">Error: spawn git ENOENT</div><div class="line">    at notFoundError (D:\Github\blog-hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\node_modules\cross-spawn\lib\enoent.js:11:11)</div><div class="line">    at verifyENOENT (D:\Github\blog-hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\node_modules\cross-spawn\lib\enoent.js:46:16)</div><div class="line">    at ChildProcess.cp.emit (D:\Github\blog-hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\node_modules\cross-spawn\lib\enoent.js:33:19)</div><div class="line">    at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)</div><div class="line">FATAL spawn git ENOENT</div><div class="line">Error: spawn git ENOENT</div><div class="line">    at notFoundError (D:\Github\blog-hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\node_modules\cross-spawn\lib\enoent.js:11:11)</div><div class="line">    at verifyENOENT (D:\Github\blog-hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\node_modules\cross-spawn\lib\enoent.js:46:16)</div><div class="line">    at ChildProcess.cp.emit (D:\Github\blog-hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\node_modules\cross-spawn\lib\enoent.js:33:19)</div><div class="line">    at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)</div></pre></td></tr></table></figure></p>
+<p>原因是：git的执行目录没有加入系统环境变量。解决方案：1.将git加入环境变量Path中。2.直接在git shell中进行操作。我更习惯于方式2。</p>
+<p>环境搭建好以后，常用到的就是增加新的博客然后提交git。以下操作均在git shell中操作</p>
+<p>操作目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">YGC@YGC  /d/Github</div><div class="line">$ cd blog-hexo/</div><div class="line"></div><div class="line">YGC@YGC  /d/Github/blog-hexo</div><div class="line">$ pwd</div><div class="line">/d/Github/blog-hexo</div><div class="line"></div><div class="line">YGC@YGC  /d/Github/blog-hexo</div><div class="line">$ ls</div><div class="line">_config.yml  node_modules/  public/    scaffolds/  themes/</div><div class="line">db.json      package.json   readme.md  source/     upload.bat</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n &quot;Linux基础&quot;</div><div class="line">hexo clean</div><div class="line">hexo s -p 5500</div><div class="line">hexo d -g</div></pre></td></tr></table></figure>
+<ul>
+<li><h2 id="Error-message-“Filename-too-long”"><a href="#Error-message-“Filename-too-long”" class="headerlink" title="Error message “Filename too long”"></a>Error message “Filename too long”</h2><pre><code>git config --system core.longpaths true
+</code></pre></li>
+</ul>
+<!--more-->
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/杂项/">杂项</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-git"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -344,6 +424,21 @@ Mac：terminal : brew install git
           <li class="clearfix">
 
             
+              <div class="widget-entry-thumbnail">
+                <a href="/Linux/ubuntu17-aria2c.html" title=""><img width="50" height="50" src="../img/1daaf097-cf2a-4d5d-86a9-13bf3cf91ef0.png" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+              </div>
+              <div class="widget-entry-summary">
+            
+
+              <h6 style="margin: 0;"><a href="/Linux/ubuntu17-aria2c.html">Ubuntu17 aria2c安装使用手记</a></h6>
+              <span>January 16, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
               <div class="widget-entry-summary" style="margin: 0;">
             
 
@@ -413,21 +508,6 @@ Mac：terminal : brew install git
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-thumbnail">
-                <a href="/Linux/TCP-IP.html" title=""><img width="50" height="50" src="../img/-ZQhMuKf.png" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
-              </div>
-              <div class="widget-entry-summary">
-            
-
-              <h6 style="margin: 0;"><a href="/Linux/TCP-IP.html">TCP/IP</a></h6>
-              <span>October 24, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -437,7 +517,7 @@ Mac：terminal : brew install git
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CentOS7/" style="font-size: 10px;">CentOS7</a> <a href="/tags/Cpp/" style="font-size: 10px;">Cpp</a> <a href="/tags/GPT/" style="font-size: 10px;">GPT</a> <a href="/tags/Grub-Linux-Windows/" style="font-size: 10px;">Grub Linux Windows</a> <a href="/tags/Grub2/" style="font-size: 10px;">Grub2</a> <a href="/tags/IP伪装/" style="font-size: 10px;">IP伪装</a> <a href="/tags/LAMP/" style="font-size: 10px;">LAMP</a> <a href="/tags/LEDE/" style="font-size: 10px;">LEDE</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Qt/" style="font-size: 13.33px;">Qt</a> <a href="/tags/TCP-IP/" style="font-size: 10px;">TCP/IP</a> <a href="/tags/Ubuntu/" style="font-size: 16.67px;">Ubuntu</a> <a href="/tags/VIP视频/" style="font-size: 10px;">VIP视频</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/debian/" style="font-size: 10px;">debian</a> <a href="/tags/github/" style="font-size: 16.67px;">github</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/wps/" style="font-size: 10px;">wps</a> <a href="/tags/代理/" style="font-size: 13.33px;">代理</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a> <a href="/tags/路由器/" style="font-size: 10px;">路由器</a>
+      <a href="/tags/CentOS7/" style="font-size: 10px;">CentOS7</a> <a href="/tags/Cpp/" style="font-size: 10px;">Cpp</a> <a href="/tags/GPT/" style="font-size: 10px;">GPT</a> <a href="/tags/Grub-Linux-Windows/" style="font-size: 10px;">Grub Linux Windows</a> <a href="/tags/Grub2/" style="font-size: 10px;">Grub2</a> <a href="/tags/IP伪装/" style="font-size: 10px;">IP伪装</a> <a href="/tags/LAMP/" style="font-size: 10px;">LAMP</a> <a href="/tags/LEDE/" style="font-size: 10px;">LEDE</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Qt/" style="font-size: 12.5px;">Qt</a> <a href="/tags/TCP-IP/" style="font-size: 10px;">TCP/IP</a> <a href="/tags/Ubuntu/" style="font-size: 17.5px;">Ubuntu</a> <a href="/tags/VIP视频/" style="font-size: 10px;">VIP视频</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/debian/" style="font-size: 10px;">debian</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/wps/" style="font-size: 10px;">wps</a> <a href="/tags/代理/" style="font-size: 12.5px;">代理</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a> <a href="/tags/路由器/" style="font-size: 10px;">路由器</a>
     </div>
   </div>
 
@@ -446,7 +526,7 @@ Mac：terminal : brew install git
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Cpp/">Cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Network/">Network</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Qt/">Qt</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python3/">python3</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/嵌入式/">嵌入式</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/建站/">建站</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂项/">杂项</a><span class="category-list-count">8</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Cpp/">Cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Network/">Network</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Qt/">Qt</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python3/">python3</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/嵌入式/">嵌入式</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/建站/">建站</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂项/">杂项</a><span class="category-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -457,7 +537,7 @@ Mac：terminal : brew install git
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">11</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">11</span></li></ul>
     </div>
   </div>
 
