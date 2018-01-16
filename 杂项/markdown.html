@@ -144,20 +144,20 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>JOHN GRUBER定义的<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">markdown语法</a>。</p>
+        <p>JOHN GRUBER定义的<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">markdown语法</a>。</p>
 <a id="more"></a>
 <h1 id="段落与换行"><a href="#段落与换行" class="headerlink" title="段落与换行"></a>段落与换行</h1><p>1.段落的前后必须空行：空行指的是什么内容都没有，或者只有空白符（空格或制表符）</p>
 <p>相邻两行文本，如果中间没有空行会显示在一行中（换行符被转换成为空格）</p>
 <p>2.如果需要在段落内加入换行（<code>&lt;br/&gt;</code>）<br>可以在前一行的末尾加入至少两个空格，然后换行写其他的文字</p>
 <p>3.Markdown中的多数区域都需要在两个空行之间</p>
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="Setext格式"><a href="#Setext格式" class="headerlink" title="Setext格式"></a>Setext格式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">H1</div><div class="line">====</div><div class="line"></div><div class="line">H2</div><div class="line">----</div></pre></td></tr></table></figure>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="Setext格式"><a href="#Setext格式" class="headerlink" title="Setext格式"></a>Setext格式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">H1</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line">H2</span><br><span class="line">----</span><br></pre></td></tr></table></figure>
 <p>渲染效果：（不包含上下的分隔线）</p>
 <hr>
 <h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><hr>
 <h2 id="atx格式"><a href="#atx格式" class="headerlink" title="atx格式"></a>atx格式</h2><ul>
 <li>可以使用对称的<code>#</code>包括文本：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">## H2 ##</div><div class="line"></div><div class="line">### H3 ###</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## H2 ##</span><br><span class="line"></span><br><span class="line">### H3 ###</span><br></pre></td></tr></table></figure>
 <p><del>对于有道云笔记文本和<code>#</code>之间必须有空格。</del> 标准语法就是这样的。</p>
 <p>渲染效果：</p>
 <hr>
@@ -165,36 +165,36 @@
 <ul>
 <li>也可以只在左边使用<code>#</code>:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">### H3</div><div class="line"></div><div class="line">#### H4</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### H3</span><br><span class="line"></span><br><span class="line">#### H4</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <h3 id="H3-1"><a href="#H3-1" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><hr>
-<p>JOHN’s <a href="http://daringfireball.net/projects/markdown/syntax#header" target="_blank" rel="external">Heaser</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">HEADERS</div><div class="line"></div><div class="line">Markdown supports two styles of headers, Setext and atx.</div><div class="line"></div><div class="line">Setext-style headers are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers). For example:</div><div class="line"></div><div class="line">This is an H1</div><div class="line">=============</div><div class="line"></div><div class="line">This is an H2</div><div class="line">-------------</div><div class="line">Any number of underlining =’s or -’s will work.</div><div class="line"></div><div class="line">Atx-style headers use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. For example:</div><div class="line"></div><div class="line"># This is an H1</div><div class="line"></div><div class="line">## This is an H2</div><div class="line"></div><div class="line">###### This is an H6</div><div class="line">Optionally, you may “close” atx-style headers. This is purely cosmetic — you can use this if you think it looks better. The closing hashes don’t even need to match the number of hashes used to open the header. (The number of opening hashes determines the header level.) :</div><div class="line"></div><div class="line"># This is an H1 #</div><div class="line"></div><div class="line">## This is an H2 ##</div><div class="line"></div><div class="line">### This is an H3 ######</div></pre></td></tr></table></figure>
+<p>JOHN’s <a href="http://daringfireball.net/projects/markdown/syntax#header" target="_blank" rel="noopener">Heaser</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">HEADERS</span><br><span class="line"></span><br><span class="line">Markdown supports two styles of headers, Setext and atx.</span><br><span class="line"></span><br><span class="line">Setext-style headers are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers). For example:</span><br><span class="line"></span><br><span class="line">This is an H1</span><br><span class="line">=============</span><br><span class="line"></span><br><span class="line">This is an H2</span><br><span class="line">-------------</span><br><span class="line">Any number of underlining =’s or -’s will work.</span><br><span class="line"></span><br><span class="line">Atx-style headers use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. For example:</span><br><span class="line"></span><br><span class="line"># This is an H1</span><br><span class="line"></span><br><span class="line">## This is an H2</span><br><span class="line"></span><br><span class="line">###### This is an H6</span><br><span class="line">Optionally, you may “close” atx-style headers. This is purely cosmetic — you can use this if you think it looks better. The closing hashes don’t even need to match the number of hashes used to open the header. (The number of opening hashes determines the header level.) :</span><br><span class="line"></span><br><span class="line"># This is an H1 #</span><br><span class="line"></span><br><span class="line">## This is an H2 ##</span><br><span class="line"></span><br><span class="line">### This is an H3 ######</span><br></pre></td></tr></table></figure>
 <p>各种Markdown软件的渲染结果可能会有一些差别，但是了解一下标准的语法是没坏处的。</p>
 <h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="1-引用内容"><a href="#1-引用内容" class="headerlink" title="1.引用内容"></a>1.引用内容</h2><p>在段落或者内容前使用<code>&gt;</code>符号，就可以将这段内容标记为‘引用’的内容（<code>&lt;blockquote&gt;</code>）:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;引用内容</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用内容</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <blockquote>
 <p>引用内容</p>
 </blockquote>
 <hr>
-<h2 id="2-多行引用"><a href="#2-多行引用" class="headerlink" title="2.多行引用"></a>2.多行引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;多行引用</div><div class="line">&gt;可以在每一行前加`&gt;`符号</div></pre></td></tr></table></figure>
+<h2 id="2-多行引用"><a href="#2-多行引用" class="headerlink" title="2.多行引用"></a>2.多行引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;多行引用</span><br><span class="line">&gt;可以在每一行前加`&gt;`符号</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <blockquote>
 <p>多行引用<br>可以在每一行前加<code>&gt;</code>符号</p>
 </blockquote>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;如果仅在第一行使用`&gt;`,</div><div class="line">后面相邻的行即使省略`&gt;`，也会变成引用内容</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;如果仅在第一行使用`&gt;`,</span><br><span class="line">后面相邻的行即使省略`&gt;`，也会变成引用内容</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <blockquote>
 <p>如果仅在第一行使用<code>&gt;</code>,<br>后面相邻的行即使省略<code>&gt;</code>，也会变成引用内容</p>
 </blockquote>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;如果引用的内容需要换行，  </div><div class="line">&gt;可以在行尾添加两个空格</div><div class="line">&gt;</div><div class="line">&gt;或者在引用内容中加一个空行</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;如果引用的内容需要换行，  </span><br><span class="line">&gt;可以在行尾添加两个空格</span><br><span class="line">&gt;</span><br><span class="line">&gt;或者在引用内容中加一个空行</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <blockquote>
@@ -202,7 +202,7 @@
 <p>或者在引用内容中加一个空行</p>
 </blockquote>
 <hr>
-<h2 id="3-嵌套引用"><a href="#3-嵌套引用" class="headerlink" title="3.嵌套引用"></a>3.嵌套引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;也可以在引用中</div><div class="line">&gt;&gt;使用嵌套的引用</div></pre></td></tr></table></figure>
+<h2 id="3-嵌套引用"><a href="#3-嵌套引用" class="headerlink" title="3.嵌套引用"></a>3.嵌套引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;也可以在引用中</span><br><span class="line">&gt;&gt;使用嵌套的引用</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <blockquote>
@@ -212,14 +212,14 @@
 </blockquote>
 </blockquote>
 <hr>
-<h2 id="4-其它Markdown"><a href="#4-其它Markdown" class="headerlink" title="4.其它Markdown"></a>4.其它Markdown</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;在引用中可以使用其它任何*Markdown*语法</div></pre></td></tr></table></figure>
+<h2 id="4-其它Markdown"><a href="#4-其它Markdown" class="headerlink" title="4.其它Markdown"></a>4.其它Markdown</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在引用中可以使用其它任何*Markdown*语法</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <blockquote>
 <p>在引用中可以使用其它任何<em>Markdown</em>语法</p>
 </blockquote>
 <hr>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* 可以使用`*`作为标记</div><div class="line">- 也可以使用`-`</div><div class="line">+ 或者`+`</div></pre></td></tr></table></figure>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 可以使用`*`作为标记</span><br><span class="line">- 也可以使用`-`</span><br><span class="line">+ 或者`+`</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <ul>
@@ -232,7 +232,7 @@
 <li>或者<code>+</code></li>
 </ul>
 <hr>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 有序列表以数字和`.`开始；</div><div class="line">2. 数字的序列并不会影响生成列表的序列；</div><div class="line">4. 但是仍然推荐按照自然顺序（1.2.3...）编写</div></pre></td></tr></table></figure>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表以数字和`.`开始；</span><br><span class="line">2. 数字的序列并不会影响生成列表的序列；</span><br><span class="line">4. 但是仍然推荐按照自然顺序（1.2.3...）编写</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <ol>
@@ -241,7 +241,7 @@
 <li>但是仍然推荐按照自然顺序（1.2.3…）编写</li>
 </ol>
 <hr>
-<h2 id="嵌套的列表"><a href="#嵌套的列表" class="headerlink" title="嵌套的列表"></a>嵌套的列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. 第一层</div><div class="line">    + 1-1</div><div class="line">    + 1-2</div><div class="line">    + 1-3</div><div class="line">2. 无序列表和有序列表可以随意相互嵌套</div><div class="line">    1. 2-1</div><div class="line">    2. 2-2</div><div class="line">    3. 2-3</div></pre></td></tr></table></figure>
+<h2 id="嵌套的列表"><a href="#嵌套的列表" class="headerlink" title="嵌套的列表"></a>嵌套的列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 第一层</span><br><span class="line">    + 1-1</span><br><span class="line">    + 1-2</span><br><span class="line">    + 1-3</span><br><span class="line">2. 无序列表和有序列表可以随意相互嵌套</span><br><span class="line">    1. 2-1</span><br><span class="line">    2. 2-2</span><br><span class="line">    3. 2-3</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <ol>
@@ -265,7 +265,7 @@
 <li>空格至少为一个，多个空格将被解析为一个；</li>
 <li>如果仅需要在行前显示数字和<code>.</code>:  </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">05\. 可以使用：数字\. 来取消显示为列表</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">05\. 可以使用：数字\. 来取消显示为列表</span><br></pre></td></tr></table></figure>
 <p>05. 可以使用：数字\. 来取消显示为列表</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>可以使用缩进来插入代码块：</p>
 <pre><code>&lt;html&gt;
@@ -274,23 +274,23 @@
 </code></pre><p>代码块前后至少有一个空行，切每行代码前至少有一个Tab或者四个空格；</p>
 <h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>通过<code>`，插入行内代码（</code>是Tab键上边、数字<code>1</code>键左侧的按键）；</p>
 <p>例如<code>&lt;title&gt;Markdown&lt;/title&gt;</code></p>
-<h2 id="转换规则"><a href="#转换规则" class="headerlink" title="转换规则"></a>转换规则</h2><p>代码块中的文本（包括Markdown语法）都会显示为原始内容，而特殊字符会被转换为HTML<a href="https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8" target="_blank" rel="external">字符实体</a></p>
+<h2 id="转换规则"><a href="#转换规则" class="headerlink" title="转换规则"></a>转换规则</h2><p>代码块中的文本（包括Markdown语法）都会显示为原始内容，而特殊字符会被转换为HTML<a href="https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">字符实体</a></p>
 <h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><ol>
 <li>可以在一行中使用三个或更多的<code>*</code>,<code>-</code>或<code>_</code>来添加分隔线(<hr>):</li>
 <li>多个字符之间可以有空格（空白符），但不能有其它字符：</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">***</div><div class="line">------</div><div class="line">_____</div><div class="line"></div><div class="line">*   *   *</div><div class="line">_ _ _</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">------</span><br><span class="line">_____</span><br><span class="line"></span><br><span class="line">*   *   *</span><br><span class="line">_ _ _</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <h2 id=""><a href="#" class="headerlink" title="*"></a><em>*</em></h2><hr>
 <hr>
 <hr>
 <h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><h2 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h2><p>格式为：<code>[link text](URL  &quot;title text&quot;)</code></p>
-<p><code>[Google](http://www.google.com)</code><br><a href="http://www.google.com" target="_blank" rel="external">Google</a></p>
+<p><code>[Google](http://www.google.com)</code><br><a href="http://www.google.com" target="_blank" rel="noopener">Google</a></p>
 <p><code>[icon](./images/icon.png)</code><br><a href="./images/icon.png">icon</a></p>
 <p>超链接的title就是鼠标放上去（不是点击）时就弹出来的提示：</p>
 <p><code>[Google](http://www.google.com &quot;Google Title&quot;)</code></p>
 <p>注：title text使用’或者”都是可以的。</p>
-<p><a href="http://www.google.com" title="Google Title" target="_blank" rel="external">Google</a></p>
+<p><a href="http://www.google.com" title="Google Title" target="_blank" rel="noopener">Google</a></p>
 <h2 id="参考式"><a href="#参考式" class="headerlink" title="参考式"></a>参考式</h2><p>参考式链接的写法相当于行内式拆分成两部分，并通过一个识别符连链接两部分。参考式能尽量保持文章的结构简单，也方便统一管理URL</p>
 <ol>
 <li>链接格式</li>
@@ -308,24 +308,24 @@
 <p>可以省略标识符，直接使用link text作为标识符。</p>
 <p>这种情况下第二个方括号可以为空或者直接省略第二个方括号。</p>
 <p>参考格式的优点在于可以在多个不同的位置引用同一个URL。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[Google][google-link]  </div><div class="line">[Baidu][baidu-link]  </div><div class="line">[QQ][]  </div><div class="line">[Amazon]</div><div class="line"></div><div class="line">[google-link]: http://www.google.com &quot;Google Title&quot;</div><div class="line">[baidu-link]: http://www.baidu.com &quot;Baidu Title&quot;</div><div class="line">[QQ]: http://www.qq.com &quot;QQ Title&quot;</div><div class="line">[Amazon]: http://www.amazon.com &quot;amazon title&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Google][google-link]  </span><br><span class="line">[Baidu][baidu-link]  </span><br><span class="line">[QQ][]  </span><br><span class="line">[Amazon]</span><br><span class="line"></span><br><span class="line">[google-link]: http://www.google.com &quot;Google Title&quot;</span><br><span class="line">[baidu-link]: http://www.baidu.com &quot;Baidu Title&quot;</span><br><span class="line">[QQ]: http://www.qq.com &quot;QQ Title&quot;</span><br><span class="line">[Amazon]: http://www.amazon.com &quot;amazon title&quot;</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
-<p><a href="http://www.google.com" title="Google Title" target="_blank" rel="external">Google</a><br><a href="http://www.baidu.com" title="Baidu Title" target="_blank" rel="external">Baidu</a><br><a href="http://www.qq.com" title="QQ Title" target="_blank" rel="external">QQ</a><br><a href="http://www.amazon.com" title="amazon title" target="_blank" rel="external">Amazon</a></p>
+<p><a href="http://www.google.com" title="Google Title" target="_blank" rel="noopener">Google</a><br><a href="http://www.baidu.com" title="Baidu Title" target="_blank" rel="noopener">Baidu</a><br><a href="http://www.qq.com" title="QQ Title" target="_blank" rel="noopener">QQ</a><br><a href="http://www.amazon.com" title="amazon title" target="_blank" rel="noopener">Amazon</a></p>
 <hr>
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.google.com&gt;   </div><div class="line">&lt;123@email.com&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.google.com&gt;   </span><br><span class="line">&lt;123@email.com&gt;</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a><br><a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#49;&#x32;&#x33;&#64;&#x65;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">&#49;&#x32;&#x33;&#64;&#x65;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x31;&#x32;&#51;&#x40;&#101;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x31;&#x32;&#51;&#x40;&#101;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
-<h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</div></pre></td></tr></table></figure>
+<h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</span><br></pre></td></tr></table></figure>
 <p><img src="http://i.imgur.com/YACdsVS.jpg" alt="Imgur" title="rosse"></p>
 <p>方括号部分是图片的替代文本，括号中的’title’部分和连接是一样的，是可选的。</p>
-<h2 id="参考式-1"><a href="#参考式-1" class="headerlink" title="参考式"></a>参考式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">![Imgur][rosse]</div><div class="line"></div><div class="line">[rosse]: http://i.imgur.com/YACdsVS.jpg &quot;rosse&quot;</div></pre></td></tr></table></figure>
+<h2 id="参考式-1"><a href="#参考式-1" class="headerlink" title="参考式"></a>参考式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![Imgur][rosse]</span><br><span class="line"></span><br><span class="line">[rosse]: http://i.imgur.com/YACdsVS.jpg &quot;rosse&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="http://i.imgur.com/YACdsVS.jpg" alt="Imgur" title="rosse"></p>
 <h2 id="指定图片的大小"><a href="#指定图片的大小" class="headerlink" title="指定图片的大小"></a>指定图片的大小</h2><p>Markdown不支持指定图片的大小，不过可以通过直接插入<img>标签来指定相关属性：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;http://i.imgur.com/YACdsVS.jpg&quot; alt=&quot;rosse&quot; title=&quot;rosse&quot; width=&quot;50&quot; height=&quot;30&quot;/&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://i.imgur.com/YACdsVS.jpg&quot; alt=&quot;rosse&quot; title=&quot;rosse&quot; width=&quot;50&quot; height=&quot;30&quot;/&gt;</span><br></pre></td></tr></table></figure>
 <p><img src="http://i.imgur.com/YACdsVS.jpg" alt="rosse" title="rosse" width="50" height="30"></p>
 <p>注：这在有道云笔记里是不支持的！</p>
 <h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><ol>
@@ -335,28 +335,28 @@
 <li>如果需要在文本中成对显示*或者_，可以在符号前加入<code>\</code>即可。</li>
 <li>强调的特殊符号必须成对使用。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*Hello world!*  </div><div class="line">_Hello world!_  </div><div class="line">**Hello world!**  </div><div class="line">__Hello world!__  </div><div class="line">\*Hello world!\*  </div><div class="line">\_Hello world!\_</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*Hello world!*  </span><br><span class="line">_Hello world!_  </span><br><span class="line">**Hello world!**  </span><br><span class="line">__Hello world!__  </span><br><span class="line">\*Hello world!\*  </span><br><span class="line">\_Hello world!\_</span><br></pre></td></tr></table></figure>
 <p><em>Hello world!</em><br><em>Hello world!</em><br><strong>Hello world!</strong><br><strong>Hello world!</strong><br>*Hello world!*<br>_Hello world!_  </p>
 <h1 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h1><p>反斜线 <code>\</code>用于插入在Markdown语法中有特殊作用的字符。</p>
 <p>这些字符包括：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">\  </div><div class="line">`  </div><div class="line">_  </div><div class="line">&#123;&#125;  </div><div class="line">[]  </div><div class="line">()  </div><div class="line">#  </div><div class="line">+  </div><div class="line">-  </div><div class="line">_  </div><div class="line">&apos;  </div><div class="line">.  </div><div class="line">!</div></pre></td></tr></table></figure>
-<h1 id="Markdown-扩展语法"><a href="#Markdown-扩展语法" class="headerlink" title="Markdown 扩展语法"></a>Markdown 扩展语法</h1><p>Markdown标准 本身包含的功能有限，所以产生了许多第三方的扩展语法，如<a href="https://help.github.com/categories/writing-on-github/" target="_blank" rel="external">Github Flavored Markdown</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\  </span><br><span class="line">`  </span><br><span class="line">_  </span><br><span class="line">&#123;&#125;  </span><br><span class="line">[]  </span><br><span class="line">()  </span><br><span class="line">#  </span><br><span class="line">+  </span><br><span class="line">-  </span><br><span class="line">_  </span><br><span class="line">&apos;  </span><br><span class="line">.  </span><br><span class="line">!</span><br></pre></td></tr></table></figure>
+<h1 id="Markdown-扩展语法"><a href="#Markdown-扩展语法" class="headerlink" title="Markdown 扩展语法"></a>Markdown 扩展语法</h1><p>Markdown标准 本身包含的功能有限，所以产生了许多第三方的扩展语法，如<a href="https://help.github.com/categories/writing-on-github/" target="_blank" rel="noopener">Github Flavored Markdown</a>。</p>
 <h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><p>用<code>~~ ~~</code>包括的内容将以删除线的形式展现。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~~删除线~~</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
 <p><del>删除线</del></p>
 <h1 id="代码块和语法高亮"><a href="#代码块和语法高亮" class="headerlink" title="代码块和语法高亮"></a>代码块和语法高亮</h1><h2 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h2><ol>
-<li>与缩进添加代码块不同，这里使用 \<figure class="highlight plain"><figcaption><span>来包含多行代码。```需要单独占一行。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">2. 在第一组```之后添加代码的语言，如&apos;javascript&apos;或者&apos;js&apos;，即可以将代码标记为Javascript。</div><div class="line"></div><div class="line"></div><div class="line">    ```c++</div><div class="line">    include&lt;iostream&gt;</div><div class="line">    using namespace std;</div><div class="line"></div><div class="line">    int main(void)</div><div class="line">    &#123;</div><div class="line">        cout &lt;&lt; &quot;Hello world!&quot;;</div><div class="line">        return 0;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></li>
+<li>与缩进添加代码块不同，这里使用 \<figure class="highlight plain"><figcaption><span>来包含多行代码。```需要单独占一行。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">2. 在第一组```之后添加代码的语言，如&apos;javascript&apos;或者&apos;js&apos;，即可以将代码标记为Javascript。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    ```c++</span><br><span class="line">    include&lt;iostream&gt;</span><br><span class="line">    using namespace std;</span><br><span class="line"></span><br><span class="line">    int main(void)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;Hello world!&quot;;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">include&lt;iostream&gt;</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello world!"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">'window loaded'</span>);&#125;);</div></pre></td></tr></table></figure>
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">'window loaded'</span>);&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iostream&gt;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello world!"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">'window loaded'</span>);&#125;);</span><br></pre></td></tr></table></figure>
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">'window loaded'</span>);&#125;);</span><br></pre></td></tr></table></figure>
 <h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><h2 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h2><ol>
 <li>使用<code>|</code>来分隔不同的单元格，使用来分隔表头和其它行。</li>
 <li>为了美观，可以使用空格对齐不同的单元格，并在左右两侧都使用 <code>|</code>来标记单元格边界。</li>
 <li>在表头下方的分隔线中加入 <code>:</code>，即可标记下方单元格内容的对齐方式。单元格内容默认为左对齐，表头内容会一直居中对齐。</li>
 <li>表格中可以插入其它Markdown内容的行内标记，比如超链接等。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">| name      |   age     |</div><div class="line">|---------- |-----------|</div><div class="line">|LearnShare |   12      |</div><div class="line">|Mike       |   20      |</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| name      |   age     |</span><br><span class="line">|---------- |-----------|</span><br><span class="line">|LearnShare |   12      |</span><br><span class="line">|Mike       |   20      |</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -387,7 +387,7 @@
 <tr>
 <td style="text-align:right">LearnShare</td>
 <td>12</td>
-<td><a href="http://www.blog.cumtpn.com" target="_blank" rel="external">Learn</a></td>
+<td><a href="http://www.blog.cumtpn.com" target="_blank" rel="noopener">Learn</a></td>
 </tr>
 <tr>
 <td style="text-align:right">Mike</td>
@@ -396,7 +396,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="Task-list"><a href="#Task-list" class="headerlink" title="Task list"></a>Task list</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- [ ] Eat</div><div class="line">- [x] Code</div><div class="line">    - [x] HTML</div><div class="line">    - [X] CSS</div><div class="line">    - [ ] Javascipt</div><div class="line">- [ ]Sleep</div></pre></td></tr></table></figure>
+<h1 id="Task-list"><a href="#Task-list" class="headerlink" title="Task list"></a>Task list</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- [ ] Eat</span><br><span class="line">- [x] Code</span><br><span class="line">    - [x] HTML</span><br><span class="line">    - [X] CSS</span><br><span class="line">    - [ ] Javascipt</span><br><span class="line">- [ ]Sleep</span><br></pre></td></tr></table></figure>
 <ul>
 <li>[ ] Eat</li>
 <li>[x] Code<ul>
@@ -410,23 +410,23 @@
 <h1 id="编辑器与扩展"><a href="#编辑器与扩展" class="headerlink" title="编辑器与扩展"></a>编辑器与扩展</h1><p>这部分给大家介绍一些可以用来书写、编辑Markdown的工具，包括独立客户端、编辑器/IDE插件，以及WEB的工具，排名不分先后。</p>
 <p>也欢迎你来推荐自己喜欢的工具和插件。</p>
 <ul>
-<li><a href="https://markdownpad.com" target="_blank" rel="external">MarkdownPad</a> Windows</li>
-<li><a href="http://www.texts.io/" target="_blank" rel="external">Text</a> Windows OSX</li>
-<li><a href="http://code52.org/DownmarkerWPF/" target="_blank" rel="external">MarkPad</a> Windows</li>
-<li><a href="http://www.mdcharm.com/" target="_blank" rel="external">MdCharm</a> Windows Linux</li>
-<li><a href="http://mike-ward.net/markdownedit/" target="_blank" rel="external">Mardown Edit</a> Windows</li>
-<li><a href="https://cloose.github.io/CuteMarkEd/" target="_blank" rel="external">CuteMarkEd</a>Windows Linux</li>
-<li><a href="http://pad.haroopress.com/" target="_blank" rel="external">Haroopad</a> Windows OSX Linux</li>
-<li><a href="http://25.io/mou/" target="_blank" rel="external">Mou</a> OSX</li>
-<li><a href="http://macdown.uranusjr.com/" target="_blank" rel="external">MacDown</a> OSX</li>
-<li><a href="http://www.markdownpro.com/" target="_blank" rel="external">Markdown Pro</a> OSX</li>
-<li><a href="http://sourceforge.net/projects/retext/" target="_blank" rel="external">ReText</a>Linux</li>
-<li><a href="https://github.com/jonschlinkert/sublime-markdown-extended" target="_blank" rel="external">sublime-markdown-extended</a>Sublime Text</li>
-<li><a href="https://github.com/atom/markdown-preview" target="_blank" rel="external">Atom Markdown Preview</a>Atom</li>
-<li><a href="https://github.com/nicoulaj/idea-markdown" target="_blank" rel="external">IDEA Markdown</a>IDEA</li>
-<li><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">cmd Markdown</a>Windows OSX Linux web</li>
-<li><a href="https://stackedit.io" target="_blank" rel="external">StactEdit</a>Web</li>
-<li><a href="http://dillinger.io" target="_blank" rel="external">Dillinger</a>Web</li>
+<li><a href="https://markdownpad.com" target="_blank" rel="noopener">MarkdownPad</a> Windows</li>
+<li><a href="http://www.texts.io/" target="_blank" rel="noopener">Text</a> Windows OSX</li>
+<li><a href="http://code52.org/DownmarkerWPF/" target="_blank" rel="noopener">MarkPad</a> Windows</li>
+<li><a href="http://www.mdcharm.com/" target="_blank" rel="noopener">MdCharm</a> Windows Linux</li>
+<li><a href="http://mike-ward.net/markdownedit/" target="_blank" rel="noopener">Mardown Edit</a> Windows</li>
+<li><a href="https://cloose.github.io/CuteMarkEd/" target="_blank" rel="noopener">CuteMarkEd</a>Windows Linux</li>
+<li><a href="http://pad.haroopress.com/" target="_blank" rel="noopener">Haroopad</a> Windows OSX Linux</li>
+<li><a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a> OSX</li>
+<li><a href="http://macdown.uranusjr.com/" target="_blank" rel="noopener">MacDown</a> OSX</li>
+<li><a href="http://www.markdownpro.com/" target="_blank" rel="noopener">Markdown Pro</a> OSX</li>
+<li><a href="http://sourceforge.net/projects/retext/" target="_blank" rel="noopener">ReText</a>Linux</li>
+<li><a href="https://github.com/jonschlinkert/sublime-markdown-extended" target="_blank" rel="noopener">sublime-markdown-extended</a>Sublime Text</li>
+<li><a href="https://github.com/atom/markdown-preview" target="_blank" rel="noopener">Atom Markdown Preview</a>Atom</li>
+<li><a href="https://github.com/nicoulaj/idea-markdown" target="_blank" rel="noopener">IDEA Markdown</a>IDEA</li>
+<li><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="noopener">cmd Markdown</a>Windows OSX Linux web</li>
+<li><a href="https://stackedit.io" target="_blank" rel="noopener">StactEdit</a>Web</li>
+<li><a href="http://dillinger.io" target="_blank" rel="noopener">Dillinger</a>Web</li>
 </ul>
 
       

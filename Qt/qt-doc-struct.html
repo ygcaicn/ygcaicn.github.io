@@ -119,7 +119,7 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/../img/4655551fdasfaf.png" rel="gallery_cjcg78xvj002hmdevzenb8ait">
+      <a class="article-gallery-img fancybox" href="/../img/4655551fdasfaf.png" rel="gallery_cjchfqovt002jitevy6nrk49z">
         <img src="/../img/4655551fdasfaf.png" itemprop="image">
       </a>
     
@@ -151,7 +151,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="external">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
+        <p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="noopener">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
 <p>进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists</p>
 <p><img src="../img/49e21d26-e157-40b5-acb1-3e492b9cf2d8.png" alt="49e21d26-e157-40b5-acb1-3e492b9cf2d8"></p>
 <p>Class Lists中又有不同的索引方式，方便不同情景下查询：<br><img src="../img/c42b0ad4-92e7-4dcf-b09f-14bce8261eea.png" alt="c42b0ad4-92e7-4dcf-b09f-14bce8261eea"> </p>
@@ -181,7 +181,7 @@
 <p><em>说明header和qmake的包含操作</em></p>
 <hr>
 <h2 id="Public-Types-公有的数据类型"><a href="#Public-Types-公有的数据类型" class="headerlink" title="Public Types 公有的数据类型"></a>Public Types <em>公有的数据类型</em></h2><p><img src="../img/ae7e90b2-2b94-45af-819e-cb99c0f686e3.png" alt="ae7e90b2-2b94-45af-819e-cb99c0f686e3"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">enum	Filter &#123; Dirs, AllDirs, Files, Drives, ..., CaseSensitive &#125;</div><div class="line">flags	Filters</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">enum	Filter &#123; Dirs, AllDirs, Files, Drives, ..., CaseSensitive &#125;</span><br><span class="line">flags	Filters</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>The Filters type is a typedef for QFlags<filter>. It stores an OR combination of Filter values.</filter></p>
 </blockquote>
@@ -190,7 +190,7 @@
 <p>解决同一个类不同对象之间的数据共享问题。主要作用是用来访问同一个类中的静态数据成员，维护对象之间的数据共享。</p>
 <p>访问不依赖于对象。</p>
 <p>可以通过对象与类名进行调用，一般习惯与用类名进行访问。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">static QDir	current()</div><div class="line"></div><div class="line">//example：</div><div class="line"></div><div class="line">QDir::current()</div><div class="line"></div><div class="line">//return a QDir Object of current directory.</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">static QDir	current()</span><br><span class="line"></span><br><span class="line">//example：</span><br><span class="line"></span><br><span class="line">QDir::current()</span><br><span class="line"></span><br><span class="line">//return a QDir Object of current directory.</span><br></pre></td></tr></table></figure>
 <h2 id="Macros-宏"><a href="#Macros-宏" class="headerlink" title="Macros 宏"></a>Macros 宏</h2><p><img src="../img/747b2a9a-3760-4319-8dda-06b283649d8e.png" alt="747b2a9a-3760-4319-8dda-06b283649d8e"></p>
 <hr>
 <h2 id="Detailed-Description"><a href="#Detailed-Description" class="headerlink" title="Detailed Description"></a>Detailed Description</h2><p>该部分介绍QDir的整体概览。又分为小的章节进行介绍</p>
@@ -201,7 +201,7 @@
 <h2 id="Member-Function-Documentation"><a href="#Member-Function-Documentation" class="headerlink" title="Member Function Documentation"></a>Member Function Documentation</h2><p><img src="../img/g3364be29-656a-4a1f-8b6e-2f96a635e4d3.png" alt="g3364be29-656a-4a1f-8b6e-2f96a635e4d3"></p>
 <p><img src="../img/ee471f05-3f7e-4537-baa3-537f69c3c64f.png" alt="ee471f05-3f7e-4537-baa3-537f69c3c64f"><br>具体的介绍Function，包括static function。每个函数后有<code>See also xxx()</code>非常的方便。</p>
 <h2 id="Macro-Documentation"><a href="#Macro-Documentation" class="headerlink" title="Macro Documentation"></a>Macro Documentation</h2><p><img src="../img/c70d4c00-6840-4eb5-be99-4c18cdf4fe01.png" alt="c70d4c00-6840-4eb5-be99-4c18cdf4fe01"><br>具体的介绍宏</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="QDir"><a href="#QDir" class="headerlink" title="QDir"></a><a href="http://doc.qt.io/qt-5/qdir.html#QDir" target="_blank" rel="external">QDir</a></h3>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="QDir"><a href="#QDir" class="headerlink" title="QDir"></a><a href="http://doc.qt.io/qt-5/qdir.html#QDir" target="_blank" rel="noopener">QDir</a></h3>
       
     </div>
     <footer class="entry-meta entry-footer">
