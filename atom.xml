@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2018-01-16T09:26:19.657Z</updated>
+  <updated>2018-01-16T09:29:23.526Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html"/>
     <id>https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html</id>
     <published>2018-01-16T17:09:42.000Z</published>
-    <updated>2018-01-16T09:26:19.657Z</updated>
+    <updated>2018-01-16T09:29:23.526Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>aria2 is a utility for downloading files. The supported protocols are HTTP(S), FTP, SFTP, BitTorrent, and Metalink. aria2 can download a file from multiple sources/protocols and tries to utilize your maximum download bandwidth. It supports downloading a file from HTTP(S)/FTP /SFTP and BitTorrent at the same time, while the data downloaded from HTTP(S)/FTP/SFTP is uploaded to the BitTorrent swarm. Using Metalink chunk checksums, aria2 automatically validates chunks of data while downloading a file.</p>
@@ -37,7 +37,7 @@
 <p>修改完成后 <code>source ~/.bash_aliases</code></p>
 <h2 id="Downloads"><a href="#Downloads" class="headerlink" title="Downloads"></a>Downloads</h2><p>打开命令行输入啊aria2,然后用浏览器打开<a href="http://aria2c.com/便可以添加任务！" target="_blank" rel="noopener">http://aria2c.com/便可以添加任务！</a></p>
 <h1 id="0x03-百度网盘插件"><a href="#0x03-百度网盘插件" class="headerlink" title="0x03. 百度网盘插件"></a>0x03. 百度网盘插件</h1><p><a href="https://blog.icehoney.me/posts/2015-01-31-Aria2-download" target="_blank" rel="noopener">https://blog.icehoney.me/posts/2015-01-31-Aria2-download</a></p>
-<h1 id="0x03-每天进步一点点"><a href="#0x03-每天进步一点点" class="headerlink" title="0x03.每天进步一点点!!!"></a>0x03.每天进步一点点!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>]]></content>
+<h1 id="0x04-每天进步一点点"><a href="#0x04-每天进步一点点" class="headerlink" title="0x04.每天进步一点点!!!"></a>0x04.每天进步一点点!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>]]></content>
     
     <summary type="html">
     
