@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2018-01-16T09:29:23.526Z</updated>
+  <updated>2018-03-22T18:40:57.909Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Live Ubuntu快速布局</title>
+    <link href="https://ygcaicn.github.io/Linux/Ubuntu-new.html"/>
+    <id>https://ygcaicn.github.io/Linux/Ubuntu-new.html</id>
+    <published>2018-03-22T18:38:42.000Z</published>
+    <updated>2018-03-22T18:40:57.909Z</updated>
+    
+    <content type="html"><![CDATA[<p>进入live Ubuntu 如何快速布局工作环境呢？</p>
+<h1 id="Go"><a href="#Go" class="headerlink" title="Go!"></a>Go!</h1><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget blog.cumtpn.com/newu.sh</span><br><span class="line">chmod +x newu.sh</span><br><span class="line">sudo ./newu.sh</span><br></pre></td></tr></table></figure>
+<p>静候5分钟！</p>
+<h1 id="newu-sh"><a href="#newu-sh" class="headerlink" title="newu.sh"></a>newu.sh</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env bash</span><br><span class="line"></span><br><span class="line"># Color</span><br><span class="line">red=&apos;\033[0;31m&apos;</span><br><span class="line">green=&apos;\033[0;32m&apos;</span><br><span class="line">yellow=&apos;\033[0;33m&apos;</span><br><span class="line">plain=&apos;\033[0m&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[[ $EUID -ne 0 ]] &amp;&amp; echo -e  &quot;[$&#123;red&#125;Error$&#123;plain&#125;] This script must be run as root!\n$&#123;green&#125;Maybe you want \&quot;sudo ./newu.sh\&quot;$&#123;plain&#125;&quot; &amp;&amp; exit 1</span><br><span class="line">echo -e &quot;[$&#123;yellow&#125;root access!$&#123;plain&#125;]&quot;</span><br><span class="line"></span><br><span class="line">pre_install()&#123;</span><br><span class="line">    type wget &amp;&gt; /dev/null</span><br><span class="line">    [[ $? -eq 0 ]] &amp;&amp; apt-get update &amp;&amp; apt-get install -y wget</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">add_repo()&#123;</span><br><span class="line">cat&lt;&lt;EOF &gt; /etc/apt/sources.list.d/google-chrome.list</span><br><span class="line">deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main</span><br><span class="line">deb [arch=amd64] https://repo.fdzh.org/chrome/deb/ stable main</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">mv /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line"></span><br><span class="line">cat&lt;&lt;EOF &gt; /etc/apt/sources.list</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu/ artful main restricted universe multiverse</span><br><span class="line">deb http://security.ubuntu.com/ubuntu artful-security main restricted universe multiverse</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu/ artful-updates main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add_key()&#123;</span><br><span class="line">    wget -q  -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># shadowsocks</span><br><span class="line">shadowsocks_install()&#123;</span><br><span class="line">    pushd /tmp</span><br><span class="line">    wget -q --no-check-certificate https://bootstrap.pypa.io/get-pip.py</span><br><span class="line">    python get-pip.py</span><br><span class="line">    rm get-pip.py</span><br><span class="line">    pip install shadowsocks</span><br><span class="line">    popd</span><br><span class="line">&#125;</span><br><span class="line">SwitchyOmega_install()&#123;</span><br><span class="line">    wget -q --no-check-certificate https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.5.10/SwitchyOmega_Chromium.crx</span><br><span class="line">    [ -e SwitchyOmega_Chromium.crx ] &amp;&amp; [ -s SwitchyOmega_Chromium.crx ] &amp;&amp; echo -e &quot;$&#123;green&#125;Downloaded SwitchyOmega_Chromium at current directory please open google-chrome install it!$&#123;plain&#125;&quot;</span><br><span class="line">    if ! [ -e SwitchyOmega_Chromium.crx ]</span><br><span class="line">    then</span><br><span class="line">        wget -q --no-check-certificate http://blog.cumtpn.com/SwitchyOmega_Chromium.crx</span><br><span class="line">        [ -e SwitchyOmega_Chromium.crx ] &amp;&amp; [ -s SwitchyOmega_Chromium.crx ] &amp;&amp; echo -e &quot;$&#123;green&#125;Downloaded SwitchyOmega_Chromium at current directory please open google-chrome install it!$&#123;plain&#125;&quot;</span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">    echo -e &quot;[$&#123;green&#125;Ref$&#123;plain&#125;]  https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList&quot;</span><br><span class="line">    echo -e &quot;[$&#123;green&#125;Con$&#123;plain&#125;]  Import profile SwitchyOmega.bak&quot;</span><br><span class="line">    cat&lt;&lt;EOF &gt; SwitchyOmega.bak</span><br><span class="line">&#123;&quot;+GFWed&quot;:&#123;&quot;bypassList&quot;:[&#123;&quot;conditionType&quot;:&quot;BypassCondition&quot;,&quot;pattern&quot;:&quot;&lt;local&gt;&quot;&#125;],&quot;color&quot;:&quot;#99ccee&quot;,&quot;fallbackProxy&quot;:&#123;&quot;host&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:1080,&quot;scheme&quot;:&quot;socks5&quot;&#125;,&quot;name&quot;:&quot;GFWed&quot;,&quot;profileType&quot;:&quot;FixedProfile&quot;,&quot;revision&quot;:&quot;153abe56d04&quot;&#125;,&quot;+__ruleListOf_自动切换&quot;:&#123;&quot;color&quot;:&quot;#99dd99&quot;,&quot;defaultProfileName&quot;:&quot;direct&quot;,&quot;format&quot;:&quot;AutoProxy&quot;,&quot;matchProfileName&quot;:&quot;GFWed&quot;,&quot;name&quot;:&quot;__ruleListOf_自动切换&quot;,&quot;profileType&quot;:&quot;RuleListProfile&quot;,&quot;revision&quot;:&quot;153abdf798a&quot;,&quot;ruleList&quot;:&quot;&quot;,&quot;sourceUrl&quot;:&quot;https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt&quot;,&quot;lastUpdate&quot;:null&#125;,&quot;+自动切换&quot;:&#123;&quot;color&quot;:&quot;#99dd99&quot;,&quot;defaultProfileName&quot;:&quot;__ruleListOf_自动切换&quot;,&quot;name&quot;:&quot;自动切换&quot;,&quot;profileType&quot;:&quot;SwitchProfile&quot;,&quot;revision&quot;:&quot;153abd3207f&quot;,&quot;rules&quot;:[&#123;&quot;condition&quot;:&#123;&quot;conditionType&quot;:&quot;HostWildcardCondition&quot;,&quot;pattern&quot;:&quot;raw.githubusercontent.com&quot;&#125;,&quot;profileName&quot;:&quot;GFWed&quot;&#125;]&#125;,&quot;-confirmDeletion&quot;:true,&quot;-downloadInterval&quot;:1440,&quot;-enableQuickSwitch&quot;:false,&quot;-monitorWebRequests&quot;:true,&quot;-quickSwitchProfiles&quot;:[],&quot;-refreshOnProfileChange&quot;:true,&quot;-revertProxyChanges&quot;:true,&quot;-showInspectMenu&quot;:true,&quot;-startupProfileName&quot;:&quot;&quot;,&quot;schemaVersion&quot;:2&#125;</span><br><span class="line">EOF</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">install_all()&#123;</span><br><span class="line">    apt-get update</span><br><span class="line">    apt-get install -y guake</span><br><span class="line">    apt-get install -y vim</span><br><span class="line">    apt-get install -y google-chrome-stable</span><br><span class="line">    shadowsocks_install</span><br><span class="line">    echo -e &quot;$&#123;yellow&#125;Please enter shadowsocks server:$&#123;plain&#125;&quot;</span><br><span class="line">    while [[ -z &quot;$&#123;ss_ip&#125;&quot; ]]; do</span><br><span class="line">        read -p &quot;shadowsocks server:&quot; ss_ip</span><br><span class="line">        [ -z $&#123;ss_ip&#125; ] &amp;&amp; ss_ip=45.55.181.140</span><br><span class="line">    done</span><br><span class="line"></span><br><span class="line">    echo -e &quot;$&#123;yellow&#125;Please enter shadowsocks password:$&#123;plain&#125;&quot;</span><br><span class="line">    while [[ -z &quot;$&#123;ss_pwd&#125;&quot; ]]; do</span><br><span class="line">        read -p &quot;shadowsocks password:&quot; ss_pwd</span><br><span class="line">        [ -z $&#123;ss_pwd&#125; ] &amp;&amp; ss_pwd=waggywn@10000</span><br><span class="line">    done</span><br><span class="line"></span><br><span class="line">    echo -e &quot;$&#123;yellow&#125;Please enter shadowsocks port:$&#123;plain&#125;&quot;</span><br><span class="line">    read -p &quot;shadowsocks port(Default 6566):&quot; ss_port</span><br><span class="line">    [[ -z $&#123;ss_port&#125; ]] &amp;&amp; ss_port=6566</span><br><span class="line"></span><br><span class="line">    echo -e &quot;$&#123;yellow&#125;Please enter shadowsocks method:$&#123;plain&#125;&quot;</span><br><span class="line">    read -p &quot;shadowsocks method(Default aes-256-cfb):&quot; ss_method</span><br><span class="line">    [[ -z $&#123;ss_method&#125; ]] &amp;&amp; ss_method=&quot;aes-256-cfb&quot;</span><br><span class="line"></span><br><span class="line">    sslocal -d start -q -s $&#123;ss_ip&#125; -p $&#123;ss_port&#125; -m $&#123;ss_method&#125; -k $&#123;ss_pwd&#125; -l 1080</span><br><span class="line">    echo -e &quot;$&#123;green&#125;Start sslocal at 127.0.0.1:1080 $&#123;plain&#125;&quot;</span><br><span class="line"></span><br><span class="line">    SwitchyOmega_install</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">pre_install</span><br><span class="line">add_repo</span><br><span class="line">add_key</span><br><span class="line">install_all</span><br></pre></td></tr></table></figure>
+<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!"></a>每天进步一点点!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;进入live Ubuntu 如何快速布局工作环境呢？&lt;/p&gt;
+&lt;h1 id=&quot;Go&quot;&gt;&lt;a href=&quot;#Go&quot; class=&quot;headerlink&quot; title=&quot;Go!&quot;&gt;&lt;/a&gt;Go!&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="https://ygcaicn.github.io/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu17 aria2c安装使用手记</title>
@@ -1041,312 +1071,6 @@
     
     
       <category term="Markdown" scheme="https://ygcaicn.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown 基础语法</title>
-    <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/markdown.html"/>
-    <id>https://ygcaicn.github.io/杂项/markdown.html</id>
-    <published>2017-03-05T22:58:19.000Z</published>
-    <updated>2018-01-15T10:22:24.425Z</updated>
-    
-    <content type="html"><![CDATA[<p>JOHN GRUBER定义的<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">markdown语法</a>。</p>
-<a id="more"></a>
-<h1 id="段落与换行"><a href="#段落与换行" class="headerlink" title="段落与换行"></a>段落与换行</h1><p>1.段落的前后必须空行：空行指的是什么内容都没有，或者只有空白符（空格或制表符）</p>
-<p>相邻两行文本，如果中间没有空行会显示在一行中（换行符被转换成为空格）</p>
-<p>2.如果需要在段落内加入换行（<code>&lt;br/&gt;</code>）<br>可以在前一行的末尾加入至少两个空格，然后换行写其他的文字</p>
-<p>3.Markdown中的多数区域都需要在两个空行之间</p>
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="Setext格式"><a href="#Setext格式" class="headerlink" title="Setext格式"></a>Setext格式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">H1</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line">H2</span><br><span class="line">----</span><br></pre></td></tr></table></figure>
-<p>渲染效果：（不包含上下的分隔线）</p>
-<hr>
-<h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><hr>
-<h2 id="atx格式"><a href="#atx格式" class="headerlink" title="atx格式"></a>atx格式</h2><ul>
-<li>可以使用对称的<code>#</code>包括文本：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## H2 ##</span><br><span class="line"></span><br><span class="line">### H3 ###</span><br></pre></td></tr></table></figure>
-<p><del>对于有道云笔记文本和<code>#</code>之间必须有空格。</del> 标准语法就是这样的。</p>
-<p>渲染效果：</p>
-<hr>
-<h2 id="H2-1"><a href="#H2-1" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><hr>
-<ul>
-<li>也可以只在左边使用<code>#</code>:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### H3</span><br><span class="line"></span><br><span class="line">#### H4</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<h3 id="H3-1"><a href="#H3-1" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><hr>
-<p>JOHN’s <a href="http://daringfireball.net/projects/markdown/syntax#header" target="_blank" rel="noopener">Heaser</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">HEADERS</span><br><span class="line"></span><br><span class="line">Markdown supports two styles of headers, Setext and atx.</span><br><span class="line"></span><br><span class="line">Setext-style headers are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers). For example:</span><br><span class="line"></span><br><span class="line">This is an H1</span><br><span class="line">=============</span><br><span class="line"></span><br><span class="line">This is an H2</span><br><span class="line">-------------</span><br><span class="line">Any number of underlining =’s or -’s will work.</span><br><span class="line"></span><br><span class="line">Atx-style headers use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. For example:</span><br><span class="line"></span><br><span class="line"># This is an H1</span><br><span class="line"></span><br><span class="line">## This is an H2</span><br><span class="line"></span><br><span class="line">###### This is an H6</span><br><span class="line">Optionally, you may “close” atx-style headers. This is purely cosmetic — you can use this if you think it looks better. The closing hashes don’t even need to match the number of hashes used to open the header. (The number of opening hashes determines the header level.) :</span><br><span class="line"></span><br><span class="line"># This is an H1 #</span><br><span class="line"></span><br><span class="line">## This is an H2 ##</span><br><span class="line"></span><br><span class="line">### This is an H3 ######</span><br></pre></td></tr></table></figure>
-<p>各种Markdown软件的渲染结果可能会有一些差别，但是了解一下标准的语法是没坏处的。</p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="1-引用内容"><a href="#1-引用内容" class="headerlink" title="1.引用内容"></a>1.引用内容</h2><p>在段落或者内容前使用<code>&gt;</code>符号，就可以将这段内容标记为‘引用’的内容（<code>&lt;blockquote&gt;</code>）:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用内容</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<blockquote>
-<p>引用内容</p>
-</blockquote>
-<hr>
-<h2 id="2-多行引用"><a href="#2-多行引用" class="headerlink" title="2.多行引用"></a>2.多行引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;多行引用</span><br><span class="line">&gt;可以在每一行前加`&gt;`符号</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<blockquote>
-<p>多行引用<br>可以在每一行前加<code>&gt;</code>符号</p>
-</blockquote>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;如果仅在第一行使用`&gt;`,</span><br><span class="line">后面相邻的行即使省略`&gt;`，也会变成引用内容</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<blockquote>
-<p>如果仅在第一行使用<code>&gt;</code>,<br>后面相邻的行即使省略<code>&gt;</code>，也会变成引用内容</p>
-</blockquote>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;如果引用的内容需要换行，  </span><br><span class="line">&gt;可以在行尾添加两个空格</span><br><span class="line">&gt;</span><br><span class="line">&gt;或者在引用内容中加一个空行</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<blockquote>
-<p>如果引用的内容需要换行，<br>可以在行尾添加两个空格</p>
-<p>或者在引用内容中加一个空行</p>
-</blockquote>
-<hr>
-<h2 id="3-嵌套引用"><a href="#3-嵌套引用" class="headerlink" title="3.嵌套引用"></a>3.嵌套引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;也可以在引用中</span><br><span class="line">&gt;&gt;使用嵌套的引用</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<blockquote>
-<p>也可以在引用中</p>
-<blockquote>
-<p>使用嵌套的引用</p>
-</blockquote>
-</blockquote>
-<hr>
-<h2 id="4-其它Markdown"><a href="#4-其它Markdown" class="headerlink" title="4.其它Markdown"></a>4.其它Markdown</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在引用中可以使用其它任何*Markdown*语法</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<blockquote>
-<p>在引用中可以使用其它任何<em>Markdown</em>语法</p>
-</blockquote>
-<hr>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 可以使用`*`作为标记</span><br><span class="line">- 也可以使用`-`</span><br><span class="line">+ 或者`+`</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<ul>
-<li>可以使用<code>*</code>作为标记</li>
-</ul>
-<ul>
-<li>也可以使用<code>-</code></li>
-</ul>
-<ul>
-<li>或者<code>+</code></li>
-</ul>
-<hr>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表以数字和`.`开始；</span><br><span class="line">2. 数字的序列并不会影响生成列表的序列；</span><br><span class="line">4. 但是仍然推荐按照自然顺序（1.2.3...）编写</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<ol>
-<li>有序列表以数字和<code>.</code>开始；</li>
-<li>数字的序列并不会影响生成列表的序列；</li>
-<li>但是仍然推荐按照自然顺序（1.2.3…）编写</li>
-</ol>
-<hr>
-<h2 id="嵌套的列表"><a href="#嵌套的列表" class="headerlink" title="嵌套的列表"></a>嵌套的列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 第一层</span><br><span class="line">    + 1-1</span><br><span class="line">    + 1-2</span><br><span class="line">    + 1-3</span><br><span class="line">2. 无序列表和有序列表可以随意相互嵌套</span><br><span class="line">    1. 2-1</span><br><span class="line">    2. 2-2</span><br><span class="line">    3. 2-3</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<ol>
-<li>第一层<ul>
-<li>1-1</li>
-<li>1-2</li>
-<li>1-3</li>
-</ul>
-</li>
-<li>无序列表和有序列表可以随意相互嵌套<ol>
-<li>2-1</li>
-<li>2-2</li>
-<li>2-3</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h2 id="语法和用法"><a href="#语法和用法" class="headerlink" title="语法和用法"></a>语法和用法</h2><ol>
-<li>无序列表项的开始是：符号 空格；</li>
-<li>有序列表项的开始是：数字 <code>.</code> 空格；</li>
-<li>空格至少为一个，多个空格将被解析为一个；</li>
-<li>如果仅需要在行前显示数字和<code>.</code>:  </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">05\. 可以使用：数字\. 来取消显示为列表</span><br></pre></td></tr></table></figure>
-<p>05. 可以使用：数字\. 来取消显示为列表</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>可以使用缩进来插入代码块：</p>
-<pre><code>&lt;html&gt;
-    &lt;title&gt;&lt;/title&gt;
-&lt;/html&gt;
-</code></pre><p>代码块前后至少有一个空行，切每行代码前至少有一个Tab或者四个空格；</p>
-<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>通过<code>`，插入行内代码（</code>是Tab键上边、数字<code>1</code>键左侧的按键）；</p>
-<p>例如<code>&lt;title&gt;Markdown&lt;/title&gt;</code></p>
-<h2 id="转换规则"><a href="#转换规则" class="headerlink" title="转换规则"></a>转换规则</h2><p>代码块中的文本（包括Markdown语法）都会显示为原始内容，而特殊字符会被转换为HTML<a href="https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">字符实体</a></p>
-<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><ol>
-<li>可以在一行中使用三个或更多的<code>*</code>,<code>-</code>或<code>_</code>来添加分隔线(<hr>):</li>
-<li>多个字符之间可以有空格（空白符），但不能有其它字符：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">------</span><br><span class="line">_____</span><br><span class="line"></span><br><span class="line">*   *   *</span><br><span class="line">_ _ _</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<h2 id=""><a href="#" class="headerlink" title="*"></a><em>*</em></h2><hr>
-<hr>
-<hr>
-<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><h2 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h2><p>格式为：<code>[link text](URL  &quot;title text&quot;)</code></p>
-<p><code>[Google](http://www.google.com)</code><br><a href="http://www.google.com" target="_blank" rel="noopener">Google</a></p>
-<p><code>[icon](./images/icon.png)</code><br><a href="./images/icon.png">icon</a></p>
-<p>超链接的title就是鼠标放上去（不是点击）时就弹出来的提示：</p>
-<p><code>[Google](http://www.google.com &quot;Google Title&quot;)</code></p>
-<p>注：title text使用’或者”都是可以的。</p>
-<p><a href="http://www.google.com" title="Google Title" target="_blank" rel="noopener">Google</a></p>
-<h2 id="参考式"><a href="#参考式" class="headerlink" title="参考式"></a>参考式</h2><p>参考式链接的写法相当于行内式拆分成两部分，并通过一个识别符连链接两部分。参考式能尽量保持文章的结构简单，也方便统一管理URL</p>
-<ol>
-<li>链接格式</li>
-</ol>
-<p>第一个方括号为链接文本，第二个方括号为 链接独有的标识符，可以是字母、数字、空格或标点符号。<strong>标识符是不区分大小写的</strong></p>
-<p><code>[link text][link-sign]</code></p>
-<ol>
-<li>链接内容</li>
-</ol>
-<p>其中URL可以使用&lt;&gt;包起来，title可以使用’’、””、 ()包括（考虑到兼容性，建议使用引号），title部分也可以换行来写；</p>
-<p>链接内容的定义可以放在同一个文件的任意位置；</p>
-<ol>
-<li>备注</li>
-</ol>
-<p>可以省略标识符，直接使用link text作为标识符。</p>
-<p>这种情况下第二个方括号可以为空或者直接省略第二个方括号。</p>
-<p>参考格式的优点在于可以在多个不同的位置引用同一个URL。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Google][google-link]  </span><br><span class="line">[Baidu][baidu-link]  </span><br><span class="line">[QQ][]  </span><br><span class="line">[Amazon]</span><br><span class="line"></span><br><span class="line">[google-link]: http://www.google.com &quot;Google Title&quot;</span><br><span class="line">[baidu-link]: http://www.baidu.com &quot;Baidu Title&quot;</span><br><span class="line">[QQ]: http://www.qq.com &quot;QQ Title&quot;</span><br><span class="line">[Amazon]: http://www.amazon.com &quot;amazon title&quot;</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<hr>
-<p><a href="http://www.google.com" title="Google Title" target="_blank" rel="noopener">Google</a><br><a href="http://www.baidu.com" title="Baidu Title" target="_blank" rel="noopener">Baidu</a><br><a href="http://www.qq.com" title="QQ Title" target="_blank" rel="noopener">QQ</a><br><a href="http://www.amazon.com" title="amazon title" target="_blank" rel="noopener">Amazon</a></p>
-<hr>
-<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.google.com&gt;   </span><br><span class="line">&lt;123@email.com&gt;</span><br></pre></td></tr></table></figure>
-<p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x31;&#x32;&#51;&#x40;&#101;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x31;&#x32;&#51;&#x40;&#101;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></p>
-<p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
-<h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</span><br></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/YACdsVS.jpg" alt="Imgur" title="rosse"></p>
-<p>方括号部分是图片的替代文本，括号中的’title’部分和连接是一样的，是可选的。</p>
-<h2 id="参考式-1"><a href="#参考式-1" class="headerlink" title="参考式"></a>参考式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![Imgur][rosse]</span><br><span class="line"></span><br><span class="line">[rosse]: http://i.imgur.com/YACdsVS.jpg &quot;rosse&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/YACdsVS.jpg" alt="Imgur" title="rosse"></p>
-<h2 id="指定图片的大小"><a href="#指定图片的大小" class="headerlink" title="指定图片的大小"></a>指定图片的大小</h2><p>Markdown不支持指定图片的大小，不过可以通过直接插入<img>标签来指定相关属性：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://i.imgur.com/YACdsVS.jpg&quot; alt=&quot;rosse&quot; title=&quot;rosse&quot; width=&quot;50&quot; height=&quot;30&quot;/&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/YACdsVS.jpg" alt="rosse" title="rosse" width="50" height="30"></p>
-<p>注：这在有道云笔记里是不支持的！</p>
-<h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><ol>
-<li>使用<code>* *</code>或<code>_ _</code>包括的文本会被转换为<em></em>,通常表现为斜体。</li>
-<li>使用<code>** **</code>或<code>__ __</code>包括的文本会被转换为<strong></strong>,通常表现为加粗。</li>
-<li>用来包括文本的<em>或_内侧不能有空白，否则</em> _将不会被转换。</li>
-<li>如果需要在文本中成对显示*或者_，可以在符号前加入<code>\</code>即可。</li>
-<li>强调的特殊符号必须成对使用。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*Hello world!*  </span><br><span class="line">_Hello world!_  </span><br><span class="line">**Hello world!**  </span><br><span class="line">__Hello world!__  </span><br><span class="line">\*Hello world!\*  </span><br><span class="line">\_Hello world!\_</span><br></pre></td></tr></table></figure>
-<p><em>Hello world!</em><br><em>Hello world!</em><br><strong>Hello world!</strong><br><strong>Hello world!</strong><br>*Hello world!*<br>_Hello world!_  </p>
-<h1 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h1><p>反斜线 <code>\</code>用于插入在Markdown语法中有特殊作用的字符。</p>
-<p>这些字符包括：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\  </span><br><span class="line">`  </span><br><span class="line">_  </span><br><span class="line">&#123;&#125;  </span><br><span class="line">[]  </span><br><span class="line">()  </span><br><span class="line">#  </span><br><span class="line">+  </span><br><span class="line">-  </span><br><span class="line">_  </span><br><span class="line">&apos;  </span><br><span class="line">.  </span><br><span class="line">!</span><br></pre></td></tr></table></figure>
-<h1 id="Markdown-扩展语法"><a href="#Markdown-扩展语法" class="headerlink" title="Markdown 扩展语法"></a>Markdown 扩展语法</h1><p>Markdown标准 本身包含的功能有限，所以产生了许多第三方的扩展语法，如<a href="https://help.github.com/categories/writing-on-github/" target="_blank" rel="noopener">Github Flavored Markdown</a>。</p>
-<h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><p>用<code>~~ ~~</code>包括的内容将以删除线的形式展现。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-<p><del>删除线</del></p>
-<h1 id="代码块和语法高亮"><a href="#代码块和语法高亮" class="headerlink" title="代码块和语法高亮"></a>代码块和语法高亮</h1><h2 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h2><ol>
-<li>与缩进添加代码块不同，这里使用 \<figure class="highlight plain"><figcaption><span>来包含多行代码。```需要单独占一行。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">2. 在第一组```之后添加代码的语言，如&apos;javascript&apos;或者&apos;js&apos;，即可以将代码标记为Javascript。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    ```c++</span><br><span class="line">    include&lt;iostream&gt;</span><br><span class="line">    using namespace std;</span><br><span class="line"></span><br><span class="line">    int main(void)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;Hello world!&quot;;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iostream&gt;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello world!"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">'window loaded'</span>);&#125;);</span><br></pre></td></tr></table></figure>
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">'window loaded'</span>);&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><h2 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h2><ol>
-<li>使用<code>|</code>来分隔不同的单元格，使用来分隔表头和其它行。</li>
-<li>为了美观，可以使用空格对齐不同的单元格，并在左右两侧都使用 <code>|</code>来标记单元格边界。</li>
-<li>在表头下方的分隔线中加入 <code>:</code>，即可标记下方单元格内容的对齐方式。单元格内容默认为左对齐，表头内容会一直居中对齐。</li>
-<li>表格中可以插入其它Markdown内容的行内标记，比如超链接等。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| name      |   age     |</span><br><span class="line">|---------- |-----------|</span><br><span class="line">|LearnShare |   12      |</span><br><span class="line">|Mike       |   20      |</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>age</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LearnShare</td>
-<td>12</td>
-</tr>
-<tr>
-<td>Mike</td>
-<td>20</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">name</th>
-<th>age</th>
-<th>blog</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">LearnShare</td>
-<td>12</td>
-<td><a href="http://www.blog.cumtpn.com" target="_blank" rel="noopener">Learn</a></td>
-</tr>
-<tr>
-<td style="text-align:right">Mike</td>
-<td>20</td>
-<td><img src="http://i.imgur.com/YACdsVS.jpg" alt="Imgur" title="rosse"></td>
-</tr>
-</tbody>
-</table>
-<h1 id="Task-list"><a href="#Task-list" class="headerlink" title="Task list"></a>Task list</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- [ ] Eat</span><br><span class="line">- [x] Code</span><br><span class="line">    - [x] HTML</span><br><span class="line">    - [X] CSS</span><br><span class="line">    - [ ] Javascipt</span><br><span class="line">- [ ]Sleep</span><br></pre></td></tr></table></figure>
-<ul>
-<li>[ ] Eat</li>
-<li>[x] Code<ul>
-<li>[x] HTML</li>
-<li>[x] CSS</li>
-<li>[ ] Javascipt</li>
-</ul>
-</li>
-<li>[ ]Sleep</li>
-</ul>
-<h1 id="编辑器与扩展"><a href="#编辑器与扩展" class="headerlink" title="编辑器与扩展"></a>编辑器与扩展</h1><p>这部分给大家介绍一些可以用来书写、编辑Markdown的工具，包括独立客户端、编辑器/IDE插件，以及WEB的工具，排名不分先后。</p>
-<p>也欢迎你来推荐自己喜欢的工具和插件。</p>
-<ul>
-<li><a href="https://markdownpad.com" target="_blank" rel="noopener">MarkdownPad</a> Windows</li>
-<li><a href="http://www.texts.io/" target="_blank" rel="noopener">Text</a> Windows OSX</li>
-<li><a href="http://code52.org/DownmarkerWPF/" target="_blank" rel="noopener">MarkPad</a> Windows</li>
-<li><a href="http://www.mdcharm.com/" target="_blank" rel="noopener">MdCharm</a> Windows Linux</li>
-<li><a href="http://mike-ward.net/markdownedit/" target="_blank" rel="noopener">Mardown Edit</a> Windows</li>
-<li><a href="https://cloose.github.io/CuteMarkEd/" target="_blank" rel="noopener">CuteMarkEd</a>Windows Linux</li>
-<li><a href="http://pad.haroopress.com/" target="_blank" rel="noopener">Haroopad</a> Windows OSX Linux</li>
-<li><a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a> OSX</li>
-<li><a href="http://macdown.uranusjr.com/" target="_blank" rel="noopener">MacDown</a> OSX</li>
-<li><a href="http://www.markdownpro.com/" target="_blank" rel="noopener">Markdown Pro</a> OSX</li>
-<li><a href="http://sourceforge.net/projects/retext/" target="_blank" rel="noopener">ReText</a>Linux</li>
-<li><a href="https://github.com/jonschlinkert/sublime-markdown-extended" target="_blank" rel="noopener">sublime-markdown-extended</a>Sublime Text</li>
-<li><a href="https://github.com/atom/markdown-preview" target="_blank" rel="noopener">Atom Markdown Preview</a>Atom</li>
-<li><a href="https://github.com/nicoulaj/idea-markdown" target="_blank" rel="noopener">IDEA Markdown</a>IDEA</li>
-<li><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="noopener">cmd Markdown</a>Windows OSX Linux web</li>
-<li><a href="https://stackedit.io" target="_blank" rel="noopener">StactEdit</a>Web</li>
-<li><a href="http://dillinger.io" target="_blank" rel="noopener">Dillinger</a>Web</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;JOHN GRUBER定义的&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;markdown语法&lt;/a&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂项" scheme="https://ygcaicn.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
-    
-    
-      <category term="markdown" scheme="https://ygcaicn.github.io/tags/markdown/"/>
     
   </entry>
   
