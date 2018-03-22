@@ -13,7 +13,7 @@ echo -e "[${yellow}root access!${plain}]"
 pre_install(){
     type wget &> /dev/null
     [[ $? -eq 0 ]] && apt-get update && apt-get install -y wget
-    apt install -y guake && guake -p
+
 }
 add_repo(){
 cat<<EOF > /etc/apt/sources.list.d/google-chrome.list
@@ -51,6 +51,7 @@ SwitchyOmega_install(){
 }
 install(){
     apt-get update
+    apt-get install -y guake && guake -p
     apt-get install -y google-chrome-stable
     shadowsocks_install
     echo -e "${green}Please enter shadowsocks server:${plain}"
