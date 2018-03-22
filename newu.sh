@@ -6,18 +6,24 @@ green='\033[0;32m'
 yellow='\033[0;33m'
 plain='\033[0m'
 
-[[ $EUID -ne 0 ]] && echo -e  "[${red}Error${plain}] This script must be run as root!" && exit 1
-echo -e "[${yellow}root access!${plain}]"
 
+[[ $EUID -ne 0 ]] && echo -e  "[${red}Error${plain}] This script must be run as root!\n${green}Maybe you want \"sudo ./newu.sh\"${plain}" && exit 1
+echo -e "[${yellow}root access!${plain}]"
 
 pre_install(){
     type wget &> /dev/null
-    [[ $? -eq 0 ]] && apt update && apt install wget
+    [[ $? -eq 0 ]] && apt-get update && apt-get install -y wget
 }
 add_repo(){
-cat<<EOF > /etc/apt/sources.list.d/google-chrome.list
+cat<<EOF > /etc/apt/sources.list.d/google-chrome.list.back
 deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 deb [arch=amd64] https://repo.fdzh.org/chrome/deb/ stable main
+EOF
+
+cat<<EOF > /etc/apt/sources.list
+deb http://cn.archive.ubuntu.com/ubuntu/ artful main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu artful-security main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ artful-updates main restricted universe multiverse
 EOF
 }
 
@@ -44,32 +50,29 @@ SwitchyOmega_install(){
 }
 install(){
     apt-get update
-    apt-get install google-chrome-stable
+    apt-get install -y google-chrome-stable
     shadowsocks_install
-    echo "${green}Please enter shadowsocks server:${plain}"
+    echo -e "${green}Please enter shadowsocks server:${plain}"
     while [[ -z "${ss_ip}" ]]; do
         read -p "shadowsocks server:" ss_ip
     done
 
-    echo "${green}Please enter shadowsocks port:${green}"
+    echo -e "${green}Please enter shadowsocks port:${green}"
     read -p "shadowsocks port(Default 6566):" ss_port
-    [[ -x ${ss_port} ]] && ss_port=6566
+    [[ -z ${ss_port} ]] && ss_port=6566
 
-    echo "${green}Please enter shadowsocks method:${green}"
-    read -p "shadowsocks method(Default aes256-cfb):" ss_method
-    [[ -x ${ss_method} ]] && ss_method="aes256-cfb"
+    echo -e "${green}Please enter shadowsocks method:${green}"
+    read -p "shadowsocks method(Default aes-256-cfb):" ss_method
+    [[ -z ${ss_method} ]] && ss_method="aes-256-cfb"
 
-    echo "${green}Please enter shadowsocks password:${green}"
+    echo -e "${green}Please enter shadowsocks password:${green}"
     while [[ -z "${ss_pwd}" ]]; do
         read -p "shadowsocks password:" ss_pwd
     done
 
-    `sslocal -s ${ss_ip} -p ${ss_port} -m ${ss_method} -k ${ss_pwd} -l 1080 &`
-    echo "${green}Start sslocal at 127.0.0.1:1080 ${green}"
-
-    SwitchyOmega_install
+    sslocal -d start -q -s ${ss_ip} -p ${ss_port} -m ${ss_method} -k ${ss_pwd} -l 1080
+    echo -e "${green}Start sslocal at 127.0.0.1:1080 ${green}"
 }
 pre_install
 add_repo
-add_key
 install
