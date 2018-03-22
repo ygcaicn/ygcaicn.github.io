@@ -49,7 +49,7 @@
     <title>Ubuntu17 aria2c安装使用手记</title>
     <link href="https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html"/>
     <id>https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html</id>
-    <published>2018-01-16T17:09:42.000Z</published>
+    <published>2018-01-16T04:09:42.000Z</published>
     <updated>2018-01-16T09:29:23.526Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
@@ -90,7 +90,7 @@
     <title>Linux下python3测试网速</title>
     <link href="https://ygcaicn.github.io/python3/py3-networkrate.html"/>
     <id>https://ygcaicn.github.io/python3/py3-networkrate.html</id>
-    <published>2018-01-16T01:09:42.000Z</published>
+    <published>2018-01-15T12:09:42.000Z</published>
     <updated>2018-01-15T13:16:44.618Z</updated>
     
     <content type="html"><![CDATA[<h1 id="python3实现"><a href="#python3实现" class="headerlink" title="python3实现"></a>python3实现</h1><p>python3学习中写的一个小程序，有时候还挺有用，贴出来做记录！</p>
@@ -125,7 +125,7 @@
     <title>build-live-ubuntu --2</title>
     <link href="https://ygcaicn.github.io/Linux/build-live-ubuntu2.html"/>
     <id>https://ygcaicn.github.io/Linux/build-live-ubuntu2.html</id>
-    <published>2018-01-15T17:09:42.000Z</published>
+    <published>2018-01-15T04:09:42.000Z</published>
     <updated>2018-01-15T10:04:40.317Z</updated>
     
     <content type="html"><![CDATA[<p>在上次介绍了一些基础的常用软件之后决定进一步探索！在知乎找到了一篇很棒的讨论，链接如下：<br><a href="https://www.zhihu.com/question/19811112" target="_blank" rel="noopener">https://www.zhihu.com/question/19811112</a>通过实践找出了我比较满意的软件。<br>由于本人电脑只有240G的固盘，电脑性能一般，因此对与内存和硬盘都是相当的奢侈，能原配的就不去搞些华丽胡哨的<br>东西，本着能简单绝不复杂，能默认绝不修改的原则去测试一些软件，以及一些脚本，特此记录以备后查！</p>
@@ -158,7 +158,7 @@
     <title>build-live-ubuntu打造日常使用Ubuntu</title>
     <link href="https://ygcaicn.github.io/Linux/build-live-ubuntu.html"/>
     <id>https://ygcaicn.github.io/Linux/build-live-ubuntu.html</id>
-    <published>2017-11-11T17:09:42.000Z</published>
+    <published>2017-11-11T04:09:42.000Z</published>
     <updated>2018-01-14T19:22:28.687Z</updated>
     
     <content type="html"><![CDATA[<p>转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。<br>Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大<br>的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。<br>本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10</p>
@@ -220,7 +220,7 @@
     <title>Ubuntu17.10-ChineseInputContexts</title>
     <link href="https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html"/>
     <id>https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html</id>
-    <published>2017-11-11T15:32:29.000Z</published>
+    <published>2017-11-11T02:32:29.000Z</published>
     <updated>2018-01-15T10:26:31.156Z</updated>
     
     <content type="html"><![CDATA[<p>unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！<br>环境为Ubuntu17.10 （17.04同样适用）。<br>常用软件包括：</p>
@@ -295,7 +295,7 @@
     <title>Qt-doc-struct</title>
     <link href="https://ygcaicn.github.io/Qt/qt-doc-struct.html"/>
     <id>https://ygcaicn.github.io/Qt/qt-doc-struct.html</id>
-    <published>2017-11-09T16:09:40.000Z</published>
+    <published>2017-11-09T03:09:40.000Z</published>
     <updated>2017-11-09T16:51:30.140Z</updated>
     
     <content type="html"><![CDATA[<p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="noopener">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
@@ -373,7 +373,7 @@
     <title>TCP/IP</title>
     <link href="https://ygcaicn.github.io/Linux/TCP-IP.html"/>
     <id>https://ygcaicn.github.io/Linux/TCP-IP.html</id>
-    <published>2017-10-24T12:32:55.000Z</published>
+    <published>2017-10-24T00:32:55.000Z</published>
     <updated>2017-10-24T07:37:47.173Z</updated>
     
     <content type="html"><![CDATA[<h2 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h2><p>维基百科：<a href="https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F</a></p>
@@ -417,7 +417,7 @@
     <title>Adblock的一些软件</title>
     <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/adb.html"/>
     <id>https://ygcaicn.github.io/杂项/adb.html</id>
-    <published>2017-10-16T03:02:06.000Z</published>
+    <published>2017-10-15T15:02:06.000Z</published>
     <updated>2018-01-15T09:55:33.502Z</updated>
     
     <content type="html"><![CDATA[<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><a id="more"></a>
@@ -475,7 +475,7 @@
     <title>VIP视频解析+去广告教程</title>
     <link href="https://ygcaicn.github.io/Network/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html"/>
     <id>https://ygcaicn.github.io/Network/VIP视频解析-去广告.html</id>
-    <published>2017-07-22T12:32:55.000Z</published>
+    <published>2017-07-22T00:32:55.000Z</published>
     <updated>2018-01-15T10:38:30.729Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VIP视频解析-去广告教程"><a href="#VIP视频解析-去广告教程" class="headerlink" title="VIP视频解析+去广告教程"></a>VIP视频解析+去广告教程</h1><h2 id="Step1-打开视频网站"><a href="#Step1-打开视频网站" class="headerlink" title="Step1.打开视频网站"></a>Step1.打开视频网站</h2><p>这里以爱奇艺为例 <a href="http://www.iqiyi.com" target="_blank" rel="noopener">http://www.iqiyi.com</a> 打开首页看到类似下面的界面：</p>
@@ -516,7 +516,7 @@
     <title>关于win10version1703 多引导（grub引导）的问题</title>
     <link href="https://ygcaicn.github.io/Linux/win10-1703-grub.html"/>
     <id>https://ygcaicn.github.io/Linux/win10-1703-grub.html</id>
-    <published>2017-06-01T12:32:55.000Z</published>
+    <published>2017-06-01T00:32:55.000Z</published>
     <updated>2017-06-01T02:15:58.516Z</updated>
     
     <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
@@ -578,7 +578,7 @@
     <title>ESP分区格式化，修复Windows&amp;Linux引导</title>
     <link href="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html"/>
     <id>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</id>
-    <published>2017-05-14T21:32:55.000Z</published>
+    <published>2017-05-14T09:32:55.000Z</published>
     <updated>2018-01-15T10:13:42.503Z</updated>
     
     <content type="html"><![CDATA[<p>ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
@@ -656,7 +656,7 @@
     <title>mathjax 测试</title>
     <link href="https://ygcaicn.github.io/Linux/mathjax.html"/>
     <id>https://ygcaicn.github.io/Linux/mathjax.html</id>
-    <published>2017-05-05T01:57:40.000Z</published>
+    <published>2017-05-04T13:57:40.000Z</published>
     <updated>2018-01-15T10:22:38.408Z</updated>
     
     <content type="html"><![CDATA[<p>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
@@ -678,7 +678,7 @@
     <title>【Machine Learning】机器学习：简明入门指南</title>
     <link href="https://ygcaicn.github.io/Machine-Learning/Mechine-Learning.html"/>
     <id>https://ygcaicn.github.io/Machine-Learning/Mechine-Learning.html</id>
-    <published>2017-05-04T21:32:55.000Z</published>
+    <published>2017-05-04T09:32:55.000Z</published>
     <updated>2017-05-04T05:52:22.505Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
@@ -792,7 +792,7 @@
     <title>python基础</title>
     <link href="https://ygcaicn.github.io/python3/python%E5%9F%BA%E7%A1%80.html"/>
     <id>https://ygcaicn.github.io/python3/python基础.html</id>
-    <published>2017-05-04T19:25:36.000Z</published>
+    <published>2017-05-04T07:25:36.000Z</published>
     <updated>2018-01-15T13:21:33.926Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h1><blockquote>
@@ -853,7 +853,7 @@
     <title>GPT(GUID partition table)</title>
     <link href="https://ygcaicn.github.io/Linux/GPT.html"/>
     <id>https://ygcaicn.github.io/Linux/GPT.html</id>
-    <published>2017-05-04T17:04:44.000Z</published>
+    <published>2017-05-04T05:04:44.000Z</published>
     <updated>2018-01-15T10:17:42.885Z</updated>
     
     <content type="html"><![CDATA[<p>GPT 磁盘分区表：</p>
@@ -895,7 +895,7 @@
     <title>Python3 实现代理IP,伪装IP</title>
     <link href="https://ygcaicn.github.io/python3/proxy-python3.html"/>
     <id>https://ygcaicn.github.io/python3/proxy-python3.html</id>
-    <published>2017-03-19T06:43:36.000Z</published>
+    <published>2017-03-18T18:43:36.000Z</published>
     <updated>2018-01-15T13:21:48.246Z</updated>
     
     <content type="html"><![CDATA[<p>实现抓取代理服务器，建立ipPool,伪装外网ip</p>
@@ -936,7 +936,7 @@
     <title>LEDE-Mt7620a-newifiY1</title>
     <link href="https://ygcaicn.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F/LEDE-Mt7620a-newifiY1.html"/>
     <id>https://ygcaicn.github.io/嵌入式/LEDE-Mt7620a-newifiY1.html</id>
-    <published>2017-03-17T03:56:12.000Z</published>
+    <published>2017-03-16T15:56:12.000Z</published>
     <updated>2018-01-15T10:22:08.174Z</updated>
     
     <content type="html"><![CDATA[<p>LEDE:<br><a href="https://downloads.lede-project.org" target="_blank" rel="noopener">https://downloads.lede-project.org</a></p>
@@ -989,7 +989,7 @@
     <title>help-linux</title>
     <link href="https://ygcaicn.github.io/Linux/help-linux.html"/>
     <id>https://ygcaicn.github.io/Linux/help-linux.html</id>
-    <published>2017-03-16T02:01:55.000Z</published>
+    <published>2017-03-15T14:01:55.000Z</published>
     <updated>2018-01-15T10:21:26.740Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Help-Linux"><a href="#Help-Linux" class="headerlink" title="Help Linux"></a>Help Linux</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a><em>Ubuntu</em></h2><h3 id="发行版列表WIKI"><a href="#发行版列表WIKI" class="headerlink" title="发行版列表WIKI"></a><a href="https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">发行版列表WIKI</a></h3><p>Ubuntu版本的命名规则是根据正式版发行的年月命名，Ubuntu 8.10也就意味着2008年10月发行的Ubuntu，研发人员与使用者可从版本号码就知道正式发布的时间。Ubuntu是基于Debian开发的Linux发行版，Debian的开发代号来自于电影玩具总动员，不过，Ubuntu各版本的代号却固定是形容词加上动物名称，而且这2个词的英文首字母一定是相同的。从Ubuntu 6.06开始，两个词的首字母按照英文字母表的排列顺序取用</p>
@@ -1028,7 +1028,7 @@
     <title>hello md</title>
     <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/hello-md.html"/>
     <id>https://ygcaicn.github.io/杂项/hello-md.html</id>
-    <published>2017-03-05T23:08:28.000Z</published>
+    <published>2017-03-05T10:08:28.000Z</published>
     <updated>2018-01-15T11:02:24.880Z</updated>
     
     <content type="html"><![CDATA[<p>MarkDown 文本编辑器：  </p>
