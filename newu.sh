@@ -61,6 +61,7 @@ EOF
 install(){
     apt-get update
     apt-get install -y guake
+    apt-get install -y vim
     apt-get install -y google-chrome-stable
     shadowsocks_install
     echo -e "${green}Please enter shadowsocks server:${plain}"
