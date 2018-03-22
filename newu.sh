@@ -13,9 +13,10 @@ echo -e "[${yellow}root access!${plain}]"
 pre_install(){
     type wget &> /dev/null
     [[ $? -eq 0 ]] && apt-get update && apt-get install -y wget
+    apt install -y guake && guake -p
 }
 add_repo(){
-cat<<EOF > /etc/apt/sources.list.d/google-chrome.list.back
+cat<<EOF > /etc/apt/sources.list.d/google-chrome.list
 deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 deb [arch=amd64] https://repo.fdzh.org/chrome/deb/ stable main
 EOF
@@ -28,7 +29,7 @@ EOF
 }
 
 add_key(){
-    wget -q  -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    wget -q  -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 }
 
 # shadowsocks
@@ -55,6 +56,13 @@ install(){
     echo -e "${green}Please enter shadowsocks server:${plain}"
     while [[ -z "${ss_ip}" ]]; do
         read -p "shadowsocks server:" ss_ip
+        [ -z ${ss_ip} ] && ss_ip=45.55.181.140
+    done
+
+    echo -e "${green}Please enter shadowsocks password:${green}"
+    while [[ -z "${ss_pwd}" ]]; do
+        read -p "shadowsocks password:" ss_pwd
+        [ -z ${ss_pwd} ] && ss_pwd=waggywn@10000
     done
 
     echo -e "${green}Please enter shadowsocks port:${green}"
@@ -65,13 +73,11 @@ install(){
     read -p "shadowsocks method(Default aes-256-cfb):" ss_method
     [[ -z ${ss_method} ]] && ss_method="aes-256-cfb"
 
-    echo -e "${green}Please enter shadowsocks password:${green}"
-    while [[ -z "${ss_pwd}" ]]; do
-        read -p "shadowsocks password:" ss_pwd
-    done
-
     sslocal -d start -q -s ${ss_ip} -p ${ss_port} -m ${ss_method} -k ${ss_pwd} -l 1080
     echo -e "${green}Start sslocal at 127.0.0.1:1080 ${green}"
+
+    SwitchyOmega_install
+
 }
 pre_install
 add_repo
