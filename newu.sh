@@ -44,8 +44,14 @@ shadowsocks_install(){
 }
 SwitchyOmega_install(){
     wget -q --no-check-certificate https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.5.10/SwitchyOmega_Chromium.crx
-    echo -e "${green}Downloaded SwitchyOmega_Chromium at current directory please open google-chrome install it!${green}"
-    echo -e "${green}Ref${plain}https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList"
+    [ -e SwitchyOmega_Chromium.crx ] && [ -s SwitchyOmega_Chromium.crx ] && echo -e "${green}Downloaded SwitchyOmega_Chromium at current directory please open google-chrome install it!${green}"
+    if ! [ -e SwitchyOmega_Chromium.crx ]
+    then
+        wget -q --no-check-certificate http://blog.cumtpn.com/SwitchyOmega_Chromium.crx
+        [ -e SwitchyOmega_Chromium.crx ] && [ -s SwitchyOmega_Chromium.crx ] && echo -e "${green}Downloaded SwitchyOmega_Chromium at current directory please open google-chrome install it!${green}"
+    fi
+
+    echo -e "[${green}Ref${plain}]  https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList"
     echo -e "Import profile SwitchyOmega.bak"
     cat<<EOF > SwitchyOmega.bak
 {"+GFWed":{"bypassList":[{"conditionType":"BypassCondition","pattern":"<local>"}],"color":"#99ccee","fallbackProxy":{"host":"127.0.0.1","port":1080,"scheme":"socks5"},"name":"GFWed","profileType":"FixedProfile","revision":"153abe56d04"},"+__ruleListOf_自动切换":{"color":"#99dd99","defaultProfileName":"direct","format":"AutoProxy","matchProfileName":"GFWed","name":"__ruleListOf_自动切换","profileType":"RuleListProfile","revision":"153abdf798a","ruleList":"","sourceUrl":"https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt","lastUpdate":null},"+自动切换":{"color":"#99dd99","defaultProfileName":"__ruleListOf_自动切换","name":"自动切换","profileType":"SwitchProfile","revision":"153abd3207f","rules":[{"condition":{"conditionType":"HostWildcardCondition","pattern":"raw.githubusercontent.com"},"profileName":"GFWed"}]},"-confirmDeletion":true,"-downloadInterval":1440,"-enableQuickSwitch":false,"-monitorWebRequests":true,"-quickSwitchProfiles":[],"-refreshOnProfileChange":true,"-revertProxyChanges":true,"-showInspectMenu":true,"-startupProfileName":"","schemaVersion":2}
