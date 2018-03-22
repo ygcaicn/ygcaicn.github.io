@@ -15,7 +15,7 @@ pre_install(){
     [[ $? -eq 0 ]] && apt update && apt install wget
 }
 add_repo(){
-cat<<EOF > /etc/apt/sources.list.d/google-chrome.list.back
+cat<<EOF > /etc/apt/sources.list.d/google-chrome.list
 deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 deb [arch=amd64] https://repo.fdzh.org/chrome/deb/ stable main
 EOF
