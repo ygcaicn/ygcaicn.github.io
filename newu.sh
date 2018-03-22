@@ -43,15 +43,18 @@ shadowsocks_install(){
     popd
 }
 SwitchyOmega_install(){
-    pushd /tmp
     wget -q --no-check-certificate https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.5.10/SwitchyOmega_Chromium.crx
-    echo "${green}Downloaded SwitchyOmega_Chromium at /tmp please open google-chrome install it!${green}"
-    google-chrome https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList
-    popd
+    echo -e "${green}Downloaded SwitchyOmega_Chromium at current directory please open google-chrome install it!${green}"
+    echo -e "${green}Ref${plain}https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList"
+    echo -e "Import profile SwitchyOmega.bak"
+    cat<<EOF > SwitchyOmega.bak
+{"+GFWed":{"bypassList":[{"conditionType":"BypassCondition","pattern":"<local>"}],"color":"#99ccee","fallbackProxy":{"host":"127.0.0.1","port":1080,"scheme":"socks5"},"name":"GFWed","profileType":"FixedProfile","revision":"153abe56d04"},"+__ruleListOf_自动切换":{"color":"#99dd99","defaultProfileName":"direct","format":"AutoProxy","matchProfileName":"GFWed","name":"__ruleListOf_自动切换","profileType":"RuleListProfile","revision":"153abdf798a","ruleList":"","sourceUrl":"https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt","lastUpdate":null},"+自动切换":{"color":"#99dd99","defaultProfileName":"__ruleListOf_自动切换","name":"自动切换","profileType":"SwitchProfile","revision":"153abd3207f","rules":[{"condition":{"conditionType":"HostWildcardCondition","pattern":"raw.githubusercontent.com"},"profileName":"GFWed"}]},"-confirmDeletion":true,"-downloadInterval":1440,"-enableQuickSwitch":false,"-monitorWebRequests":true,"-quickSwitchProfiles":[],"-refreshOnProfileChange":true,"-revertProxyChanges":true,"-showInspectMenu":true,"-startupProfileName":"","schemaVersion":2}
+EOF
 }
+
 install(){
     apt-get update
-    apt-get install -y guake && guake -p
+    apt-get install -y guake
     apt-get install -y google-chrome-stable
     shadowsocks_install
     echo -e "${green}Please enter shadowsocks server:${plain}"
@@ -82,4 +85,5 @@ install(){
 }
 pre_install
 add_repo
+add_key
 install
