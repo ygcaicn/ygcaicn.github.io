@@ -45,7 +45,7 @@ SwitchyOmega_install(){
 install(){
     apt-get update
     apt-get install google-chrome-stable
-    #shadowsocks_install
+    shadowsocks_install
     echo "${green}Please enter shadowsocks server:${plain}"
     while [[ -z "${ss_ip}" ]]; do
         read -p "shadowsocks server:" ss_ip
@@ -64,9 +64,12 @@ install(){
         read -p "shadowsocks password:" ss_pwd
     done
 
-    echo "sslocal -s ${ss_ip} -p ${ss_port} -m ${ss_method} -k ${ss_pwd} -l 1080 &"
+    `sslocal -s ${ss_ip} -p ${ss_port} -m ${ss_method} -k ${ss_pwd} -l 1080 &`
     echo "${green}Start sslocal at 127.0.0.1:1080 ${green}"
+
+    SwitchyOmega_install
 }
 pre_install
 add_repo
+add_key
 install
