@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2018-05-19T19:05:13.851Z</updated>
+  <updated>2018-05-19T19:14:42.028Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="https://ygcaicn.github.io/Linux/Linux-ubuntu-qq.html"/>
     <id>https://ygcaicn.github.io/Linux/Linux-ubuntu-qq.html</id>
     <published>2018-05-19T18:30:42.000Z</published>
-    <updated>2018-05-19T19:05:13.851Z</updated>
+    <updated>2018-05-19T19:14:42.028Z</updated>
     
     <content type="html"><![CDATA[<p>使用Ubuntu作为日常生活、工作、学习环境有一点最大的问题就是QQ，博主最近发现一个近乎完美的方案！</p>
 <p>首先说明wine可以解决这个问题，但是我也尝试安装过wine占用两个G空间不说零零散散装了一大堆各种依赖库，而这些库可能只有wine才会用的到，这怎么能符合完美、极简主义呢！！！果断放弃这种方案。<br>本文介绍使用docker安装的方法使用Tim，与系统隔离，不需要自己配置weine，占用707M空间，能记住密码，能发送图片语音红包，能够接收发送文件，能远程，展示了解到的bug只有不能开视频。<br><a id="more"></a></p>
-<h1 id="Step1-安装"><a href="#Step1-安装" class="headerlink" title="Step1.安装"></a>Step1.安装</h1><p>安装很简单，一条命令，并且不会零散的安装的导出都是。。</p>
+<h1 id="Step1-安装"><a href="#Step1-安装" class="headerlink" title="Step1.安装"></a>Step1.安装</h1><p>安装很简单，一条命令，并且不会零散的安装的到出都是。。</p>
 <p>  docker push bestwu/qq:office</p>
 <h1 id="Step-建立启动脚本"><a href="#Step-建立启动脚本" class="headerlink" title="Step.建立启动脚本"></a>Step.建立启动脚本</h1><p>新建~/opt/qq.sh下如一下内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#/usr/bin/env bash</span><br><span class="line">  docker run -d  \</span><br><span class="line">    --device /dev/snd \</span><br><span class="line">    -v /tmp/.X11-unix:/tmp/.X11-unix \</span><br><span class="line">    -v $HOME/TencentFiles:/TencentFiles \</span><br><span class="line">    -v $HOME:/home/jachin\</span><br><span class="line">    -e DISPLAY=unix$DISPLAY \</span><br><span class="line">    -e XMODIFIERS=@im=fcitx \</span><br><span class="line">    -e QT_IM_MODULE=fcitx \</span><br><span class="line">    -e GTK_IM_MODULE=fcitx \</span><br><span class="line">    -e AUDIO_GID=`getent group audio | cut -d: -f3` \</span><br><span class="line">    -e VIDEO_GID=`getent group video | cut -d: -f3` \</span><br><span class="line">    -e GID=`id -g` \</span><br><span class="line">    -e UID=`id -u` \</span><br><span class="line">    bestwu/qq:office</span><br></pre></td></tr></table></figure>
