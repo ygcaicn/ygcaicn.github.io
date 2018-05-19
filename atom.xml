@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2018-05-19T18:22:31.684Z</updated>
+  <updated>2018-05-19T19:01:52.050Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu解决QQ难题(Tim)</title>
+    <link href="https://ygcaicn.github.io/Linux/Linux-ubuntu-qq.html"/>
+    <id>https://ygcaicn.github.io/Linux/Linux-ubuntu-qq.html</id>
+    <published>2018-05-19T18:30:42.000Z</published>
+    <updated>2018-05-19T19:01:52.050Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用Ubuntu作为日常生活、工作、学习环境有一点最大的问题就是QQ，博主最近发现一个近乎完美的方案！</p>
+<p>首先说明wine可以解决这个问题，但是我也尝试安装过wine占用两个G空间不说零零散散装了一大堆各种依赖库，而这些库可能只有wine才会用的到，这怎么能符合完美、极简主义呢！！！果断放弃这种方案。<br>本文介绍使用docker安装的方法使用Tim，与系统隔离，不需要自己配置weine，占用707M空间，能记住密码，能发送图片语音红包，能够接收发送文件，能远程，展示了解到的bug只有不能开视频。<br><a id="more"></a></p>
+<h1 id="Step1-安装"><a href="#Step1-安装" class="headerlink" title="Step1.安装"></a>Step1.安装</h1><p>安装很简单，一条命令，并且不会零散的安装的导出都是。。</p>
+<p>  docker push bestwu/qq:office</p>
+<h1 id="Step-建立启动脚本"><a href="#Step-建立启动脚本" class="headerlink" title="Step.建立启动脚本"></a>Step.建立启动脚本</h1><p>新建~/opt/qq.sh下如一下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#/usr/bin/env bash</span><br><span class="line">  docker run -d  \</span><br><span class="line">    --device /dev/snd \</span><br><span class="line">    -v /tmp/.X11-unix:/tmp/.X11-unix \</span><br><span class="line">    -v $HOME/TencentFiles:/TencentFiles \</span><br><span class="line">    -v $HOME:/home/jachin\</span><br><span class="line">    -e DISPLAY=unix$DISPLAY \</span><br><span class="line">    -e XMODIFIERS=@im=fcitx \</span><br><span class="line">    -e QT_IM_MODULE=fcitx \</span><br><span class="line">    -e GTK_IM_MODULE=fcitx \</span><br><span class="line">    -e AUDIO_GID=`getent group audio | cut -d: -f3` \</span><br><span class="line">    -e VIDEO_GID=`getent group video | cut -d: -f3` \</span><br><span class="line">    -e GID=`id -g` \</span><br><span class="line">    -e UID=`id -u` \</span><br><span class="line">    bestwu/qq:office</span><br></pre></td></tr></table></figure>
+<p>脚本中的-v选项是指定与qq共享的录，冒号前面的对应主机的实际目录，冒号后面的是对应在Tim中的路径，注意按照自己的实际情况修改。</p>
+<p>然后在命令行chmod +x ~/opt/qq.sh</p>
+<p>然后新建~/.local/share/applications/tim.desktop</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Categories=Network;InstantMessaging;</span><br><span class="line">Exec=/home/jachin/app/ubuntu/qq.sh</span><br><span class="line">Icon=tim</span><br><span class="line">Name=Wine QQ</span><br><span class="line">NoDisplay=false</span><br><span class="line">StartupNotify=true</span><br><span class="line">Terminal=0</span><br><span class="line">Type=Application</span><br><span class="line">Name[en_US]=TIM</span><br><span class="line">Name[zn_CN]=TIM</span><br></pre></td></tr></table></figure>
+<p>下载个Tim的图标命名为tim.png  放置到   ~/.local/share/icons/Papirus/scalable/apps/tim.png然后就能在应用中看到QQ的图标了，到此大功告成！</p>
+<p>  docker images#查看安装的容器<br><img src="../img/6b2085ec-55fd-431a-b846-fab7c1a5fcec.png" alt="6b2085ec-55fd-431a-b846-fab7c1a5fcec"></p>
+<p><img src="../img/f510eee8-0492-414a-8e8e-9bebabcac661.png" alt="f510eee8-0492-414a-8e8e-9bebabcac661"></p>
+<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!!"></a>每天进步一点点!!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用Ubuntu作为日常生活、工作、学习环境有一点最大的问题就是QQ，博主最近发现一个近乎完美的方案！&lt;/p&gt;
+&lt;p&gt;首先说明wine可以解决这个问题，但是我也尝试安装过wine占用两个G空间不说零零散散装了一大堆各种依赖库，而这些库可能只有wine才会用的到，这怎么能符合完美、极简主义呢！！！果断放弃这种方案。&lt;br&gt;本文介绍使用docker安装的方法使用Tim，与系统隔离，不需要自己配置weine，占用707M空间，能记住密码，能发送图片语音红包，能够接收发送文件，能远程，展示了解到的bug只有不能开视频。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="https://ygcaicn.github.io/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>百度云不限速下载</title>
@@ -1029,45 +1067,6 @@
       <category term="路由器" scheme="https://ygcaicn.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
     
       <category term="LEDE" scheme="https://ygcaicn.github.io/tags/LEDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>help-linux</title>
-    <link href="https://ygcaicn.github.io/Linux/help-linux.html"/>
-    <id>https://ygcaicn.github.io/Linux/help-linux.html</id>
-    <published>2017-03-15T14:01:55.000Z</published>
-    <updated>2018-01-15T10:21:26.740Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Help-Linux"><a href="#Help-Linux" class="headerlink" title="Help Linux"></a>Help Linux</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a><em>Ubuntu</em></h2><h3 id="发行版列表WIKI"><a href="#发行版列表WIKI" class="headerlink" title="发行版列表WIKI"></a><a href="https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">发行版列表WIKI</a></h3><p>Ubuntu版本的命名规则是根据正式版发行的年月命名，Ubuntu 8.10也就意味着2008年10月发行的Ubuntu，研发人员与使用者可从版本号码就知道正式发布的时间。Ubuntu是基于Debian开发的Linux发行版，Debian的开发代号来自于电影玩具总动员，不过，Ubuntu各版本的代号却固定是形容词加上动物名称，而且这2个词的英文首字母一定是相同的。从Ubuntu 6.06开始，两个词的首字母按照英文字母表的排列顺序取用</p>
-<p><img src="http://i.imgur.com/ApYN4RB.png" alt="Imgur"></p>
-<a id="more"></a>
-<h3 id="manpage"><a href="#manpage" class="headerlink" title="manpage"></a><a href="http://manpages.ubuntu.com/manpages/" target="_blank" rel="noopener">manpage</a></h3><p>按照开发代号分类了各个版本的man,也可以通过Toolsbar的版本号直接选择相应的版本。</p>
-<p><a href="http://manpages.ubuntu.com/manpages/" target="_blank" rel="noopener"><img src="http://i.imgur.com/m0Qbhj5.png" alt="Imgur"></a><br><a href="http://manpages.ubuntu.com/manpages/" target="_blank" rel="noopener"><img src="http://i.imgur.com/YrRlIc8.png" alt="Imgur"></a></p>
-<h3 id="help-Ubuntu"><a href="#help-Ubuntu" class="headerlink" title="help Ubuntu"></a><a href="https://help.ubuntu.com/" target="_blank" rel="noopener">help Ubuntu</a></h3><p>同样按照版本号和开发代号进行了分类，同时文档的类型分为Desktop，Server，InstallGuide。</p>
-<p><a href="https://help.ubuntu.com/" target="_blank" rel="noopener"><img src="http://i.imgur.com/HvItDsN.png" alt="Imgur"></a></p>
-<h2 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a><em>Debian</em></h2><p><a href="https://www.debian.org/" target="_blank" rel="noopener">Debian</a></p>
-<p><a href="https://www.debian.org/doc/manuals/debian-reference/" target="_blank" rel="noopener">Debian 中文参考手册</a></p>
-<h2 id="Raspberry"><a href="#Raspberry" class="headerlink" title="Raspberry"></a><em>Raspberry</em></h2><p><a href="https://www.raspberrypi.org/documentation/raspbian/" target="_blank" rel="noopener">Raspbian</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Help-Linux&quot;&gt;&lt;a href=&quot;#Help-Linux&quot; class=&quot;headerlink&quot; title=&quot;Help Linux&quot;&gt;&lt;/a&gt;Help Linux&lt;/h1&gt;&lt;h2 id=&quot;Ubuntu&quot;&gt;&lt;a href=&quot;#Ubuntu&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu&quot;&gt;&lt;/a&gt;&lt;em&gt;Ubuntu&lt;/em&gt;&lt;/h2&gt;&lt;h3 id=&quot;发行版列表WIKI&quot;&gt;&lt;a href=&quot;#发行版列表WIKI&quot; class=&quot;headerlink&quot; title=&quot;发行版列表WIKI&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;发行版列表WIKI&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ubuntu版本的命名规则是根据正式版发行的年月命名，Ubuntu 8.10也就意味着2008年10月发行的Ubuntu，研发人员与使用者可从版本号码就知道正式发布的时间。Ubuntu是基于Debian开发的Linux发行版，Debian的开发代号来自于电影玩具总动员，不过，Ubuntu各版本的代号却固定是形容词加上动物名称，而且这2个词的英文首字母一定是相同的。从Ubuntu 6.06开始，两个词的首字母按照英文字母表的排列顺序取用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ApYN4RB.png&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
-    
-    
-      <category term="linux" scheme="https://ygcaicn.github.io/tags/linux/"/>
-    
-      <category term="ubuntu" scheme="https://ygcaicn.github.io/tags/ubuntu/"/>
-    
-      <category term="debian" scheme="https://ygcaicn.github.io/tags/debian/"/>
-    
-      <category term="raspberry" scheme="https://ygcaicn.github.io/tags/raspberry/"/>
     
   </entry>
   
