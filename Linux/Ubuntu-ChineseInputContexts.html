@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ubuntu17.10-ChineseInputContexts | Jachin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Ubuntu中文输入法 Ubuntu下Qtcreator无法输入中文 Ubantu下wps无法输入中文 Ubuntu下Atom 无法输入中文 Ubuntu17 Ubuntu17.04 Ubuntu17.10" />
+  
+  
+  
+  
+  <meta name="description" content="unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！环境为Ubuntu17.10 （17.04同样适用）。常用软件包括：  Atom Wps QtCreator">
+<meta name="keywords" content="Ubuntu中文输入法 Ubuntu下Qtcreator无法输入中文 Ubantu下wps无法输入中文 Ubuntu下Atom 无法输入中文 Ubuntu17 Ubuntu17.04 Ubuntu17.10">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu17.10-ChineseInputContexts">
+<meta property="og:url" content="https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html">
+<meta property="og:site_name" content="Jachin">
+<meta property="og:description" content="unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！环境为Ubuntu17.10 （17.04同样适用）。常用软件包括：  Atom Wps QtCreator">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://ygcaicn.github.io/img/4d3ae893-f910-4c23-8749-ef7bf963ef56.png">
+<meta property="og:updated_time" content="2018-01-15T10:26:31.156Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ubuntu17.10-ChineseInputContexts">
+<meta name="twitter:description" content="unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！环境为Ubuntu17.10 （17.04同样适用）。常用软件包括：  Atom Wps QtCreator">
+<meta name="twitter:image" content="https://ygcaicn.github.io/img/4d3ae893-f910-4c23-8749-ef7bf963ef56.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
+  
+  <link rel="icon" href="/img/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Jachin" rel="home"> Jachin </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">openwrt  嵌入式  学习总结  思考感悟  知识管理</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/gallery">gallery</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/link">link</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Ubuntu-ChineseInputContexts" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/../img/4d3ae893-f910-4c23-8749-ef7bf963ef56.png" rel="gallery_cjf2v7s3k000ph673cwvuvsiu">
+        <img src="/../img/4d3ae893-f910-4c23-8749-ef7bf963ef56.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Ubuntu17.10-ChineseInputContexts
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/Linux/Ubuntu-ChineseInputContexts.html" class="article-date">
+	  <time datetime="2017-11-11T02:32:29.000Z" itemprop="datePublished">November 11, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！<br>环境为Ubuntu17.10 （17.04同样适用）。<br>常用软件包括：</p>
+<ul>
+<li>Atom</li>
+<li>Wps</li>
+<li>QtCreator</li>
+</ul>
+<a id="more"></a>
+<h2 id="系统中文输入"><a href="#系统中文输入" class="headerlink" title="系统中文输入"></a>系统中文输入</h2><p>看图，不多说：</p>
+<p><img src="../img/7c1e95b2-17a3-4322-ab84-8c09619e237e.png" alt="7c1e95b2-17a3-4322-ab84-8c09619e237e"></p>
+<p><img src="../img/8f506da4-b2d3-4a23-84e3-53472b5f0320.png" alt="8f506da4-b2d3-4a23-84e3-53472b5f0320"></p>
+<p><img src="../img/8a39b319-f52c-4f2d-a61a-de2f62dead49.png" alt="8a39b319-f52c-4f2d-a61a-de2f62dead49"></p>
+<p><img src="../img/ddb58d66-7572-4a6f-8d9f-0d20b28ccdf8.png" alt="ddb58d66-7572-4a6f-8d9f-0d20b28ccdf8"></p>
+<p>效果图：<br><img src="../img/4d3ae893-f910-4c23-8749-ef7bf963ef56.png" alt="4d3ae893-f910-4c23-8749-ef7bf963ef56"></p>
+<h2 id="Qt-QtCreator"><a href="#Qt-QtCreator" class="headerlink" title="Qt QtCreator"></a>Qt QtCreator</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fcitx-libs-qt fcitx-libs-qt5</span><br><span class="line"></span><br><span class="line">cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so  ~/qtcreator-4.4.0/lib/Qt/plugins/platforminputcontexts/</span><br></pre></td></tr></table></figure>
+<p>以上操作其实就是安装fcitx-libs-qt和fcitx-libs-qt5的库，然后将动态链接拷贝到qtcreator的插件目录中，至于为什么是这个目录需要你自己去发现，不过我们可以看到在该目录中已经存在ibux的动态链接库，我们只是把fcitx的加进去而已。</p>
+<p><img src="../img/b7a25a45-c60d-44ba-bcaa-2ead2ca1bd4e.png" alt="b7a25a45-c60d-44ba-bcaa-2ead2ca1bd4e"></p>
+<p>当然你也可以不拷贝直接将libfcitxplatforminputcontextplugin.so所在的目录加入到环境变量中应该也是可以的（我没有测试）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etx/bash.bashrc</span><br></pre></td></tr></table></figure>
+<p>在文件最后添加一行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export $PATH = $PATH:/usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/</span><br></pre></td></tr></table></figure></p>
+<p>到此重启qtcreator已经可以输入中文了。就是这么简单！<br>效果图：<br><img src="../img/fa8ee2df-6668-469f-b965-55174c5275e3.png" alt="370933ff-bb56-47de-8c4c-aca83576cf79"></p>
+<h2 id="Wps"><a href="#Wps" class="headerlink" title="Wps"></a>Wps</h2><p>google搜到的解决办法,(亲测在Ubuntu17.04&amp;17.10中无效)</p>
+<blockquote>
+<p>wps文字不能输入中文解决  </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /usr/bin/wps</span><br></pre></td></tr></table></figure>
+<p>修改wps启动文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">export XMODIFIERS=&quot;@im=fcitx&quot;</span><br><span class="line">export QT_IM_MODULE=&quot;fcitx&quot;</span><br><span class="line">gOpt=</span><br><span class="line">#gOptExt=-multiply</span><br><span class="line">gTemplateExt=(&quot;wpt&quot; &quot;dot&quot; &quot;dotx&quot;)</span><br></pre></td></tr></table></figure>
+<p>wps writer,表格，ppt对应的启动文件分别为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/wps</span><br><span class="line">/usr/bin/et</span><br><span class="line">/usr/bin/wpp</span><br></pre></td></tr></table></figure>
+<p><img src="../img/a419806f-81a9-4ace-8249-874e1a004b45.png" alt="a419806f-81a9-4ace-8249-874e1a004b45"></p>
+<p>以上方式在17.04和17.10中亲测无效！！！</p>
+<p>受到qtcreator的启示，同样将libfcitxplatforminputcontextplugin.so动态链接库拷贝到wps的目录中，wps的目录位于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/kingsoft/wps-office/office6</span><br></pre></td></tr></table></figure>
+<p>可以看到在office6目录下有一个这样的路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/kingsoft/wps-office/office6/qt/plugins/</span><br></pre></td></tr></table></figure>
+<p>和qtcreator的很相似，只是没有platforminputcontexts这个下一级目录，由于强迫症就建立一个这个目录（其实不建也是可以的）把libfcitxplatforminputcontextplugin.so拷贝进来，然后启动wps发现完美解决。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /opt/kingsoft/wps-office/office6/qt/plugins/platforminputcontexts</span><br><span class="line"></span><br><span class="line">sudo cp  /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so  /opt/kingsoft/wps-office/office6/qt/plugins/platforminputcontexts/</span><br><span class="line"></span><br><span class="line">fcitx-autostart</span><br><span class="line"></span><br><span class="line">wps</span><br></pre></td></tr></table></figure>
+<p>效果图：<br><img src="../img/5e598032-adc5-48ad-a1a3-8a2cd012861a.png" alt="5e598032-adc5-48ad-a1a3-8a2cd012861a"></p>
+<h2 id="Atom"><a href="#Atom" class="headerlink" title="Atom"></a>Atom</h2><p>Atom 我没有测试上面的方法，应该也是可以的。我的解决办法是编译安装。</p>
+<p>Atom的官方网址：<a href="https://atom.io/" target="_blank" rel="noopener">https://atom.io/</a></p>
+<p>binary包安装以后无法输入中文，后来采用编译安装问题的到解决。</p>
+<p>编译安装参考：<a href="http://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-linux" target="_blank" rel="noopener">http://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-linux</a></p>
+<p>效果图：<br><img src="../img/01cf646b-b789-4b42-9278-adcdec0ffed6.png" alt="01cf646b-b789-4b42-9278-adcdec0ffed6"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上通过安装 fcitx-libs-qt fcitx-libs-qt5，然后将动态链接库拷贝到软件的启动目录（或者特定的库目录中）完美解决了Qtcreator，wps，Atom在Ubuntu中的中文输入问题！！Enjoy your Ubuntu!<br>&lt;</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Qt/">Qt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wps/">wps</a></li></ul>
+
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'jachin';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Linux/build-live-ubuntu.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          build-live-ubuntu打造日常使用Ubuntu
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Qt/qt-doc-struct.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Qt-doc-struct</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统中文输入"><span class="nav-number">1.</span> <span class="nav-text">系统中文输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Qt-QtCreator"><span class="nav-number">2.</span> <span class="nav-text">Qt QtCreator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wps"><span class="nav-number">3.</span> <span class="nav-text">Wps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Atom"><span class="nav-number">4.</span> <span class="nav-text">Atom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/gallery" class="mobile-nav-link">Gallery</a>
+  
+    <a href="/link" class="mobile-nav-link">Link</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Jachin All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+<!--        
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+-->      
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-103029370-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263042211&web_id=1263042211" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

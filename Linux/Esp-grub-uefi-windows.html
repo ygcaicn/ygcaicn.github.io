@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ESP分区格式化，修复Windows&amp;Linux引导 | Jachin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Grub2 Linux Windows 修复Windows&Linux引导" />
+  
+  
+  
+  
+  <meta name="description" content="ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统">
+<meta name="keywords" content="Grub2 Linux Windows 修复Windows&amp;Linux引导">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ESP分区格式化，修复Windows&amp;Linux引导">
+<meta property="og:url" content="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html">
+<meta property="og:site_name" content="Jachin">
+<meta property="og:description" content="ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-15T10:13:42.503Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ESP分区格式化，修复Windows&amp;Linux引导">
+<meta name="twitter:description" content="ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统">
+  
+    <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
+  
+  <link rel="icon" href="/img/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Jachin" rel="home"> Jachin </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">openwrt  嵌入式  学习总结  思考感悟  知识管理</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/gallery">gallery</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/link">link</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Esp-grub-uefi-windows" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      ESP分区格式化，修复Windows&amp;Linux引导
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/Linux/Esp-grub-uefi-windows.html" class="article-date">
+	  <time datetime="2017-05-14T09:32:55.000Z" itemprop="datePublished">May 14, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
+<h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>Windows10 64<br>Linuxmint 64</p>
+<p>双系统</p>
+<p>Windows UEFI引导<br>Linux Grub2引导</p>
+<p>sda1是我的Esp分区。被我格式化过</p>
+<pre><code>sudo mkfs.vfat /dev/sda1
+</code></pre><p>Linux的boot是单独分区的，设备符为：/dev/sda5</p>
+<h1 id="修复Linux-Grub2"><a href="#修复Linux-Grub2" class="headerlink" title="修复Linux Grub2"></a>修复Linux Grub2</h1><p>进入U盘进入live Linux</p>
+<h2 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h2><p>从新安装grub2,</p>
+<p>挂载esp分区：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /mnt/esp</span><br><span class="line">sudo mount /dev/sda1 /mnt/esp</span><br></pre></td></tr></table></figure>
+<p>挂载boot分区：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /mnt/boot</span><br><span class="line">sudo mount /dev/sda5 /mnt/boot</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> 这里为什么要挂载boot分区？</p>
+<p>因为esp分区</p>
+<p>grub-install的–boot-directory选项默认的是镜像安装位置为/boot/grub</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--boot-directory=DIR   install GRUB images under the directory DIR/grub</span><br><span class="line">                       instead of the boot/grub directory</span><br></pre></td></tr></table></figure>
+<p>为了追求与默认一致，其实也是为了以后更新方便，我们现在要在Live Linux下挂载你的boot分区，然后将Grub的镜像安装到硬盘上的Linux系统的/boot中。其实完全可以将Grub镜像安装到Esp分区中，我们在做U盘Grub时就是将镜像直接放到了Esp分区。</p>
+<p>Esp分区只存放UEFI可以认识的efi程序，以及efi程序的字体文件等。</p>
+<p>安装grub2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-install --target x86_64-efi --efi-directory /mnt/esp --boot-directory=/mnt/boot</span><br></pre></td></tr></table></figure>
+<p>成功执行结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Installing for x86_64-efi platform.</span><br><span class="line">Installation finished. No error reported.</span><br></pre></td></tr></table></figure>
+<p>错误信息类似于grub-install: error: /usr/lib/grub/x86_64-efi/modinfo.sh doesn’t exist. Please specify –target or –directory. 这样的话，就需要安装grub-pc或grub-efi之后再试。</p>
+<pre><code>sudo apt-get install grub-efi -y
+</code></pre><p><strong>note:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--efi-directory=DIR    use DIR as the EFI System Partition root</span><br></pre></td></tr></table></figure>
+<p>生成grub.cfg</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o /mnt/boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
+<p>这时候我们看一下esp分区中的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">└── EFI</span><br><span class="line">    └── ubuntu</span><br><span class="line">        └── grubx64.efi</span><br></pre></td></tr></table></figure>
+<p>发现里面就只有一个grubx64.efi的文件。这个文件其实就是一个UEFI程序。在UEFI中可以识别这个程序，这个程序又引导CPU进入grub。那么这个程序是怎么找到Grub镜像的位置的呢？（有待查阅，这是不是意味着grub必须从新安装？方法2不可行？）</p>
+<p>看看boot分区多了什么东西：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">grub</span><br><span class="line">├── fonts</span><br><span class="line">│   └── unicode.pf2</span><br><span class="line">├── grub.cfg</span><br><span class="line">├── grubenv</span><br><span class="line">├── locale</span><br><span class="line">│   ├── en_AU.mo</span><br><span class="line">│   ├── en_CA.mo</span><br><span class="line">│   ├── en_GB.mo</span><br><span class="line">│   └── en@quot.mo</span><br><span class="line">└── x86_64-efi</span><br><span class="line">    ├── acpi.mod</span><br><span class="line">    ├── adler32.mod</span><br><span class="line">    ├── affs.mod</span><br><span class="line">    ├── afs.mod</span><br><span class="line">    ├── ahci.mod</span><br><span class="line">    :</span><br><span class="line">    :</span><br><span class="line">    :</span><br><span class="line">    └── zfs.mod</span><br></pre></td></tr></table></figure>
+<p>重启系统，在UEFI界面应该已经可以看到了grub的启动项。</p>
+<p>启动着实进入了grub，也进入了Linux，但是进入的是emergency mode.</p>
+<p>这让我百思不得其解，为什么无法进入图形界面？？？Google也没有找到答案，关键是系统没有提示有什么出错的地方。。。</p>
+<p>Emergency下df -h发现有些不对的地方：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">jachin@jachin-Inspiron-5548 ~ $ df -h</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">udev            3.9G     0  3.9G   0% /dev</span><br><span class="line">tmpfs           790M  1.5M  789M   1% /run</span><br><span class="line">/dev/sda7        19G   14G  4.2G  77% /</span><br><span class="line">tmpfs           3.9G   49M  3.9G   2% /dev/shm</span><br><span class="line">tmpfs           5.0M  4.0K  5.0M   1% /run/lock</span><br><span class="line">tmpfs           3.9G     0  3.9G   0% /sys/fs/cgroup</span><br><span class="line">/dev/sda5       180M  129M   39M  77% /boot</span><br><span class="line">cgmfs           100K     0  100K   0% /run/cgmanager/fs</span><br><span class="line">tmpfs           790M   36K  790M   1% /run/user/1000</span><br></pre></td></tr></table></figure></p>
+<p>什么情况efi分区没挂载上。</p>
+<p>问题解决：最后发现是/etc/fstab出了问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># /etc/fstab: static file system information.</span><br><span class="line">#</span><br><span class="line"># Use &apos;blkid&apos; to print the universally unique identifier for a</span><br><span class="line"># device; this may be used with UUID= as a more robust way to name devices</span><br><span class="line"># that works even if disks are added and removed. See fstab(5).</span><br><span class="line">#</span><br><span class="line"># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;</span><br><span class="line"># / was on /dev/sda7 during installation</span><br><span class="line">UUID=29fb7aca-a39d-485e-bcb2-4188ae03b085 /               ext4    errors=remount-ro 0       1</span><br><span class="line"># /boot was on /dev/sda5 during installation</span><br><span class="line">UUID=d5151999-209d-4a90-95f4-e4e70ab02ac7 /boot           ext4    defaults        0       2</span><br><span class="line"># /boot/efi was on /dev/sda1 during installation</span><br><span class="line">UUID=B178-A3FF  /boot/efi       vfat    umask=0077      0       1</span><br><span class="line"># swap was on /dev/sda6 during installation</span><br><span class="line">UUID=b6f30e1d-84b0-4b23-862c-82cb12773a4f none            swap    sw              0       0</span><br></pre></td></tr></table></figure>
+<p><code>blkid</code>发现esp分区的UUID竟然与fstab中的不一样。推测是格式化会改变分区的UUID（有待查阅资料）so，把这里的UUID改了之后问题解决。成功进入Linux。</p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>直接拷贝一个grubx64.efi文件,到Esp分区中。</p>
+<p>没有测试，不知道行不行。</p>
+<h1 id="修复Windows-引导"><a href="#修复Windows-引导" class="headerlink" title="修复Windows 引导"></a>修复Windows 引导</h1><p>很简单，进入PE</p>
+<p>执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdboot c:\windows /s g: /f UEFI</span><br></pre></td></tr></table></figure></p>
+<p>c:为Windows安装的盘符，g：为Esp分区的盘符。Esp分区盘符可以在Diskgens下查看。</p>
+<p><code>/f UEFI</code>选项尽量加上吧，我的不加没有成功哦。</p>
+<p>到此位置你的Windows已经可以启动了。</p>
+<p>查看一下上面的命令都干了什么事,可以看到esp分区中只有一个目录：EFI</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">EFI</span><br><span class="line">├── Boot</span><br><span class="line">│   └── bootx64.efi</span><br><span class="line">├── Microsoft</span><br><span class="line">│   ├── Boot</span><br><span class="line">│   │   ├── BCD</span><br><span class="line">│   │   ├── BCD.LOG</span><br><span class="line">│   │   ├── BCD.LOG1</span><br><span class="line">│   │   ├── BCD.LOG2</span><br><span class="line">│   │   ├── bg-BG</span><br><span class="line">│   │   │   ├── bootmgfw.efi.mui</span><br><span class="line">│   │   │   └── bootmgr.efi.mui</span><br><span class="line">│   │   ├── bootmgfw.efi</span><br><span class="line">│   │   ├── bootmgr.efi</span><br><span class="line">│   │   ├── BOOTSTAT.DAT</span><br><span class="line">│   │   ├── boot.stl</span><br><span class="line">│   │   ├── cs-CZ  语言文件</span><br><span class="line">│   │   │   ├── bootmgfw.efi.mui</span><br><span class="line">│   │   │   ├── bootmgr.efi.mui</span><br><span class="line">│   │   │   └── memtest.efi.mui</span><br><span class="line">│   │   ├── en-GB</span><br><span class="line">│   │   │   ├── bootmgfw.efi.mui</span><br><span class="line">│   │   │   └── bootmgr.efi.mui</span><br><span class="line">│   │   ├── en-US</span><br><span class="line">│   │   │   ├── bootmgfw.efi.mui</span><br><span class="line">│   │   │   ├── bootmgr.efi.mui</span><br><span class="line">│   │   │   └── memtest.efi.mui</span><br><span class="line">|   |   :</span><br><span class="line">|   |   :</span><br><span class="line">│   │   ├── zh-CN</span><br><span class="line">│   │   │   ├── bootmgfw.efi.mui</span><br><span class="line">│   │   │   ├── bootmgr.efi.mui</span><br><span class="line">│   │   │   └── memtest.efi.mui</span><br><span class="line">│   │   ├── Fonts  字体文件</span><br><span class="line">│   │   │   ├── chs_boot.ttf</span><br><span class="line">│   │   │   :</span><br><span class="line">│   │   │   :</span><br><span class="line">│   │   │   └── wgl4_boot.ttf</span><br><span class="line">│   │   ├── kd_02_10df.dll</span><br><span class="line">│   │   :</span><br><span class="line">│   │   :</span><br><span class="line">│   │   ├── kdstub.dll</span><br><span class="line">│   │   ├── memtest.efi</span><br><span class="line">│   │   ├── qps-ploc</span><br><span class="line">│   │   │   └── memtest.efi.mui</span><br><span class="line">│   │   └── Resources</span><br><span class="line">│   │       ├── bootres.dll</span><br><span class="line">│   │       ├── en-US</span><br><span class="line">│   │       │   └── bootres.dll.mui</span><br><span class="line">│   │       └── zh-CN</span><br><span class="line">│   │           └── bootres.dll.mui</span><br><span class="line">│   └── Recovery</span><br><span class="line">│       ├── BCD</span><br><span class="line">│       ├── BCD.LOG</span><br><span class="line">│       ├── BCD.LOG1</span><br><span class="line">│       └── BCD.LOG2</span><br><span class="line">└── ubuntu</span><br><span class="line">    └── grubx64.efi</span><br></pre></td></tr></table></figure>
+<p>windows引导有几类文件：<br>efi文件memtest.efi bootmgr.efi bootmgfw.efi /Boot/bootmgfw.efi<br>字体文件 *.ttf<br>语言文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zh-CN</span><br><span class="line">├── bootmgfw.efi.mui</span><br><span class="line">├── bootmgr.efi.mui</span><br><span class="line">└── memtest.efi.mui</span><br></pre></td></tr></table></figure></p>
+<p>BCD文件 BCD引导修复这个是最重要的其他的那些文件都可以拷贝，这个不可以。所以前面的命令bcdboot主要任务就是修复这个BCD文件。当然还有其他的修复方式。</p>
+<h1 id="Other-things"><a href="#Other-things" class="headerlink" title="Other things"></a>Other things</h1><p>现在系统都可以完美启动了，但是还有些不完没就是Grub的引导中没有Windows item。<br>进入Lilnux<br>执行   <code>update-grub2</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">jachin-Inspiron-5548 boot # update-grub2</span><br><span class="line">Generating grub configuration file ...</span><br><span class="line">Found linux image: /boot/vmlinuz-4.4.0-77-generic</span><br><span class="line">Found initrd image: /boot/initrd.img-4.4.0-77-generic</span><br><span class="line">Found linux image: /boot/vmlinuz-4.4.0-75-generic</span><br><span class="line">Found initrd image: /boot/initrd.img-4.4.0-75-generic</span><br><span class="line">Found Windows Boot Manager on /dev/sda1@/EFI/Microsoft/Boot/bootmgfw.efi</span><br><span class="line">Adding boot menu entry for EFI firmware configuration</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>okay,现在Grub的menu中已经有Windows选项了，到此完美修复。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grub-Linux-Windows/">Grub Linux Windows</a></li></ul>
+
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'jachin';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Linux/win10-1703-grub.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          关于win10version1703 多引导（grub引导）的问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Linux/mathjax.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mathjax 测试</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#系统环境"><span class="nav-number">1.</span> <span class="nav-text">系统环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修复Linux-Grub2"><span class="nav-number">2.</span> <span class="nav-text">修复Linux Grub2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方式一"><span class="nav-number">2.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二"><span class="nav-number">2.2.</span> <span class="nav-text">方法二</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修复Windows-引导"><span class="nav-number">3.</span> <span class="nav-text">修复Windows 引导</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Other-things"><span class="nav-number">4.</span> <span class="nav-text">Other things</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/gallery" class="mobile-nav-link">Gallery</a>
+  
+    <a href="/link" class="mobile-nav-link">Link</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Jachin All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+<!--        
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+-->      
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-103029370-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263042211&web_id=1263042211" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[百度云不限速下载]]></title>
-      <url>https://ygcaicn.github.io/undefinedLinux-baidudisk-download.html</url>
+      <url>https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html</url>
       <content type="html"><![CDATA[<p>百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普</p>
 <p>百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
 <a id="more"></a>
@@ -49,7 +49,7 @@
     
     <entry>
       <title><![CDATA[Live Ubuntu快速布局]]></title>
-      <url>https://ygcaicn.github.io/undefinedUbuntu-new.html</url>
+      <url>https://ygcaicn.github.io/Linux/Ubuntu-new.html</url>
       <content type="html"><![CDATA[<p>进入live Ubuntu 如何快速布局工作环境呢？</p>
 <h1 id="Go"><a href="#Go" class="headerlink" title="Go!"></a>Go!</h1><a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://blog.cumtpn.com/newu.sh</span><br><span class="line">chmod +x newu.sh</span><br><span class="line">sudo ./newu.sh</span><br></pre></td></tr></table></figure>
@@ -76,7 +76,7 @@
     
     <entry>
       <title><![CDATA[Ubuntu17 aria2c安装使用手记]]></title>
-      <url>https://ygcaicn.github.io/undefinedubuntu17-aria2c.html</url>
+      <url>https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html</url>
       <content type="html"><![CDATA[<blockquote>
 <p>aria2 is a utility for downloading files. The supported protocols are HTTP(S), FTP, SFTP, BitTorrent, and Metalink. aria2 can download a file from multiple sources/protocols and tries to utilize your maximum download bandwidth. It supports downloading a file from HTTP(S)/FTP /SFTP and BitTorrent at the same time, while the data downloaded from HTTP(S)/FTP/SFTP is uploaded to the BitTorrent swarm. Using Metalink chunk checksums, aria2 automatically validates chunks of data while downloading a file.</p>
 </blockquote>
@@ -113,7 +113,7 @@
     
     <entry>
       <title><![CDATA[Linux下python3测试网速]]></title>
-      <url>https://ygcaicn.github.io/undefinedpy3-networkrate.html</url>
+      <url>https://ygcaicn.github.io/python3/py3-networkrate.html</url>
       <content type="html"><![CDATA[<h1 id="python3实现"><a href="#python3实现" class="headerlink" title="python3实现"></a>python3实现</h1><p>python3学习中写的一个小程序，有时候还挺有用，贴出来做记录！</p>
 <a id="more"></a>
 <p>依赖系统的net-tools工具，也就是ifconfig命令。<br>实现原理利用ifconfig查看网卡发送和接受的数据多少，利用re匹配出需要的数据，利用time模块计时算出<br>1s内发送或者接收数据的多少！</p>
@@ -146,7 +146,7 @@
     
     <entry>
       <title><![CDATA[build-live-ubuntu --2]]></title>
-      <url>https://ygcaicn.github.io/undefinedbuild-live-ubuntu2.html</url>
+      <url>https://ygcaicn.github.io/Linux/build-live-ubuntu2.html</url>
       <content type="html"><![CDATA[<p>在上次介绍了一些基础的常用软件之后决定进一步探索！在知乎找到了一篇很棒的讨论，链接如下：<br><a href="https://www.zhihu.com/question/19811112" target="_blank" rel="noopener">https://www.zhihu.com/question/19811112</a>通过实践找出了我比较满意的软件。<br>由于本人电脑只有240G的固盘，电脑性能一般，因此对与内存和硬盘都是相当的奢侈，能原配的就不去搞些华丽胡哨的<br>东西，本着能简单绝不复杂，能默认绝不修改的原则去测试一些软件，以及一些脚本，特此记录以备后查！</p>
 <a id="more"></a>
 <h1 id="No-1-Guake-Terminal"><a href="#No-1-Guake-Terminal" class="headerlink" title="No.1 Guake Terminal"></a>No.1 Guake Terminal</h1><p>这个名字有点意思，‘挂科’Terminal。。。功能很简单快速打开Terminal，或许你认为Ctrl+Alt+T（或者自己设置一个快捷键）去开Terminal也是一件很简单的事。没错我以前也是这么认为的，但是遇到了Guake后我改变了看法，特别是需要开多个Terminal的时候（高手都不需要开多个，一个都能全搞定！）系统的Terminal显的不方便，还有就是临时开一个<br>Terminal的时候很可能用完就不去关然后在那积攒了很多。Guake Terminal就是来解决这些问题的！一键弹出（默认F12），失去焦点自动关闭，可以开启多个Tab，可以自定义Appearance。<br><img src="../img/82bdf788-4c0c-4238-a94c-bf6e7e2e2106.png" alt="82bdf788-4c0c-4238-a94c-bf6e7e2e2106"></p>
@@ -177,7 +177,7 @@
     
     <entry>
       <title><![CDATA[build-live-ubuntu打造日常使用Ubuntu]]></title>
-      <url>https://ygcaicn.github.io/undefinedbuild-live-ubuntu.html</url>
+      <url>https://ygcaicn.github.io/Linux/build-live-ubuntu.html</url>
       <content type="html"><![CDATA[<p>转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。<br>Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大<br>的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。<br>本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10</p>
 <a id="more"></a>
 <h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p>几张系统美图：<br><img src="../img/b207a505-34c5-4236-898d-21de1c7dd91e.png" alt="b207a505-34c5-4236-898d-21de1c7dd91e"><br><img src="../img/e0a9cda0-3cac-4dd4-88cb-2e201d649880.png" alt="e0a9cda0-3cac-4dd4-88cb-2e201d649880"><br><img src="../img/a3f9ed8c-efba-423d-a62d-420514282260.png" alt="a3f9ed8c-efba-423d-a62d-420514282260"><br><img src="../img/731747dc-79eb-42c0-bf02-bb98602a463a.png" alt="731747dc-79eb-42c0-bf02-bb98602a463a"><br><img src="../img/98343370-eb6a-4b11-9fe2-e0c558bf1e0d.png" alt="98343370-eb6a-4b11-9fe2-e0c558bf1e0d"></p>
@@ -237,7 +237,7 @@
     
     <entry>
       <title><![CDATA[Ubuntu17.10-ChineseInputContexts]]></title>
-      <url>https://ygcaicn.github.io/undefinedUbuntu-ChineseInputContexts.html</url>
+      <url>https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html</url>
       <content type="html"><![CDATA[<p>unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！<br>环境为Ubuntu17.10 （17.04同样适用）。<br>常用软件包括：</p>
 <ul>
 <li>Atom</li>
@@ -305,7 +305,7 @@
     
     <entry>
       <title><![CDATA[Qt-doc-struct]]></title>
-      <url>https://ygcaicn.github.io/undefinedqt-doc-struct.html</url>
+      <url>https://ygcaicn.github.io/Qt/qt-doc-struct.html</url>
       <content type="html"><![CDATA[<p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="noopener">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
 <p>进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists</p>
 <p><img src="../img/49e21d26-e157-40b5-acb1-3e492b9cf2d8.png" alt="49e21d26-e157-40b5-acb1-3e492b9cf2d8"></p>
@@ -377,7 +377,7 @@
     
     <entry>
       <title><![CDATA[TCP/IP]]></title>
-      <url>https://ygcaicn.github.io/undefinedTCP-IP.html</url>
+      <url>https://ygcaicn.github.io/Linux/TCP-IP.html</url>
       <content type="html"><![CDATA[<h2 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h2><p>维基百科：<a href="https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F</a></p>
 <p>互联网协议族（英语：Internet Protocol Suite，缩写IPS）是一个网络通信模型，以及一整个网络传输协议家族，为互联网的基础通信架构。它常被通称为TCP/IP协议族（英语：TCP/IP Protocol Suite，或TCP/IP Protocols），简称TCP/IP[2]。因为该协议家族的两个核心协议：TCP（传输控制协议）和IP（网际协议），为该家族中最早通过的标准[3]。由于在网络通讯协议普遍采用分层的结构，当多个层次的协议共同工作时，类似计算机科学中的堆栈，因此又被称为TCP/IP协议栈（英语：TCP/IP Protocol Stack）</p>
 <p>整个通信网络的任务，可以划分成不同的功能区块，即所谓的层级（layer）。用于互联网的协议可以比照TCP/IP参考模型进行分类。TCP/IP协议栈起始于第三层协议IP（网际协议）。</p>
@@ -417,7 +417,7 @@
     
     <entry>
       <title><![CDATA[Adblock的一些软件]]></title>
-      <url>https://ygcaicn.github.io/undefinedadb.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/adb.html</url>
       <content type="html"><![CDATA[<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><a id="more"></a>
 <p>1.Adblock Plus （推荐）</p>
 <p><a href="https://adblockplus.org/zh_CN/" target="_blank" rel="noopener">https://adblockplus.org/zh_CN/</a></p>
@@ -469,7 +469,7 @@
     
     <entry>
       <title><![CDATA[VIP视频解析+去广告教程]]></title>
-      <url>https://ygcaicn.github.io/undefinedVIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html</url>
+      <url>https://ygcaicn.github.io/Network/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html</url>
       <content type="html"><![CDATA[<h1 id="VIP视频解析-去广告教程"><a href="#VIP视频解析-去广告教程" class="headerlink" title="VIP视频解析+去广告教程"></a>VIP视频解析+去广告教程</h1><h2 id="Step1-打开视频网站"><a href="#Step1-打开视频网站" class="headerlink" title="Step1.打开视频网站"></a>Step1.打开视频网站</h2><p>这里以爱奇艺为例 <a href="http://www.iqiyi.com" target="_blank" rel="noopener">http://www.iqiyi.com</a> 打开首页看到类似下面的界面：</p>
 <p><img src="http://i.imgur.com/ZQhMuKf.png" alt="Imgur"></p>
 <a id="more"></a>
@@ -507,7 +507,7 @@
     
     <entry>
       <title><![CDATA[关于win10version1703 多引导（grub引导）的问题]]></title>
-      <url>https://ygcaicn.github.io/undefinedwin10-1703-grub.html</url>
+      <url>https://ygcaicn.github.io/Linux/win10-1703-grub.html</url>
       <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
 <p>往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。</p>
 <p>好在我还有移动硬盘的linux，当然你用live盘也是可以的。进去移动硬盘linux后按照上篇文章讲的方法修复了grub。再次进入bios选择ubuntu启动，没什么问题一下就进入了grub熟悉的界面。成功进入了内置硬盘的linuxmint。<br><a id="more"></a></p>
@@ -565,7 +565,7 @@
     
     <entry>
       <title><![CDATA[ESP分区格式化，修复Windows&Linux引导]]></title>
-      <url>https://ygcaicn.github.io/undefinedEsp-grub-uefi-windows.html</url>
+      <url>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</url>
       <content type="html"><![CDATA[<p>ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
 <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>Windows10 64<br>Linuxmint 64</p>
 <p>双系统</p>
@@ -641,7 +641,7 @@
     
     <entry>
       <title><![CDATA[mathjax 测试]]></title>
-      <url>https://ygcaicn.github.io/undefinedmathjax.html</url>
+      <url>https://ygcaicn.github.io/Linux/mathjax.html</url>
       <content type="html"><![CDATA[<p>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
 <a id="more"></a>
 ]]></content>
@@ -657,7 +657,7 @@
     
     <entry>
       <title><![CDATA[【Machine Learning】机器学习：简明入门指南]]></title>
-      <url>https://ygcaicn.github.io/undefinedMechine-Learning.html</url>
+      <url>https://ygcaicn.github.io/Machine-Learning/Mechine-Learning.html</url>
       <content type="html"><![CDATA[<blockquote>
 <p>本文是一篇转载自<a href="http://blog.jobbole.com/67616/" target="_blank" rel="noopener"><strong>伯乐在线的译文</strong></a>，英文原文是这里：<a href="https://medium.com/code-poet/80ea3ec3c471" target="_blank" rel="noopener"><strong>Machine Learning is Fun!</strong> — by Adam Geitgey</a></p>
 </blockquote>
@@ -764,7 +764,7 @@
     
     <entry>
       <title><![CDATA[python基础]]></title>
-      <url>https://ygcaicn.github.io/undefinedpython%E5%9F%BA%E7%A1%80.html</url>
+      <url>https://ygcaicn.github.io/python3/python%E5%9F%BA%E7%A1%80.html</url>
       <content type="html"><![CDATA[<h1 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h1><blockquote>
 <p>A string is a sequence of values that represent Unicode code points. All the code points in the range U+0000 - U+10FFFF can be represented in a string. Python doesn’t have a char type; instead, every code point in the string is represented as a string object with length 1. The built-in function ord() converts a code point from its string form to an integer in the range 0 - 10FFFF; chr() converts an integer in the range 0 - 10FFFF to the corresponding length 1 string object. <code>str.encode()</code> can be used to convert a str to bytes using the given text encoding, and <code>bytes.decode()</code> can be used to achieve the opposite.</p>
 </blockquote>
@@ -821,7 +821,7 @@
     
     <entry>
       <title><![CDATA[GPT(GUID partition table)]]></title>
-      <url>https://ygcaicn.github.io/undefinedGPT.html</url>
+      <url>https://ygcaicn.github.io/Linux/GPT.html</url>
       <content type="html"><![CDATA[<p>GPT 磁盘分区表：</p>
 <p>LBA – Logical Block Adress</p>
 <p>size of  LBA :512bytes(0.5KB)</p>
@@ -857,7 +857,7 @@
     
     <entry>
       <title><![CDATA[Python3 实现代理IP,伪装IP]]></title>
-      <url>https://ygcaicn.github.io/undefinedproxy-python3.html</url>
+      <url>https://ygcaicn.github.io/python3/proxy-python3.html</url>
       <content type="html"><![CDATA[<p>实现抓取代理服务器，建立ipPool,伪装外网ip</p>
 <a id="more"></a>
 <h1 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ungzip</span><span class="params">(data)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:        <span class="comment"># try decompress</span></span><br><span class="line">        print(<span class="string">'compressing.....'</span>)</span><br><span class="line">        data = gzip.decompress(data)</span><br><span class="line">        print(<span class="string">'dcompress done!'</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">'without compress!'</span>)</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Proxy</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,url=<span class="string">'http://www.xicidaili.com/'</span>)</span>:</span></span><br><span class="line">        self.ipPool=[]</span><br><span class="line">        self.url=url</span><br><span class="line">        self.getipPool();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getipPool</span><span class="params">(self)</span>:</span>     </span><br><span class="line">        <span class="comment">#get proxy Ip address pool from http://www.xicidaili.com/</span></span><br><span class="line">        <span class="comment"># Base URL being accessed</span></span><br><span class="line">        headers=&#123;</span><br><span class="line">        <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,</span><br><span class="line">        <span class="string">'Cache-Control'</span>: <span class="string">'max-age=0'</span>,</span><br><span class="line">        <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>,</span><br><span class="line">        <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'</span>,</span><br><span class="line">        <span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'</span>,</span><br><span class="line">        <span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, sdch'</span>,</span><br><span class="line">        <span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en;q=0.6'</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"># Make a GET request and read the response</span></span><br><span class="line">        req = urllib.request.Request(self.url,headers=headers)</span><br><span class="line">        response = urllib.request.urlopen(req)</span><br><span class="line">        res_bytes = ungzip(response.read())</span><br><span class="line">        html_str = res_bytes.decode(encoding=<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># the pattern(Regular expression) is depend on the response data from your url</span></span><br><span class="line">        pattern = <span class="string">r'\s*&lt;td&gt;(((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?))&lt;/td&gt;\s*\n\s*&lt;td&gt;(\d&#123;2,5&#125;)&lt;/td&gt;\s*\n\s*&lt;td&gt;(\w+)&lt;/td&gt;\s*\n\s*&lt;td class="country"&gt;透明&lt;/td&gt;\s*\n\s*&lt;td&gt;(HTTP|HTTPS)&lt;/td&gt;'</span></span><br><span class="line">        regex = re.compile(pattern)</span><br><span class="line">        s = regex.findall(html_str)</span><br><span class="line">        <span class="comment">#s = [('221.204.103.145', '103.', '103', '145', '9797', '山西太原', 'HTTP'), ...]</span></span><br><span class="line">        <span class="keyword">for</span> host <span class="keyword">in</span> s:</span><br><span class="line">            hostdict = &#123;<span class="string">'host'</span>:host[<span class="number">0</span>],<span class="string">'port'</span>:host[<span class="number">4</span>],<span class="string">'country'</span>:host[<span class="number">5</span>],<span class="string">'protocol'</span>:host[<span class="number">-1</span>]&#125;</span><br><span class="line">            self.ipPool.append(hostdict)</span><br><span class="line">        <span class="keyword">return</span> self.ipPool</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">startProxy</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">        self.printIpPool();</span><br><span class="line">        host_num = input(<span class="string">'Please select a host:'</span>)</span><br><span class="line">        host_num = int(host_num.strip())        </span><br><span class="line">        proxy = &#123;<span class="string">'http'</span>:self.ipPool[host_num][<span class="string">'host'</span>]+<span class="string">':'</span>+self.ipPool[host_num][<span class="string">'port'</span>]&#125;</span><br><span class="line">        <span class="comment">#creat ProxyHandler</span></span><br><span class="line">        proxy_support = urllib.request.ProxyHandler(proxy)</span><br><span class="line">        <span class="comment">#creat Opener</span></span><br><span class="line">        opener = urllib.request.build_opener(proxy_support)</span><br><span class="line">        <span class="comment">#creat User Angent</span></span><br><span class="line">        <span class="comment">#opener.addheaders = [('User-Agent','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36')]</span></span><br><span class="line">        <span class="comment">#install OPener</span></span><br><span class="line">        urllib.request.install_opener(opener)</span><br><span class="line">        <span class="comment">#start Opener</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">printIpPool</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(self.ipPool)):</span><br><span class="line">            print(i,<span class="string">":"</span>,self.ipPool[i])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    url = <span class="string">"http://ip.cn/"</span></span><br><span class="line">    headers=&#123;</span><br><span class="line">    <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,</span><br><span class="line">    <span class="string">'Cache-Control'</span>: <span class="string">'max-age=0'</span>,</span><br><span class="line">    <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'</span>,</span><br><span class="line">    <span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'</span>,</span><br><span class="line">    <span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, sdch'</span>,</span><br><span class="line">    <span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en;q=0.6'</span>,</span><br><span class="line">    <span class="comment">#'Cookie': 'UM_distinctid=15ae0d3744b437-0ebcb4eece40e4-57e1b3c-100200-15ae0d3744c42b; CNZZDATA123770=cnzz_eid%3D646344926-1484393339-%26ntime%3D1489830206'</span></span><br><span class="line">    &#125;</span><br><span class="line">    proxyhost = Proxy()</span><br><span class="line">    proxyhost.startProxy()</span><br><span class="line"></span><br><span class="line">    req = urllib.request.Request(url,headers=headers)</span><br><span class="line">    response = urllib.request.urlopen(req)</span><br><span class="line">    res_bytes = ungzip(response.read())</span><br><span class="line"></span><br><span class="line">    html_str = res_bytes.decode(encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">    file_html = open(<span class="string">"proxy.html"</span>,<span class="string">'w'</span>,encoding = <span class="string">"utf-8"</span>)</span><br><span class="line">    file_html.write(html_str)</span><br><span class="line">    file_html.close()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># the pattern(Regular expression) is depend on the response data from your url</span></span><br><span class="line">    <span class="comment">#pattern = r'((\d&#123;1,3&#125;\.)&#123;3&#125;\d&#123;1,3&#125;)'</span></span><br><span class="line">    pattern = <span class="string">r'&lt;code&gt;(((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?))&lt;/code&gt;'</span></span><br><span class="line"></span><br><span class="line">    pattern2 = <span class="string">r'所在地理位置：&lt;code&gt;([\s\w]*)&lt;/code&gt;'</span></span><br><span class="line">    my_locate = re.findall(pattern2,html_str)</span><br><span class="line">    my_locate = my_locate[<span class="number">0</span>]</span><br><span class="line">    my_ip = re.findall(pattern,html_str)</span><br><span class="line">    my_ip = my_ip[<span class="number">0</span>][<span class="number">0</span>]</span><br><span class="line">    <span class="comment">#print(html_str)</span></span><br><span class="line">    print(<span class="string">'my locate:'</span>,my_locate)</span><br><span class="line">    print(<span class="string">'my ip:'</span>,my_ip)</span><br></pre></td></tr></table></figure>
@@ -896,7 +896,7 @@
     
     <entry>
       <title><![CDATA[LEDE-Mt7620a-newifiY1]]></title>
-      <url>https://ygcaicn.github.io/undefinedLEDE-Mt7620a-newifiY1.html</url>
+      <url>https://ygcaicn.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F/LEDE-Mt7620a-newifiY1.html</url>
       <content type="html"><![CDATA[<p>LEDE:<br><a href="https://downloads.lede-project.org" target="_blank" rel="noopener">https://downloads.lede-project.org</a></p>
 <p>LEDE Packages(mipsel_24kc):<a href="http://openwrt-dist.sourceforge.net/packages/LEDE/base/mipsel_24kc/" target="_blank" rel="noopener">http://openwrt-dist.sourceforge.net/packages/LEDE/base/mipsel_24kc/</a></p>
 <a id="more"></a>
@@ -946,7 +946,7 @@
     
     <entry>
       <title><![CDATA[help-linux]]></title>
-      <url>https://ygcaicn.github.io/undefinedhelp-linux.html</url>
+      <url>https://ygcaicn.github.io/Linux/help-linux.html</url>
       <content type="html"><![CDATA[<h1 id="Help-Linux"><a href="#Help-Linux" class="headerlink" title="Help Linux"></a>Help Linux</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a><em>Ubuntu</em></h2><h3 id="发行版列表WIKI"><a href="#发行版列表WIKI" class="headerlink" title="发行版列表WIKI"></a><a href="https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">发行版列表WIKI</a></h3><p>Ubuntu版本的命名规则是根据正式版发行的年月命名，Ubuntu 8.10也就意味着2008年10月发行的Ubuntu，研发人员与使用者可从版本号码就知道正式发布的时间。Ubuntu是基于Debian开发的Linux发行版，Debian的开发代号来自于电影玩具总动员，不过，Ubuntu各版本的代号却固定是形容词加上动物名称，而且这2个词的英文首字母一定是相同的。从Ubuntu 6.06开始，两个词的首字母按照英文字母表的排列顺序取用</p>
 <p><img src="http://i.imgur.com/ApYN4RB.png" alt="Imgur"></p>
 <a id="more"></a>
@@ -982,7 +982,7 @@
     
     <entry>
       <title><![CDATA[hello md]]></title>
-      <url>https://ygcaicn.github.io/undefinedhello-md.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/hello-md.html</url>
       <content type="html"><![CDATA[<p>MarkDown 文本编辑器：  </p>
 <ul>
 <li>MarkdownPad（我使用的是Markdownpad2）</li>
@@ -1023,7 +1023,7 @@
     
     <entry>
       <title><![CDATA[Markdown 基础语法]]></title>
-      <url>https://ygcaicn.github.io/undefinedmarkdown.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/markdown.html</url>
       <content type="html"><![CDATA[<p>JOHN GRUBER定义的<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">markdown语法</a>。</p>
 <a id="more"></a>
 <h1 id="段落与换行"><a href="#段落与换行" class="headerlink" title="段落与换行"></a>段落与换行</h1><p>1.段落的前后必须空行：空行指的是什么内容都没有，或者只有空白符（空格或制表符）</p>
@@ -1327,7 +1327,7 @@
     
     <entry>
       <title><![CDATA[CentOS下载及版本选择--Linux版本，下载]]></title>
-      <url>https://ygcaicn.github.io/undefinedCentOS%E4%B8%8B%E8%BD%BD%E5%8F%8A%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9-Linux%E7%89%88%E6%9C%AC%EF%BC%8C%E4%B8%8B%E8%BD%BD.html</url>
+      <url>https://ygcaicn.github.io/Linux/CentOS%E4%B8%8B%E8%BD%BD%E5%8F%8A%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9-Linux%E7%89%88%E6%9C%AC%EF%BC%8C%E4%B8%8B%E8%BD%BD.html</url>
       <content type="html"><![CDATA[<p>CentOS 是一个企业级的 Linux 发行版本，它源于 Red Hat 1 免费公开的源代码。<br>CentOS 完全遵守 Red Hat 的再发行政策，并且以功能上的兼容性为目标。CentOS 对组件的修改主要是去除上游供应商的商标及美工。</p>
 <a id="more"></a>
 <h1 id="镜像目录结构："><a href="#镜像目录结构：" class="headerlink" title="镜像目录结构："></a>镜像目录结构：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">0_README.txt                                       22-May-2016 13:52    2210</span><br><span class="line">CentOS-6.8-x86_64-LiveCD.iso                       22-May-2016 22:18    702M</span><br><span class="line">CentOS-6.8-x86_64-LiveCD.torrent                   25-May-2016 18:01     28K</span><br><span class="line">CentOS-6.8-x86_64-LiveDVD.iso                      22-May-2016 21:38      2G</span><br><span class="line">CentOS-6.8-x86_64-LiveDVD.torrent                  25-May-2016 18:01     76K</span><br><span class="line">CentOS-6.8-x86_64-bin-DVD1.iso                     23-May-2016 07:53      4G</span><br><span class="line">CentOS-6.8-x86_64-bin-DVD1to2.torrent              25-May-2016 18:01    229K</span><br><span class="line">CentOS-6.8-x86_64-bin-DVD2.iso                     23-May-2016 07:53      2G</span><br><span class="line">CentOS-6.8-x86_64-minimal.iso                      24-May-2016 00:37    447M</span><br><span class="line">CentOS-6.8-x86_64-minimal.torrent                  25-May-2016 18:01     18K</span><br><span class="line">CentOS-6.8-x86_64-netinstall.iso                   22-May-2016 14:07    228M</span><br><span class="line">CentOS-6.8-x86_64-netinstall.torrent               25-May-2016 18:01    9799</span><br><span class="line">README.txt                                         22-May-2016 13:52    2210</span><br><span class="line">md5sum.txt                                         24-May-2016 00:41     388</span><br><span class="line">md5sum.txt.asc                                     25-May-2016 17:57    1271</span><br><span class="line">sha1sum.txt                                        24-May-2016 00:41     436</span><br><span class="line">sha1sum.txt.asc                                    25-May-2016 17:57    1319</span><br><span class="line">sha256sum.txt                                      24-May-2016 00:41     580</span><br><span class="line">sha256sum.txt.asc                                  25-May-2016 17:58    1463</span><br></pre></td></tr></table></figure>
@@ -1390,7 +1390,7 @@
     
     <entry>
       <title><![CDATA[UEFI 启动：实际工作原理]]></title>
-      <url>https://ygcaicn.github.io/undefinedgrub2-1.html</url>
+      <url>https://ygcaicn.github.io/Linux/grub2-1.html</url>
       <content type="html"><![CDATA[<p>（译）<a href="http://blog.woodelf.org/2014/05/28/uefi-boot-how-it-works.html" target="_blank" rel="noopener">转</a> UEFI 启动：实际工作原理 2014.05.28</p>
 <p>本文是我翻译自国外技术博客的一篇文章，其中讲述了 UEFI 的一些基本概念和细节。</p>
 <p>本文的原始链接位于：，<a href="https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/" target="_blank" rel="noopener">https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/</a></p>
@@ -1627,7 +1627,7 @@
     
     <entry>
       <title><![CDATA[收集整理各高校ACM OJ网站，欢迎补充修正]]></title>
-      <url>https://ygcaicn.github.io/undefinedacmurl.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/acmurl.html</url>
       <content type="html"><![CDATA[<p>搜集的各大高校的ACM网站…</p>
 <a id="more"></a>
 <h1 id="中国：-China"><a href="#中国：-China" class="headerlink" title="中国：(China)"></a>中国：(China)</h1><h1 id="华东地区："><a href="#华东地区：" class="headerlink" title="华东地区："></a>华东地区：</h1><h2 id="浙江："><a href="#浙江：" class="headerlink" title="浙江："></a>浙江：</h2><p>杭州电子科技大学(HDU)：<a href="http://acm.hdu.edu.cn/" target="_blank" rel="noopener">http://acm.hdu.edu.cn/</a></p>
@@ -1701,7 +1701,7 @@
     
     <entry>
       <title><![CDATA[C++练习笔记（持续更新）]]></title>
-      <url>https://ygcaicn.github.io/undefinedcpplianxi.html</url>
+      <url>https://ygcaicn.github.io/Cpp/cpplianxi.html</url>
       <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于近一年来学习嵌入式大多接触的都是纯C语言，直到看到学校搞了一个程序设计大赛，才发现自己的C++的基础遗忘了好多。<br>不过这也是正常的，毕竟三天不练手生，学习其他知识的同时不要忘记基础！！将练习记录写在博客中一来方便以后查阅，而来和大家一起学习！</p>
 <p>查了查以前囤下的C++API手册发现是C++98的，这有点让我不开心了，于是上网搜寻了一番，发现没有找到好的本地手册，oschina的手册做的不能再垃圾，连个search都没有。去一些<a href="http://www.cplusplus.com/" target="_blank" rel="noopener">cpp的权威网站</a>当然是英文的，但是发现不怎么活跃。这怎么能满足我这种完美主义的程序爱好者呢。。。最后搜寻了一番终于找到了满意的手册，不过美中不足的是不能本地化。不过这也没什么这说明网站更新活跃嘛！下面附上链接，欢迎各位<code>Ctrl+D</code>:</p>
 <p><a href="http://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">Cpp编程手册</a></p>
@@ -1770,7 +1770,7 @@ Sample Output
     
     <entry>
       <title><![CDATA[lamp服务器搭建-centos7+Apache2.4+MariaDB+php5.6+phpmyadmin]]></title>
-      <url>https://ygcaicn.github.io/undefinedlamp-centos7.html</url>
+      <url>https://ygcaicn.github.io/Linux/lamp-centos7.html</url>
       <content type="html"><![CDATA[<p>centos7 下yum搭建服务器以及数据库的流程。</p>
 <a id="more"></a>
 <h1 id="安装httpd"><a href="#安装httpd" class="headerlink" title="安装httpd"></a>安装httpd</h1><p>直接yum源安装就可以，centos7的yum源是Apache2.4</p>
@@ -1812,7 +1812,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
     
     <entry>
       <title><![CDATA[CentOS7使用firewalld管理防火墙与端口]]></title>
-      <url>https://ygcaicn.github.io/undefinedfirewalld-centos7.html</url>
+      <url>https://ygcaicn.github.io/Linux/firewalld-centos7.html</url>
       <content type="html"><![CDATA[<p>CentOS7使用firewalld打开关闭防火墙与端口</p>
 <h2 id="1、firewalld的基本使用"><a href="#1、firewalld的基本使用" class="headerlink" title="1、firewalld的基本使用"></a>1、firewalld的基本使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">启动： systemctl start firewalld</span><br><span class="line">查看状态： systemctl status firewalld</span><br><span class="line">停止： systemctl disable firewalld</span><br><span class="line">禁用： systemctl stop firewalld</span><br><span class="line">systemctl list-unit-files | grep firewalld #查看是否加入开机启</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -1838,7 +1838,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
     
     <entry>
       <title><![CDATA[科学上网]]></title>
-      <url>https://ygcaicn.github.io/undefined%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html</url>
+      <url>https://ygcaicn.github.io/Network/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html</url>
       <content type="html"><![CDATA[<h2 id="持续更新，Shadowsocks下载-2016最新版（影梭，小飞机客户端）"><a href="#持续更新，Shadowsocks下载-2016最新版（影梭，小飞机客户端）" class="headerlink" title="持续更新，Shadowsocks下载 2016最新版（影梭，小飞机客户端）"></a>持续更新，Shadowsocks下载 2016最新版（影梭，小飞机客户端）</h2><p><img src="http://pubcdn.cumtpn.com/Shadowsocks.jpg-blog" alt=""><br>Shadowsocks（中文名称：影梭）是一个安全的socks5代理，用于保护网络流量，是一个开源项目。</p>
 <h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>快速（异步I/O和事件驱动程序）<br>安全（所有的流量都经过加密算法加密，支持自定义算法）<br>支持移动客户端（专为移动设备和无线网络优化）<br>跨平台（可运行于包括PC，Mac，手机（Android和iOS）和路由器（OpenWrt）在内的多种平台上）</p>
 <h3 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h3><h3 id="易于维护"><a href="#易于维护" class="headerlink" title="易于维护"></a>易于维护</h3><h2 id="按下Ctrl点击-gt-github地址"><a href="#按下Ctrl点击-gt-github地址" class="headerlink" title="按下Ctrl点击-&gt;github地址"></a><a href="https://github.com/shadowsocks" target="_blank" rel="noopener"><code>按下Ctrl点击-&gt;</code>github地址</a></h2><a id="more"></a>
@@ -1867,7 +1867,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
     
     <entry>
       <title><![CDATA[免费设置QQ空间音乐记 qzone music]]></title>
-      <url>https://ygcaicn.github.io/undefinedqzonemusic.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/qzonemusic.html</url>
       <content type="html"><![CDATA[<p>如今有了智能终端，Web QQ空间好像越来越冷落。可是QQ空间的背景音乐仍然是要收费的，奈我何，发现了腾讯还是给屌丝们留了一条活路！！！</p>
 <p>按照以下步骤免费获得QQ空间背景音乐。</p>
 <h2 id="a-进入QQ空间"><a href="#a-进入QQ空间" class="headerlink" title="a.进入QQ空间"></a>a.进入QQ空间</h2><p><img src="http://pubcdn.cumtpn.com/SDfXASCFDXASCRXF2.png-blog" alt=""></p>
@@ -1906,7 +1906,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
     
     <entry>
       <title><![CDATA[Markdown Syntax Tutorial]]></title>
-      <url>https://ygcaicn.github.io/undefinedSyntax.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/Syntax.html</url>
       <content type="html"><![CDATA[<h2 id="MarkDown语法简明"><a href="#MarkDown语法简明" class="headerlink" title="MarkDown语法简明"></a>MarkDown语法简明</h2><h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1><p>This is first paragraph!</p>
 <p>This is second paragraph!</p>
 <p>1.段落的前后必须有一个空行，否则换行符会被替换为空格<br>2.行内要换行的话，必须在上一行的最后空上至少两个空格<br>或者加入<code>&lt;br/&gt;</code><br>实现换行.</p>
@@ -2046,7 +2046,7 @@ int main()
     
     <entry>
       <title><![CDATA[socks5,socks4,http,vpn 代理是怎么回事]]></title>
-      <url>https://ygcaicn.github.io/undefinedproxy.html</url>
+      <url>https://ygcaicn.github.io/Network/proxy.html</url>
       <content type="html"><![CDATA[<h1 id="一、什么是代理服务器？"><a href="#一、什么是代理服务器？" class="headerlink" title="一、什么是代理服务器？"></a>一、什么是代理服务器？</h1><p> 代理服务器英文全称是Proxy Server，其功能就是代理网络用户去取得网络信息。形象的说：它是网络信息的中转站。 在一般情况下，我们使用网络浏览器直接去连接其他Internet站点取得网络信息时，需送出Request信号来得到回答，然后对方再把信息以bit方式传送回来。代理服务器是介于浏览器和Web服务器之间的一台服务器，有了它之后，浏览器不是直接到Web服务器去取回网页而是向代理服务器发出请求， Request信号会先送到代理服务器，由代理服务器来取回浏览器所需要的信息并传送给你的浏览器。而且，大部分代理服务器都具有缓冲的功能，就好象一个大的Cache，它有很大的存储空间，它不断将新取得数据储存到它本机的存储器上，如果浏览器所请求的数据在它本机的存储器上已经存在而且是最新的，那么它就不重新从Web服务器取数据，而直接将存储器上的数据传送给用户的浏览器，这样就能显著提高浏览速度和效率。 更重要的是：Proxy Server (代理服务器)是 Internet链路级网关所提供的一种重要的安全功能，它的工作主要在开放系统互联 (OSI) 模型的对话层。</p>
 <a id="more"></a>
 <h1 id="二、代理服务器的分类"><a href="#二、代理服务器的分类" class="headerlink" title="二、代理服务器的分类"></a>二、代理服务器的分类</h1><h2 id="1-HTTP代理按匿名功能分类。"><a href="#1-HTTP代理按匿名功能分类。" class="headerlink" title="1. HTTP代理按匿名功能分类。"></a>1. HTTP代理按匿名功能分类。</h2><p> 是否具有隐藏IP的功能。 非匿名代理：不具有匿名功能。 匿名代理。使用此种代理时，虽然被访问的网站不能知道你的IP地址，但仍然可以知道你在使用代理，有些侦测IP的网页也仍然可以查到你的IP。 高度匿名代理：使用此种代理时，被访问的网站不知道你的IP地址，也不知道你在使用代理进行访问。此种代理的隐藏IP地址的功能最强。</p>
@@ -2108,7 +2108,7 @@ int main()
     
     <entry>
       <title><![CDATA[Hexo搭建个人博客及NexT主题配置与优化]]></title>
-      <url>https://ygcaicn.github.io/undefinedhexo-blog.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/hexo-blog.html</url>
       <content type="html"><![CDATA[<a id="more"></a>
 <h1 id="命令行帮助"><a href="#命令行帮助" class="headerlink" title="命令行帮助"></a>命令行帮助</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">D:\Github\blog-hexo&gt;hexo -help</span><br><span class="line">Usage: hexo &lt;command&gt;</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  clean     Removed generated files and cache.</span><br><span class="line">  config    Get or set configurations.</span><br><span class="line">  deploy    Deploy your website.</span><br><span class="line">  generate  Generate static files.</span><br><span class="line">  help      Get help on a command.</span><br><span class="line">  init      Create a new Hexo folder.</span><br><span class="line">  list      List the information of the site</span><br><span class="line">  migrate   Migrate your site from other system to Hexo.</span><br><span class="line">  new       Create a new post.</span><br><span class="line">  publish   Moves a draft post from _drafts to _posts folder.</span><br><span class="line">  render    Render files with renderer plugins.</span><br><span class="line">  server    Start the server.</span><br><span class="line">  version   Display version information.</span><br><span class="line"></span><br><span class="line">Global Options:</span><br><span class="line">  --config  Specify config file instead of using _config.yml</span><br><span class="line">  --cwd     Specify the CWD</span><br><span class="line">  --debug   Display all verbose messages in the terminal</span><br><span class="line">  --draft   Display draft posts</span><br><span class="line">  --safe    Disable all plugins and scripts</span><br><span class="line">  --silent  Hide output on console</span><br><span class="line"></span><br><span class="line">For more help, you can use &apos;hexo help [command]&apos; for the detailed information</span><br><span class="line">or you can check the docs: http://hexo.io/docs/</span><br></pre></td></tr></table></figure>
 <ul>
@@ -2162,7 +2162,7 @@ hexo d == hexo deploy
     
     <entry>
       <title><![CDATA[GitHub入门记 Go Git!!!]]></title>
-      <url>https://ygcaicn.github.io/undefinedgit.html</url>
+      <url>https://ygcaicn.github.io/%E5%BB%BA%E7%AB%99/git.html</url>
       <content type="html"><![CDATA[<h1 id="git-install-and-config"><a href="#git-install-and-config" class="headerlink" title="git install and config"></a>git install and config</h1><ul>
 <li><p>install Linux:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell 界面输入 ``sudo  apt-get install git-core`` 回车输入密码</span><br></pre></td></tr></table></figure>
@@ -2334,7 +2334,7 @@ git push origin master //  同步到远程库
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>https://ygcaicn.github.io/undefinedhello-world.html</url>
+      <url>https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/hello-world.html</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
