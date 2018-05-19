@@ -882,13 +882,13 @@
         
         <tags>
             
-            <tag> 代理 </tag>
-            
             <tag> Python3 </tag>
             
             <tag> 正则表达式 </tag>
             
             <tag> IP伪装 </tag>
+            
+            <tag> 代理 </tag>
             
         </tags>
         
@@ -1196,7 +1196,7 @@
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.google.com&gt;   </span><br><span class="line">&lt;123@email.com&gt;</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x31;&#50;&#x33;&#64;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x31;&#50;&#x33;&#64;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x31;&#50;&#x33;&#x40;&#x65;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#x31;&#50;&#x33;&#x40;&#x65;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</span><br></pre></td></tr></table></figure>
@@ -1983,7 +1983,7 @@ int main()
 <p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a></p>
 <p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a></p>
 <p>name@gmail.com</p>
-<p><a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#110;&#x61;&#x6d;&#x65;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#110;&#x61;&#x6d;&#x65;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
+<p><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#110;&#x61;&#109;&#x65;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#110;&#x61;&#109;&#x65;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="./calcu.png" alt="icon"></p>
 <p>嵌入Html</p>
 <p><img src="/img/calcu.png" alt="This is a calcular" title="calcular" width="100" length="100"></p>
@@ -2182,7 +2182,7 @@ hexo d == hexo deploy
 <p><img src="/img/markdown-img-paste-20161016161851265.png" alt=""><br><img src="/img/markdown-img-paste-20161016162035764.png" alt=""></p>
 <p>完成以后你的远程仓库也就建好了。不过你还需要将刚才建立的本地仓库与远程的仓库建立连接。那么你就需要你的远程仓库地址</p>
 <p><img src="/img/markdown-img-paste-20161016162352701.png" alt=""><br>连接支持HTTPs和SSH两种协议，推荐使用ＳＳＨ连接。</p>
-<p>我的连接是<a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;&#58;&#x79;&#x67;&#x63;&#97;&#105;&#x63;&#110;&#x2f;&#x6d;&#121;&#x67;&#x69;&#116;&#46;&#x67;&#105;&#x74;">&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;&#58;&#x79;&#x67;&#x63;&#97;&#105;&#x63;&#110;&#x2f;&#x6d;&#121;&#x67;&#x69;&#116;&#46;&#x67;&#105;&#x74;</a>, （这用的是SSH连接地址）</p>
+<p>我的连接是<a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;&#58;&#121;&#103;&#x63;&#x61;&#x69;&#x63;&#110;&#47;&#x6d;&#121;&#x67;&#105;&#x74;&#46;&#x67;&#x69;&#116;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;&#58;&#121;&#103;&#x63;&#x61;&#x69;&#x63;&#110;&#47;&#x6d;&#121;&#x67;&#105;&#x74;&#46;&#x67;&#x69;&#116;</a>, （这用的是SSH连接地址）</p>
 <h1 id="本地仓库与远程仓库连接-connect-a-remote-repository"><a href="#本地仓库与远程仓库连接-connect-a-remote-repository" class="headerlink" title="本地仓库与远程仓库连接( connect a remote repository )"></a>本地仓库与远程仓库连接( connect a remote repository )</h1><pre><code>#打开git shell
 cd D:/github/mygit
 git remote add origin git@github.com:ygcaicn/mygit.git
