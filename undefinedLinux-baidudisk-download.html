@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>百度云不限速下载 | Jachin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu Ubuntu必备软件  百度云不限速下载" />
+  
+  
+  
+  
+  <meta name="description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
+<meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu Ubuntu必备软件  百度云不限速下载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="百度云不限速下载">
+<meta property="og:url" content="https://ygcaicn.github.io/undefinedLinux-baidudisk-download.html">
+<meta property="og:site_name" content="Jachin">
+<meta property="og:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://ygcaicn.github.io/--%20%20../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png">
+<meta property="og:updated_time" content="2018-05-19T18:19:00.379Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="百度云不限速下载">
+<meta name="twitter:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
+<meta name="twitter:image" content="https://ygcaicn.github.io/--%20%20../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
+  
+  <link rel="icon" href="/img/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Jachin" rel="home"> Jachin </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">openwrt  嵌入式  学习总结  思考感悟  知识管理</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/gallery">gallery</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/link">link</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Linux-baidudisk-download" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/--  ../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png" rel="gallery_cjhdpt07100008573fj65i82q">
+        <img src="/--  ../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      百度云不限速下载
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/undefinedLinux-baidudisk-download.html" class="article-date">
+	  <time datetime="2018-05-19T18:09:42.000Z" itemprop="datePublished">May 20, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普</p>
+<p>百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
+<a id="more"></a>
+<h1 id="Step1-获取下载链接"><a href="#Step1-获取下载链接" class="headerlink" title="Step1. 获取下载链接"></a>Step1. 获取下载链接</h1><p>获取下载链接的方法有很多一下介绍两种：</p>
+<ul>
+<li><h2 id="从浏览器直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。"><a href="#从浏览器直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。" class="headerlink" title="从浏览器直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。"></a>从浏览器直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。</h2><p><img src="../img/1d643fe7-1caf-4efd-b55f-d82a5fc6f24f.png" alt="1d643fe7-1caf-4efd-b55f-d82a5fc6f24f"></p>
+</li>
+</ul>
+<ul>
+<li><h2 id="安装油猴脚本管理器，然后安装相应的脚本"><a href="#安装油猴脚本管理器，然后安装相应的脚本" class="headerlink" title="安装油猴脚本管理器，然后安装相应的脚本"></a>安装油猴脚本管理器，然后安装相应的脚本</h2>油猴脚本管理器：<a href="https://tampermonkey.net/" target="_blank" rel="noopener">https://tampermonkey.net/</a></li>
+</ul>
+<p><img src="../img/980eeb96-4e7f-46f2-8198-f0922da5bf48.png" alt="980eeb96-4e7f-46f2-8198-f0922da5bf48 "><br>Chrome打开，点击安装Stable版即可。</p>
+<p>脚本：<a href="https://greasyfork.org/zh-CN/scripts/by-site/baidu.com" target="_blank" rel="noopener">https://greasyfork.org/zh-CN/scripts/by-site/baidu.com</a><br><img src="../img/c778d634-d739-4adf-88ce-1651fbbe9668.png" alt="c778d634-d739-4adf-88ce-1651fbbe9668"><br>脚本网站有很多不限于这一个，进去后搜索使用于baidu.com的脚本，找个比较新点的，得分高的下载即可。然后打开百度云(<a href="https://pan.baidu.com" target="_blank" rel="noopener">https://pan.baidu.com</a>)，或则百度云分享链接就能看到下载助手或则是导出链接的字样。<br><img src="../img/4bb22410-b8e7-4f4c-8e31-68343af548f4.png" alt="4bb22410-b8e7-4f4c-8e31-68343af548f4"></p>
+<ul>
+<li><h2 id="使用Chrome插件"><a href="#使用Chrome插件" class="headerlink" title="使用Chrome插件"></a>使用Chrome插件</h2>类似的插进有很多，这里给出一个BaiduExporter<br><a href="https://github.com/acgotaku/BaiduExporter" target="_blank" rel="noopener">https://github.com/acgotaku/BaiduExporter</a></li>
+</ul>
+<h1 id="Step2-axel登场"><a href="#Step2-axel登场" class="headerlink" title="Step2.axel登场"></a>Step2.axel登场</h1><h2 id="安装axel"><a href="#安装axel" class="headerlink" title="安装axel"></a>安装axel</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install axel</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">Usage: axel [options] url1 [url2] [url...]</span><br><span class="line"></span><br><span class="line">#指定最大速度（字节/秒）</span><br><span class="line">--max-speed=x		-s x	Specify maximum speed (bytes per second)</span><br><span class="line"># 最大链接数</span><br><span class="line">--num-connections=x	-n x	Specify maximum number of connections</span><br><span class="line"># 最大重定向次数</span><br><span class="line">--max-redirect=x		Specify maximum number of redirections</span><br><span class="line"># 输出文件指定文件名</span><br><span class="line">--output=f		-o f	Specify local output file</span><br><span class="line"># 服务器数目</span><br><span class="line">--search[=n]		-S[n]	Search for mirrors and download from n servers</span><br><span class="line"># 强制使用ipv4</span><br><span class="line">--ipv4			-4	Use the IPv4 protocol</span><br><span class="line"># 强制使用ipv6</span><br><span class="line">--ipv6			-6	Use the IPv6 protocol</span><br><span class="line"># 指定Http请求的Header</span><br><span class="line">--header=x		-H x	Add HTTP header string</span><br><span class="line"># 指定Http请求的user-agent</span><br><span class="line">--user-agent=x		-U x	Set user agent</span><br><span class="line"># 不使用代理</span><br><span class="line">--no-proxy		-N	Just don&apos;t use any proxy server</span><br><span class="line"># 不验证SSL密钥</span><br><span class="line">--insecure		-k	Don&apos;t verify the SSL certificate</span><br><span class="line"># 如果文件已经存在跳过下载</span><br><span class="line">--no-clobber		-c	Skip download if file already exists</span><br><span class="line"># 静默模式</span><br><span class="line">--quiet			-q	Leave stdout alone</span><br><span class="line"># 详细输出信息</span><br><span class="line">--verbose		-v	More status information</span><br><span class="line"># 显示进度条</span><br><span class="line">--alternate		-a	Alternate progress indicator</span><br><span class="line"># 帮助</span><br><span class="line">--help			-h	This information</span><br><span class="line"># 设置连接超时</span><br><span class="line">--timeout=x		-T x	Set I/O and connection timeout</span><br><span class="line"># 查看版本号</span><br><span class="line">--version		-V	Version information</span><br></pre></td></tr></table></figure>
+<h1 id="Step3-正式下载"><a href="#Step3-正式下载" class="headerlink" title="Step3.正式下载"></a>Step3.正式下载</h1><p>主要用axel的-n选项进行加速，百度云一般每个链接给几十KB的速度，因此我们链接数目越多下载速度越快！当然还跟你的带宽有关100MB的带宽-n 1000足够慢速下载了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axel -n 1000 &quot;https://d.pcs.baidu.com/file/32a06e6f67e2567e799300b7f09c4b06?fid=3928561930-250528-591861579041114&amp;dstime=1526751194&amp;rt=sh&amp;sign=FDtAERV-DCb740ccc5511e5e8fedcff06b081203-bkeG852xirZ02HOQHHOi5tBWbzc%3D&amp;expires=8h&amp;chkv=1&amp;chkbd=0&amp;chkpc=&amp;dp-logid=3225304149957301357&amp;dp-callid=0&amp;r=674737288&quot;</span><br></pre></td></tr></table></figure></p>
+<p>注意链接左右的引号不能丢，因为链接内有特殊符号！！！<br>网上有些说的要加ua选项、header选项什么的，2018.05.20亲测不需要加直接就能下载！100M带宽下载12MB/s。</p>
+<p><img src="../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png" alt="9db692a0-5e32-43e4-b4fe-bf9cca5d3dec"></p>
+<p>以上就是百度云不限速下载的整个步骤，各种下载工具很多都是利用这个思路实现的。</p>
+<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!!"></a>每天进步一点点!!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'jachin';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/undefinedUbuntu-new.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Live Ubuntu快速布局</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Step1-获取下载链接"><span class="nav-number">1.</span> <span class="nav-text">Step1. 获取下载链接</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#从浏览器直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。"><span class="nav-number">1.1.</span> <span class="nav-text">从浏览器直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装油猴脚本管理器，然后安装相应的脚本"><span class="nav-number">1.2.</span> <span class="nav-text">安装油猴脚本管理器，然后安装相应的脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Chrome插件"><span class="nav-number">1.3.</span> <span class="nav-text">使用Chrome插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Step2-axel登场"><span class="nav-number">2.</span> <span class="nav-text">Step2.axel登场</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装axel"><span class="nav-number">2.1.</span> <span class="nav-text">安装axel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Step3-正式下载"><span class="nav-number">3.</span> <span class="nav-text">Step3.正式下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#每天进步一点点"><span class="nav-number">4.</span> <span class="nav-text">每天进步一点点!!!!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#impossible-is-I’m-possible"><span class="nav-number">4.1.</span> <span class="nav-text">impossible is I’m possible!!!</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/gallery" class="mobile-nav-link">Gallery</a>
+  
+    <a href="/link" class="mobile-nav-link">Link</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Jachin All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+<!--        
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+-->      
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-103029370-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263042211&web_id=1263042211" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

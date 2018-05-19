@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>GPT(GUID partition table) | Jachin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Machine Learning GPT分区表" />
+  
+  
+  
+  
+  <meta name="description" content="GPT 磁盘分区表： LBA – Logical Block Adress size of  LBA :512bytes(0.5KB) LBA0~LBA33: GUID partition table(GPT) LBA(end-33)~LBA(end): Backup GPT">
+<meta name="keywords" content="Machine Learning GPT分区表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GPT(GUID partition table)">
+<meta property="og:url" content="https://ygcaicn.github.io/undefinedGPT.html">
+<meta property="og:site_name" content="Jachin">
+<meta property="og:description" content="GPT 磁盘分区表： LBA – Logical Block Adress size of  LBA :512bytes(0.5KB) LBA0~LBA33: GUID partition table(GPT) LBA(end-33)~LBA(end): Backup GPT">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://i.imgur.com/Q9g4RCE.png">
+<meta property="og:updated_time" content="2018-01-15T10:17:42.885Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GPT(GUID partition table)">
+<meta name="twitter:description" content="GPT 磁盘分区表： LBA – Logical Block Adress size of  LBA :512bytes(0.5KB) LBA0~LBA33: GUID partition table(GPT) LBA(end-33)~LBA(end): Backup GPT">
+<meta name="twitter:image" content="http://i.imgur.com/Q9g4RCE.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
+  
+  <link rel="icon" href="/img/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Jachin" rel="home"> Jachin </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">openwrt  嵌入式  学习总结  思考感悟  知识管理</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/gallery">gallery</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/link">link</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-GPT" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="http://i.imgur.com/Q9g4RCE.png" rel="gallery_cjf2v7s3b000ch673zug08ehr">
+        <img src="http://i.imgur.com/Q9g4RCE.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      GPT(GUID partition table)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/undefinedGPT.html" class="article-date">
+	  <time datetime="2017-05-04T05:04:44.000Z" itemprop="datePublished">May 4, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>GPT 磁盘分区表：</p>
+<p>LBA – Logical Block Adress</p>
+<p>size of  LBA :512bytes(0.5KB)</p>
+<p>LBA0~LBA33: GUID partition table(GPT)</p>
+<p>LBA(end-33)~LBA(end): Backup GPT</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Disk /dev/sdb: 33021952 sectors, 15.7 GiB</span><br><span class="line">Logical sector size: 512 bytes</span><br><span class="line">Disk identifier (GUID): 2A7B560E-11D2-48FE-9A16-A54069811BF4</span><br><span class="line">Partition table holds up to 128 entries</span><br><span class="line">First usable sector is 34, last usable sector is 33021918</span><br><span class="line">Partitions will be aligned on 2048-sector boundaries</span><br><span class="line">Total free space is 2014 sectors (1007.0 KiB)</span><br><span class="line"></span><br><span class="line">Number  Start (sector)    End (sector)  Size       Code  Name</span><br><span class="line">   1            2048        33021918   15.7 GiB    8300  Linux filesystem</span><br></pre></td></tr></table></figure>
+<h1 id="gdisk"><a href="#gdisk" class="headerlink" title="gdisk"></a>gdisk</h1><h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Command (? for help): ?</span><br><span class="line">b	back up GPT data to a file</span><br><span class="line">c	change a partition&apos;s name</span><br><span class="line">d	delete a partition</span><br><span class="line">i	show detailed information on a partition</span><br><span class="line">l	list known partition types</span><br><span class="line">n	add a new partition</span><br><span class="line">o	create a new empty GUID partition table (GPT)</span><br><span class="line">p	print the partition table</span><br><span class="line">q	quit without saving changes</span><br><span class="line">r	recovery and transformation options (experts only)</span><br><span class="line">s	sort partitions</span><br><span class="line">t	change a partition&apos;s type code</span><br><span class="line">v	verify disk</span><br><span class="line">w	write table to disk and exit</span><br><span class="line">x	extra functionality (experts only)</span><br><span class="line">?	print this menu</span><br></pre></td></tr></table></figure>
+<h2 id="Recovery-transformation"><a href="#Recovery-transformation" class="headerlink" title="Recovery/transformation"></a>Recovery/transformation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Recovery/transformation command (? for help): ?</span><br><span class="line">b	use backup GPT header (rebuilding main)</span><br><span class="line">c	load backup partition table from disk (rebuilding main)</span><br><span class="line">d	use main GPT header (rebuilding backup)</span><br><span class="line">e	load main partition table from disk (rebuilding backup)</span><br><span class="line">f	load MBR and build fresh GPT from it</span><br><span class="line">g	convert GPT into MBR and exit</span><br><span class="line">h	make hybrid MBR</span><br><span class="line">i	show detailed information on a partition</span><br><span class="line">l	load partition data from a backup file</span><br><span class="line">m	return to main menu</span><br><span class="line">o	print protective MBR data</span><br><span class="line">p	print the partition table</span><br><span class="line">q	quit without saving changes</span><br><span class="line">t	transform BSD disklabel partition</span><br><span class="line">v	verify disk</span><br><span class="line">w	write table to disk and exit</span><br><span class="line">x	extra functionality (experts only)</span><br><span class="line">?	print this menu</span><br></pre></td></tr></table></figure>
+<h2 id="Expert"><a href="#Expert" class="headerlink" title="Expert"></a>Expert</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Expert command (? for help): ?</span><br><span class="line">a	set attributes</span><br><span class="line">c	change partition GUID</span><br><span class="line">d	display the sector alignment value</span><br><span class="line">e	relocate backup data structures to the end of the disk</span><br><span class="line">g	change disk GUID</span><br><span class="line">h	recompute CHS values in protective/hybrid MBR</span><br><span class="line">i	show detailed information on a partition</span><br><span class="line">l	set the sector alignment value</span><br><span class="line">m	return to main menu</span><br><span class="line">n	create a new protective MBR</span><br><span class="line">o	print protective MBR data</span><br><span class="line">p	print the partition table</span><br><span class="line">q	quit without saving changes</span><br><span class="line">r	recovery and transformation options (experts only)</span><br><span class="line">s	resize partition table</span><br><span class="line">t	transpose two partition table entries</span><br><span class="line">u	replicate partition table on new device</span><br><span class="line">v	verify disk</span><br><span class="line">w	write table to disk and exit</span><br><span class="line">z	zap (destroy) GPT data structures and exit</span><br><span class="line">?	print this menu</span><br></pre></td></tr></table></figure>
+<h1 id="partition’s-type-code"><a href="#partition’s-type-code" class="headerlink" title="partition’s type code"></a>partition’s type code</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">0700 Microsoft basic data  0c01 Microsoft reserved    2700 Windows RE          </span><br><span class="line">3000 ONIE boot             3001 ONIE config           3900 Plan 9              </span><br><span class="line">4100 PowerPC PReP boot     4200 Windows LDM data      4201 Windows LDM metadata</span><br><span class="line">4202 Windows Storage Spac  7501 IBM GPFS              7f00 ChromeOS kernel     </span><br><span class="line">7f01 ChromeOS root         7f02 ChromeOS reserved     8200 Linux swap          </span><br><span class="line">8300 Linux filesystem      8301 Linux reserved        8302 Linux /home         </span><br><span class="line">8303 Linux x86 root (/)    8304 Linux x86-64 root (/  8305 Linux ARM64 root (/)</span><br><span class="line">8306 Linux /srv            8307 Linux ARM32 root (/)  8400 Intel Rapid Start   </span><br><span class="line">8e00 Linux LVM             a500 FreeBSD disklabel     a501 FreeBSD boot        </span><br><span class="line">a502 FreeBSD swap          a503 FreeBSD UFS           a504 FreeBSD ZFS         </span><br><span class="line">a505 FreeBSD Vinum/RAID    a580 Midnight BSD data     a581 Midnight BSD boot   </span><br><span class="line">a582 Midnight BSD swap     a583 Midnight BSD UFS      a584 Midnight BSD ZFS    </span><br><span class="line">a585 Midnight BSD Vinum    a600 OpenBSD disklabel     a800 Apple UFS           </span><br><span class="line">a901 NetBSD swap           a902 NetBSD FFS            a903 NetBSD LFS          </span><br><span class="line">a904 NetBSD concatenated   a905 NetBSD encrypted      a906 NetBSD RAID         </span><br><span class="line">ab00 Recovery HD           af00 Apple HFS/HFS+        af01 Apple RAID          </span><br><span class="line">af02 Apple RAID offline    af03 Apple label           af04 AppleTV recovery    </span><br><span class="line">af05 Apple Core Storage    bc00 Acronis Secure Zone   be00 Solaris boot        </span><br><span class="line">bf00 Solaris root          bf01 Solaris /usr &amp; Mac Z  bf02 Solaris swap        </span><br><span class="line">bf03 Solaris backup        bf04 Solaris /var          bf05 Solaris /home       </span><br><span class="line">bf06 Solaris alternate se  bf07 Solaris Reserved 1    bf08 Solaris Reserved 2  </span><br><span class="line">bf09 Solaris Reserved 3    bf0a Solaris Reserved 4    bf0b Solaris Reserved 5  </span><br><span class="line">c001 HP-UX data            c002 HP-UX service         ea00 Freedesktop $BOOT   </span><br><span class="line">eb00 Haiku BFS             ed00 Sony system partitio  ed01 Lenovo system partit</span><br><span class="line">ef00 EFI System            ef01 MBR partition scheme  ef02 BIOS boot partition</span><br><span class="line">f800 Ceph OSD              f801 Ceph dm-crypt OSD     f802 Ceph journal        </span><br><span class="line">f803 Ceph dm-crypt journa  f804 Ceph disk in creatio  f805 Ceph dm-crypt disk i</span><br><span class="line">fb00 VMWare VMFS           fb01 VMWare reserved       fc00 VMWare kcore crash p</span><br><span class="line">fd00 Linux RAID</span><br></pre></td></tr></table></figure>
+<h1 id="刻录iso镜像到U盘"><a href="#刻录iso镜像到U盘" class="headerlink" title="刻录iso镜像到U盘"></a>刻录iso镜像到U盘</h1><p><strong>必须先change a partition’s type code -&gt;EF00</strong>再 ‘dd’</p>
+<h1 id="Example-disk’s-GPT"><a href="#Example-disk’s-GPT" class="headerlink" title="Example disk’s GPT"></a>Example disk’s GPT</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Disk /dev/sda: 468862128 sectors, 223.6 GiB</span><br><span class="line">Logical sector size: 512 bytes</span><br><span class="line">Disk identifier (GUID): 4F2B2F55-48AC-4CC8-A745-605404C6BDF7</span><br><span class="line">Partition table holds up to 128 entries</span><br><span class="line">First usable sector is 34, last usable sector is 468862094</span><br><span class="line">Partitions will be aligned on 2048-sector boundaries</span><br><span class="line">Total free space is 13745 sectors (6.7 MiB)</span><br><span class="line"></span><br><span class="line">Number  Start (sector)    End (sector)  Size       Code  Name</span><br><span class="line">   1            4096          204799   98.0 MiB    EF00  EFI system partition</span><br><span class="line">   2          208896       229904940   109.5 GiB   0700  Basic data partition</span><br><span class="line">   3       229906432       230897663   484.0 MiB   2700  </span><br><span class="line">   4       230899712       426919054   93.5 GiB    0700  Basic data partition</span><br><span class="line">   5       426919936       427309055   190.0 MiB   8300  </span><br><span class="line">   6       427309056       428285951   477.0 MiB   8200  </span><br><span class="line">   7       428285952       468860927   19.3 GiB    8300</span><br></pre></td></tr></table></figure>
+<h1 id="details-infomation-on-a-partition"><a href="#details-infomation-on-a-partition" class="headerlink" title="details infomation on a partition"></a>details infomation on a partition</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Partition GUID code: C12A7328-F81F-11D2-BA4B-00A0C93EC93B (EFI System)</span><br><span class="line">Partition unique GUID: 00772A36-9423-43A9-B1A1-0BE031102BFB</span><br><span class="line">First sector: 4096 (at 2.0 MiB)</span><br><span class="line">Last sector: 204799 (at 100.0 MiB)</span><br><span class="line">Partition size: 200704 sectors (98.0 MiB)</span><br><span class="line">Attribute flags: 0000000000000000</span><br><span class="line">Partition name: &apos;EFI system partition&apos;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GPT/">GPT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'jachin';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/undefinedpython基础.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python基础
+        
+      </div>
+    </a>
+  
+  
+    <a href="/undefinedproxy-python3.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python3 实现代理IP,伪装IP</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#gdisk"><span class="nav-number">1.</span> <span class="nav-text">gdisk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Command"><span class="nav-number">1.1.</span> <span class="nav-text">Command</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recovery-transformation"><span class="nav-number">1.2.</span> <span class="nav-text">Recovery/transformation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Expert"><span class="nav-number">1.3.</span> <span class="nav-text">Expert</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#partition’s-type-code"><span class="nav-number">2.</span> <span class="nav-text">partition’s type code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#刻录iso镜像到U盘"><span class="nav-number">3.</span> <span class="nav-text">刻录iso镜像到U盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Example-disk’s-GPT"><span class="nav-number">4.</span> <span class="nav-text">Example disk’s GPT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#details-infomation-on-a-partition"><span class="nav-number">5.</span> <span class="nav-text">details infomation on a partition</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/gallery" class="mobile-nav-link">Gallery</a>
+  
+    <a href="/link" class="mobile-nav-link">Link</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Jachin All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+<!--        
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+-->      
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-103029370-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263042211&web_id=1263042211" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

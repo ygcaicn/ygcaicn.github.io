@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>build-live-ubuntu打造日常使用Ubuntu | Jachin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu" />
+  
+  
+  
+  
+  <meta name="description" content="转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10">
+<meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="build-live-ubuntu打造日常使用Ubuntu">
+<meta property="og:url" content="https://ygcaicn.github.io/undefinedbuild-live-ubuntu.html">
+<meta property="og:site_name" content="Jachin">
+<meta property="og:description" content="转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://ygcaicn.github.io/img/c09aa9ee-24f3-4960-b996-99de49f4fbe0.png">
+<meta property="og:updated_time" content="2018-01-14T19:22:28.687Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="build-live-ubuntu打造日常使用Ubuntu">
+<meta name="twitter:description" content="转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10">
+<meta name="twitter:image" content="https://ygcaicn.github.io/img/c09aa9ee-24f3-4960-b996-99de49f4fbe0.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
+  
+  <link rel="icon" href="/img/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Jachin" rel="home"> Jachin </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">openwrt  嵌入式  学习总结  思考感悟  知识管理</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/gallery">gallery</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/link">link</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-build-live-ubuntu" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/../img/c09aa9ee-24f3-4960-b996-99de49f4fbe0.png" rel="gallery_cjf2v7s3q0016h673bz2gqt0z">
+        <img src="/../img/c09aa9ee-24f3-4960-b996-99de49f4fbe0.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      build-live-ubuntu打造日常使用Ubuntu
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/undefinedbuild-live-ubuntu.html" class="article-date">
+	  <time datetime="2017-11-11T04:09:42.000Z" itemprop="datePublished">November 11, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。<br>Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大<br>的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。<br>本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10</p>
+<a id="more"></a>
+<h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p>几张系统美图：<br><img src="../img/b207a505-34c5-4236-898d-21de1c7dd91e.png" alt="b207a505-34c5-4236-898d-21de1c7dd91e"><br><img src="../img/e0a9cda0-3cac-4dd4-88cb-2e201d649880.png" alt="e0a9cda0-3cac-4dd4-88cb-2e201d649880"><br><img src="../img/a3f9ed8c-efba-423d-a62d-420514282260.png" alt="a3f9ed8c-efba-423d-a62d-420514282260"><br><img src="../img/731747dc-79eb-42c0-bf02-bb98602a463a.png" alt="731747dc-79eb-42c0-bf02-bb98602a463a"><br><img src="../img/98343370-eb6a-4b11-9fe2-e0c558bf1e0d.png" alt="98343370-eb6a-4b11-9fe2-e0c558bf1e0d"></p>
+<h2 id="Step1-浏览器Chrome-amp-FireFox"><a href="#Step1-浏览器Chrome-amp-FireFox" class="headerlink" title="Step1.浏览器Chrome&amp;FireFox"></a>Step1.浏览器Chrome&amp;FireFox</h2><p>浏览器是日常使用的top1。在Ubuntu下也有很多浏览器可以选择，我的搭配为Chrome为主，FireFox为辅。选择Chrome后可以在Chrome的基础上安装很多的Chrome App。</p>
+<h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p>Chrome主页：<a href="https://www.google.com/chrome/browser/desktop/index.html#" target="_blank" rel="noopener">https://www.google.com/chrome/browser/desktop/index.html#</a><br>（需要梯子自寻）</p>
+<p>Chrome安装很简单在上面的链接中下着二进制包安装即可！</p>
+<p><img src="../img/62c4e42a-5a98-4f11-921b-1954821b3451.png" alt="62c4e42a-5a98-4f11-921b-1954821b3451"></p>
+<h3 id="FireFox"><a href="#FireFox" class="headerlink" title="FireFox"></a>FireFox</h3><p>Firefox主页：<a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener">https://www.mozilla.org/en-US/firefox/new/</a><br><img src="../img/d4329e63-1f7f-4863-8733-8309e37a8eb1.png" alt="d4329e63-1f7f-4863-8733-8309e37a8eb1"></p>
+<h2 id="Step2-编辑器Atom"><a href="#Step2-编辑器Atom" class="headerlink" title="Step2. 编辑器Atom"></a>Step2. 编辑器<a href="https://atom.io" target="_blank" rel="noopener">Atom</a></h2><p>Atom主页：<a href="https://atom.io" target="_blank" rel="noopener">https://atom.io</a><br>程序员最不可缺少的就是一个好的编辑器。Atom是万能的，开源，有很多的扩展包可以使用。</p>
+<p><img src="../img/96878ad6-346d-43a3-a1b7-7851683c8219.png" alt="96878ad6-346d-43a3-a1b7-7851683c8219"></p>
+<p>必须扩展包：</p>
+<h3 id="Sublime-Style-Column-Celection"><a href="#Sublime-Style-Column-Celection" class="headerlink" title="Sublime-Style-Column-Celection"></a>Sublime-Style-Column-Celection</h3><p>区块编辑支持<br><img src="../img/d24863a2-5697-411f-b9ad-35c032a2467a.png" alt="d24863a2-5697-411f-b9ad-35c032a2467a"><br><img src="../img/e319e32b-da3b-4814-b514-68f79f829e35.png" alt="e319e32b-da3b-4814-b514-68f79f829e35"></p>
+<h3 id="gcc-make-run"><a href="#gcc-make-run" class="headerlink" title="gcc-make-run"></a>gcc-make-run</h3><p>c文件快速编译运行<br><img src="../img/93120020-fa27-445e-a77e-de0d38df843a.png" alt="93120020-fa27-445e-a77e-de0d38df843a"></p>
+<h3 id="markdown-image-paste"><a href="#markdown-image-paste" class="headerlink" title="markdown-image-paste"></a>markdown-image-paste</h3><p>最棒的插件之一！！！在md文件编辑中，截图以后直接打出文件名然后Ctrl+V将图片存到配置好的目录中，并生成Markdow 图片链接。<br><img src="../img/719a6b00-d384-4b08-8656-85c24e4b3444.png" alt="719a6b00-d384-4b08-8656-85c24e4b3444"></p>
+<h3 id="uuidgen"><a href="#uuidgen" class="headerlink" title="uuidgen"></a>uuidgen</h3><p>在粘贴md的图片时总是要起文件名也是一件麻烦的事，还要保证不重复。uuidgen完美解决这个问题！只要快捷键Alt+Commend+G即生成一个uuid。保证不会重复！</p>
+<p><img src="../img/3cd28274-9a9c-4f1b-8fee-0594c307f9c1.png" alt="3cd28274-9a9c-4f1b-8fee-0594c307f9c1"></p>
+<h3 id="atom-python-run"><a href="#atom-python-run" class="headerlink" title="atom-python-run"></a>atom-python-run</h3><p>快速python运行！<br><img src="../img/315006bb-9155-4c78-a262-7fbd3e319992.png" alt="315006bb-9155-4c78-a262-7fbd3e319992"></p>
+<h3 id="markdown-preview-plus"><a href="#markdown-preview-plus" class="headerlink" title="markdown-preview-plus"></a>markdown-preview-plus</h3><p> markdown预览，支持latex公式嵌入。<br><img src="../img/f291e0ac-04ec-433b-a753-8bb83c3bd226.png" alt="f291e0ac-04ec-433b-a753-8bb83c3bd226"></p>
+<h3 id="markdown-scroll-sync"><a href="#markdown-scroll-sync" class="headerlink" title="markdown-scroll-sync"></a>markdown-scroll-sync</h3><p> markdown预览时同步滚动。<br><img src="../img/6cee2b03-1e20-498c-82a1-9f34a5a55cd0.png" alt="6cee2b03-1e20-498c-82a1-9f34a5a55cd0"></p>
+<h2 id="Step3-音乐"><a href="#Step3-音乐" class="headerlink" title="Step3.音乐"></a>Step3.音乐</h2><p>听歌你可以选择网页：</p>
+<p><a href="http://music.163.com" target="_blank" rel="noopener">http://music.163.com</a></p>
+<p><a href="https://youtube.com" target="_blank" rel="noopener">https://youtube.com</a></p>
+<p>但是你有更好的选择，就是Chrome app, Netease Music!</p>
+<p><img src="../img/c454aefc-269a-4501-8c0f-1c06021023c5.png" alt="c454aefc-269a-4501-8c0f-1c06021023c5"></p>
+<p><img src="../img/d56fbec3-d2b5-4262-afbe-41e847a70b36.png" alt="d56fbec3-d2b5-4262-afbe-41e847a70b36"></p>
+<p>chrome app的启动是不依赖与chrome的界面的，因此你完全可以在不启动chrome的情况下直接启动music！</p>
+<h2 id="Step4-微信（可作为QQ的替代品）"><a href="#Step4-微信（可作为QQ的替代品）" class="headerlink" title="Step4.微信（可作为QQ的替代品）"></a>Step4.微信（可作为QQ的替代品）</h2><p>同样chrome app中安装Wechat，其实就是网页版的wechat封装成单独的app可以独立启动！这大概是我对微信刮目相看的唯一理由了。。QQ也是有chrome app的，但是选择wechat而不选择QQ是因为wechat的功能要强大的多！比如支持与好友或者手机互传文件！！！！对的你没看错是文件！！当然照片也是可以的！并且照片是支持截图后Ctrl+v直接粘贴发送的，是不是很方便。然而QQ只能发个表情包里面的表情。。</p>
+<p><img src="../img/53a62b2f-2c64-4531-b933-e66cab438c64.jpg" alt="53a62b2f-2c64-4531-b933-e66cab438c64"></p>
+<h2 id="Step5-office系列"><a href="#Step5-office系列" class="headerlink" title="Step5.office系列"></a>Step5.office系列</h2><p>office系列的软件有自带的liberate office，效果嘛，，谁用谁知道！….支持国产我们选择wps，完美兼容Mxx公司的几大坨。</p>
+<p>wps 主页：<a href="http://wps-community.org/download.html" target="_blank" rel="noopener">http://wps-community.org/download.html</a></p>
+<p><img src="../img/0dab9e22-085d-4162-83f7-20a417430d75.png" alt="0dab9e22-085d-4162-83f7-20a417430d75"><br><img src="../img/4152da53-40f7-4430-ad4b-2533323b3012.png" alt="4152da53-40f7-4430-ad4b-2533323b3012"><br><img src="../img/d3216ba8-b725-457e-9da3-dbd507444c6f.png" alt="d3216ba8-b725-457e-9da3-dbd507444c6f"></p>
+<blockquote>
+<p>Download <a href="http://ftp.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb" target="_blank" rel="noopener">libpng12-0_1.2.50-2+deb8u2_amd64.deb</a>. If you use a 32 bit system, download the 32 bit deb file.<br>Install the package and then install wps-office.</p>
+</blockquote>
+<h2 id="Step6-Foxit-Reader"><a href="#Step6-Foxit-Reader" class="headerlink" title="Step6.Foxit Reader"></a>Step6.Foxit Reader</h2><p>Foxit Reader完美支持Linux：</p>
+<p>Foxit 主页：<a href="https://www.foxitsoftware.com/pdf-reader/" target="_blank" rel="noopener">https://www.foxitsoftware.com/pdf-reader/</a></p>
+<p><img src="../img/387400dc-1467-4222-b56b-74e966d15e48.png" alt="387400dc-1467-4222-b56b-74e966d15e48"></p>
+<h2 id="Step7-视频播放器"><a href="#Step7-视频播放器" class="headerlink" title="Step7.视频播放器"></a>Step7.视频播放器</h2><p>SMplayer</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'jachin';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/undefinedbuild-live-ubuntu2.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          build-live-ubuntu --2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/undefinedUbuntu-ChineseInputContexts.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ubuntu17.10-ChineseInputContexts</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#美图"><span class="nav-number">1.</span> <span class="nav-text">美图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step1-浏览器Chrome-amp-FireFox"><span class="nav-number">2.</span> <span class="nav-text">Step1.浏览器Chrome&amp;FireFox</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome"><span class="nav-number">2.1.</span> <span class="nav-text">Chrome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FireFox"><span class="nav-number">2.2.</span> <span class="nav-text">FireFox</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step2-编辑器Atom"><span class="nav-number">3.</span> <span class="nav-text">Step2. 编辑器Atom</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublime-Style-Column-Celection"><span class="nav-number">3.1.</span> <span class="nav-text">Sublime-Style-Column-Celection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gcc-make-run"><span class="nav-number">3.2.</span> <span class="nav-text">gcc-make-run</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown-image-paste"><span class="nav-number">3.3.</span> <span class="nav-text">markdown-image-paste</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uuidgen"><span class="nav-number">3.4.</span> <span class="nav-text">uuidgen</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#atom-python-run"><span class="nav-number">3.5.</span> <span class="nav-text">atom-python-run</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown-preview-plus"><span class="nav-number">3.6.</span> <span class="nav-text">markdown-preview-plus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown-scroll-sync"><span class="nav-number">3.7.</span> <span class="nav-text">markdown-scroll-sync</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step3-音乐"><span class="nav-number">4.</span> <span class="nav-text">Step3.音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step4-微信（可作为QQ的替代品）"><span class="nav-number">5.</span> <span class="nav-text">Step4.微信（可作为QQ的替代品）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step5-office系列"><span class="nav-number">6.</span> <span class="nav-text">Step5.office系列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step6-Foxit-Reader"><span class="nav-number">7.</span> <span class="nav-text">Step6.Foxit Reader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step7-视频播放器"><span class="nav-number">8.</span> <span class="nav-text">Step7.视频播放器</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/gallery" class="mobile-nav-link">Gallery</a>
+  
+    <a href="/link" class="mobile-nav-link">Link</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Jachin All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+<!--        
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+-->      
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-103029370-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263042211&web_id=1263042211" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
