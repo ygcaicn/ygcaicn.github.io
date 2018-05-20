@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>fcitx-qimpanel Tray图标不显示问题 | Jachin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu Ubuntu必备软件" />
+  
+  
+  
+  
+  <meta name="description" content="更换为Papirus后，输入法托盘图标怎么就是不显示，用的是fcitx-qimpanel。用默认Hicolor主题能正常显示，">
+<meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu Ubuntu必备软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fcitx-qimpanel Tray图标不显示问题">
+<meta property="og:url" content="https://ygcaicn.github.io/Linux/Linux-fcitx-qimpanel.html">
+<meta property="og:site_name" content="Jachin">
+<meta property="og:description" content="更换为Papirus后，输入法托盘图标怎么就是不显示，用的是fcitx-qimpanel。用默认Hicolor主题能正常显示，">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://ygcaicn.github.io/img/d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb.png">
+<meta property="og:updated_time" content="2018-05-20T20:25:04.516Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="fcitx-qimpanel Tray图标不显示问题">
+<meta name="twitter:description" content="更换为Papirus后，输入法托盘图标怎么就是不显示，用的是fcitx-qimpanel。用默认Hicolor主题能正常显示，">
+<meta name="twitter:image" content="https://ygcaicn.github.io/img/d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
+  
+  <link rel="icon" href="/img/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Jachin" rel="home"> Jachin </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">openwrt  嵌入式  学习总结  思考感悟  知识管理</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/gallery">gallery</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/link">link</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Linux-fcitx-qimpanel" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/../img/d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb.png" rel="gallery_cjhf9u1c60000d6735qfb5bn1">
+        <img src="/../img/d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      fcitx-qimpanel Tray图标不显示问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/Linux/Linux-fcitx-qimpanel.html" class="article-date">
+	  <time datetime="2018-05-20T18:09:42.000Z" itemprop="datePublished">May 21, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>更换为Papirus后，输入法托盘图标怎么就是不显示，用的是fcitx-qimpanel。用默认Hicolor主题能正常显示，</p>
+<p><img src="../img/d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb.png" alt="d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb"></p>
+<a id="more"></a>
+<h1 id="尝试1：把Hicolor中的相关图标拷贝到Papirus未能解决问题"><a href="#尝试1：把Hicolor中的相关图标拷贝到Papirus未能解决问题" class="headerlink" title="尝试1：把Hicolor中的相关图标拷贝到Papirus未能解决问题"></a>尝试1：<del>把Hicolor中的相关图标拷贝到Papirus未能解决问题</del></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/icons/hicolor/128x128/apps/fcitx.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx-fullwidth-active.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx-fullwidth-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx-kbd.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx-punc-active.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx-punc-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx-vk-active.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx-vk-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/16x16/apps/fcitx.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx-fullwidth-active.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx-fullwidth-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx-kbd.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx-punc-active.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx-punc-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx-vk-active.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx-vk-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/22x22/apps/fcitx.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx-fullwidth-active.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx-fullwidth-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx-kbd.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx-punc-active.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx-punc-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx-vk-active.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx-vk-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/24x24/apps/fcitx.png</span><br><span class="line">/usr/share/icons/hicolor/32x32/apps/fcitx.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-cangjie.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-chn.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-chttrans-active.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-chttrans-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-erbi.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-fullwidth-active.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-fullwidth-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-kbd.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-pinyin.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-punc-active.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-punc-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-remind-active.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-remind-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-shuangpin.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-vk-active.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-vk-inactive.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-wbpy.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-wubi.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx-ziranma.png</span><br><span class="line">/usr/share/icons/hicolor/48x48/apps/fcitx.png</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-fullwidth-active-symbolic.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-fullwidth-active.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-fullwidth-inactive-symbolic.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-fullwidth-inactive.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-kbd-symbolic.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-kbd.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-punc-active-symbolic.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-punc-active.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-punc-inactive-symbolic.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-punc-inactive.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-vk-active-symbolic.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-vk-active.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-vk-inactive-symbolic.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx-vk-inactive.svg</span><br><span class="line">/usr/share/icons/hicolor/scalable/apps/fcitx.svg</span><br></pre></td></tr></table></figure>
+<p>把以上的这些图片拷贝到 /home/jachin/.local/share/icons/Papirus/*下对应的目录</p>
+<pre><code>cp /usr/share/icons/hicolor/48x48/apps/fcitx-kbd.png /home/jachin/.local/share/icons/Papirus/48x48/apps/fcitx-kbd.png
+</code></pre><p>发现这是徒劳的，有很多原本在Papirus下就是有的。拷贝完没有一点的好转。。。</p>
+<p>在Papirus主题下运行 fcitx-qimpanel：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">reply.value(): &quot;:1.76&quot;</span><br><span class="line">fcitxIsNotRunning(): 0</span><br><span class="line">mIsHorizontal: true</span><br><span class="line">mSkinName: &quot;ubuntu-orange&quot;</span><br><span class="line">MainController::init()</span><br><span class="line">/usr/share/fcitx-qimpanel/skin</span><br><span class="line">SkinType is default</span><br><span class="line">QSystemTrayIcon::setVisible: No Icon set</span><br><span class="line">/usr/share/fcitx-qimpanel/skin</span><br><span class="line">SkinType is default</span><br></pre></td></tr></table></figure>
+<p>在Hicolor主题下运行 fcitx-qimpanel：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">reply.value(): &quot;:1.76&quot;</span><br><span class="line">fcitxIsNotRunning(): 0</span><br><span class="line">mIsHorizontal: true</span><br><span class="line">mSkinName: &quot;ubuntu-orange&quot;</span><br><span class="line">MainController::init()</span><br><span class="line">/usr/share/fcitx-qimpanel/skin</span><br><span class="line">SkinType is default</span><br><span class="line">/usr/share/fcitx-qimpanel/skin</span><br><span class="line">SkinType is default</span><br></pre></td></tr></table></figure></p>
+<p>发现是Qt写的程序，还有报错，QSystemTrayIcon::setVisible: No Icon set，就是没找到图标造成的。。。难道是需要的图标没有拷贝到？？？那正确的图标名称到底是什么呢？带着这个疑问尝试了下一个方法。</p>
+<h1 id="尝试2：分析源码"><a href="#尝试2：分析源码" class="headerlink" title="尝试2：分析源码"></a>尝试2：<del>分析源码</del></h1><p>无奈想到去看看源码，fcitx-qimpanel是Qt写的，代码是开源<br>地址：<a href="https://github.com/lenky0401/fcitx-qimpanel/" target="_blank" rel="noopener">https://github.com/lenky0401/fcitx-qimpanel/</a></p>
+<p>git clone <a href="https://github.com/lenky0401/fcitx-qimpanel.git" target="_blank" rel="noopener">https://github.com/lenky0401/fcitx-qimpanel.git</a><br>cd fcitx-qimpanel<br>grep -r “QSystemTrayIcon”  ./</p>
+<p><img src="../img/45f64777-8e4b-4b01-b577-f331d41f63aa.png" alt="45f64777-8e4b-4b01-b577-f331d41f63aa"></p>
+<p>从源码中我们可以看到主要的图标设置：</p>
+<pre><code>QIcon::fromTheme(&quot;fcitx-kbd&quot;)
+QIcon::fromTheme(&quot;fcitx&quot;)
+</code></pre><p>这两个图标在主题中都已经有了，这下心灰意冷，说明不是图标名称的问题。。。</p>
+<h1 id="尝试3：I-O分析"><a href="#尝试3：I-O分析" class="headerlink" title="尝试3：I/O分析"></a>尝试3：I/O分析</h1><p>既然不是名称的问题那就是路径的问题，除非它没找到我们用的主题的路径，因此想到I/O分析。<br>调整为Hicolor主题，运行fcitx-qimpanel,正确运行，有了图标，那么这样它必然会打开的有关于主题内图片的文件描述符：</p>
+<pre><code>lsof -c fcitx-qimpanel
+</code></pre><p>果不其然找到了：</p>
+<p><img src="../img/c3731c9e-61bc-4e4b-a8a1-971225c107d0.png" alt="c3731c9e-61bc-4e4b-a8a1-971225c107d0"></p>
+<p>/usr/share/icons/hicolor/icon-theme.cache系统在更换主题时建立了一个缓存cache（相当于索引，提高速度），然后文件都从chache中找需要的图标。既然这样那就换会Papirus看看：<br><img src="../img/3519125f-cb70-4e4b-814b-b4d35fea4872.png" alt="3519125f-cb70-4e4b-814b-b4d35fea4872"><br>一下子感觉找到了病根，怎的是没找到路径。。。至于为什么会这样可能是Qt的bug或则gnome的bug。知道了原因解决起来就容易了：</p>
+<pre><code>sudo ln -s  ~/.local/share/icons/Papirus  /usr/share/icons/Papirus
+</code></pre><p><img src="../img/c85f92e9-aa82-4af1-9d4c-153bd5e71ca7.png" alt="c85f92e9-aa82-4af1-9d4c-153bd5e71ca7"></p>
+<p>重启fcitx-qimpanel问题解决！！！</p>
+<p><img src="../img/e2bace6d-bdfe-423e-b052-1f9a16eb2892.png" alt="e2bace6d-bdfe-423e-b052-1f9a16eb2892"></p>
+<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!!"></a>每天进步一点点!!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'jachin';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Linux/Linux-ubuntu-qq.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ubuntu解决QQ难题(Tim)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试1：把Hicolor中的相关图标拷贝到Papirus未能解决问题"><span class="nav-number">1.</span> <span class="nav-text">尝试1：把Hicolor中的相关图标拷贝到Papirus未能解决问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试2：分析源码"><span class="nav-number">2.</span> <span class="nav-text">尝试2：分析源码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试3：I-O分析"><span class="nav-number">3.</span> <span class="nav-text">尝试3：I/O分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#每天进步一点点"><span class="nav-number">4.</span> <span class="nav-text">每天进步一点点!!!!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#impossible-is-I’m-possible"><span class="nav-number">4.1.</span> <span class="nav-text">impossible is I’m possible!!!</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/gallery" class="mobile-nav-link">Gallery</a>
+  
+    <a href="/link" class="mobile-nav-link">Link</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Jachin All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+<!--        
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+-->      
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-103029370-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263042211&web_id=1263042211" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
