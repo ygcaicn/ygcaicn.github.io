@@ -12,7 +12,7 @@
   
   
   <meta name="description" content="JOHN GRUBER定义的markdown语法。">
-<meta name="keywords" content="markdown">
+<meta name="keywords" content="Markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown 基础语法">
 <meta property="og:url" content="https://ygcaicn.github.io/杂项/markdown.html">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://i.imgur.com/YACdsVS.jpg">
 <meta property="og:image" content="http://i.imgur.com/YACdsVS.jpg">
 <meta property="og:image" content="http://i.imgur.com/YACdsVS.jpg">
-<meta property="og:updated_time" content="2018-05-20T03:42:32.723Z">
+<meta property="og:updated_time" content="2018-05-20T04:10:23.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown 基础语法">
 <meta name="twitter:description" content="JOHN GRUBER定义的markdown语法。">
@@ -194,7 +194,7 @@
 <p>如果仅在第一行使用<code>&gt;</code>,<br>后面相邻的行即使省略<code>&gt;</code>，也会变成引用内容</p>
 </blockquote>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;如果引用的内容需要换行，  </span><br><span class="line">&gt;可以在行尾添加两个空格</span><br><span class="line">&gt;</span><br><span class="line">&gt;或者在引用内容中加一个空行</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;如果引用的内容需要换行，</span><br><span class="line">&gt;可以在行尾添加两个空格</span><br><span class="line">&gt;</span><br><span class="line">&gt;或者在引用内容中加一个空行</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <blockquote>
@@ -263,7 +263,7 @@
 <li>无序列表项的开始是：符号 空格；</li>
 <li>有序列表项的开始是：数字 <code>.</code> 空格；</li>
 <li>空格至少为一个，多个空格将被解析为一个；</li>
-<li>如果仅需要在行前显示数字和<code>.</code>:  </li>
+<li>如果仅需要在行前显示数字和<code>.</code>:</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">05\. 可以使用：数字\. 来取消显示为列表</span><br></pre></td></tr></table></figure>
 <p>05. 可以使用：数字\. 来取消显示为列表</p>
@@ -308,15 +308,15 @@
 <p>可以省略标识符，直接使用link text作为标识符。</p>
 <p>这种情况下第二个方括号可以为空或者直接省略第二个方括号。</p>
 <p>参考格式的优点在于可以在多个不同的位置引用同一个URL。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Google][google-link]  </span><br><span class="line">[Baidu][baidu-link]  </span><br><span class="line">[QQ][]  </span><br><span class="line">[Amazon]</span><br><span class="line"></span><br><span class="line">[google-link]: http://www.google.com &quot;Google Title&quot;</span><br><span class="line">[baidu-link]: http://www.baidu.com &quot;Baidu Title&quot;</span><br><span class="line">[QQ]: http://www.qq.com &quot;QQ Title&quot;</span><br><span class="line">[Amazon]: http://www.amazon.com &quot;amazon title&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Google][google-link]</span><br><span class="line">[Baidu][baidu-link]</span><br><span class="line">[QQ][]</span><br><span class="line">[Amazon]</span><br><span class="line"></span><br><span class="line">[google-link]: http://www.google.com &quot;Google Title&quot;</span><br><span class="line">[baidu-link]: http://www.baidu.com &quot;Baidu Title&quot;</span><br><span class="line">[QQ]: http://www.qq.com &quot;QQ Title&quot;</span><br><span class="line">[Amazon]: http://www.amazon.com &quot;amazon title&quot;</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
 <hr>
 <p><a href="http://www.google.com" title="Google Title" target="_blank" rel="noopener">Google</a><br><a href="http://www.baidu.com" title="Baidu Title" target="_blank" rel="noopener">Baidu</a><br><a href="http://www.qq.com" title="QQ Title" target="_blank" rel="noopener">QQ</a><br><a href="http://www.amazon.com" title="amazon title" target="_blank" rel="noopener">Amazon</a></p>
 <hr>
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括的URL或者邮箱地址会被自动的转换为超链接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.google.com&gt;   </span><br><span class="line">&lt;123@email.com&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.google.com&gt;</span><br><span class="line">&lt;123@email.com&gt;</span><br></pre></td></tr></table></figure>
 <p>渲染效果：</p>
-<p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br><a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#49;&#x32;&#x33;&#x40;&#101;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#49;&#x32;&#x33;&#x40;&#101;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br><a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x31;&#50;&#x33;&#x40;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#x40;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>这种方式适合行内较短的链接，会使用URL作为超链接文章，邮箱地址会自动编码，以逃避抓取机器人。</p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个<code>!</code>。也分为行内式和参考式两种。</p>
 <h2 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Imgur](http://i.imgur.com/YACdsVS.jpg)</span><br></pre></td></tr></table></figure>
@@ -335,11 +335,11 @@
 <li>如果需要在文本中成对显示*或者_，可以在符号前加入<code>\</code>即可。</li>
 <li>强调的特殊符号必须成对使用。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*Hello world!*  </span><br><span class="line">_Hello world!_  </span><br><span class="line">**Hello world!**  </span><br><span class="line">__Hello world!__  </span><br><span class="line">\*Hello world!\*  </span><br><span class="line">\_Hello world!\_</span><br></pre></td></tr></table></figure>
-<p><em>Hello world!</em><br><em>Hello world!</em><br><strong>Hello world!</strong><br><strong>Hello world!</strong><br>*Hello world!*<br>_Hello world!_  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*Hello world!*</span><br><span class="line">_Hello world!_</span><br><span class="line">**Hello world!**</span><br><span class="line">__Hello world!__</span><br><span class="line">\*Hello world!\*</span><br><span class="line">\_Hello world!\_</span><br></pre></td></tr></table></figure>
+<p><em>Hello world!</em><br><em>Hello world!</em><br><strong>Hello world!</strong><br><strong>Hello world!</strong><br>*Hello world!*<br>_Hello world!_</p>
 <h1 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h1><p>反斜线 <code>\</code>用于插入在Markdown语法中有特殊作用的字符。</p>
 <p>这些字符包括：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\  </span><br><span class="line">`  </span><br><span class="line">_  </span><br><span class="line">&#123;&#125;  </span><br><span class="line">[]  </span><br><span class="line">()  </span><br><span class="line">#  </span><br><span class="line">+  </span><br><span class="line">-  </span><br><span class="line">_  </span><br><span class="line">&apos;  </span><br><span class="line">.  </span><br><span class="line">!</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">`</span><br><span class="line">_</span><br><span class="line">&#123;&#125;</span><br><span class="line">[]</span><br><span class="line">()</span><br><span class="line">#</span><br><span class="line">+</span><br><span class="line">-</span><br><span class="line">_</span><br><span class="line">&apos;</span><br><span class="line">.</span><br><span class="line">!</span><br></pre></td></tr></table></figure>
 <h1 id="Markdown-扩展语法"><a href="#Markdown-扩展语法" class="headerlink" title="Markdown 扩展语法"></a>Markdown 扩展语法</h1><p>Markdown标准 本身包含的功能有限，所以产生了许多第三方的扩展语法，如<a href="https://help.github.com/categories/writing-on-github/" target="_blank" rel="noopener">Github Flavored Markdown</a>。</p>
 <h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><p>用<code>~~ ~~</code>包括的内容将以删除线的形式展现。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
@@ -438,7 +438,7 @@
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
 
       
         

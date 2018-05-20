@@ -381,12 +381,12 @@
     <link href="https://ygcaicn.github.io/Qt/qt-doc-struct.html"/>
     <id>https://ygcaicn.github.io/Qt/qt-doc-struct.html</id>
     <published>2017-11-09T03:09:40.000Z</published>
-    <updated>2018-05-20T03:42:32.742Z</updated>
+    <updated>2018-05-20T04:05:51.080Z</updated>
     
     <content type="html"><![CDATA[<p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="noopener">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
 <p>进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists</p>
 <p><img src="../img/49e21d26-e157-40b5-acb1-3e492b9cf2d8.png" alt="49e21d26-e157-40b5-acb1-3e492b9cf2d8"></p>
-<p>Class Lists中又有不同的索引方式，方便不同情景下查询：<br><img src="../img/c42b0ad4-92e7-4dcf-b09f-14bce8261eea.png" alt="c42b0ad4-92e7-4dcf-b09f-14bce8261eea"> </p>
+<p>Class Lists中又有不同的索引方式，方便不同情景下查询：<br><img src="../img/c42b0ad4-92e7-4dcf-b09f-14bce8261eea.png" alt="c42b0ad4-92e7-4dcf-b09f-14bce8261eea"></p>
 <p>Qt的class文档大致分为3个部分，Type（数据类型），Functions（成员函数），Macros（宏）。每个部分又分为两块，前一块是一个list，简单的列举，后一块为detail，详细信息。每个类的文档都是在同一个html页面上，采用锚点相互跳转，这也是非常棒的一点！</p>
 <a id="more"></a>
 <h2 id="QDir-Class-类名"><a href="#QDir-Class-类名" class="headerlink" title="QDir Class 类名"></a>QDir Class <em>类名</em></h2><p><img src="../img/qdirdfadfclass.png" alt="qdirdfadfclass"></p>
@@ -440,7 +440,7 @@
       &lt;p&gt;Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为&lt;a href=&quot;http://doc.qt.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://doc.qt.io&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png&quot; alt=&quot;4bbdac2a-5470-4829-8a47-5cfed7253eba&quot;&gt;&lt;/p&gt;
 &lt;p&gt;进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;../img/49e21d26-e157-40b5-acb1-3e492b9cf2d8.png&quot; alt=&quot;49e21d26-e157-40b5-acb1-3e492b9cf2d8&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Class Lists中又有不同的索引方式，方便不同情景下查询：&lt;br&gt;&lt;img src=&quot;../img/c42b0ad4-92e7-4dcf-b09f-14bce8261eea.png&quot; alt=&quot;c42b0ad4-92e7-4dcf-b09f-14bce8261eea&quot;&gt; &lt;/p&gt;
+&lt;p&gt;Class Lists中又有不同的索引方式，方便不同情景下查询：&lt;br&gt;&lt;img src=&quot;../img/c42b0ad4-92e7-4dcf-b09f-14bce8261eea.png&quot; alt=&quot;c42b0ad4-92e7-4dcf-b09f-14bce8261eea&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Qt的class文档大致分为3个部分，Type（数据类型），Functions（成员函数），Macros（宏）。每个部分又分为两块，前一块是一个list，简单的列举，后一块为detail，详细信息。每个类的文档都是在同一个html页面上，采用锚点相互跳转，这也是非常棒的一点！&lt;/p&gt;
     
     </summary>
@@ -450,7 +450,7 @@
     
       <category term="Qt" scheme="https://ygcaicn.github.io/tags/Qt/"/>
     
-      <category term="cpp" scheme="https://ygcaicn.github.io/tags/cpp/"/>
+      <category term="Cpp" scheme="https://ygcaicn.github.io/tags/Cpp/"/>
     
   </entry>
   
@@ -653,9 +653,9 @@
     
       <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
     
-      <category term="Windows" scheme="https://ygcaicn.github.io/tags/Windows/"/>
-    
       <category term="Grub2" scheme="https://ygcaicn.github.io/tags/Grub2/"/>
+    
+      <category term="Windows" scheme="https://ygcaicn.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -664,7 +664,7 @@
     <link href="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html"/>
     <id>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</id>
     <published>2017-05-14T09:32:55.000Z</published>
-    <updated>2018-05-20T03:59:49.057Z</updated>
+    <updated>2018-05-20T04:06:35.523Z</updated>
     
     <content type="html"><![CDATA[<p>ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
 <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>Windows10 64<br>Linuxmint 64</p>
@@ -735,7 +735,7 @@
     
       <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
     
-      <category term="Grub" scheme="https://ygcaicn.github.io/tags/Grub/"/>
+      <category term="Grub2" scheme="https://ygcaicn.github.io/tags/Grub2/"/>
     
       <category term="Windows" scheme="https://ygcaicn.github.io/tags/Windows/"/>
     
