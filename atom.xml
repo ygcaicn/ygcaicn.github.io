@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2018-05-19T19:14:42.028Z</updated>
+  <updated>2018-05-20T03:44:47.531Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="https://ygcaicn.github.io/Linux/Linux-ubuntu-qq.html"/>
     <id>https://ygcaicn.github.io/Linux/Linux-ubuntu-qq.html</id>
     <published>2018-05-19T18:30:42.000Z</published>
-    <updated>2018-05-19T19:14:42.028Z</updated>
+    <updated>2018-05-20T03:44:47.531Z</updated>
     
     <content type="html"><![CDATA[<p>使用Ubuntu作为日常生活、工作、学习环境有一点最大的问题就是QQ，博主最近发现一个近乎完美的方案！</p>
-<p>首先说明wine可以解决这个问题，但是我也尝试安装过wine占用两个G空间不说零零散散装了一大堆各种依赖库，而这些库可能只有wine才会用的到，这怎么能符合完美、极简主义呢！！！果断放弃这种方案。<br>本文介绍使用docker安装的方法使用Tim，与系统隔离，不需要自己配置weine，占用707M空间，能记住密码，能发送图片语音红包，能够接收发送文件，能远程，展示了解到的bug只有不能开视频。<br><a id="more"></a></p>
+<p>首先说明wine可以解决这个问题，但是我也尝试安装过wine占用两个G空间不说零零散散装了一大堆各种依赖库，而这些库可能只有wine才会用的到，这怎么能符合完美、极简主义呢！！！果断放弃这种方案。<br>本文介绍使用docker安装的方法使用Tim，与系统隔离，不需要自己配置wine，占用707M空间，能记住密码，能发送图片语音红包，能够接收发送文件，能远程，展示了解到的bug只有不能开视频。<br><a id="more"></a></p>
 <h1 id="Step1-安装"><a href="#Step1-安装" class="headerlink" title="Step1.安装"></a>Step1.安装</h1><p>安装很简单，一条命令，并且不会零散的安装的到出都是。。</p>
 <p>  docker push bestwu/qq:office</p>
 <h1 id="Step-建立启动脚本"><a href="#Step-建立启动脚本" class="headerlink" title="Step.建立启动脚本"></a>Step.建立启动脚本</h1><p>新建~/opt/qq.sh下如一下内容：</p>
@@ -40,7 +40,7 @@
     <summary type="html">
     
       &lt;p&gt;使用Ubuntu作为日常生活、工作、学习环境有一点最大的问题就是QQ，博主最近发现一个近乎完美的方案！&lt;/p&gt;
-&lt;p&gt;首先说明wine可以解决这个问题，但是我也尝试安装过wine占用两个G空间不说零零散散装了一大堆各种依赖库，而这些库可能只有wine才会用的到，这怎么能符合完美、极简主义呢！！！果断放弃这种方案。&lt;br&gt;本文介绍使用docker安装的方法使用Tim，与系统隔离，不需要自己配置weine，占用707M空间，能记住密码，能发送图片语音红包，能够接收发送文件，能远程，展示了解到的bug只有不能开视频。&lt;br&gt;
+&lt;p&gt;首先说明wine可以解决这个问题，但是我也尝试安装过wine占用两个G空间不说零零散散装了一大堆各种依赖库，而这些库可能只有wine才会用的到，这怎么能符合完美、极简主义呢！！！果断放弃这种方案。&lt;br&gt;本文介绍使用docker安装的方法使用Tim，与系统隔离，不需要自己配置wine，占用707M空间，能记住密码，能发送图片语音红包，能够接收发送文件，能远程，展示了解到的bug只有不能开视频。&lt;br&gt;
     
     </summary>
     
@@ -58,10 +58,10 @@
     <link href="https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html"/>
     <id>https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html</id>
     <published>2018-05-19T18:09:42.000Z</published>
-    <updated>2018-05-19T18:22:31.684Z</updated>
+    <updated>2018-05-20T03:45:40.868Z</updated>
     
     <content type="html"><![CDATA[<p>百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普</p>
-<p>百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
+<p>百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
 <a id="more"></a>
 <h1 id="Step1-获取下载链接"><a href="#Step1-获取下载链接" class="headerlink" title="Step1. 获取下载链接"></a>Step1. 获取下载链接</h1><p>获取下载链接的方法有很多一下介绍两种：</p>
 <ul>
@@ -87,7 +87,7 @@
     <summary type="html">
     
       &lt;p&gt;百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普&lt;/p&gt;
-&lt;p&gt;百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。&lt;br&gt;总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel&lt;br&gt;平台：Ubuntu 18.04 4.15.0-20-generic&lt;/p&gt;
+&lt;p&gt;百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。&lt;br&gt;总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel&lt;br&gt;平台：Ubuntu 18.04 4.15.0-20-generic&lt;/p&gt;
     
     </summary>
     
@@ -105,7 +105,7 @@
     <link href="https://ygcaicn.github.io/Linux/Ubuntu-new.html"/>
     <id>https://ygcaicn.github.io/Linux/Ubuntu-new.html</id>
     <published>2018-03-22T18:38:42.000Z</published>
-    <updated>2018-03-22T18:49:30.506Z</updated>
+    <updated>2018-05-20T03:42:32.766Z</updated>
     
     <content type="html"><![CDATA[<p>进入live Ubuntu 如何快速布局工作环境呢？</p>
 <h1 id="Go"><a href="#Go" class="headerlink" title="Go!"></a>Go!</h1><a id="more"></a>
@@ -135,7 +135,7 @@
     <link href="https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html"/>
     <id>https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html</id>
     <published>2018-01-16T04:09:42.000Z</published>
-    <updated>2018-01-16T09:29:23.526Z</updated>
+    <updated>2018-05-20T03:42:32.765Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>aria2 is a utility for downloading files. The supported protocols are HTTP(S), FTP, SFTP, BitTorrent, and Metalink. aria2 can download a file from multiple sources/protocols and tries to utilize your maximum download bandwidth. It supports downloading a file from HTTP(S)/FTP /SFTP and BitTorrent at the same time, while the data downloaded from HTTP(S)/FTP/SFTP is uploaded to the BitTorrent swarm. Using Metalink chunk checksums, aria2 automatically validates chunks of data while downloading a file.</p>
@@ -211,7 +211,7 @@
     <link href="https://ygcaicn.github.io/Linux/build-live-ubuntu2.html"/>
     <id>https://ygcaicn.github.io/Linux/build-live-ubuntu2.html</id>
     <published>2018-01-15T04:09:42.000Z</published>
-    <updated>2018-01-15T10:04:40.317Z</updated>
+    <updated>2018-05-20T03:42:32.688Z</updated>
     
     <content type="html"><![CDATA[<p>在上次介绍了一些基础的常用软件之后决定进一步探索！在知乎找到了一篇很棒的讨论，链接如下：<br><a href="https://www.zhihu.com/question/19811112" target="_blank" rel="noopener">https://www.zhihu.com/question/19811112</a>通过实践找出了我比较满意的软件。<br>由于本人电脑只有240G的固盘，电脑性能一般，因此对与内存和硬盘都是相当的奢侈，能原配的就不去搞些华丽胡哨的<br>东西，本着能简单绝不复杂，能默认绝不修改的原则去测试一些软件，以及一些脚本，特此记录以备后查！</p>
 <a id="more"></a>
@@ -244,7 +244,7 @@
     <link href="https://ygcaicn.github.io/Linux/build-live-ubuntu.html"/>
     <id>https://ygcaicn.github.io/Linux/build-live-ubuntu.html</id>
     <published>2017-11-11T04:09:42.000Z</published>
-    <updated>2018-01-14T19:22:28.687Z</updated>
+    <updated>2018-05-20T03:42:32.690Z</updated>
     
     <content type="html"><![CDATA[<p>转战Linux后尝试过不少的发行版Mint，Deepin等，换来换去最后还是换成了ubuntu。<br>Ubuntu17.10后回归Gnome桌面，真的越来越棒了！当然选择Linux作为日常live系统最大<br>的问题就是缺少很多日常必须的软件，比如QQ，office，还有一些音乐视频等娱乐软件。<br>本文带你打造一个完美的能够满足日常娱乐与学习的Linux系统！发行版为：Ubuntu17.10</p>
 <a id="more"></a>
@@ -306,7 +306,7 @@
     <link href="https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html"/>
     <id>https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html</id>
     <published>2017-11-11T02:32:29.000Z</published>
-    <updated>2018-01-15T10:26:31.156Z</updated>
+    <updated>2018-05-20T03:42:32.765Z</updated>
     
     <content type="html"><![CDATA[<p>unbuntu下一些常用的软件无法输入中文，这使人很不爽，经过一段时间的努力基本解决了系统中文输入以及常用软件输入中文的问题！<br>环境为Ubuntu17.10 （17.04同样适用）。<br>常用软件包括：</p>
 <ul>
@@ -381,7 +381,7 @@
     <link href="https://ygcaicn.github.io/Qt/qt-doc-struct.html"/>
     <id>https://ygcaicn.github.io/Qt/qt-doc-struct.html</id>
     <published>2017-11-09T03:09:40.000Z</published>
-    <updated>2017-11-09T16:51:30.140Z</updated>
+    <updated>2018-05-20T03:42:32.742Z</updated>
     
     <content type="html"><![CDATA[<p>Qt的文档写的非常棒！学习QT最重要的就是学会看官方的文档，了解文档的结构有助于快速的查询文档，解决问题。Qt官方文档的主页为<a href="http://doc.qt.io" target="_blank" rel="noopener">http://doc.qt.io</a><br><img src="../img/4bbdac2a-5470-4829-8a47-5cfed7253eba.png" alt="4bbdac2a-5470-4829-8a47-5cfed7253eba"></p>
 <p>进入Qt Reference Documentation后可以看到Qt的文档还分为不同的分类，本文主要是介绍第一个分类：Class Lists</p>
@@ -459,7 +459,7 @@
     <link href="https://ygcaicn.github.io/Linux/TCP-IP.html"/>
     <id>https://ygcaicn.github.io/Linux/TCP-IP.html</id>
     <published>2017-10-24T00:32:55.000Z</published>
-    <updated>2017-10-24T07:37:47.173Z</updated>
+    <updated>2018-05-20T03:42:32.758Z</updated>
     
     <content type="html"><![CDATA[<h2 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h2><p>维基百科：<a href="https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F</a></p>
 <p>互联网协议族（英语：Internet Protocol Suite，缩写IPS）是一个网络通信模型，以及一整个网络传输协议家族，为互联网的基础通信架构。它常被通称为TCP/IP协议族（英语：TCP/IP Protocol Suite，或TCP/IP Protocols），简称TCP/IP[2]。因为该协议家族的两个核心协议：TCP（传输控制协议）和IP（网际协议），为该家族中最早通过的标准[3]。由于在网络通讯协议普遍采用分层的结构，当多个层次的协议共同工作时，类似计算机科学中的堆栈，因此又被称为TCP/IP协议栈（英语：TCP/IP Protocol Stack）</p>
@@ -503,7 +503,7 @@
     <link href="https://ygcaicn.github.io/%E6%9D%82%E9%A1%B9/adb.html"/>
     <id>https://ygcaicn.github.io/杂项/adb.html</id>
     <published>2017-10-15T15:02:06.000Z</published>
-    <updated>2018-01-15T09:55:33.502Z</updated>
+    <updated>2018-05-20T03:42:32.679Z</updated>
     
     <content type="html"><![CDATA[<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><a id="more"></a>
 <p>1.Adblock Plus （推荐）</p>
@@ -561,7 +561,7 @@
     <link href="https://ygcaicn.github.io/Network/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html"/>
     <id>https://ygcaicn.github.io/Network/VIP视频解析-去广告.html</id>
     <published>2017-07-22T00:32:55.000Z</published>
-    <updated>2018-01-15T10:38:30.729Z</updated>
+    <updated>2018-05-20T03:42:32.767Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VIP视频解析-去广告教程"><a href="#VIP视频解析-去广告教程" class="headerlink" title="VIP视频解析+去广告教程"></a>VIP视频解析+去广告教程</h1><h2 id="Step1-打开视频网站"><a href="#Step1-打开视频网站" class="headerlink" title="Step1.打开视频网站"></a>Step1.打开视频网站</h2><p>这里以爱奇艺为例 <a href="http://www.iqiyi.com" target="_blank" rel="noopener">http://www.iqiyi.com</a> 打开首页看到类似下面的界面：</p>
 <p><img src="http://i.imgur.com/ZQhMuKf.png" alt="Imgur"></p>
@@ -602,7 +602,7 @@
     <link href="https://ygcaicn.github.io/Linux/win10-1703-grub.html"/>
     <id>https://ygcaicn.github.io/Linux/win10-1703-grub.html</id>
     <published>2017-06-01T00:32:55.000Z</published>
-    <updated>2017-06-01T02:15:58.516Z</updated>
+    <updated>2018-05-20T03:42:32.769Z</updated>
     
     <content type="html"><![CDATA[<h1 id="关于win10调包grub引导的过程"><a href="#关于win10调包grub引导的过程" class="headerlink" title="关于win10调包grub引导的过程"></a>关于win10调包grub引导的过程</h1><p>2017.05.31日中午更新了win10 1703推送的更新，一切由此变的不开心。。。</p>
 <p>往常一直正常的grub引导出问题了，bios启动项中ubuntu这个item还在，不过不幸运的是即使你选择这项引导进行开机进入的依然是windows。这就让人很生气。</p>
@@ -664,7 +664,7 @@
     <link href="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html"/>
     <id>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</id>
     <published>2017-05-14T09:32:55.000Z</published>
-    <updated>2018-01-15T10:13:42.503Z</updated>
+    <updated>2018-05-20T03:42:32.699Z</updated>
     
     <content type="html"><![CDATA[<p>ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
 <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>Windows10 64<br>Linuxmint 64</p>
@@ -742,7 +742,7 @@
     <link href="https://ygcaicn.github.io/Linux/mathjax.html"/>
     <id>https://ygcaicn.github.io/Linux/mathjax.html</id>
     <published>2017-05-04T13:57:40.000Z</published>
-    <updated>2018-01-15T10:22:38.408Z</updated>
+    <updated>2018-05-20T03:42:32.723Z</updated>
     
     <content type="html"><![CDATA[<p>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
 <a id="more"></a>
@@ -764,7 +764,7 @@
     <link href="https://ygcaicn.github.io/Machine-Learning/Mechine-Learning.html"/>
     <id>https://ygcaicn.github.io/Machine-Learning/Mechine-Learning.html</id>
     <published>2017-05-04T09:32:55.000Z</published>
-    <updated>2017-05-04T05:52:22.505Z</updated>
+    <updated>2018-05-20T03:42:32.738Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文是一篇转载自<a href="http://blog.jobbole.com/67616/" target="_blank" rel="noopener"><strong>伯乐在线的译文</strong></a>，英文原文是这里：<a href="https://medium.com/code-poet/80ea3ec3c471" target="_blank" rel="noopener"><strong>Machine Learning is Fun!</strong> — by Adam Geitgey</a></p>
@@ -878,7 +878,7 @@
     <link href="https://ygcaicn.github.io/python3/python%E5%9F%BA%E7%A1%80.html"/>
     <id>https://ygcaicn.github.io/python3/python基础.html</id>
     <published>2017-05-04T07:25:36.000Z</published>
-    <updated>2018-01-15T13:21:33.926Z</updated>
+    <updated>2018-05-20T03:42:32.741Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h1><blockquote>
 <p>A string is a sequence of values that represent Unicode code points. All the code points in the range U+0000 - U+10FFFF can be represented in a string. Python doesn’t have a char type; instead, every code point in the string is represented as a string object with length 1. The built-in function ord() converts a code point from its string form to an integer in the range 0 - 10FFFF; chr() converts an integer in the range 0 - 10FFFF to the corresponding length 1 string object. <code>str.encode()</code> can be used to convert a str to bytes using the given text encoding, and <code>bytes.decode()</code> can be used to achieve the opposite.</p>
@@ -939,7 +939,7 @@
     <link href="https://ygcaicn.github.io/Linux/GPT.html"/>
     <id>https://ygcaicn.github.io/Linux/GPT.html</id>
     <published>2017-05-04T05:04:44.000Z</published>
-    <updated>2018-05-17T17:09:56.797Z</updated>
+    <updated>2018-05-20T03:42:32.704Z</updated>
     
     <content type="html"><![CDATA[<p>GPT 磁盘分区表：</p>
 <p>LBA – Logical Block Adress</p>
@@ -981,7 +981,7 @@
     <link href="https://ygcaicn.github.io/python3/proxy-python3.html"/>
     <id>https://ygcaicn.github.io/python3/proxy-python3.html</id>
     <published>2017-03-18T18:43:36.000Z</published>
-    <updated>2018-01-15T13:21:48.246Z</updated>
+    <updated>2018-05-20T03:42:32.740Z</updated>
     
     <content type="html"><![CDATA[<p>实现抓取代理服务器，建立ipPool,伪装外网ip</p>
 <a id="more"></a>
@@ -1007,13 +1007,13 @@
       <category term="python3" scheme="https://ygcaicn.github.io/categories/python3/"/>
     
     
+      <category term="代理" scheme="https://ygcaicn.github.io/tags/%E4%BB%A3%E7%90%86/"/>
+    
       <category term="Python3" scheme="https://ygcaicn.github.io/tags/Python3/"/>
     
       <category term="正则表达式" scheme="https://ygcaicn.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
       <category term="IP伪装" scheme="https://ygcaicn.github.io/tags/IP%E4%BC%AA%E8%A3%85/"/>
-    
-      <category term="代理" scheme="https://ygcaicn.github.io/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
@@ -1022,7 +1022,7 @@
     <link href="https://ygcaicn.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F/LEDE-Mt7620a-newifiY1.html"/>
     <id>https://ygcaicn.github.io/嵌入式/LEDE-Mt7620a-newifiY1.html</id>
     <published>2017-03-16T15:56:12.000Z</published>
-    <updated>2018-01-15T10:22:08.174Z</updated>
+    <updated>2018-05-20T03:42:32.722Z</updated>
     
     <content type="html"><![CDATA[<p>LEDE:<br><a href="https://downloads.lede-project.org" target="_blank" rel="noopener">https://downloads.lede-project.org</a></p>
 <p>LEDE Packages(mipsel_24kc):<a href="http://openwrt-dist.sourceforge.net/packages/LEDE/base/mipsel_24kc/" target="_blank" rel="noopener">http://openwrt-dist.sourceforge.net/packages/LEDE/base/mipsel_24kc/</a></p>

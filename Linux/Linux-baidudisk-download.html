@@ -11,19 +11,19 @@
   
   
   
-  <meta name="description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
+  <meta name="description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
 <meta name="keywords" content="Jachin blog Linxu Qt Cpp Ubuntu Python 打造日常使用ubuntu Ubuntu必备软件  百度云不限速下载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度云不限速下载">
 <meta property="og:url" content="https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html">
 <meta property="og:site_name" content="Jachin">
-<meta property="og:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
+<meta property="og:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ygcaicn.github.io/img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png">
-<meta property="og:updated_time" content="2018-05-19T18:22:31.684Z">
+<meta property="og:updated_time" content="2018-05-20T03:45:40.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度云不限速下载">
-<meta name="twitter:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
+<meta name="twitter:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
 <meta name="twitter:image" content="https://ygcaicn.github.io/img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png">
   
     <link rel="alternate" href="/atom.xml" title="Jachin" type="application/atom+xml">
@@ -119,7 +119,7 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png" rel="gallery_cjhdq4ath0058xm73fcaomyba">
+      <a class="article-gallery-img fancybox" href="/../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png" rel="gallery_cjhea4txo005frh73khdz3n52">
         <img src="/../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png" itemprop="image">
       </a>
     
@@ -152,7 +152,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普</p>
-<p>百度云下载限速的原理是按廉洁数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
+<p>百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
 <a id="more"></a>
 <h1 id="Step1-获取下载链接"><a href="#Step1-获取下载链接" class="headerlink" title="Step1. 获取下载链接"></a>Step1. 获取下载链接</h1><p>获取下载链接的方法有很多一下介绍两种：</p>
 <ul>
