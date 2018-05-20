@@ -58,7 +58,7 @@
     <link href="https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html"/>
     <id>https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html</id>
     <published>2018-05-19T18:09:42.000Z</published>
-    <updated>2018-05-20T04:14:23.748Z</updated>
+    <updated>2018-05-20T04:31:02.836Z</updated>
     
     <content type="html"><![CDATA[<p>百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普</p>
 <p>百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
@@ -67,7 +67,7 @@
 <ul>
 <li><h2 id="1-从浏览器获取"><a href="#1-从浏览器获取" class="headerlink" title="1.从浏览器获取"></a>1.从浏览器获取</h2></li>
 </ul>
-<p>直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。</p>
+<p>直接点击下载会生成下载链接，然后复制下载链接待用，取消下载。<br>这种方法简单但是很容易出现403,不推荐！！！</p>
 <p> <img src="../img/1d643fe7-1caf-4efd-b55f-d82a5fc6f24f.png" alt="1d643fe7-1caf-4efd-b55f-d82a5fc6f24f"></p>
 <ul>
 <li><h2 id="2-安装油猴脚本管理器，然后安装相应的脚本"><a href="#2-安装油猴脚本管理器，然后安装相应的脚本" class="headerlink" title="2.安装油猴脚本管理器，然后安装相应的脚本"></a>2.安装油猴脚本管理器，然后安装相应的脚本</h2>油猴脚本管理器：<a href="https://tampermonkey.net/" target="_blank" rel="noopener">https://tampermonkey.net/</a></li>
