@@ -664,7 +664,7 @@
     <link href="https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html"/>
     <id>https://ygcaicn.github.io/Linux/Esp-grub-uefi-windows.html</id>
     <published>2017-05-14T09:32:55.000Z</published>
-    <updated>2018-05-20T03:42:32.699Z</updated>
+    <updated>2018-05-20T03:59:49.057Z</updated>
     
     <content type="html"><![CDATA[<p>ESP分区存放的UEFI引导程序，ESP分区被格式化意味着无法进入系统<br><a id="more"></a></p>
 <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>Windows10 64<br>Linuxmint 64</p>
@@ -733,7 +733,11 @@
       <category term="Linux" scheme="https://ygcaicn.github.io/categories/Linux/"/>
     
     
-      <category term="Grub Linux Windows" scheme="https://ygcaicn.github.io/tags/Grub-Linux-Windows/"/>
+      <category term="Linux" scheme="https://ygcaicn.github.io/tags/Linux/"/>
+    
+      <category term="Windows" scheme="https://ygcaicn.github.io/tags/Windows/"/>
+    
+      <category term="Grub" scheme="https://ygcaicn.github.io/tags/Grub/"/>
     
   </entry>
   

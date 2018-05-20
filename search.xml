@@ -668,7 +668,11 @@
         
         <tags>
             
-            <tag> Grub Linux Windows </tag>
+            <tag> Linux </tag>
+            
+            <tag> Windows </tag>
+            
+            <tag> Grub </tag>
             
         </tags>
         
@@ -1003,9 +1007,9 @@
         
         <tags>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
-            <tag> ubuntu </tag>
+            <tag> Ubuntu </tag>
             
             <tag> debian </tag>
             
