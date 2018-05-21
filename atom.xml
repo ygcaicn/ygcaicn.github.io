@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2018-05-20T20:25:04.516Z</updated>
+  <updated>2018-05-20T20:26:56.850Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://ygcaicn.github.io/Linux/Linux-fcitx-qimpanel.html"/>
     <id>https://ygcaicn.github.io/Linux/Linux-fcitx-qimpanel.html</id>
     <published>2018-05-20T18:09:42.000Z</published>
-    <updated>2018-05-20T20:25:04.516Z</updated>
+    <updated>2018-05-20T20:26:56.850Z</updated>
     
     <content type="html"><![CDATA[<p>更换为Papirus后，输入法托盘图标怎么就是不显示，用的是fcitx-qimpanel。用默认Hicolor主题能正常显示，</p>
 <p><img src="../img/d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb.png" alt="d9ded8f8-6ffd-4dd0-ad1b-9282905f25cb"></p>
@@ -110,7 +110,7 @@ QIcon::fromTheme(&quot;fcitx&quot;)
     <link href="https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html"/>
     <id>https://ygcaicn.github.io/Linux/Linux-baidudisk-download.html</id>
     <published>2018-05-19T18:09:42.000Z</published>
-    <updated>2018-05-20T04:57:35.568Z</updated>
+    <updated>2018-05-20T04:59:54.499Z</updated>
     
     <content type="html"><![CDATA[<p>百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普</p>
 <p>百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。<br>总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel<br>平台：Ubuntu 18.04 4.15.0-20-generic</p>
