@@ -20,7 +20,7 @@
 <meta property="og:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ygcaicn.github.io/img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png">
-<meta property="og:updated_time" content="2018-06-04T03:16:51.141Z">
+<meta property="og:updated_time" content="2018-06-04T03:27:08.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度云不限速下载">
 <meta name="twitter:description" content="百度云下载一直是一个烦人的问题，无奈会员又太贵。。。各种工具又都不靠普 百度云下载限速的原理是按连接数算的，一个链接给几十KB的速度，各种下载工具无非就是采用多线程下载的方法解除限速。总结起来就是先生成下载链接，然后用多线程下载工具进行下载。大家比较熟悉的可能是aria2c,但是它最大的进程数目为16,16*几十Kb也就是几百KB的速度。下面讲解在Ubuntu上的另一个下载工具：axel平台：Ub">
@@ -177,7 +177,7 @@
 <p><img src="../img/9db692a0-5e32-43e4-b4fe-bf9cca5d3dec.png" alt="9db692a0-5e32-43e4-b4fe-bf9cca5d3dec"></p>
 <p>2018.6.4更：</p>
 <p><img src="../img/0338ae49-fd08-45e0-a33a-b4aa7428aab8.png" alt="0338ae49-fd08-45e0-a33a-b4aa7428aab8"></p>
-<p>分享页面导出的链接直接下载没问题，个人网盘页面导出的要加上cookie的BDUSS值。至于cookie的获取可以下一个插件：<a href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">EditThisCookie</a>。测试这种下载方法速度大概在5M左右，如果不是什么私密文件不建议这种下载方法。其实私密文件下载完取消分享就行了。</p>
+<p>分享页面导出的链接直接下载没问题，个人网盘页面导出的要加上cookie的BDUSS值。至于cookie的获取可以下一个插件：<a href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">EditThisCookie</a>。测试这种下载方法速度大概在5M左右，如果不是什么私密文件不建议这种下载方法，可能会被百度黑名单。其实私密文件下载完取消分享就行了。</p>
 <p><img src="../img/b1de27c8-989c-412e-82d2-f4d892d3b96b.png" alt="b1de27c8-989c-412e-82d2-f4d892d3b96b"></p>
 <p>个人网盘页下载传递cookie方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axel -n 1000 --header=&quot;Cookie:BDUSS=MjI0b21jN2g0OUJ2d1pKM3YzdzR3MWYwYVhDUXVLSG93M3B1Uk5iQVFBQUFBJCQAAAAAAAAAAAEAAABX6tUtUE694TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOks7FrpLOxaS&quot; &quot;https://d.pcs.baidu.com/file/658698ff3af01e16d09d5d5d9559b746?fid=3928561930-250528-763390833218438&amp;rt=pr&amp;sign=FDtAERVC-DCb740ccc5511e5e8fedcff06b081203-rrxG0XaBvQndPe97uYh81rJHcBE%3D&amp;expires=8h&amp;chkv=1&amp;chkbd=1&amp;chkpc=&amp;dp-logid=3581996806988563417&amp;dp-callid=0&amp;dstime=1528079978&amp;r=980203686&quot;</span><br></pre></td></tr></table></figure>
