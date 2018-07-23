@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ygcaicn.github.io/"/>
-  <updated>2018-07-23T12:32:03.642Z</updated>
+  <updated>2018-07-23T12:38:53.742Z</updated>
   <id>https://ygcaicn.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Aircrack-ng学习使用</title>
-    <link href="https://ygcaicn.github.io/Linux/Linux-demo.html"/>
-    <id>https://ygcaicn.github.io/Linux/Linux-demo.html</id>
+    <link href="https://ygcaicn.github.io/Linux/Linux-aircrack-ng.html"/>
+    <id>https://ygcaicn.github.io/Linux/Linux-aircrack-ng.html</id>
     <published>2018-07-23T12:31:42.000Z</published>
-    <updated>2018-07-23T12:32:03.642Z</updated>
+    <updated>2018-07-23T12:38:53.742Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Aircrack-ng"><a href="#Aircrack-ng" class="headerlink" title="Aircrack-ng"></a>Aircrack-ng</h1><p>Aircrack-ng是一款经典的wifi破解工具，本着对网络安全的学习，熟悉本工具的使用流程。</p>
 <a id="more"></a>

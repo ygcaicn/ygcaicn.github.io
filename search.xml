@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Aircrack-ng学习使用]]></title>
-      <url>https://ygcaicn.github.io/Linux/Linux-demo.html</url>
+      <url>https://ygcaicn.github.io/Linux/Linux-aircrack-ng.html</url>
       <content type="html"><![CDATA[<h1 id="Aircrack-ng"><a href="#Aircrack-ng" class="headerlink" title="Aircrack-ng"></a>Aircrack-ng</h1><p>Aircrack-ng是一款经典的wifi破解工具，本着对网络安全的学习，熟悉本工具的使用流程。</p>
 <a id="more"></a>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><pre><code>sudo apt-get install aircrack-ng
