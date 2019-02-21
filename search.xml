@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title><![CDATA[demo]]></title>
+      <url>https://ygcaicn.github.io/Linux/12306.html</url>
+      <content type="html"><![CDATA[<p>bcbe21b2-ca52-4c84-ba0f-b82970121fa1</p>
+<p>bcbe21b2-ca52-4c84-ba0f-b82970121fa1</p>
+<p>在上次介绍了一些基础的常用软件之后决定进一步探索！在知乎找到了一篇很棒的讨论，链接如下：<br><a href="https://www.zhihu.com/question/19811112" target="_blank" rel="noopener">https://www.zhihu.com/question/19811112</a>通过实践找出了我比较满意的软件。<br>由于本人电脑只有240G的固盘，电脑性能一般，因此对与内存和硬盘都是相当的奢侈，能原配的就不去搞些华丽胡哨的<br>东西，本着能简单绝不复杂，能默认绝不修改的原则去测试一些软件，以及一些脚本，特此记录以备后查！</p>
+<a id="more"></a>
+<h1 id="No-1-Guake-Terminal"><a href="#No-1-Guake-Terminal" class="headerlink" title="No.1 Guake Terminal"></a>No.1 Guake Terminal</h1><p>这个名字有点意思，‘挂科’Terminal。。。功能很简单快速打开Terminal，或许你认为Ctrl+Alt+T（或者自己设置一个快捷键）去开Terminal也是一件很简单的事。没错我以前也是这么认为的，但是遇到了Guake后我改变了看法，特别是需要开多个Terminal的时候（高手都不需要开多个，一个都能全搞定！）系统的Terminal显的不方便，还有就是临时开一个<br>Terminal的时候很可能用完就不去关然后在那积攒了很多。Guake Terminal就是来解决这些问题的！一键弹出（默认F12），失去焦点自动关闭，可以开启多个Tab，可以自定义Appearance。<br><img src="../img/82bdf788-4c0c-4238-a94c-bf6e7e2e2106.png" alt="82bdf788-4c0c-4238-a94c-bf6e7e2e2106"></p>
+<h1 id="每天进步一点点"><a href="#每天进步一点点" class="headerlink" title="每天进步一点点!!!!"></a>每天进步一点点!!!!</h1><h2 id="impossible-is-I’m-possible"><a href="#impossible-is-I’m-possible" class="headerlink" title="impossible is I’m possible!!!"></a><strong>impossible is I’m possible!!!</strong></h2>]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 12306 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Aircrack-ng学习使用]]></title>
       <url>https://ygcaicn.github.io/Linux/Linux-aircrack-ng.html</url>
       <content type="html"><![CDATA[<h1 id="Aircrack-ng"><a href="#Aircrack-ng" class="headerlink" title="Aircrack-ng"></a>Aircrack-ng</h1><p>Aircrack-ng是一款经典的wifi破解工具，本着对网络安全的学习，熟悉本工具的使用流程。</p>
