@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ygcaicn.github.io/prj/pre_index.html</loc>
-    
-    <lastmod>2019-02-27T09:52:17.886Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/prj/css/style.css</loc>
-    
-    <lastmod>2019-02-27T09:43:45.947Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ygcaicn.github.io/404.html</loc>
     
     <lastmod>2019-02-21T08:03:31.021Z</lastmod>
@@ -128,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://ygcaicn.github.io/Network/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html</loc>
+    <loc>https://ygcaicn.github.io/Linux/win10-1703-grub.html</loc>
     
     <lastmod>2018-05-20T03:42:32.769Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ygcaicn.github.io/Linux/win10-1703-grub.html</loc>
+    <loc>https://ygcaicn.github.io/Network/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html</loc>
     
     <lastmod>2018-05-20T03:42:32.769Z</lastmod>
     
@@ -369,41 +355,6 @@
     <loc>https://ygcaicn.github.io/categories/index.html</loc>
     
     <lastmod>2017-05-03T11:18:25.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/prj/js/jquery.min.js</loc>
-    
-    <lastmod>2014-08-21T20:46:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/prj/js/circles.js</loc>
-    
-    <lastmod>2014-08-21T20:46:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/prj/js/easing.js</loc>
-    
-    <lastmod>2014-08-18T08:23:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/prj/js/move-top.js</loc>
-    
-    <lastmod>2014-08-18T08:23:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ygcaicn.github.io/prj/css/bootstrap.css</loc>
-    
-    <lastmod>2014-08-13T16:21:36.000Z</lastmod>
     
   </url>
   
