@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ygcaicn.github.io/youdao-note-min.js</loc>
+    
+    <lastmod>2019-04-10T12:28:03.582Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ygcaicn.github.io/youdao-note.js</loc>
+    
+    <lastmod>2019-04-10T12:24:00.192Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ygcaicn.github.io/404.html</loc>
     
     <lastmod>2019-02-21T08:03:31.021Z</lastmod>
@@ -114,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://ygcaicn.github.io/Linux/win10-1703-grub.html</loc>
+    <loc>https://ygcaicn.github.io/Network/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html</loc>
     
     <lastmod>2018-05-20T03:42:32.769Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ygcaicn.github.io/Network/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html</loc>
+    <loc>https://ygcaicn.github.io/Linux/win10-1703-grub.html</loc>
     
     <lastmod>2018-05-20T03:42:32.769Z</lastmod>
     
@@ -142,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html</loc>
+    <loc>https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html</loc>
     
     <lastmod>2018-05-20T03:42:32.765Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ygcaicn.github.io/Linux/ubuntu17-aria2c.html</loc>
+    <loc>https://ygcaicn.github.io/Linux/Ubuntu-ChineseInputContexts.html</loc>
     
     <lastmod>2018-05-20T03:42:32.765Z</lastmod>
     
